@@ -65,8 +65,11 @@ function byStatus(status: number, service: string, detail: string): Omit<Classif
   if (status === 402 || status === 429 || /quota|credits|rate.?limit/i.test(detail)) {
     return { code: "quota", message: `${service} atingiu o limite de uso ou está sem créditos.` };
   }
-  if (status >= 500 || status === 408) {
-    return { code: "network", message: `${service} está instável agora. Tente de novo em alguns minutos.` };
+  if (status >= 500 || status === 408 || /high demand|overloaded/i.test(detail)) {
+    return {
+      code: "network",
+      message: `${service} está sobrecarregado ou instável agora. Tente de novo em alguns minutos.`,
+    };
   }
   return { code: "unknown", message: `${service} recusou o pedido (HTTP ${status}).` };
 }
@@ -93,8 +96,9 @@ export function classifyError(error: unknown): ClassifiedError {
     return { ...byStatus(error.status, service, detail), detail };
   }
   // Errors thrown by the Gemini SDK carry a numeric HTTP status.
-  const status = (error as { status?: unknown } | null)?.status;
-  if (typeof status === "number") return { ...byStatus(status, "Gemini (inteligência artificial)", detail), detail };
+  const e = error as { status?: unknown; statusCode?: unknown } | null;
+  const status = typeof e?.status === "number" ? e.status : typeof e?.statusCode === "number" ? e.statusCode : null;
+  if (status !== null) return { ...byStatus(status, "Gemini (inteligência artificial)", detail), detail };
   if (/timeout|timed out|abort|ETIMEDOUT|ECONNRESET|ECONNREFUSED|ENOTFOUND|EAI_AGAIN|fetch failed/i.test(detail)) {
     return { code: "network", message: "Um serviço externo demorou demais ou ficou fora do ar.", detail };
   }

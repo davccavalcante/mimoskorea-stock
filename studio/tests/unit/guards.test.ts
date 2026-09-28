@@ -325,3 +325,43 @@ describe("request guard (proxy)", () => {
     expect(ok.headers.get("x-middleware-next")).toBe("1");
   });
 });
+
+describe("Gemini overload handling", () => {
+  it("skips a model whose daily quota is gone and waits on short limits", async () => {
+    const { retryWaitMs, isOverloaded } = await import("@/lib/providers/gemini");
+    const daily = Object.assign(new Error("429 Rate limit exceeded (limit: 20 requests per day on Free Tier)"), {
+      status: 429,
+    });
+    const minute = Object.assign(new Error("429 Rate limit exceeded. Please retry in 23s"), { status: 429 });
+    const busy = Object.assign(new Error("503 model is currently experiencing high demand"), { statusCode: 503 });
+    expect(isOverloaded(daily) && isOverloaded(minute) && isOverloaded(busy)).toBe(true);
+    expect(isOverloaded(Object.assign(new Error("API key not valid"), { status: 400 }))).toBe(false);
+    expect(retryWaitMs(daily)).toBeNull();
+    expect(retryWaitMs(minute)).toBe(24_000);
+    expect(retryWaitMs(busy)).toBe(5_000);
+  });
+});
+
+describe("model JSON parsing", () => {
+  it("accepts plain JSON, Markdown fences and surrounding text", async () => {
+    const { parseModelJson } = await import("@/lib/providers/gemini");
+    expect(parseModelJson('{"a":1}')).toEqual({ a: 1 });
+    expect(parseModelJson('```json\n{"a":1}\n```')).toEqual({ a: 1 });
+    expect(parseModelJson('Aqui está:\n{"a":{"b":[1,2]}}\nFim.')).toEqual({ a: { b: [1, 2] } });
+    expect(() => parseModelJson("sem json")).toThrow();
+  });
+});
+
+describe("wire format tolerance", () => {
+  it("fills missing secondary fields instead of failing the whole listing", () => {
+    const wire = SynthesisWireSchema.parse({
+      title: "Soju Lotte Chum-Churum Sabor Morango 360ml",
+      facts: [],
+      shipping: { weight: 0.7, dimensions: [20, 8, 8] },
+    });
+    expect(wire.shipping).toEqual({ weightKg: null, lengthCm: null, widthCm: null, heightCm: null });
+    expect(wire.sourcedWarnings).toEqual([]);
+    expect(wire.categoryId).toBeNull();
+    expect(() => SynthesisWireSchema.parse({ facts: [] })).toThrow(); // the title is never optional
+  });
+});

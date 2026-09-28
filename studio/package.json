@@ -12,7 +12,8 @@
     "check": "biome ci && tsc --noEmit -p .",
     "test": "vitest run",
     "test:staging": "STAGING_WC_URL=${STAGING_WC_URL:-http://localhost:8080} STAGING_WP_USER=${STAGING_WP_USER:-admin} STAGING_WP_APP_PASSWORD=${STAGING_WP_APP_PASSWORD:-$(tr -d '[:space:]' < ../staging/.cache/app-password.txt)} vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:live": "STUDIO_LIVE_TEST=1 vitest run tests/live --reporter=verbose"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",

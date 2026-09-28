@@ -60,7 +60,15 @@ export function getProviders(): Providers {
   if (!research.length) throw new ConfigError("Configure TAVILY_API_KEY e/ou EXA_API_KEY no arquivo .env.local.");
 
   return {
-    llm: new GeminiProvider(e.GEMINI_API_KEY, e.GEMINI_MODEL, e.GEMINI_TIMEOUT_MS),
+    llm: new GeminiProvider(
+      e.GEMINI_API_KEY,
+      e.GEMINI_MODEL,
+      e.GEMINI_TIMEOUT_MS,
+      e.GEMINI_FALLBACK_MODELS.split(",")
+        .map((m) => m.trim())
+        .filter(Boolean),
+      (message) => console.warn(`[gemini] ${message}`),
+    ),
     research,
     catalog,
     fetchImage: fetchReal,

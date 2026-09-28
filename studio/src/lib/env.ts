@@ -41,6 +41,10 @@ const schema = z.object({
   GEMINI_API_KEY: z.string().optional(),
   GEMINI_MODEL: z.string().default("gemini-3.8-flash"),
   GEMINI_VISION_MODEL: z.string().default("gemini-3.8-flash"),
+  /** Tried in order when the main model answers "high demand" (HTTP 503/429). Comma separated. */
+  GEMINI_FALLBACK_MODELS: z
+    .string()
+    .default("gemini-3.6-flash,gemini-3.7-flash,gemini-3.5-flash,gemini-3.1-flash-lite"),
   /** Upper limit per AI call; each operation also has its own shorter limit (identify 60 s, images 90 s). */
   GEMINI_TIMEOUT_MS: z.coerce.number().int().positive().default(300_000),
 

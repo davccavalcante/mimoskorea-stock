@@ -85,11 +85,75 @@ export function toResponseSchema(schema: z.ZodType): Record<string, unknown> {
 /** Wall-clock limit per operation (a hung call must not freeze the operator's screen). */
 const TIMEOUTS_MS: Record<string, number> = { identify: 60_000, images: 90_000, write: 300_000 };
 
+/**
+ * Parse the model's JSON. Some models wrap it in a Markdown fence (```json)
+ * or add a sentence around it despite the JSON response format.
+ */
+export function parseModelJson(raw: string): unknown {
+  const text = raw.trim();
+  try {
+    return JSON.parse(text);
+  } catch {
+    const fenced = /```(?:json)?\s*([\s\S]*?)```/i.exec(text)?.[1];
+    if (fenced) {
+      try {
+        return JSON.parse(fenced.trim());
+      } catch {
+        // fall through to the brace scan
+      }
+    }
+    const start = text.indexOf("{");
+    const end = text.lastIndexOf("}");
+    if (start >= 0 && end > start) return JSON.parse(text.slice(start, end + 1));
+    throw new SyntaxError("Resposta sem JSON");
+  }
+}
+
 function describeIssues(error: z.ZodError): string {
   return error.issues
     .slice(0, 8)
     .map((i) => `${i.path.join(".") || "(raiz)"}: ${i.message}`)
     .join("; ");
+}
+
+/** HTTP status of an SDK error (the SDK uses `status` or `statusCode` depending on the error class). */
+export function errorStatus(error: unknown): number | null {
+  const e = error as { status?: unknown; statusCode?: unknown } | null;
+  const status = typeof e?.status === "number" ? e.status : typeof e?.statusCode === "number" ? e.statusCode : null;
+  return status;
+}
+
+/** Overloaded or rate-limited model: worth retrying later or on another model. */
+export function isOverloaded(error: unknown): boolean {
+  const status = errorStatus(error);
+  if (status === 429 || status === 500 || status === 502 || status === 503 || status === 504) return true;
+  const message = error instanceof Error ? error.message : String(error);
+  return /high demand|overloaded|unavailable|resource.?exhausted|try again later/i.test(message);
+}
+
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/**
+ * How long to wait before retrying the SAME model, or null to move on now.
+ * "limit: 20 requests per day" -> null (the quota is gone until tomorrow);
+ * "Please retry in 23s" -> 24 s when short enough; 503 -> 5 s.
+ */
+export function retryWaitMs(error: unknown): number | null {
+  const message = error instanceof Error ? error.message : String(error);
+  if (/per day|daily|limit: 0 /i.test(message)) return null;
+  const retryIn = /retry in (\d+(?:\.\d+)?)\s*s/i.exec(message);
+  if (retryIn) {
+    const seconds = Number(retryIn[1]);
+    return seconds <= 30 ? Math.ceil(seconds + 1) * 1000 : null;
+  }
+  return errorStatus(error) === 429 ? 10_000 : 5_000;
+}
+
+function describeLimit(error: unknown): string {
+  const message = error instanceof Error ? error.message : String(error);
+  if (/per day|daily/i.test(message)) return "cota diária esgotada";
+  if (errorStatus(error) === 429) return "limite de uso";
+  return "sobrecarregado";
 }
 
 export class GeminiProvider implements LlmProvider {
@@ -100,15 +164,47 @@ export class GeminiProvider implements LlmProvider {
     apiKey: string,
     private readonly defaultModel: string,
     private readonly timeoutMs: number,
+    /** Models tried in order when the main one is overloaded (HTTP 503/429). */
+    private readonly fallbackModels: string[] = [],
+    private readonly onFallback: (message: string) => void = () => {},
   ) {
     this.ai = new GoogleGenAI({ apiKey });
   }
 
+  /**
+   * Try the requested model, then the fallbacks. On busy days Google answers
+   * 503 "high demand"; on the Free Tier it also answers 429 when the daily or
+   * per-minute quota is used up. A daily quota skips to the next model at
+   * once; a short per-minute limit or a 503 waits and retries once.
+   */
   async generateJson<T>(request: LlmRequest<T>): Promise<LlmResult<T>> {
-    const model = request.model ?? this.defaultModel;
+    const first = request.model ?? this.defaultModel;
+    const models = [first, ...this.fallbackModels.filter((m) => m && m !== first)];
+    let lastError: unknown = null;
+    for (const [index, model] of models.entries()) {
+      for (let attempt = 1; attempt <= 2; attempt++) {
+        try {
+          return await this.generateWith(model, request);
+        } catch (error) {
+          if (!isOverloaded(error)) throw error;
+          lastError = error;
+          const wait = retryWaitMs(error);
+          if (attempt === 2 || wait === null) break;
+          await sleep(wait);
+        }
+      }
+      const next = models[index + 1];
+      if (next)
+        this.onFallback(`${model} indisponível em ${request.operation} (${describeLimit(lastError)}); usando ${next}`);
+    }
+    throw lastError;
+  }
+
+  private async generateWith<T>(model: string, request: LlmRequest<T>): Promise<LlmResult<T>> {
     const schema = toResponseSchema(request.schema);
     let prompt = request.prompt;
     let lastRaw = "";
+    let lastProblem = "";
 
     for (let attempt = 1; attempt <= 2; attempt++) {
       // Each image is preceded by its own label, so indices can never drift.
@@ -135,7 +231,7 @@ export class GeminiProvider implements LlmProvider {
           generation_config: { thinking_level: request.thinking ?? "medium" },
           store: false,
         },
-        { timeout: Math.min(this.timeoutMs, TIMEOUTS_MS[request.operation] ?? this.timeoutMs), maxRetries: 1 },
+        { timeout: Math.min(this.timeoutMs, TIMEOUTS_MS[request.operation] ?? this.timeoutMs), maxRetries: 0 },
       );
 
       if (interaction.status && interaction.status !== "completed") {
@@ -145,8 +241,9 @@ export class GeminiProvider implements LlmProvider {
       lastRaw = interaction.output_text ?? "";
       let parsedJson: unknown;
       try {
-        parsedJson = JSON.parse(lastRaw);
+        parsedJson = parseModelJson(lastRaw);
       } catch {
+        lastProblem = "resposta não é JSON válido";
         prompt = `${request.prompt}\n\nATENÇÃO: sua resposta anterior não era JSON válido. Responda somente com JSON válido no schema pedido.`;
         continue;
       }
@@ -154,12 +251,16 @@ export class GeminiProvider implements LlmProvider {
       if (parsed.success) {
         const u = interaction.usage;
         const usage = u
-          ? `${u.total_input_tokens ?? 0} in / ${u.total_output_tokens ?? 0} out / ${u.total_thought_tokens ?? 0} thinking tokens`
-          : "n/d";
+          ? `${model}: ${u.total_input_tokens ?? 0} in / ${u.total_output_tokens ?? 0} out / ${u.total_thought_tokens ?? 0} thinking tokens`
+          : `${model}: n/d`;
         return { data: parsed.data, model, usage };
       }
-      prompt = `${request.prompt}\n\nATENÇÃO: sua resposta anterior não respeitou o schema (${describeIssues(parsed.error)}). Corrija e responda somente com JSON válido.`;
+      lastProblem = describeIssues(parsed.error);
+      prompt = `${request.prompt}\n\nATENÇÃO: sua resposta anterior não respeitou o schema (${lastProblem}). Corrija e responda somente com JSON válido.`;
     }
-    throw new LlmOutputError(`Gemini devolveu uma resposta inválida em ${request.operation}`, lastRaw.slice(0, 2000));
+    throw new LlmOutputError(
+      `${model} devolveu uma resposta inválida em ${request.operation}: ${lastProblem}`,
+      lastRaw.slice(0, 20_000),
+    );
   }
 }

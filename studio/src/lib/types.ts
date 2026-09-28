@@ -161,10 +161,10 @@ export type Nutrition = z.infer<typeof NutritionSchema>;
 // normalises it into the strict SynthesisSchema below.
 export const SynthesisWireSchema = z.object({
   title: z.string(),
-  shortDescription: z.string(),
-  introParagraphs: z.array(z.string()),
-  highlights: z.array(z.string()).describe("Non-numeric qualities only; numbers and specs belong in facts"),
-  usage: z.string().nullable(),
+  shortDescription: z.string().catch(""),
+  introParagraphs: z.array(z.string()).catch([]),
+  highlights: z.array(z.string()).describe("Non-numeric qualities only; numbers and specs belong in facts").catch([]),
+  usage: z.string().nullable().catch(null),
   facts: z.array(
     z.object({
       field: z.string().describe(`One of: ${FIELD_KEYS.filter((k) => k !== "nutrition").join(", ")}`),
@@ -181,17 +181,24 @@ export const SynthesisWireSchema = z.object({
       rows: z.array(z.object({ nutrient: z.string(), perServing: z.string(), dailyValue: z.string().nullable() })),
       sourceIds: z.array(z.string()),
     })
-    .nullable(),
-  sourcedWarnings: z.array(z.object({ text: z.string(), sourceIds: z.array(z.string()), evidence: z.string() })),
-  categoryId: z.number().int().nullable(),
-  seo: z.object({ metaTitle: z.string(), metaDescription: z.string(), focusKeyword: z.string() }),
-  shipping: z.object({
-    weightKg: z.number().nullable(),
-    lengthCm: z.number().nullable(),
-    widthCm: z.number().nullable(),
-    heightCm: z.number().nullable(),
-  }),
-  marketPrices: z.array(z.object({ amount: z.number(), currency: z.string(), sourceId: z.string() })),
+    .nullable()
+    .catch(null),
+  sourcedWarnings: z
+    .array(z.object({ text: z.string(), sourceIds: z.array(z.string()), evidence: z.string() }))
+    .catch([]),
+  categoryId: z.number().int().nullable().catch(null),
+  seo: z
+    .object({ metaTitle: z.string(), metaDescription: z.string(), focusKeyword: z.string() })
+    .catch({ metaTitle: "", metaDescription: "", focusKeyword: "" }),
+  shipping: z
+    .object({
+      weightKg: z.number().nullable().catch(null),
+      lengthCm: z.number().nullable().catch(null),
+      widthCm: z.number().nullable().catch(null),
+      heightCm: z.number().nullable().catch(null),
+    })
+    .catch({ weightKg: null, lengthCm: null, widthCm: null, heightCm: null }),
+  marketPrices: z.array(z.object({ amount: z.number(), currency: z.string(), sourceId: z.string() })).catch([]),
 });
 export type SynthesisWire = z.infer<typeof SynthesisWireSchema>;
 
