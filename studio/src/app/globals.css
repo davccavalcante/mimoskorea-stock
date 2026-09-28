@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "@fontsource-variable/archivo/wdth.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource/ibm-plex-mono/600.css";
+
+/* =============================================================================
+   Mimos Catalog Studio - monochrome "product label" design system
+   Paper, ink and rules. No colour: state is expressed with weight, inversion,
+   hatching and motion.
+   ============================================================================= */
+
+@theme {
+  --color-paper: #ffffff;
+  --color-ink: #0b0b0b;
+  --color-ink-2: #3d3d3d;
+  --color-ink-3: #737373;
+  --color-rule: #dcdcdc;
+  --color-wash: #f3f3f1;
+
+  --font-sans: "Archivo Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --animate-spin-slow: spin 1.4s linear infinite;
+  --animate-march: march 0.9s linear infinite;
+}
+
+@keyframes march {
+  to {
+    background-position: 28px 0;
+  }
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-variation-settings: "wdth" 100;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+/* Expanded display type, like the product name on a label */
+.display {
+  font-variation-settings: "wdth" 125;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.condensed {
+  font-variation-settings: "wdth" 75;
+}
+
+/* Hatched fill used for "in progress" and "pending" states */
+.hatch {
+  background-image: repeating-linear-gradient(-45deg, var(--color-ink) 0 2px, transparent 2px 7px);
+}
+
+.hatch-march {
+  background-image: repeating-linear-gradient(-45deg, var(--color-ink) 0 3px, transparent 3px 14px);
+  background-size: 28px 100%;
+  animation: var(--animate-march);
+}
+
+/* Subtle paper grain */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* -----------------------------------------------------------------------------
+   Rendered product description (the HTML that goes to WooCommerce)
+   ----------------------------------------------------------------------------- */
+.product-html {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-ink);
+}
+.product-html > * + * {
+  margin-top: 1rem;
+}
+.product-html h2 {
+  font-variation-settings: "wdth" 115;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--color-ink);
+  margin-top: 1.75rem;
+}
+.product-html ul {
+  list-style: none;
+  padding: 0;
+}
+.product-html li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.product-html li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 0.5rem;
+  height: 2px;
+  background: var(--color-ink);
+}
+.product-html table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+.product-html th,
+.product-html td {
+  text-align: left;
+  padding: 0.45rem 0.25rem;
+  border-bottom: 1px solid var(--color-rule);
+  vertical-align: top;
+}
+.product-html thead th {
+  border-bottom: 6px solid var(--color-ink);
+  font-weight: 600;
+}
+.product-html tbody th {
+  font-weight: 500;
+  width: 42%;
+}
+.product-html small {
+  color: var(--color-ink-3);
+  font-size: 0.75rem;
+}

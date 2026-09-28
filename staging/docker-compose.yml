@@ -1,0 +1,81 @@
+# =============================================================================
+# Local staging store: WordPress + WooCommerce + MariaDB (disposable)
+# =============================================================================
+# Usage: ./setup.sh   (see README.md)
+# Images can be overridden, e.g. when Docker Hub rate-limits you:
+#   DB_IMAGE=mirror.gcr.io/library/mariadb:11 CLI_IMAGE=mirror.gcr.io/library/wordpress:cli ./setup.sh
+
+name: mimos-staging
+
+x-wp-env: &wp-env
+  WORDPRESS_DB_HOST: db
+  WORDPRESS_DB_USER: wp
+  WORDPRESS_DB_PASSWORD: wp
+  WORDPRESS_DB_NAME: wp
+  # Application Passwords require HTTPS unless the environment type is "local".
+  WORDPRESS_CONFIG_EXTRA: |
+    define('WP_ENVIRONMENT_TYPE', 'local');
+
+services:
+  db:
+    image: ${DB_IMAGE:-mariadb:11}
+    environment:
+      MARIADB_DATABASE: wp
+      MARIADB_USER: wp
+      MARIADB_PASSWORD: wp
+      MARIADB_RANDOM_ROOT_PASSWORD: "1"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+    volumes:
+      - db:/var/lib/mysql
+
+  wordpress:
+    image: ${WP_IMAGE:-wordpress:latest}
+    depends_on:
+      db: { condition: service_healthy }
+    ports:
+      - "${WP_PORT:-8080}:80"
+    environment: *wp-env
+    volumes:
+      - wp:/var/www/html
+
+  # One-shot installer (WP-CLI). Runs as uid 33 to match www-data in the Debian WordPress image.
+  setup:
+    image: ${CLI_IMAGE:-wordpress:cli}
+    user: "33:33"
+    depends_on:
+      db: { condition: service_healthy }
+      wordpress: { condition: service_started }
+    environment:
+      <<: *wp-env
+      HOME: /tmp
+      WP_URL: http://localhost:${WP_PORT:-8080}
+    volumes:
+      - wp:/var/www/html
+      - ./.cache:/cache
+    entrypoint: ["sh", "-euc"]
+    command:
+      - |
+        until [ -f /var/www/html/wp-config.php ]; do sleep 1; done
+        wp core is-installed 2>/dev/null || wp core install \
+          --url="$$WP_URL" --title="Mimos Staging" \
+          --admin_user=admin --admin_password=admin-staging-only \
+          --admin_email=admin@example.test --skip-email
+        wp plugin is-active woocommerce || wp plugin install /cache/woocommerce.zip --activate
+        wp rewrite structure '/%postname%/'
+        wp option update woocommerce_currency BRL
+        wp option update woocommerce_manage_stock yes
+        wp option update woocommerce_weight_unit kg
+        wp option update woocommerce_dimension_unit cm
+        wp option update timezone_string America/Recife
+        wp user application-password delete admin --all >/dev/null 2>&1 || true
+        # Written outside the web root on purpose (never under /var/www/html).
+        wp user application-password create admin mimos-studio --porcelain > /cache/app-password.txt
+        echo "Staging ready: $$WP_URL (admin / admin-staging-only)"
+
+volumes:
+  db:
+  wp:

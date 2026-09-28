@@ -1,0 +1,1339 @@
+{
+ "method": "2 independent verifier agents (data-integrity lens, shopper lens)",
+ "results": [
+  {
+   "lens": "data-integrity",
+   "duplicate_groups": [
+    {
+     "product_ids": [
+      235,
+      954,
+      1021
+     ],
+     "canonical_suggestion": 235,
+     "confidence": "high",
+     "evidence": "All three are Orion O'Star potato chips, 30g, Queijo Duplo flavour, in the same line. 235 was created 2025-11-18 with the oldest URL, a brand taxonomy (O'star, Orion), tags and attributes. 954 was created 2026-09-02 16:25 and 1021 on 2026-09-12 09:33. The newer two have no SKU, brand or attributes, and their descriptions are byte-identical. 1021 is a re-creation of 954 made 10 days later.",
+     "conflicts_between_copies": "Price: 12.90 on 235 vs 12.99 on 954 and 1021. Stock: out-of-stock on 235 vs in-stock on 954 and 1021. Weight: 0.03 kg vs 0.2 kg vs 0.2 kg. Dimensions (cm): 15x10x5 vs 5x5x5 vs 5x3x6. SKU: 'SNK-BAT-OST-ORI-30G' on 235 (also used by 149, 231, 233 and 237, so not unique) vs empty on the other two. Categories: 235 has Salgadinhos, while 954 and 1021 have Ofertas Mimos and lack Salgadinhos. Text: 235 has generic AI copy that names the wrong flavour (\"sabores inovadores como kimchi\"); 954 and 1021 have flavour-specific copy with emojis. Title: 'Snack Batata Frita Coreano O'star...' vs 'Salgadinho Coreano O'Star ... | Snack Sabores' vs '... | Snack Sabor Queijo Duplo'. Images: attachment 236 (descriptive name) vs 955 'queijo' vs 1022 'zzz'."
+    },
+    {
+     "product_ids": [
+      237,
+      952,
+      1019
+     ],
+     "canonical_suggestion": 237,
+     "confidence": "high",
+     "evidence": "All three are Orion O'Star potato chips, 30g, Bife Americano (NY) flavour. 237 was created 2025-11-18 with the oldest URL, a SKU and a brand taxonomy. 952 was created 2026-09-02 16:23 and 1019 on 2026-09-12 09:31, and their descriptions are byte-identical ('Bife Grelhado NY'). 'Bife Americano' (237), 'Bife Americano NY' (952) and 'Bife NY' (1019) name the same flavour.",
+     "conflicts_between_copies": "Price: 12.90 on 237 vs 12.99 on 952 and 1019. Stock: out-of-stock on 237 vs in-stock on 952 and 1019. Weight: 0.03 kg vs 0.2 kg vs 0.2 kg. Dimensions (cm): 15x10x5 vs 5x5x5 vs 5x2x6. SKU: 'SNK-BAT-OST-ORI-30G' on 237 (shared with 4 other flavours) vs empty. Categories: Salgadinhos vs Ofertas Mimos. Brands, tags and attributes are present only on 237. Text: 237 is generic copy that mentions kimchi; 952 and 1019 have 'Bife Grelhado NY' copy with emojis. Images: attachment 238 (descriptive) vs 953 'bife' vs 1020 (a Shopee CDN hash)."
+    },
+    {
+     "product_ids": [
+      150,
+      864
+     ],
+     "canonical_suggestion": 150,
+     "confidence": "high",
+     "evidence": "Both are the Orion Marine Boy shrimp (Camarão) snack, 30g. 864 (2026-08-22) re-uses 150's own image attachment 228, named 'snack-coreano-marine-boy-orion-camarao-de-30g'. 864 is a re-creation of 150 (2025-11-15) under a longer SEO title.",
+     "conflicts_between_copies": "Price: 12.90 on 150 vs 10.99 on 864. Stock: out-of-stock on 150 vs in-stock on 864. Weight: 0.03 kg vs 0.200 kg. Dimensions (cm): 15x10x5 vs 5x5x8. SKU: 'SNK-MRB-ORI-CAM-30G' vs empty. Categories: Salgadinhos vs Ofertas Mimos. Brands, tags and attributes (including the allergen 'Contém crustáceos') exist only on 150. 864's text has the typo 'Marine Voy', uses emojis, and repeats the short description as the full description. 864 adds two Shopee images (865, 866)."
+    },
+    {
+     "product_ids": [
+      242,
+      253
+     ],
+     "canonical_suggestion": 242,
+     "confidence": "high",
+     "evidence": "Both are Lotte Sac Sac Uva Verde juice drink. They were created 7m44s apart on 2025-11-18 (21:08 and 21:16). 253's slug is 'refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde-2': WordPress added the '-2' because a post with the same title already existed. The title was then edited to '240ml', while the tags and short description still say 238ml. Both carry the same SKU REF-SAC-LT-238, which 145 (Morango) also uses.",
+     "conflicts_between_copies": "Price: 12.90 on 242 vs 9.99 on 253. Net volume: 238ml vs 240ml in the title and long description, although 253's slug, tags and short description say 238ml. SKU: identical (not unique). Images: separate uploads, attachment 243 '...238ml-sabor-uva-com-pedacos' vs 254 '...240ml-sabor-uva-com-pedacos'. Both are out-of-stock with the same weight and dimensions (0.28 kg; 5x5x13)."
+    }
+   ],
+   "variant_families": [
+    {
+     "family_name": "Lotte Milkis 250ml (refrigerante de leite)",
+     "product_ids": [
+      67,
+      277,
+      279,
+      281,
+      283,
+      285
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Original, Melão, Banana, Uva, Morango, Pêssego. All 6 share SKU REF-MLK-LT-250, so each variation needs its own SKU. The descriptions are identical, the price is 12.90 and every one is out-of-stock. 67 was created 2025-11-15; the rest on 2025-11-19."
+    },
+    {
+     "family_name": "Lotte Pepero 47g",
+     "product_ids": [
+      68,
+      269,
+      271,
+      273
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: White Cookie, Original, Choco Cookie, Amêndoa. All 4 share SKU BSC-PPR-LT-47G and have identical descriptions (price 19.99, out-of-stock)."
+    },
+    {
+     "family_name": "Orion O'Rice biscoito de arroz 129g",
+     "product_ids": [
+      69,
+      263,
+      265
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Queijo com Batata, Natural, Alga. All 3 share SKU BSC-ARR-ORC-ORI-129G and have identical descriptions."
+    },
+    {
+     "family_name": "Orion O'Star batata frita 30g",
+     "product_ids": [
+      149,
+      231,
+      233,
+      235,
+      237,
+      952,
+      954,
+      1019,
+      1021
+     ],
+     "axis": "flavor",
+     "notes": "These 9 listings make only 5 real variations: Maionese 149, Kimchi 231, Barbecue de Frango 233, Queijo Duplo 235 (merge 954 and 1021 into it) and Bife Americano NY 237 (merge 952 and 1019 into it). The 2025 listings share SKU SNK-BAT-OST-ORI-30G and carry generic text that mentions kimchi on every flavour. The 2026 copies have no SKU, price 12.99 instead of 12.90, and weight 0.2 kg instead of 0.03 kg."
+    },
+    {
+     "family_name": "Lotte Chum-Churum soju 360ml (com açúcar / saborizado)",
+     "product_ids": [
+      155,
+      154,
+      156,
+      810,
+      813,
+      815,
+      817
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Original, Morango, Pêssego, Maçã Verde, Blueberry, Lichia, Ameixa. The 2025 listings have legacy SKUs (SJ-CC-LT-ORI/MOR/PES-360) and weight 0.75 kg; the 2026 listings have no SKU and weight 0.6 kg. Heights also differ (21.5 vs 20 cm). 156 (Pêssego) has price 0.00 but is in-stock, with empty weight and dimensions. 155 is 34.90 while the others are 34.99. 815 is missing the 'Soju' category. 810 and 813 re-use 2025 attachments 223 and 221 from earlier Maçã Verde and Blueberry listings that no longer exist, which shows those products were deleted and re-created. The 2026 listings share one generic description. Keep the kit 829 separate as a bundle."
+    },
+    {
+     "family_name": "Lotte Saero soju 360ml zero açúcar",
+     "product_ids": [
+      819,
+      822,
+      825,
+      827
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Original, Lichia, Damasco, Kiwi (39.99, no SKU). Their descriptions are the Chum-Churum boilerplate, which also lists Chum-Churum flavours, so the text contradicts the line. Keep the kit 831 (all 4 flavours) as a separate bundle. Do not merge this family with Chum-Churum: it is a different line at a different price."
+    },
+    {
+     "family_name": "Lotte Sac Sac 238ml (com pedaços)",
+     "product_ids": [
+      145,
+      242,
+      253
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Morango (145) and Uva Verde (242). 253 is a duplicate of 242, so merge it first. All three share SKU REF-SAC-LT-238."
+    },
+    {
+     "family_name": "Lotte Cantata café gelado bag 230ml zero açúcar",
+     "product_ids": [
+      64,
+      66
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Americano, Amêndoa. The SKU scheme is inconsistent between them (CAF-CNT-LT-GEL-230 vs CAF-GEL-CNT-LT-230). Both are 14.90 and out-of-stock."
+    },
+    {
+     "family_name": "ChocoPie caixa 6 unidades",
+     "product_ids": [
+      259,
+      70
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Original (259) and Chocolate Duplo com Marshmallow (70). Both carry SKU BLN-CHP-LT-CHC. The brand is contradictory: the taxonomy, slug and image file names say Lotte, while the titles and descriptions say Orion. Lotte and Orion ChocoPies are different manufacturers' products, so confirm the brand before merging. 259's title says 180g but its description says 'Original 168g'."
+    },
+    {
+     "family_name": "Chuyin Mamadeira 280ml vidro (bebida láctea)",
+     "product_ids": [
+      833,
+      838,
+      840
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Original, Manga, Melão (19.99). All three share images 836 ('1') and 837 (Shopee), both uploaded with 833. The description's flavour list includes Morango, which is not listed as a product."
+    },
+    {
+     "family_name": "Chuyin suco com pedaços 500ml",
+     "product_ids": [
+      855,
+      858,
+      860
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Morango, Uva, Lichia (15.99). The descriptions are identical, and Shopee image 857 is shared. 858 is missing the 'Bebidas' category."
+    },
+    {
+     "family_name": "Yantai suco com pedaços 238ml",
+     "product_ids": [
+      842,
+      846,
+      849,
+      852
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Morango, Pêssego, Uva, Lichia (12.99). The descriptions are identical. All four share the screenshot 'Capturar' (attachment 843)."
+    },
+    {
+     "family_name": "Sakuragi Bala Gelatina 4D 50% fruta 50g",
+     "product_ids": [
+      894,
+      899,
+      902
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Morango, Uva, Maçã (19.99). Each gallery contains its main image uploaded twice (896/898, 900/901, 903/904) plus a shared '40% de DESCONTO' promo banner (897)."
+    },
+    {
+     "family_name": "Sakuragi Bala Gelatina 70% fruta 32g",
+     "product_ids": [
+      905,
+      908,
+      910
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Morango, Blueberry, Limão com Sal (13.99). This is a different line from the 4D 50g gummies."
+    },
+    {
+     "family_name": "Sakuragi Bala Hortelã 16g",
+     "product_ids": [
+      926,
+      932,
+      933
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Melancia, Café, Pêssego (12.99). All three share AI image 931 and banner 927."
+    },
+    {
+     "family_name": "Sakuragi Wafer 5 Camadas 110g",
+     "product_ids": [
+      941,
+      946
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Chocolate, Sorvete de Leite (29.99). Weight conflicts: 0.2 kg vs 0.3 kg for the same net content."
+    },
+    {
+     "family_name": "Sakuragi Wafer Cubos 65g",
+     "product_ids": [
+      934,
+      939
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Queijo, Sorvete de Leite (24.99)."
+    },
+    {
+     "family_name": "Sakuragi Biscoitos Animais 130g",
+     "product_ids": [
+      919,
+      923
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Chocolate, Leite (29.99)."
+    },
+    {
+     "family_name": "Sakuragi Biscoitos Snack 80g",
+     "product_ids": [
+      912,
+      916
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Abóbora, Batata Doce (29.99)."
+    },
+    {
+     "family_name": "Orion Masita Turtle Chips 60g",
+     "product_ids": [
+      875,
+      879
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Milho Agridoce, Alga Marinha (16.99). The descriptions are identical and each covers both flavours."
+    },
+    {
+     "family_name": "Orion Koony 40g",
+     "product_ids": [
+      147,
+      871
+     ],
+     "axis": "flavor",
+     "notes": "Flavours: Frango Frito (147, 2025, SKU SLG-KNY-FRG-40G, brand Koony, 0.04 kg) and Chili Picante (871, 2026, no SKU or brand, 0.1 kg). 871's text describes sticks while 147's describes potato, so verify both are the same Koony line and format before merging."
+    },
+    {
+     "family_name": "Orion Tok 38g",
+     "product_ids": [
+      151,
+      85
+     ],
+     "axis": "mixed",
+     "notes": "151 'Tok 38g Sabores' is one simple product for several flavours with no attribute: its image is Queijo and its attributes say carne/queijo. It should become a variable product (Queijo, Carne Barbecue). 85 is a 2-pack kit (Carne + Queijo) that could be a pack variation or stay a bundle. 160 (Topokki Yopokki 'Copo Sabores') has the same 'Sabores' pattern with no flavour chosen."
+    },
+    {
+     "family_name": "Mochila Escolar Viagem 25L notebook 15.6",
+     "product_ids": [
+      957,
+      967,
+      968
+     ],
+     "axis": "color",
+     "notes": "Colours: Cinza, Rosa, Verde (269.99). The descriptions are identical and all say 'na cor azul', which matches none of them. All three share the same 6 Mercado Livre gallery attachments (959-964). No SKU, and the weight (0.3 kg) and dimensions (5x5x10 cm) are placeholders."
+    },
+    {
+     "family_name": "Mochila Executiva 29L notebook",
+     "product_ids": [
+      969,
+      980,
+      981
+     ],
+     "axis": "color",
+     "notes": "Colours: Bege, Preto, Rosa (369.99). The descriptions are identical. No SKU, and the weight and dimensions are placeholders."
+    }
+   ],
+   "wrong_image_assignments": [
+    {
+     "product_id": 879,
+     "image_file": "miklho",
+     "problem": "Attachment 877 was uploaded while creating 875 (Turtle Chips Milho Agridoce). 'miklho' is a typo of 'milho' (corn), so a corn-flavour image is on the Alga Marinha (seaweed) listing."
+    },
+    {
+     "product_id": 1011,
+     "image_file": "Orion-Bungo-Choco-Mochi-Soft-Cake_-174g-Orion-131557256_700x700",
+     "problem": "The file name describes a different variant (Choco Mochi soft cake) in a 174g pack. The listing is BongBang 5 un / 140g, chocolate with red bean."
+    },
+    {
+     "product_id": 1011,
+     "image_file": "Orion_Cham_Booner_Bbang_174g_-_5",
+     "problem": "The file name shows the Korean 174g pack (Cham Bungeoppang, a different count). The listing sells 5 units / 140g."
+    },
+    {
+     "product_id": 70,
+     "image_file": "bolinho-coreano-choco-pie-lotte-chocolate-duplo-com-marshmallow",
+     "problem": "Brand conflict: the image, slug and brand taxonomy say Lotte, while the title and description say Orion. Lotte and Orion ChocoPies are different manufacturers' products, so either the image or the text is wrong."
+    },
+    {
+     "product_id": 259,
+     "image_file": "bolinho-coreano-choco-pie-lotte-chocolate-original",
+     "problem": "Same Lotte vs Orion brand conflict as 70. The title also says 180g while the description says 168g."
+    },
+    {
+     "product_id": 810,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "One Shopee image appears on 10 listings. It was uploaded twice on 2026-08-22 (attachment 812 with 810 and attachment 824 with 822). It sits on Chum-Churum Maçã Verde, Blueberry, Lichia and Ameixa (810, 813, 815, 817), Saero zero-sugar Original, Lichia, Damasco and Kiwi (819, 822, 825, 827), and kits 829 and 831. A single image cannot show both the sugared and zero-sugar lines and all these flavours, so it is wrong on most of them."
+    },
+    {
+     "product_id": 813,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Shared Shopee soju image (attachment 812), not specific to Blueberry; see 810."
+    },
+    {
+     "product_id": 815,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Shared Shopee soju image (attachment 812), not specific to Lichia; see 810."
+    },
+    {
+     "product_id": 817,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Shared Shopee soju image (attachment 812), not specific to Ameixa; see 810."
+    },
+    {
+     "product_id": 819,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "The Chum-Churum listings' image (attachment 812) is on a Saero zero-sugar Original listing, a different line."
+    },
+    {
+     "product_id": 822,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "This is a second upload (attachment 824) of the same Shopee image, on Saero Lichia. The same image is also on the Chum-Churum listings."
+    },
+    {
+     "product_id": 825,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Shared Shopee image (attachment 824) on Saero Damasco; see 810."
+    },
+    {
+     "product_id": 827,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Shared Shopee image (attachment 824) on Saero Kiwi; see 810."
+    },
+    {
+     "product_id": 846,
+     "image_file": "Capturar",
+     "problem": "Screenshot attachment 843 was uploaded with 842 (Yantai Morango) and re-used on Pêssego. A screenshot usually shows a label or nutrition table, which is flavour-specific."
+    },
+    {
+     "product_id": 849,
+     "image_file": "Capturar",
+     "problem": "Screenshot attachment 843 from the Morango listing (842) is re-used on Uva."
+    },
+    {
+     "product_id": 852,
+     "image_file": "Capturar",
+     "problem": "Screenshot attachment 843 from the Morango listing (842) is re-used on Lichia."
+    },
+    {
+     "product_id": 852,
+     "image_file": "dsdsdssdsdsds",
+     "problem": "Attachment 854 has the same 13-character junk name as attachment 848, uploaded 3 minutes earlier on 846 (Yantai Pêssego). This is most likely the same local file uploaded again, so the Pêssego image is probably on the Lichia listing."
+    },
+    {
+     "product_id": 852,
+     "image_file": "lichia",
+     "problem": "The claim that one 'lichia' file is shared is not supported: 815 (soju), 852 (Yantai) and 860 (Chuyin) use three separate attachments (816, 853, 861), each on a lichia product. However, the same file name was uploaded three times within 77 minutes on three different product types. If it is the same local file, the juice listings show a soju bottle. This needs a visual check. 'morango' (844 vs 856) and 'uva' (850 vs 859) repeat the same pattern between Yantai and Chuyin."
+    },
+    {
+     "product_id": 946,
+     "image_file": "Capturar",
+     "problem": "Screenshot attachment 943 was uploaded with 941 (Wafer 5 Camadas Chocolate) and re-used on Sorvete de Leite."
+    },
+    {
+     "product_id": 858,
+     "image_file": "br-11134207-81z1k-min2vvuzs8au88",
+     "problem": "Shopee attachment 857 was uploaded with 855 (Chuyin Morango) and re-used on Uva."
+    },
+    {
+     "product_id": 860,
+     "image_file": "br-11134207-81z1k-min2vvuzs8au88",
+     "problem": "Shopee attachment 857 from Chuyin Morango is re-used on Lichia."
+    },
+    {
+     "product_id": 838,
+     "image_file": "1",
+     "problem": "Attachments 836 ('1') and 837 ('br-11134207-820lf-mqbyej9kqo02df') were uploaded with 833 (Mamadeira Original) and re-used on Manga. Attachment 834 'asasa', from the same upload batch, is also on Manga. Note: the '1' files on 957 (attachment 958) and 993 (attachment 994) are separate attachments, not the same image."
+    },
+    {
+     "product_id": 840,
+     "image_file": "1",
+     "problem": "The Original listing's images (attachments 836 '1' and 837, a Shopee hash) are re-used on Melão."
+    },
+    {
+     "product_id": 967,
+     "image_file": "D_NQ_NP_2X_646533-MLA83544912075_042025-F",
+     "problem": "All 6 Mercado Livre gallery attachments (959-964) were uploaded with 957 (Cinza) and re-used on the Rosa listing. The text also says 'cor azul'."
+    },
+    {
+     "product_id": 968,
+     "image_file": "D_NQ_NP_2X_830485-MLA92310392642_092025-F",
+     "problem": "The same 6 Mercado Livre attachments (959-964) from the Cinza listing are re-used on the Verde listing."
+    },
+    {
+     "product_id": 85,
+     "image_file": "snack-de-batata-coreano-orion-tok-38g-sabores-carne-barbecue",
+     "problem": "The listing is a 2-flavour kit (Carne + Queijo), but its only image is a single Carne Barbecue pack."
+    },
+    {
+     "product_id": 890,
+     "image_file": "40% de DESCONTO (61)",
+     "problem": "The featured (first) image is a promo banner, not the product. The same banner was uploaded 8 separate times (attachments 891, 897, 907, 914, 920, 927, 935, 942) and appears on 18 Sakuragi listings."
+    },
+    {
+     "product_id": 864,
+     "image_file": "br-11134207-81z1k-mehcxobm65mrad",
+     "problem": "Low confidence. This image shares the Shopee upload batch prefix 'mehcxobm' with the images of 1016 (Orion Miz), so it may come from a multi-product listing and show another product. 864 also re-uses attachment 228 from its duplicate, 150."
+    },
+    {
+     "product_id": 1007,
+     "image_file": "br-11134207-81z1k-mehbkcdkr6yr79",
+     "problem": "The product is correct but the media is duplicated: the same Shopee image was uploaded twice (attachments 1008 and 1010) into one gallery. The same happens on 894, 899 and 902."
+    }
+   ],
+   "not_duplicates_despite_similarity": [
+    {
+     "product_ids": [
+      894,
+      905
+     ],
+     "reason": "Both are Sakuragi Morango gummies from different lines: 4D 50% fruta 50g at R$19.99 vs 70% fruta 32g at R$13.99."
+    },
+    {
+     "product_ids": [
+      939,
+      946
+     ],
+     "reason": "Both are 'Sorvete de Leite' but different products: Wafer Cubos 65g (24.99) vs Wafer 5 Camadas 110g (29.99)."
+    },
+    {
+     "product_ids": [
+      919,
+      941
+     ],
+     "reason": "Both are chocolate but different products: Biscoitos Animais 130g vs Wafer 5 Camadas 110g."
+    },
+    {
+     "product_ids": [
+      815,
+      822
+     ],
+     "reason": "Both are lichia soju 360ml, but 815 is Chum-Churum (sugared, 34.99) and 822 is Saero (zero sugar, 39.99). They look alike only because they share boilerplate text and the same Shopee image."
+    },
+    {
+     "product_ids": [
+      155,
+      819
+     ],
+     "reason": "Both are 'Original' soju, but 155 is Chum-Churum (legacy SKU SJ-CC-LT-ORI-360, 34.90) and 819 is Saero zero sugar (39.99)."
+    },
+    {
+     "product_ids": [
+      154,
+      155,
+      156
+     ],
+     "reason": "These are three different Chum-Churum flavours (Morango, Original, Pêssego) with distinct SKUs. The heuristic flagged them only because it did not parse the flavour."
+    },
+    {
+     "product_ids": [
+      68,
+      271
+     ],
+     "reason": "Pepero White Cookie vs Choco Cookie. The heuristic flagged them because they share SKU BSC-PPR-LT-47G and have identical descriptions, but that is a SKU collision within a variant family, not a duplicate."
+    },
+    {
+     "product_ids": [
+      70,
+      259
+     ],
+     "reason": "ChocoPie Chocolate Duplo vs Original. They have the same SKU (BLN-CHP-LT-CHC), price and taxonomy but different flavours, and 259's description says 168g."
+    },
+    {
+     "product_ids": [
+      842,
+      855,
+      849,
+      858,
+      852,
+      860
+     ],
+     "reason": "The pairs 842/855 (Morango), 849/858 (Uva) and 852/860 (Lichia) share a flavour but differ in brand and size: Yantai 238ml (12.99) vs Chuyin 500ml (15.99)."
+    },
+    {
+     "product_ids": [
+      145,
+      842
+     ],
+     "reason": "Both are 238ml morango juice drinks with pieces, but from different manufacturers: Lotte Sac Sac (SKU REF-SAC-LT-238, 12.90) vs Yantai (12.99)."
+    },
+    {
+     "product_ids": [
+      242,
+      849
+     ],
+     "reason": "Both are grape, but different brand and variety: Lotte Sac Sac Uva Verde vs Yantai Uva."
+    },
+    {
+     "product_ids": [
+      985,
+      993
+     ],
+     "reason": "Both are black reinforced notebook backpacks created 2 minutes apart. The records disagree on price (389.99 vs 249.99), material (Poliéster Premium vs 1680D Nylon Balístico) and weight (0.4 vs 0.3 kg), and their galleries are separate attachments (986-992 vs 994-1000). The records do not show they are the same SKU. However, both galleries are numbered 2-7 and 985's files carry ' (2)' re-download suffixes, so a physical check is advised."
+    },
+    {
+     "product_ids": [
+      980,
+      985
+     ],
+     "reason": "Both are black: Executiva 29L (nylon balístico, USB, 369.99) vs Premium (poliéster, 389.99). They share only a Canva promo template ('Documento A4 etiqueta adesiva oferta balão...') as images."
+    },
+    {
+     "product_ids": [
+      967,
+      981
+     ],
+     "reason": "Both are pink, but different models: Escolar 25L at 269.99 vs Executiva 29L at 369.99."
+    },
+    {
+     "product_ids": [
+      957,
+      967,
+      968,
+      969,
+      980,
+      981
+     ],
+     "reason": "The heuristic marked these as the same item because the descriptions are identical within each model. They are colour variants of two models (25L Escolar and 29L Executiva), not duplicates."
+    },
+    {
+     "product_ids": [
+      875,
+      879
+     ],
+     "reason": "Their descriptions are identical, but the flavours differ (Milho Agridoce vs Alga Marinha)."
+    },
+    {
+     "product_ids": [
+      148,
+      875
+     ],
+     "reason": "Both are Orion milho agridoce snacks, but 148 is 35g and 'picante' while 875 is Turtle Chips 60g: different size and product."
+    },
+    {
+     "product_ids": [
+      147,
+      871
+     ],
+     "reason": "Koony Frango Frito vs Chili Picante: different flavours."
+    },
+    {
+     "product_ids": [
+      85,
+      151
+     ],
+     "reason": "A 2-unit kit vs a single 38g pack of Orion Tok: different pack size."
+    },
+    {
+     "product_ids": [
+      829,
+      831
+     ],
+     "reason": "Kit of 6 sugared Chum-Churum (199.99) vs kit of 4 Saero zero sugar (155.99)."
+    },
+    {
+     "product_ids": [
+      831,
+      819,
+      822,
+      825,
+      827
+     ],
+     "reason": "831 is a bundle of the four Saero bottles and re-uses their images. It is not a duplicate of any single bottle."
+    },
+    {
+     "product_ids": [
+      131,
+      139,
+      140
+     ],
+     "reason": "All pink pigs, but different products: slippers (131), a lying plush 40cm (139) and a plush with bottle 35cm (140)."
+    },
+    {
+     "product_ids": [
+      141,
+      142
+     ],
+     "reason": "Different unicorn plush models: lying pink 50cm (109.99) vs infantil 40cm (78.99)."
+    },
+    {
+     "product_ids": [
+      64,
+      65
+     ],
+     "reason": "Both are Lotte coffees, but different lines and formats: Cantata bag 230ml vs Let's Be Cappuccino 240ml."
+    }
+   ]
+  },
+  {
+   "lens": "shopper",
+   "duplicate_groups": [
+    {
+     "product_ids": [
+      235,
+      954,
+      1021
+     ],
+     "canonical_suggestion": 235,
+     "confidence": "high",
+     "evidence": "All three are Orion O'Star 30g, flavour Queijo Duplo. 235 is the Nov/2025 listing (slug snack-batata-frita-coreano-ostar-orion-30g-sabor-queijo-duplo, image 236 '...o-star-orion-30g-sabores-duplo-queijo'). It was re-created as 954 on 2026-09-02 and again as 1021 on 2026-09-12. 954 and 1021 have byte-identical descriptions (716 chars, same emoji template, '🧀 Queijo Duplo – Explosão de sabor'). Shoppers see the same bag listed three times: one out of stock at R$12,90 and two in stock at R$12,99 with different titles.",
+     "conflicts_between_copies": "Price 12.90 (235) vs 12.99 (954, 1021). Stock: out-of-stock (235) vs in-stock (954, 1021). Weight 0.03 kg vs 0.2 kg. Dims 15x10x5 vs 5x5x5 (954) vs 5x3x6 (1021). SKU SNK-BAT-OST-ORI-30G (235; shared by all 5 O'Star flavours) vs none. Brand taxonomy O'star/Orion vs none. Category 'Salgadinhos' vs 'Ofertas Mimos'. Images: descriptive 236 vs 'queijo' (955) vs 'zzz' (1022). Text: 235 has a generic AI paragraph that mentions kimchi, not cheese. 954 and 1021 have the emoji description. Titles: 'Snack Batata Frita Coreano O'star...' vs 'Salgadinho Coreano O'Star ... | Batata Frita Crocante | Snack Sabores' vs '... | Snack Sabor Queijo Duplo'. Suggested fix: keep the 235 URL, move stock, price and the better text onto it, then 301-redirect 954 and 1021."
+    },
+    {
+     "product_ids": [
+      237,
+      952,
+      1019
+     ],
+     "canonical_suggestion": 237,
+     "confidence": "high",
+     "evidence": "All three are Orion O'Star 30g, flavour Bife Americano NY. 237 (2025-11-18) has image 238 '...o-star-orion-30g-sabores-bife-americano-ny'. It was re-created as 952 ('Sabor Bife Americano NY', 2026-09-02) and 1019 ('Snack Sabor Bife NY', 2026-09-12). 952 and 1019 have byte-identical descriptions (741 chars, '🥩 Bife Grelhado NY – Intenso e irresistível'). The same pattern and dates as the Queijo Duplo triplicate show a second batch re-entry by staff.",
+     "conflicts_between_copies": "Price 12.90 vs 12.99/12.99. Stock out-of-stock (237) vs in-stock (952, 1019). Weight 0.03 vs 0.2/0.2 kg. Dims 15x10x5 vs 5x5x5 (952) vs 5x2x6 (1019). SKU SNK-BAT-OST-ORI-30G vs none. Brand O'star/Orion vs none. Category Salgadinhos vs Ofertas Mimos. Flavour name differs: 'Bife Americano' vs 'Bife Americano NY' vs 'Bife NY' vs 'Bife Grelhado NY' in text. Images: descriptive 238 vs 'bife' (953) vs Shopee hash (1020). 237's text is the generic kimchi paragraph."
+    },
+    {
+     "product_ids": [
+      150,
+      864
+     ],
+     "canonical_suggestion": 150,
+     "confidence": "high",
+     "evidence": "Both are Orion Marine Boy, shrimp (Camarão), 30g. 864 (2026-08-22) reuses the exact media attachment 228 'snack-coreano-marine-boy-orion-camarao-de-30g' from 150 (2025-11-15) as its featured image. It is a re-created listing while the original is still published. A shopper sees the same bag with the same photo at two prices.",
+     "conflicts_between_copies": "Price 12.90 (150) vs 10.99 (864). Stock out-of-stock vs in-stock. SKU SNK-MRB-ORI-CAM-30G vs none. Weight 0.03 vs 0.200 kg. Dims 15x10x5 vs 5x5x8. Brand taxonomy Marine Boy/Orion vs none. Category Salgadinhos vs Ofertas Mimos. Attributes (allergen 'Contém crustáceos') only on 150. Text: 150 is generic AI copy. 864 is an emoji template with typo 'Marine Voy' in its first line and in the short description. 864 has 2 extra Shopee images (865, 866)."
+    },
+    {
+     "product_ids": [
+      242,
+      253
+     ],
+     "canonical_suggestion": 242,
+     "confidence": "high",
+     "evidence": "Both are Lotte Sac Sac, grape (Uva Verde) with pieces, created 8 minutes apart on 2025-11-18 (21:08 and 21:16). 253's slug is 'refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde-2'. The '-2' is WordPress's collision suffix, which proves the same title/slug already existed. SKU (REF-SAC-LT-238), tags ('238ml'), short description (238ml), attributes, category and brand are identical. The real can is 238ml, so '240ml' in 253's title is a typo.",
+     "conflicts_between_copies": "Price 12.90 (242) vs 9.99 (253). Volume in title and description 238ml vs 240ml (253's own tags and short description still say 238ml). Different image attachments: 243 '...238ml-sabor-uva-com-pedacos' vs 254 '...240ml-sabor-uva-com-pedacos'. Both out-of-stock. Same SKU."
+    },
+    {
+     "product_ids": [
+      985,
+      993
+     ],
+     "canonical_suggestion": 993,
+     "confidence": "low",
+     "evidence": "Two black, 'reforçada impermeável executiva resistente' 15.6-inch notebook backpacks, created 2 minutes apart (2026-09-02 16:41 and 16:43), with no SKU, no brand and near-identical keyword titles. Galleries: 993 = files '1','2','3','4','5','6','7'. 985 = '2','3 (2)','4 (2)','5 (2)','6 (2)','7 (2)' plus a promo banner. The ' (2)' suffix is the browser's download-collision rename, so the same numbered photo set was most likely downloaded twice. Both also carry a separate attachment titled plain '2' (986 and 995). A shopper sees the 'same' black backpack at R$389,99 and R$249,99. Needs a visual check before merging, because the ChatGPT texts claim different materials. A third black model, 980 (Executiva 29L Preto, R$369,99), adds to the confusion.",
+     "conflicts_between_copies": "Price 389.99 (985) vs 249.99 (993). Weight 0.4 vs 0.3 kg. Text: 985 'Poliéster Premium', 'Preto Executivo', no USB. 993 'Poliéster 1680D (Nylon Balístico)', 'Preto Carbono', Airflow. Titles 'Mochila Premium ... Preta Executiva Resistente' vs 'Mochila Faculdade ... Executiva Trabalho Resistente Preta'. 985's featured image is a Canva promo banner. 993 has a clean 7-photo gallery. Dims identical 6x6x12 (both implausible for a backpack)."
+    }
+   ],
+   "variant_families": [
+    {
+     "family_name": "Orion O'Star batata frita 30g",
+     "product_ids": [
+      149,
+      231,
+      233,
+      235,
+      237,
+      952,
+      954,
+      1019,
+      1021
+     ],
+     "axis": "flavor",
+     "notes": "5 real flavours: Maionese 149, Kimchi 231, Barbecue de Frango 233, Queijo Duplo 235, Bife Americano NY 237. 952/1019 duplicate 237 and 954/1021 duplicate 235, so merge them first. All 5 originals share the parent-style SKU SNK-BAT-OST-ORI-30G and image names '...-30g-sabores-<flavour>', which suggests this was once a variable product that got flattened into simple products. Prices are inconsistent (12.90 vs 12.99). The 2025 descriptions are a single generic text that mentions kimchi on every flavour."
+    },
+    {
+     "family_name": "Lotte Milkis refrigerante de leite 250ml",
+     "product_ids": [
+      67,
+      277,
+      279,
+      281,
+      283,
+      285
+     ],
+     "axis": "flavor",
+     "notes": "Original, Melão, Banana, Uva, Morango, Pêssego. All share SKU REF-MLK-LT-250 and an identical description, which fits a flattened variable product. Same price 12.90. All out of stock."
+    },
+    {
+     "family_name": "Soju Lotte Chum Churum 360ml",
+     "product_ids": [
+      154,
+      155,
+      156,
+      810,
+      813,
+      815,
+      817
+     ],
+     "axis": "flavor",
+     "notes": "Morango 154, Original 155, Pêssego 156 (2025 naming 'Soju Chum-Churum Lotte X de 360ml') plus Maçã Verde 810, Blueberry 813, Lichia 815, Ameixa 817 (2026 naming 'Soju Coreano Lotte Chum Churum 360ml Sabor X, Koreia, Kpop'). No flavour overlap, so none are duplicates. The 2026 descriptions already say 'escolha o sabor no momento da compra', which was written for a variable product that does not exist. Price 34.90/34.99, and 156 sells at R$0,00. Weight 0.75 vs 0.600 kg. 815 lacks the Soju category. 810/813 reuse images 223/221 of deleted 2025 Maçã Verde/Blueberry listings."
+    },
+    {
+     "family_name": "Soju Lotte Saero 360ml Sem Açúcar",
+     "product_ids": [
+      819,
+      822,
+      825,
+      827
+     ],
+     "axis": "flavor",
+     "notes": "Original, Lichia, Damasco, Kiwi, all at R$39,99. Keep separate from Chum Churum (a different, zero-sugar line at a different price), or merge only with a second 'Linha' attribute. Every Saero description is the Chum Churum template, so it calls the product 'Chum Churum' and lists sugared flavours. Kits 829 (6 Chum Churum assorted) and 831 (4 Saero) are bundles, not variations."
+    },
+    {
+     "family_name": "Lotte Pepero 47g",
+     "product_ids": [
+      68,
+      269,
+      271,
+      273
+     ],
+     "axis": "flavor",
+     "notes": "White Cookie, Original, Choco Cookie, Amêndoa. Shared SKU BSC-PPR-LT-47G. The heuristic wrongly marked 68 and 271 as the same item because both names contain 'cookie'."
+    },
+    {
+     "family_name": "Orion O'Rice biscoito de arroz 129g",
+     "product_ids": [
+      69,
+      263,
+      265
+     ],
+     "axis": "flavor",
+     "notes": "Queijo com Batata, Natural, Alga. Shared SKU BSC-ARR-ORC-ORI-129G. Same price 25.90."
+    },
+    {
+     "family_name": "Lotte Sac Sac 238ml com pedaços",
+     "product_ids": [
+      145,
+      242,
+      253
+     ],
+     "axis": "flavor",
+     "notes": "Morango 145 and Uva Verde 242. 253 is a duplicate of 242 (the '240ml' is a typo) and must be merged first. All three share SKU REF-SAC-LT-238."
+    },
+    {
+     "family_name": "Lotte Cantata café gelado bag 230ml",
+     "product_ids": [
+      64,
+      66
+     ],
+     "axis": "flavor",
+     "notes": "Americano and Amêndoa. The SKU pattern is inconsistent (CAF-CNT-LT-GEL-230 vs CAF-GEL-CNT-LT-230). Titles say 'Zero Açúcar' but attribute 'Açúcar' says 'Contém açúcar adicionado', and the short description mentions hazelnut/vanilla. Shoppers get conflicting information."
+    },
+    {
+     "family_name": "Suco com Pedaços Yantai 238ml",
+     "product_ids": [
+      842,
+      846,
+      849,
+      852
+     ],
+     "axis": "flavor",
+     "notes": "Morango, Pêssego, Uva, Lichia. Every listing has the same description listing all 4 flavours, which reads like a variable product. They share the 'Capturar' screenshot (843). No brand taxonomy and no SKU."
+    },
+    {
+     "family_name": "Suco com Pedaços Chuyin 500ml",
+     "product_ids": [
+      855,
+      858,
+      860
+     ],
+     "axis": "flavor",
+     "notes": "Morango, Uva, Lichia. The shared description advertises 'Uva verde' and 'Laranja', and no Laranja listing exists. 858 is missing the Bebidas category. They share the Shopee image 857."
+    },
+    {
+     "family_name": "Mamadeira Chuyin 280ml vidro (bebida cremosa)",
+     "product_ids": [
+      833,
+      838,
+      840
+     ],
+     "axis": "flavor",
+     "notes": "Original, Manga, Melão. The descriptions list Morango, which is not sold, and 838's text omits Melão. Dimensions differ per flavour (5x3x16, 5x5x15, 6x5x15). They share images '1' (836) and Shopee 837."
+    },
+    {
+     "family_name": "Sakuragi bala de gelatina 4D 50% fruta 50g",
+     "product_ids": [
+      894,
+      899,
+      902
+     ],
+     "axis": "flavor",
+     "notes": "Morango, Uva, Maçã at R$19,99. This is a different line from the 70% fruta 32g (905/908/910), so do not merge the two lines."
+    },
+    {
+     "family_name": "Sakuragi bala de gelatina 70% fruta 32g",
+     "product_ids": [
+      905,
+      908,
+      910
+     ],
+     "axis": "flavor",
+     "notes": "Morango, Blueberry, Limão com Sal at R$13,99."
+    },
+    {
+     "family_name": "Sakuragi bala hortelã 16g",
+     "product_ids": [
+      926,
+      932,
+      933
+     ],
+     "axis": "flavor",
+     "notes": "Melancia, Café, Pêssego at R$12,99. They share the ChatGPT image 931."
+    },
+    {
+     "family_name": "Sakuragi wafer cubos 65g",
+     "product_ids": [
+      934,
+      939
+     ],
+     "axis": "flavor",
+     "notes": "Queijo and Sorvete Leite at R$24,99. They share the ChatGPT image 938."
+    },
+    {
+     "family_name": "Sakuragi wafer 5 camadas 110g",
+     "product_ids": [
+      941,
+      946
+     ],
+     "axis": "flavor",
+     "notes": "Chocolate and Sorvete Leite at R$29,99. Weight 0.2 vs 0.3 kg. They share the 'Capturar' screenshot 943."
+    },
+    {
+     "family_name": "Sakuragi biscoitos animais 130g",
+     "product_ids": [
+      919,
+      923
+     ],
+     "axis": "flavor",
+     "notes": "Chocolate and Leite at R$29,99."
+    },
+    {
+     "family_name": "Sakuragi biscoitos snack 80g",
+     "product_ids": [
+      912,
+      916
+     ],
+     "axis": "flavor",
+     "notes": "Abóbora and Batata Doce at R$29,99."
+    },
+    {
+     "family_name": "Orion Turtle Chips (Masita) 60g",
+     "product_ids": [
+      875,
+      879
+     ],
+     "axis": "flavor",
+     "notes": "Milho Agridoce and Alga Marinha at R$16,99. Each listing's description already presents both flavours ('Sabor Milho Agridoce & Alga Marinha'). They share the corn image 'miklho' (877)."
+    },
+    {
+     "family_name": "Orion Koony salgadinho 40g",
+     "product_ids": [
+      147,
+      871
+     ],
+     "axis": "flavor",
+     "notes": "Frango Frito 147 (2025, brand Koony) and Chili Picante 871 (2026, 'Koony Orion'), both 40g at R$12,90. The heuristic missed this pair. 147's text says potato chips and 871's says sticks, so confirm they are the same line before merging."
+    },
+    {
+     "family_name": "Orion Choco Pie caixa 6 unidades",
+     "product_ids": [
+      70,
+      259
+     ],
+     "axis": "flavor",
+     "notes": "Chocolate Duplo c/ Marshmallow (180g) and Original (168g per its own text), so the flavour and net weight differ. They share SKU BLN-CHP-LT-CHC. 259's title says 'ChocoPie Chocolate 180g' while its slug and text say Original 168g. The brand taxonomy says Lotte while titles say Orion. The title needs fixing before any merge."
+    },
+    {
+     "family_name": "Orion Tok batata 38g",
+     "product_ids": [
+      151,
+      85
+     ],
+     "axis": "mixed",
+     "notes": "151 is a single pack titled 'Sabores' with no flavour and a queijo image. 85 is a 'Kit 2 Carne e Queijo' at R$27,99. The image names ('tok-38g-sabores-queijo' / '-carne-barbecue') show there used to be a flavour variation, and the carne single is gone. A variable product with 'Sabor/Pacote' options would solve this."
+    },
+    {
+     "family_name": "Mochila Escolar Viagem 25L notebook 15.6 USB",
+     "product_ids": [
+      957,
+      967,
+      968
+     ],
+     "axis": "color",
+     "notes": "Cinza, Rosa, Verde at R$269,99. The identical description says 'cor azul' for all three, and 6 of 7 gallery images (959-964) are the same Mercado Livre photos in all three colours."
+    },
+    {
+     "family_name": "Mochila Executiva 29L notebook USB",
+     "product_ids": [
+      969,
+      980,
+      981
+     ],
+     "axis": "color",
+     "notes": "Bege, Preto, Rosa at R$369,99 with an identical description. 980 has only Canva promo banners as images. Dims of 5x5x10 cm and 0.3 kg are placeholder values."
+    }
+   ],
+   "wrong_image_assignments": [
+    {
+     "product_id": 879,
+     "image_file": "miklho",
+     "problem": "Wrong flavour. 'miklho' (typo of 'milho' = corn, attachment 877) is the corn-flavour image, also used on 875 Turtle Chips Milho Agridoce, but here it sits on the Alga Marinha (seaweed) listing. 879's other images are 'aaa' and 'algas'."
+    },
+    {
+     "product_id": 815,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "One Shopee image, uploaded twice as attachments 812 and 824, is used on 10 soju listings: Chum Churum 810/813/815/817, Saero 819/822/825/827, Kit 6 829 and Kit Saero 831. One photo cannot show 8 flavours, 2 lines (with sugar vs zero sugar) and 2 kits, so on most listings it shows the wrong bottle or a lineup. On 815 it is the only image apart from the ambiguous 'lichia'."
+    },
+    {
+     "product_id": 810,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Same generic Shopee soju image (att 812) shared across 10 listings of different flavours and lines. It does not show Maçã Verde specifically."
+    },
+    {
+     "product_id": 813,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Same generic Shopee soju image (att 812) shared across 10 listings. It does not show Blueberry specifically."
+    },
+    {
+     "product_id": 817,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Same generic Shopee soju image (att 812) shared across 10 listings. It does not show Ameixa specifically."
+    },
+    {
+     "product_id": 819,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "The same image used on the sugared Chum Churum listings (att 812) is used on Saero Original Sem Açúcar, a different product line."
+    },
+    {
+     "product_id": 822,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Chum Churum/soju lineup image (att 824, a duplicate upload of 812) on Saero Lichia Sem Açúcar."
+    },
+    {
+     "product_id": 825,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Shared soju image (att 824) on Saero Damasco. It is not flavour-specific."
+    },
+    {
+     "product_id": 827,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Shared soju image (att 824) on Saero Kiwi. It is not flavour-specific."
+    },
+    {
+     "product_id": 829,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "The single-bottle/lineup image (att 824) also used on Saero singles appears on Kit 6 Chum Churum assorted. It does not show the kit contents, and the text itself is unsure whether the kit has 5 or 6 bottles."
+    },
+    {
+     "product_id": 831,
+     "image_file": "br-11134207-820lc-mralsmujhipye8",
+     "problem": "Kit 4 Saero Sem Açúcar gallery includes the image (att 812) also used on sugared Chum Churum singles 810/813/815/817."
+    },
+    {
+     "product_id": 852,
+     "image_file": "lichia",
+     "problem": "A file titled only 'lichia' is the featured image on three different products: soju 815 (att 816), Yantai 238ml juice 852 (att 853) and Chuyin 500ml juice 860 (att 861). The attachment IDs differ, but an identical bare local filename re-uploaded in the same session strongly suggests the same downloaded photo was reused. A soju bottle, a 238ml can and a 500ml bottle cannot share a photo, so this needs a visual check."
+    },
+    {
+     "product_id": 860,
+     "image_file": "lichia",
+     "problem": "Featured image titled 'lichia' (att 861), the same bare filename as the soju 815 and Yantai 852 images. Likely the same local file reused across unrelated products, so verify."
+    },
+    {
+     "product_id": 815,
+     "image_file": "lichia",
+     "problem": "Soju Chum Churum Lichia's featured image (att 816) is titled 'lichia', the same name later reused for juices 852 and 860. The staff renamed only the Saero one ('lichia sem'), so collisions are handled inconsistently."
+    },
+    {
+     "product_id": 855,
+     "image_file": "morango",
+     "problem": "Featured image 'morango' (att 856) has the same bare filename as Yantai 238ml Morango 842 (att 844). Different brand and size (Chuyin 500ml bottle), so this is at risk of being the Yantai can photo."
+    },
+    {
+     "product_id": 858,
+     "image_file": "uva",
+     "problem": "Featured image 'uva' (att 859) has the same bare filename as Yantai 238ml Uva 849 (att 850). Different brand and size, so there is a risk of cross-assignment."
+    },
+    {
+     "product_id": 842,
+     "image_file": "Capturar",
+     "problem": "One Windows screenshot 'Capturar' (att 843) is attached to all 4 Yantai flavours (842 Morango, 846 Pêssego, 849 Uva, 852 Lichia). It can show at most one flavour or a lineup. The other gallery images are named 'sasdasd', 'dsdsdssdsdsds' and 'sdsd'."
+    },
+    {
+     "product_id": 941,
+     "image_file": "Capturar",
+     "problem": "The screenshot 'Capturar' (att 943) is shared by Wafer 5 Camadas Chocolate 941 and Sorvete Leite 946, so it is wrong for at least one flavour."
+    },
+    {
+     "product_id": 857,
+     "image_file": "br-11134207-81z1k-min2vvuzs8au88",
+     "problem": "Wrong product_id in this entry: it cites attachment ID 857, not a product. The finding is that one Shopee image (attachment 857) is used on Chuyin 500ml Morango 855, Uva 858 and Lichia 860, so it is not flavour-specific."
+    },
+    {
+     "product_id": 838,
+     "image_file": "1",
+     "problem": "Mamadeira Chuyin Manga has no image identifiable as manga. Its gallery is Shopee 839, Shopee 837 (shared with Original 833 and Melão 840), '1' (att 836, shared by all three flavours) and 'asasa'."
+    },
+    {
+     "product_id": 840,
+     "image_file": "1",
+     "problem": "Generic image '1' (att 836) and Shopee 837 are shared by the Original, Manga and Melão mamadeiras, so they are not flavour-specific."
+    },
+    {
+     "product_id": 833,
+     "image_file": "1",
+     "problem": "Generic image '1' (att 836) and Shopee 837 are shared across 3 flavours. The main image is 'mamas'."
+    },
+    {
+     "product_id": 926,
+     "image_file": "ChatGPT Image 7 de ago. de 2026, 12_48_02",
+     "problem": "One AI-generated (ChatGPT) image (att 931) is shared by Bala Hortelã Melancia 926, Café 932 and Pêssego 933, so it is not flavour-specific and not a real packshot."
+    },
+    {
+     "product_id": 934,
+     "image_file": "ChatGPT Image 6 de ago. de 2026, 13_49_10",
+     "problem": "The AI-generated image (att 938) is shared by Wafer Cubos Queijo 934 and Sorvete Leite 939."
+    },
+    {
+     "product_id": 905,
+     "image_file": "ChatGPT Image 6 de ago. de 2026, 16_24_18",
+     "problem": "All Sakuragi listings (890, 902, 905, 908, 910, 912, 916, 919, 923, 926, 932, 933, 934, 939, 941, 946) use ChatGPT-generated images instead of real product photos. Shoppers may receive packaging that differs from the rendered image."
+    },
+    {
+     "product_id": 890,
+     "image_file": "40% de DESCONTO (61)",
+     "problem": "The featured image (position 0, att 891) is a generic '40% de DESCONTO' promo banner, so the shop thumbnail does not show the Tortinha product."
+    },
+    {
+     "product_id": 894,
+     "image_file": "40% de DESCONTO (61)",
+     "problem": "The same promo banner file '40% de DESCONTO (61)' was uploaded 8 times (atts 891, 897, 907, 914, 920, 927, 935, 942) and attached to 18 unrelated Sakuragi products (890, 894, 899, 902, 905, 908, 910, 912, 916, 919, 923, 926, 932, 933, 934, 939, 941, 946). Separately, 894's gallery repeats the same Amazon image twice (atts 896 and 898)."
+    },
+    {
+     "product_id": 899,
+     "image_file": "61RZ-t7Z5SL._AC_UF894,1000_QL80_",
+     "problem": "The same Amazon image is uploaded twice (atts 900 and 901) in the gallery, so there is no second angle. The image comes from Amazon's CDN."
+    },
+    {
+     "product_id": 902,
+     "image_file": "ChatGPT Image 6 de ago. de 2026, 16_12_50 (1)",
+     "problem": "The same AI image is uploaded twice (atts 903 and 904) as both featured and gallery image."
+    },
+    {
+     "product_id": 1007,
+     "image_file": "br-11134207-81z1k-mehbkcdkr6yr79",
+     "problem": "The same Shopee image is uploaded twice (atts 1008 and 1010) in the gallery."
+    },
+    {
+     "product_id": 967,
+     "image_file": "D_NQ_NP_2X_646533-MLA83544912075_042025-F",
+     "problem": "The Rosa backpack reuses 6 Mercado Livre photos (atts 959-964) identical to the Cinza (957) and Verde (968) listings, and the shared text says 'cor azul'. The gallery cannot show pink on all 6 images."
+    },
+    {
+     "product_id": 968,
+     "image_file": "D_NQ_NP_2X_830485-MLA92310392642_092025-F",
+     "problem": "The Verde backpack reuses the same 6 Mercado Livre photos (959-964) as the Cinza and Rosa listings."
+    },
+    {
+     "product_id": 957,
+     "image_file": "1",
+     "problem": "The Cinza backpack's featured image is a generic '1' (att 958, not the same file as the mamadeira '1' or 993's '1'), followed by the same 6 Mercado Livre photos used on Rosa and Verde."
+    },
+    {
+     "product_id": 980,
+     "image_file": "Documento A4 etiqueta adesiva oferta balão divertido amarelo e vermelho (6)",
+     "problem": "Every image is a Canva promo sticker export ((6), (8), (9), (10)) or 'HGH', with no plain photo of the black 29L backpack. The featured image is a promo banner."
+    },
+    {
+     "product_id": 985,
+     "image_file": "Documento A4 etiqueta adesiva oferta balão divertido amarelo e vermelho",
+     "problem": "The featured image is a promo banner. Gallery files '2', '3 (2)'…'7 (2)' look like a second download of the same numbered photo set used on 993."
+    },
+    {
+     "product_id": 1011,
+     "image_file": "Orion-Bungo-Choco-Mochi-Soft-Cake_-174g-Orion-131557256_700x700",
+     "problem": "The image names show the Orion 'Choco Mochi' bungeoppang 174g and 'Cham Booner Bbang 174g' (att 1014), but the listing sells 'Chocolate com Feijão Vermelho' with a net weight of 140g. At least one image is a different variant or size."
+    },
+    {
+     "product_id": 85,
+     "image_file": "snack-de-batata-coreano-orion-tok-38g-sabores-carne-barbecue",
+     "problem": "'Kit 2 Tok Carne e Queijo' shows only a single carne-barbecue pack (the old variation image), not the 2-pack or the queijo pack."
+    },
+    {
+     "product_id": 151,
+     "image_file": "snack-de-batata-coreano-orion-tok-38g-sabores-queijo",
+     "problem": "The listing is titled 'Tok 38g Sabores' (flavour unspecified, no selector), but its only image is the queijo pack, so the shopper cannot know which flavour ships."
+    },
+    {
+     "product_id": 160,
+     "image_file": "topokki-yopokki-youngpoong-coreano-120g-copo-sabores-tradicional",
+     "problem": "The listing sells 'Copo Sabores' and its text mentions carbonara, but its only image is the Tradicional cup. It is a leftover parent of a flattened variable product."
+    }
+   ],
+   "not_duplicates_despite_similarity": [
+    {
+     "product_ids": [
+      154,
+      155,
+      156
+     ],
+     "reason": "The heuristic marked these as the same item because it failed to extract the flavour ('None'). They are Chum-Churum 360ml Morango, Original and Pêssego, each with its own SKU (SJ-CC-LT-MOR/ORI/PES-360), so they are flavour variations. Separate issue: 156 is priced R$0,00 and in stock."
+    },
+    {
+     "product_ids": [
+      68,
+      271
+     ],
+     "reason": "Pepero 47g White Cookie vs Choco Cookie are different flavours. The shared SKU BSC-PPR-LT-47G and identical description come from flattening a variable product and do not make them duplicates."
+    },
+    {
+     "product_ids": [
+      894,
+      905
+     ],
+     "reason": "Both are Sakuragi gummies, strawberry flavour, but different lines: 4D 50% fruta 50g at R$19,99 vs 70% fruta 32g at R$13,99."
+    },
+    {
+     "product_ids": [
+      939,
+      946
+     ],
+     "reason": "Both are Sakuragi wafers, Sorvete Leite flavour, but different formats: Cubos 65g at R$24,99 vs 5 Camadas 110g at R$29,99."
+    },
+    {
+     "product_ids": [
+      957,
+      967,
+      968
+     ],
+     "reason": "Same backpack model in different colours (Cinza/Rosa/Verde). These are colour variations, not duplicates, even though they share 6 gallery photos and one text."
+    },
+    {
+     "product_ids": [
+      969,
+      980,
+      981
+     ],
+     "reason": "Mochila Executiva 29L in Bege/Preto/Rosa. These are colour variations."
+    },
+    {
+     "product_ids": [
+      967,
+      981
+     ],
+     "reason": "Both are pink notebook backpacks but different models: Escolar 25L at R$269,99 vs Executiva 29L at R$369,99."
+    },
+    {
+     "product_ids": [
+      980,
+      985
+     ],
+     "reason": "Both black executive backpacks, but 980 claims 29L with a USB port and belongs to the 29L colour family. 985 has no capacity or USB claim and a different price (389.99 vs 369.99). Shoppers are likely to be confused, so verify the photos."
+    },
+    {
+     "product_ids": [
+      70,
+      259
+     ],
+     "reason": "Choco Pie Chocolate Duplo c/ Marshmallow vs Choco Pie Original (168g per its text) are different flavours. 259's title wrongly says 'ChocoPie Chocolate 180g', which makes it look like 70, and both share SKU BLN-CHP-LT-CHC."
+    },
+    {
+     "product_ids": [
+      815,
+      822
+     ],
+     "reason": "Both lychee soju, but Chum Churum (with sugar, R$34,99) vs Saero Sem Açúcar (R$39,99) are different lines. Confusion comes from the Saero description, which calls itself 'Chum Churum'."
+    },
+    {
+     "product_ids": [
+      155,
+      819
+     ],
+     "reason": "Chum-Churum Original vs Saero Original Sem Açúcar are different Lotte soju lines."
+    },
+    {
+     "product_ids": [
+      842,
+      855
+     ],
+     "reason": "Both strawberry juice with pieces, but Yantai 238ml at R$12,99 vs Chuyin 500ml at R$15,99 differ in brand and size. They only share the image filename 'morango'."
+    },
+    {
+     "product_ids": [
+      849,
+      858
+     ],
+     "reason": "Yantai 238ml Uva vs Chuyin 500ml Uva differ in brand and size. They only share the image filename 'uva'."
+    },
+    {
+     "product_ids": [
+      852,
+      860
+     ],
+     "reason": "Yantai 238ml Lichia vs Chuyin 500ml Lichia differ in brand and size. They only share the image filename 'lichia'."
+    },
+    {
+     "product_ids": [
+      815,
+      852,
+      860
+     ],
+     "reason": "Lychee soju vs two lychee juices. The only link is the flavour and an image file named 'lichia'."
+    },
+    {
+     "product_ids": [
+      833,
+      855
+     ],
+     "reason": "Both Chuyin brand, but Mamadeira 280ml glass creamy/yogurt drink vs 500ml juice with pieces are different products."
+    },
+    {
+     "product_ids": [
+      85,
+      151
+     ],
+     "reason": "Orion Tok 38g Kit 2 (Carne+Queijo, R$27,99) vs a single pack (R$9,99). Same line, different pack, so this is a pack/flavour variation."
+    },
+    {
+     "product_ids": [
+      829,
+      831
+     ],
+     "reason": "Kit 6 Chum Churum assorted (R$199,99) vs Kit 4 Saero Sem Açúcar (R$155,99). Different line and bottle count, and neither duplicates the single-bottle listings."
+    },
+    {
+     "product_ids": [
+      919,
+      941
+     ],
+     "reason": "Both chocolate, but Sakuragi Animais 130g biscuits vs Wafer 5 Camadas 110g are different lines."
+    },
+    {
+     "product_ids": [
+      923,
+      939,
+      946
+     ],
+     "reason": "'Leite' vs 'Sorvete Leite' flavours across Animais 130g, Wafer Cubos 65g and Wafer 5 Camadas 110g. Different lines."
+    },
+    {
+     "product_ids": [
+      148,
+      875
+     ],
+     "reason": "Orion Milho Agridoce Picante 35g (2025, R$12,90) vs Turtle Chips Milho Agridoce 60g (2026, R$16,99). Different size, spicy vs non-spicy, different line."
+    },
+    {
+     "product_ids": [
+      867,
+      875
+     ],
+     "reason": "Orion CornChip Milho Assado 70g vs Turtle Chips Milho Agridoce 60g. Different snack lines."
+    },
+    {
+     "product_ids": [
+      147,
+      871
+     ],
+     "reason": "Koony 40g Frango Frito vs Chili Picante are different flavours of one line, so this is a variant pair."
+    },
+    {
+     "product_ids": [
+      145,
+      242
+     ],
+     "reason": "Sac Sac 238ml Morango vs Uva Verde are different flavours. Only 242/253 is a true duplicate."
+    },
+    {
+     "product_ids": [
+      64,
+      66
+     ],
+     "reason": "Cantata 230ml Americano vs Amêndoa are different flavours with different SKUs."
+    },
+    {
+     "product_ids": [
+      139,
+      140,
+      131
+     ],
+     "reason": "Pink pig items: plush lying 40cm (139), plush with bottle 35cm (140) and slippers (131). Different models, sizes and categories."
+    },
+    {
+     "product_ids": [
+      141,
+      142
+     ],
+     "reason": "Unicórnio Deitado Rosa 50cm vs Unicórnio Infantil 40cm. Different models and sizes."
+    },
+    {
+     "product_ids": [
+      1007,
+      70,
+      259
+     ],
+     "reason": "Orion Custard 12un/276g vs Choco Pie 6un. Different Orion cake lines."
+    }
+   ]
+  }
+ ]
+}

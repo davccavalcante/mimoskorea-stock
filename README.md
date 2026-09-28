@@ -6,32 +6,32 @@ inventory of the Mimos Korea Design WooCommerce store
 
 ## Status
 
-| Phase | State |
+| Part | State |
 |---|---|
-| 1. Audit of the current catalog (public data) | done, see [`audit/AUDIT_REPORT.md`](audit/AUDIT_REPORT.md) |
+| 1. Audit of the current catalog (public data) | done, see [`audit/`](audit/) |
 | 2. Admin-side diagnostics (database, drafts, trash, orders) | pending access, queries ready in [`audit/sql/diagnostics.sql`](audit/sql/diagnostics.sql) |
-| 3. Solution design and implementation | not started |
+| 3. Mimos Catalog Studio (AI product registration) | working in test mode, see [`studio/`](studio/) |
+| 4. Local staging store (WordPress + WooCommerce + MariaDB) | working, see [`staging/`](staging/) |
+| 5. Connection to the production store | pending credentials |
 
 ## Layout
 
 ```
-audit/
-  AUDIT_REPORT.md              full audit report (findings, evidence, priorities)
-  data/
-    README.md                  how the snapshot was captured and its limits
-    raw/                       public API snapshots (2026-09-28)
-    derived/                   per-product scorecard, duplicates, taxonomy, media, id space, reviews
-  scripts/
-    collect_public_catalog.py  re-collect the public snapshot over HTTP (stdlib only)
-    extract_exa_payloads.py    helper used for the first snapshot (captured via Exa)
-    analyze_catalog.py         deterministic metrics -> audit/data/derived
-  sql/
-    diagnostics.sql            read-only MariaDB queries to close the gaps public data cannot see
+audit/     catalog audit: report, data snapshots, analysis scripts, SQL diagnostics
+studio/    Mimos Catalog Studio (Next.js): name + link + stock -> researched, verified listing -> WooCommerce
+staging/   disposable WordPress + WooCommerce + MariaDB mirror of the catalog for testing
 ```
 
-## Reproduce the metrics
+## Quick start
 
 ```bash
-python3 audit/scripts/collect_public_catalog.py   # needs direct access to mimoskorea.com.br
-python3 audit/scripts/analyze_catalog.py
+# 1. test store (Docker)
+cd staging && ./setup.sh
+
+# 2. studio in test mode (mock AI, real staging store)
+cd ../studio && npm install && npm run build && npm run start
+# open http://localhost:3000
 ```
+
+For real AI research, fill `studio/.env.local` with the Gemini, Tavily and Exa keys and set
+`STUDIO_PROVIDERS=live` (see [`studio/README.md`](studio/README.md)).

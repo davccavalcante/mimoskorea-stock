@@ -1,0 +1,425 @@
+{
+ "findings": [
+  {
+   "title": "Título diz 'Sem Glúten' e atributo diz 'Contém glúten' no Choco Pie (aparece indexado)",
+   "severity": "critical",
+   "evidence": "Busca ao vivo (?audit=1) de https://mimoskorea.com.br/bolinho-coreano-choco-pie-lotte-chocolate-original-com-marshmallow/?audit=1 retornou o título 'Bolinho Coreano ChocoPie Chocolate 180g Orion | Caixa com 6 Unidades | Recheio Cremoso | Sem Glúten | Mimos Korea', a descrição '✅ Sem glúten' e, na tabela 'Informação adicional', 'Ingredientes Principais | Farinha de trigo...' e 'Alérgicos | Contém glúten, leite, soja'. A página https://mimoskorea.com.br/bolinho-coreano-choco-pie-lotte-chocolate-duplo-com-marshmallow/ mostra a mesma contradição: título '... | 180g | Sem Glúten | Importado Mimos Korea', '✅ Sem glúten' e 'Alérgicos | Contém glúten, leite, soja'. O snippet desse título no índice aparece em https://mimoskorea.com.br/comida-e-bebida/. Há ainda outra contradição na mesma página: o título diz 180g e a descrição do ID 259 diz 'Choco Pie Original 168g'.",
+   "detail": "O produto tem farinha de trigo, mas o título e o texto de SEO dizem 'Sem Glúten'. Essa alegação falsa sobre alérgeno já está no índice de busca, onde pessoas com doença celíaca podem lê-la. Gera risco sanitário e regulatório (rotulagem de alérgenos da ANVISA, CDC art. 31) e dá base para reclamações. É o exemplo mais grave de texto gerado por ChatGPT publicado sem revisão.",
+   "recommendation": "Tirar 'Sem Glúten' dos títulos e descrições dos IDs 70 e 259 imediatamente e pedir reindexação no Google Search Console. Na solução, fazer com que a declaração de alérgenos venha de um campo estruturado (tabela nutricional/rótulo) e bloquear a publicação quando o texto de marketing contradisser esse campo.",
+   "affected_product_ids": [
+    70,
+    259
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/bolinho-coreano-choco-pie-lotte-chocolate-original-com-marshmallow/?audit=1",
+    "https://mimoskorea.com.br/bolinho-coreano-choco-pie-lotte-chocolate-duplo-com-marshmallow/",
+    "https://mimoskorea.com.br/comida-e-bebida/"
+   ]
+  },
+  {
+   "title": "Cinco URLs de produto indexadas agora dão 404, incluindo toda a linha Sinomie (campeã de vendas)",
+   "severity": "high",
+   "evidence": "As 5 URLs abaixo estão no índice do Exa (resultados de busca e vitrine 'Mais Vendidos' da home em cache) e NÃO estão entre as 103 URLs publicadas: /bebida-coreana-cafe-gelado-cantata-lotte-bag-230ml-sabor-avela/, /bebida-cafe-coreano-lets-be-lotte-mild-coffee-de-175ml/, /lamen-asiatico-sinomie-102g-estilo-coreano-sabor-kimchi/, /lamen-asiatico-sinomie-72g-estilo-coreano-sabor-frango-picante/, /lamen-asiatico-sinomie-102g-estilo-coreano-sabor-frutos-do-mar/. Sem parâmetro, o web_fetch_exa devolveu cópias em cache: 'Fora de estoque', e no Mild Coffee o banner antigo 'ENVIOS GRÁTIS ... R$ 150'. Com '?audit=1', que força um crawl ao vivo, as 5 deram CRAWL_NOT_FOUND. As URLs de controle publicadas /soju-chum-churum-lotte-pessego-de-360ml/?audit=1 e /pelucia-cachorro-pug-fofinho-de-30cm/?audit=1 responderam com conteúdo. Importância comercial: a loja MIMOS KOREA DESIGN na Shopee tem o 'Lamen Sinomie 102g' como '1º mais vendido em Macarrão Instantâneo' (246 vendidos) e o 'Sinomie 72g' com 191 vendidos (superofertasbrasil). A loja oficial MKD no Mercado Livre lista 'Kit 3 Lamen Asiático Sinomie 102g' em 'Ofertas mais avaliadas'. Na home em cache, a seção 'Mais Vendidos' do próprio site trazia 4 itens Sinomie, Cantata Avelã e Let's Be Mild Coffee.",
+   "detail": "São perdas de SEO causadas por apagar ou despublicar produtos em vez de redirecioná-los. O Google continua mandando tráfego para URLs 404 da linha de produto mais vendida da marca. A cópia em cache do Mild Coffee 175ml mostra que ele foi criado duplicando o Cappuccino 240ml e trocando só o título: o texto começa com 'A Bebida Café Coreano Let's Be Lotte Cappuccino de 240ml...' e a tabela de atributos ficou com os valores vazios. É o fluxo 'duplica → edita título → apaga' descrito pelo usuário.",
+   "recommendation": "Criar redirecionamentos 301 das 5 URLs para os produtos equivalentes ou para a categoria, e reativar os Sinomie se houver estoque, porque vendem bem em outros canais. Na solução: nunca excluir produto indexado sem registrar a URL antiga e criar o 301 automaticamente; alertar quando um produto for criado por duplicação sem troca de descrição e atributos; e manter um registro de slug → ID antigo/novo.",
+   "affected_product_ids": [],
+   "sources": [
+    "https://mimoskorea.com.br/bebida-coreana-cafe-gelado-cantata-lotte-bag-230ml-sabor-avela/?audit=1",
+    "https://mimoskorea.com.br/bebida-cafe-coreano-lets-be-lotte-mild-coffee-de-175ml/",
+    "https://mimoskorea.com.br/lamen-asiatico-sinomie-102g-estilo-coreano-sabor-kimchi/?audit=1",
+    "https://mimoskorea.com.br/lamen-asiatico-sinomie-72g-estilo-coreano-sabor-frango-picante/?audit=1",
+    "https://mimoskorea.com.br/lamen-asiatico-sinomie-102g-estilo-coreano-sabor-frutos-do-mar/?audit=1",
+    "https://superofertasbrasil.com/p/lamen-sinomie-102g-estilo-coreano-macarrao-sabores-kimchi-frutos-do-mar-picantes-i.22099149111",
+    "https://superofertasbrasil.com/p/lamen-coreano-sinomie-72g-frango-picante-queijo-ou-carbonara-macarrao-instantane-i.22399143332",
+    "https://www.mercadolivre.com.br/loja/mkd-mimos-korea-design",
+    "https://mimoskorea.com.br/"
+   ]
+  },
+  {
+   "title": "Anúncio da MKD no Mercado Livre cadastra bebida Chuyin como mamadeira infantil, com volume e origem errados, e confunde cliente",
+   "severity": "high",
+   "evidence": "https://produto.mercadolivre.com.br/MLB-5173474044-mamadeira-vidro-coreano-iogurte-bebida-original-280-ml-_JM ('Anúncio pausado', vendido pela 'MKD Mimos Korea Design – Loja oficial do Mercado Livre', +25 vendidos). O título diz '280 Ml', mas as características dizem 'Capacidade em volume | 230 mL' e a descrição começa com '...1 UN 230 ML'. Tem atributos de mamadeira de bebê: 'Tamanho do bico | 2', 'Velocidade de fluxo | Médio', 'Idade mínima recomendada | 36 meses', 'É livre de BPA | Sim'. Afirma 'Produto importado da Coreia', enquanto outros revendedores da mesma bebida Chuyin informam 'Origem: China' (ex.: https://mimosdaisuki.com.br/produto/mamadeira-pronta-a-base-de-leite-chuyin-280ml/, https://www.madeinkoreaminas.com.br/produto/mamadeira-chuyin-bebida-a-base-de-leite-fermentado-original-280-ml.html). Pergunta de comprador no anúncio: 'Esta mamadeira é de vidro e não forro cancelar agora e a cor clara azul ou verdinha com nude menos Rosa', respondida só com 'Olá, posso te ajudar ?'.",
+   "detail": "O problema de cadastro não se limita ao WooCommerce: o mesmo operador cadastra errado também no Mercado Livre. A bebida láctea foi posta na categoria de mamadeiras e herdou atributos de produto infantil. O volume se contradiz e o país de origem está errado. A pergunta do comprador mostra confusão causada pelo anúncio. O site repete a mesma narrativa: a home diz 'tudo direto de Seul' e o ID 833 diz 'Diretemente da Ásia' (com erro de digitação).",
+   "recommendation": "Corrigir a categoria, o volume e a origem no anúncio MLB-5173474044 antes de reativá-lo. Na solução, manter uma ficha-mestra por produto (marca, fabricante, país de origem, volume, EAN) e distribuí-la para WooCommerce, Shopee e Mercado Livre, em vez de digitar a mesma informação em cada canal.",
+   "affected_product_ids": [
+    833,
+    838,
+    840
+   ],
+   "sources": [
+    "https://produto.mercadolivre.com.br/MLB-5173474044-mamadeira-vidro-coreano-iogurte-bebida-original-280-ml-_JM",
+    "https://mimosdaisuki.com.br/produto/mamadeira-pronta-a-base-de-leite-chuyin-280ml/",
+    "https://www.madeinkoreaminas.com.br/produto/mamadeira-chuyin-bebida-a-base-de-leite-fermentado-original-280-ml.html",
+    "https://mimoskorea.com.br/?audit=1"
+   ]
+  },
+  {
+   "title": "Produtos duplicados e descrições copiadas aparecem nos resultados de busca e competem entre si, também nos marketplaces",
+   "severity": "high",
+   "evidence": "Snippets indexados com texto de outro produto: o título 'Let's Be Lotte Mild Coffee de 175ml' traz a descrição 'Let's Be Lotte Cappuccino de 240ml' (resultados de site:mimoskorea.com.br soju e home em cache). O título 'Lamen Asiático Sinomie 102g ... Frutos do Mar' traz o snippet 'O Lamen Asiático Sinomie de 72g...' (home em cache). O snippet 'O'star Orion 30g Sabor Bife Americano' e o 'Queijo Duplo' dizem '...sabores inovadores como kimchi' (home). A página 'Barbecue de Frango' reutiliza literalmente o texto do Kimchi ('perfeito para jovens que apreciam sabores inovadores como kimchi'). Duplicatas publicadas: Sac Sac Uva Verde em /refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde/ (ID 242, '238ml', R$ 12,90) e /refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde-2/ (ID 253, título '240ml', R$ 9,99), ambas vivas via ?audit=1. O'Star Bife Americano em três produtos (237, 952, 1019) e O'Star Queijo Duplo em três (235, 954, 1021). Marine Boy Camarão 30g em dois (150, 864). Nos marketplaces: a loja MKD no ML tem 'Soju Coreano Pessego Chum Churum 12% Coreia' e 'Soju Bebida Coreana Chum Churum Pêssego - Lotte 360ml'. O ranking da Shopee lista dois anúncios Sinomie 102g da MIMOS KOREA DESIGN ('Lamen Sinomie 102g Estilo Coreano – Macarrão Sabores Kimchi...' e 'Lamen Estilo Coreano Macarrao Sinomie Sabores 102g Bowl').",
+   "detail": "O Google vê várias páginas quase iguais para a mesma busca (canibalização de palavra-chave) e snippets que descrevem outro produto ou outro peso. Duplicatas com preços diferentes (R$ 9,99 e R$ 12,90 para o mesmo Sac Sac) confundem o cliente e o estoque. O slug '-2' é a assinatura típica do WordPress quando se cria um produto novo em vez de editar o existente.",
+   "recommendation": "Escolher uma URL canônica por produto e redirecionar as demais com 301 (253→242; 952/1019→237; 954/1021→235; 864→150, ou o inverso, conforme qual tem mais histórico). Reescrever as descrições copiadas. Na solução, detectar duplicatas por marca+linha+sabor+peso (e EAN) antes de publicar, e impedir slugs com sufixo '-2'. Nos marketplaces, unificar os anúncios repetidos em um anúncio com variações.",
+   "affected_product_ids": [
+    65,
+    242,
+    253,
+    237,
+    952,
+    1019,
+    235,
+    954,
+    1021,
+    150,
+    864,
+    233,
+    231
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/",
+    "https://mimoskorea.com.br/refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde/?audit=1",
+    "https://mimoskorea.com.br/refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde-2/",
+    "https://mimoskorea.com.br/snack-batata-frita-coreano-ostar-orion-30g-sabor-barbecue-de-frango/",
+    "https://www.mercadolivre.com.br/loja/mkd-mimos-korea-design",
+    "https://superofertasbrasil.com/ranking/top-vendidos-alimentos-e-bebidas/top-vendidos-alimentos-embalados"
+   ]
+  },
+  {
+   "title": "Índice de busca mostra produtos já removidos e nomes antigos, e ainda não mostra os produtos novos",
+   "severity": "medium",
+   "evidence": "Versões em cache no índice x estado ao vivo (?audit=1): https://mimoskorea.com.br/papelaria/ indexada com 'Mostrando todos os 8 resultados' (Tesoura Escolar Dino Verde Fofy, Tesoura Escolar Bichinho Fofy, Post It 76x50mm, Post It 4 Cores 76x76mm, Livro Colorir Bobbie Goods, Estojo Infantil Unicórnios/Tubarão/Coelhinho Cósmico); ao vivo: 'Nenhum produto foi encontrado'. /marca/mimos-korea-design/ indexada com 'Pelúcia MKD Gato Imperador ... 30cm R$ 119,99'; ao vivo: 'Nenhum produto'. A home em cache lista 'Soju Chum-Churum Lotte Iogurte de 360ml', 'Cantata ... Caramelo Macchiato', 'Sinomie 102g Carne e Cogumelo' e 'Sinomie 72g Carbonara', e nenhum deles está entre os 103 publicados. Nomes antigos em https://www.mimoskorea.com.br/ (outra versão em cache): 'Bolinho Coreano Choco Pie Lotte Chocolate Duplo com Marshmallow' (hoje ID 70 'ChocoPie Orion') e 'Soju Chum-Churum Lotte Maça Verde de 360ml' (hoje ID 810, recriado em 2026-08-22 com outro nome). Na direção contrária, /mochilas/ está indexada como 'Nenhum produto foi encontrado', mas ao vivo mostra os 8 produtos criados em 2026-09-02, e /marca/orion/ indexada lista 13 itens antigos, sem nenhum dos Orion novos (864–1021, que não têm marca atribuída).",
+   "detail": "O índice reflete um catálogo que já não existe. Quem clica nos snippets de papelaria, Gato Imperador, Soju Iogurte etc. cai em página vazia ou 404, e os produtos novos (mochilas, Sakuragi, Orion novos) ainda não têm visibilidade orgânica. Como os produtos novos (IDs ≥ 810) não têm marca atribuída, também não aparecem nas páginas de marca.",
+   "recommendation": "Enviar o sitemap (/wp-sitemap.xml, declarado no robots.txt) ao Google Search Console e pedir recrawl. Redirecionar produtos removidos. Nas categorias vazias, retirar do menu ou aplicar noindex. Atribuir marca (Orion, Lotte, Sakuragi, Chuyin, Yantai) a todos os produtos novos.",
+   "affected_product_ids": [
+    70,
+    810,
+    957,
+    967,
+    968,
+    969,
+    980,
+    981,
+    985,
+    993,
+    864,
+    867,
+    871,
+    875,
+    879,
+    948,
+    952,
+    954,
+    1007,
+    1011,
+    1016,
+    1019,
+    1021
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/papelaria/",
+    "https://mimoskorea.com.br/papelaria/?audit=1",
+    "https://mimoskorea.com.br/marca/mimos-korea-design/",
+    "https://mimoskorea.com.br/marca/mimos-korea-design/?audit=1",
+    "https://mimoskorea.com.br/mochilas/",
+    "https://mimoskorea.com.br/mochilas/?audit=1",
+    "https://mimoskorea.com.br/marca/orion/",
+    "https://www.mimoskorea.com.br/",
+    "https://mimoskorea.com.br/"
+   ]
+  },
+  {
+   "title": "Fotos com nome Shopee (br-11134207) quase certamente vêm dos anúncios da própria loja na Shopee, e uma única capa foi reaproveitada em vários SKUs",
+   "severity": "medium",
+   "evidence": "A loja 'MIMOS KOREA DESIGN' existe na Shopee (nota 4.8/5, 12 produtos catalogados, 27.825ª no ranking de vendas; https://superofertasbrasil.com/s/mimos-korea-design). Os títulos desses anúncios usam o sufixo '| Mimos Korea' ('Lamen Sinomie 102g ... | Mimos Korea'), o mesmo padrão dos produtos do site criados a partir de 2026-08-22 (ex.: 'Mamadeira Chuyin 280ml Vidro | Bebida Cremosa | Sabor Original | Importada | Mimos Korea'). Nos dados locais, a mesma imagem 'br-11134207-820lc-mralsmujhipye8' é a imagem de 10 sojus diferentes (IDs 810, 813, 815, 817, 819, 822, 825, 827, 829, 831), 'br-11134207-820lf-mqbyej9kqo02df' aparece nos Chuyin 280ml 833/838/840 e 'br-11134207-81z1k-min2vvuzs8au88' nos Chuyin 500ml 855/858/860. O prefixo 'br-' é o namespace de imagens da Shopee Brasil; '11134201' (usado no ID 1007) é o tipo de imagem de descrição.",
+   "detail": "Na Shopee, um anúncio com variações tem uma única imagem de capa. Ao 'desmontar' o anúncio em produtos simples no WooCommerce, o operador copiou essa capa para todos os sabores. O cliente que compra 'Soju Sabor Kiwi' vê a mesma foto do 'Blueberry', o que abre caminho para reclamações de item errado. Não dá para descartar que parte das imagens venha de outros vendedores Shopee (há muitos anúncios de Chuyin e Choco Pie de terceiros), e as imagens da Shopee ficam em CDN de terceiros, sem garantia de licença.",
+   "recommendation": "Confirmar no Seller Center da Shopee se esses IDs de imagem pertencem aos anúncios da própria loja. Ter pelo menos uma foto própria por SKU (sabor), com nome de arquivo descritivo (marca-linha-sabor-peso.jpg). Na solução, rejeitar publicação quando dois SKUs de sabores diferentes compartilharem a mesma imagem principal.",
+   "affected_product_ids": [
+    810,
+    813,
+    815,
+    817,
+    819,
+    822,
+    825,
+    827,
+    829,
+    831,
+    833,
+    838,
+    840,
+    855,
+    858,
+    860,
+    70,
+    259,
+    864,
+    867,
+    871,
+    1007,
+    1016,
+    1019
+   ],
+   "sources": [
+    "https://superofertasbrasil.com/s/mimos-korea-design",
+    "https://superofertasbrasil.com/p/lamen-sinomie-102g-estilo-coreano-macarrao-sabores-kimchi-frutos-do-mar-picantes-i.22099149111",
+    "https://superofertasbrasil.com/ranking/top-vendidos-alimentos-e-bebidas/top-vendidos-alimentos-embalados"
+   ]
+  },
+  {
+   "title": "Fotos das mochilas com prefixo MLA (Mercado Libre Argentina) não vêm dos anúncios MLB da própria loja e misturam cores",
+   "severity": "medium",
+   "evidence": "Nos dados locais, as mochilas 957 (Cinza), 967 (Rosa) e 968 (Verde) usam imagens 'D_NQ_NP_2X_646533-MLA83544912075_042025-F', 'D_NQ_NP_2X_816704-MLA83253449746_042025-F', 'D_NQ_NP_2X_830485-MLA92310392642_092025-F' etc., e o mesmo arquivo aparece em cores diferentes (ex.: ...816704-MLA83253449746 em 957, 967 e 968; ...830485-MLA92310392642 em 967 e 968). Os anúncios da própria loja no Mercado Livre usam o código Brasil MLB (ex.: MLB-5173474044 da MKD e MLB-4870683630 da antiga vitrine Mercado Shops). A vitrine oficial da MKD (https://www.mercadolivre.com.br/loja/mkd-mimos-korea-design) mostra soju, lámen, garrafa térmica MKD, marmita, 'Mala Esportiva' e kits, mas as buscas não encontraram mochilas anunciadas pela MKD. As mochilas 980 e 985 usam como nome de imagem 'Documento A4 etiqueta adesiva oferta balão divertido amarelo e vermelho (6)', um nome padrão de template do Canva, e outras imagens se chamam '1', 'R', 'V', 'HGH', 'ro', 'ross'.",
+   "detail": "'MLA' é o código de site do Mercado Libre Argentina, e o sufixo _042025/_092025 parece indicar mês e ano do upload. Uma foto enviada pela conta brasileira da loja teria MLB. Então essas fotos foram baixadas de páginas de catálogo do Mercado Libre ou de anúncios de terceiros (possivelmente argentinos), o que traz risco de direitos autorais e de divergência entre foto e produto real. Como a mochila Cinza exibe fotos de outras cores, há risco de item errado.",
+   "recommendation": "Fotografar as mochilas em estoque (uma galeria por cor) ou obter imagens com autorização do fornecedor. Renomear os arquivos de forma descritiva. Na solução, sinalizar arquivos com padrões D_NQ_NP_*-MLA*, br-1113*, 'Documento A4...', nomes de 1–4 caracteres e o mesmo arquivo reutilizado em SKUs de cores diferentes.",
+   "affected_product_ids": [
+    957,
+    967,
+    968,
+    980,
+    985,
+    969,
+    981,
+    993
+   ],
+   "sources": [
+    "https://www.mercadolivre.com.br/loja/mkd-mimos-korea-design",
+    "https://produto.mercadolivre.com.br/MLB-5173474044-mamadeira-vidro-coreano-iogurte-bebida-original-280-ml-_JM",
+    "https://www.mimoskorea.com.br/MLB-4870683630-copo-200ml-fibra-de-bambu-orgnico-colorido-criancas-cozinha-_JM"
+   ]
+  },
+  {
+   "title": "Snippets indexados e a home ao vivo estão carregados de emojis",
+   "severity": "medium",
+   "evidence": "Snippet do índice de https://mimoskorea.com.br/suco-com-pedacos-yantai-sabor-pessego-238ml-bebida-importada-mimos-korea/: '...uma experiência única a cada gole 😋💧. Prático e leve, é ideal para qualquer momento do dia 🍃✨. 🌈 Sabores disponíveis... 🍓 Morango... 🌸 Lichia... 🍇 Uva... 🍑 Pêssego... 🌍 Bebida Importada... 🍹✨'. Home ao vivo (https://mimoskorea.com.br/?audit=1), seção 'Mais Vendidos': Chuyin 500ml Morango/Lichia/Uva exibem '🍹✨ Bebida Suco com Pedaços Chuyin 500ml | Bebida Importada | Mimos Korea ✨🍓🍊🍇', o mesmo texto nos 3 sabores. O snippet do ChocoPie em /comida-e-bebida/ começa com '🍫 Bolinho Coreano Choco Pie...'. A página ao vivo da Mochila Executiva 29L Preto tem '🎒', '🎁✨', '🌧️🛡️', '📱⚡', '🌬️💪', e o O'Star Bife NY tem '🥔', '🥩', '✅', '🛒'. Nos dados locais, 61 dos 103 produtos têm emoji no nome ou na descrição.",
+   "detail": "Como os emojis ficam no início do texto, eles entram no trecho usado como meta description ou excerpt e aparecem nos resultados de busca. O Google costuma reescrever ou suprimir snippets desse tipo, e o resultado passa uma imagem pouco profissional. O mesmo texto com emojis repetido em vários sabores gera conteúdo duplicado. É o padrão de conteúdo gerado por ChatGPT descrito pelo usuário.",
+   "recommendation": "Na solução, remover emojis dos campos título, descrição curta e primeiro parágrafo (e manter, se desejado, só ícones de interface no tema), gerar uma meta description única por SKU e bloquear a publicação de textos com emoji ou com '✅' e '🛒' como marcadores.",
+   "affected_product_ids": [
+    842,
+    846,
+    849,
+    852,
+    855,
+    858,
+    860,
+    833,
+    838,
+    840,
+    70,
+    259,
+    1019,
+    1021,
+    952,
+    954,
+    980,
+    969,
+    981,
+    957,
+    967,
+    968
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/suco-com-pedacos-yantai-sabor-pessego-238ml-bebida-importada-mimos-korea/",
+    "https://mimoskorea.com.br/?audit=1",
+    "https://mimoskorea.com.br/comida-e-bebida/",
+    "https://mimoskorea.com.br/mochila-executiva-29l-cor-preto-notebook-reforcada-impermeavel-usb-viagem-premium-mimos/",
+    "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-bife-ny/"
+   ]
+  },
+  {
+   "title": "URLs antigas do Mercado Shops em www.mimoskorea.com.br/MLB-* continuam indexadas e dão 404",
+   "severity": "medium",
+   "evidence": "Resultado de busca e fetch em cache de https://www.mimoskorea.com.br/MLB-4870683630-copo-200ml-fibra-de-bambu-orgnico-colorido-criancas-cozinha-_JM mostram uma vitrine Mercado Shops com o nome 'mimosmimos' e categorias 'Pelúcia, Garrafas e Canecas, Beleza e Cuidado Pessoal, Calçados, Roupas e Bolsas, Casa e Decoração, Papelaria'. O item exibido é 'Copo 200ml Fibra De Bambu...', com 'Anúncio pausado', R$ 8 e 'Marca | Sua Casa Decor' (marca de terceiro), e o slug tem o erro 'orgnico'. O fetch ao vivo com '?live=1' deu CRAWL_NOT_FOUND. O Mercado Livre encerrou o Mercado Shops em 31/12/2025 (https://www.ecommercebrasil.com.br/noticias/mercado-livre-anuncia-fim-do-mercado-shops).",
+   "detail": "O domínio (subdomínio www) já apontou para uma loja Mercado Shops operada por outra conta ('mimosmimos', diferente da loja oficial 'MKD Mimos Korea Design'). Quando a plataforma foi desligada e o DNS migrou para o WooCommerce, as URLs /MLB-* ficaram órfãs no índice e hoje dão 404. É mais uma camada da 'bagunça' de IDs e URLs, dessa vez entre plataformas.",
+   "recommendation": "Criar uma regra 301 para /MLB-* (www e apex) apontando para a home ou para a categoria correspondente, e pedir a remoção dessas URLs no Search Console. Documentar quais contas de marketplace pertencem à empresa ('mimosmimos', 'MKD Mimos Korea Design', loja Shopee).",
+   "affected_product_ids": [],
+   "sources": [
+    "https://www.mimoskorea.com.br/MLB-4870683630-copo-200ml-fibra-de-bambu-orgnico-colorido-criancas-cozinha-_JM",
+    "https://www.mimoskorea.com.br/MLB-4870683630-copo-200ml-fibra-de-bambu-orgnico-colorido-criancas-cozinha-_JM?live=1",
+    "https://www.ecommercebrasil.com.br/noticias/mercado-livre-anuncia-fim-do-mercado-shops"
+   ]
+  },
+  {
+   "title": "Categorias vazias ou rasas no menu, e a home promete canecas que não existem no catálogo",
+   "severity": "medium",
+   "evidence": "Páginas indexadas com 'Nenhum produto foi encontrado para a sua seleção': /presentes/, /agendas/, /lar/, /jogos/ e /eletronicos/ (esta mostra só o cabeçalho). Ao vivo, /papelaria/?audit=1 e /marca/mimos-korea-design/?audit=1 também estão vazias. Todas aparecem no menu principal ('Presentes, Agendas, Pelúcias, Comida e Bebida, Papelaria, Moda, Lar, Eletrônicos, Jogos, Bebê e Infantil'). A home ao vivo tem a seção 'Canecas Coreanas Exclusivas' e o texto '...papelaria fofinha, mochilas estilosas, bolsas e pelúcias kawaii, até maquiagem e acessórios K-Beauty originais, tudo direto de Seul'. As buscas por canecas e garrafas não acharam nenhuma página de produto desse tipo no domínio, e não há produto de papelaria, caneca, beleza ou chaveiro entre os 103 publicados.",
+   "detail": "Categorias vazias são 'soft 404' e thin content para o Google e frustram quem clica no menu. A home promete sortimento (canecas, K-beauty, 'direto de Seul') que o e-commerce não tem, e vários produtos são chineses (Chuyin, Yantai).",
+   "recommendation": "Esconder do menu e aplicar noindex às categorias com 0 produtos, até terem itens. Ajustar os textos da home ao sortimento real. Na solução, gerar um alerta quando uma categoria do menu ficar com menos de N produtos publicados.",
+   "affected_product_ids": [],
+   "sources": [
+    "https://mimoskorea.com.br/presentes/",
+    "https://mimoskorea.com.br/agendas/",
+    "https://mimoskorea.com.br/lar/",
+    "https://mimoskorea.com.br/jogos/",
+    "https://mimoskorea.com.br/eletronicos/",
+    "https://mimoskorea.com.br/papelaria/?audit=1",
+    "https://mimoskorea.com.br/marca/mimos-korea-design/?audit=1",
+    "https://mimoskorea.com.br/?audit=1"
+   ]
+  },
+  {
+   "title": "Peso e dimensões absurdos nas páginas ao vivo (afetam o cálculo de frete)",
+   "severity": "medium",
+   "evidence": "Páginas ao vivo: a Mochila Executiva 29L Preto aparece com 'Peso | 0,3 kg' e 'Dimensões | 5 × 5 × 10 cm'. O Salgadinho O'Star 30g aparece com 'Peso | 0,2 kg' e 'Dimensões | 5 × 2 × 6 cm'. As caixas de ChocoPie de 6 unidades e 180g aparecem com 'Peso | 0,05 kg' e 'Dimensões | 8 × 5 × 5 cm' (IDs 70 e 259).",
+   "detail": "Esses valores alimentam o cálculo de frete da página ('Calcular o Frete') e os feeds de marketplace. Uma mochila de 29L declarada com 5×5×10 cm gera frete subcotado ou divergência com a transportadora. Parecem valores padrão copiados de outro produto.",
+   "recommendation": "Na solução, validar faixas plausíveis de peso e volume por categoria (ex.: mochila > 0,5 kg e > 30 cm), com o peso da embalagem tirado da ficha-mestra.",
+   "affected_product_ids": [
+    980,
+    969,
+    981,
+    985,
+    993,
+    957,
+    967,
+    968,
+    1019,
+    1021,
+    70,
+    259
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/mochila-executiva-29l-cor-preto-notebook-reforcada-impermeavel-usb-viagem-premium-mimos/",
+    "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-bife-ny/",
+    "https://mimoskorea.com.br/bolinho-coreano-choco-pie-lotte-chocolate-duplo-com-marshmallow/",
+    "https://mimoskorea.com.br/bolinho-coreano-choco-pie-lotte-chocolate-original-com-marshmallow/?audit=1"
+   ]
+  },
+  {
+   "title": "Erros de digitação, keyword stuffing e marca errada em títulos e slugs permanentes",
+   "severity": "low",
+   "evidence": "Títulos e slugs publicados: 'Soju Coreano Lotte Chum Churum 360ml Sabor Maçã Verde , Koreia, Kpop' (erro 'Koreia', vírgula solta e 'Kpop' como palavra-chave; IDs 810, 813, 815, 817), o slug 'salgadinho-koony-orion-sabor-chili-picante-40g-impotado-coreano-mimos-korea' (ID 871), 'Biscoito Coreano Orion Miz Chocolate 54g | Ceral, Crocante...' (ID 1016) e 'Diretemente da Ásia' (IDs 833, 840). Os títulos longos com pipes repetem a marca da loja ('| Importado | Mimos Korea Design'), e no <title> o nome aparece duas vezes: 'Suco com Pedaços Yantai Sabor Pêssego 238ml | Bebida Importada | Mimos Korea – Mimos Korea Design'. Slug e marca não batem: o slug 'bolinho-coreano-choco-pie-lotte-...' (IDs 70, 259) vem com o título 'ChocoPie Orion', e o índice (www) ainda mostra o nome antigo 'Choco Pie Lotte'. Lotte e Orion fabricam Choco Pies diferentes.",
+   "detail": "Os erros de digitação no slug ficam permanentes, porque corrigi-los muda a URL e exige 301. Repetir o nome da marca nos títulos desperdiça espaço no SERP. A troca Lotte/Orion no mesmo produto é um erro de fato sobre o fabricante.",
+   "recommendation": "Padronizar os títulos como 'Marca Linha Sabor Peso – Tipo', sem pipes nem nome da loja (o tema já acrescenta a marca da loja). Revisar a ortografia antes de gerar o slug. Ao corrigir um slug, criar o 301 automaticamente.",
+   "affected_product_ids": [
+    810,
+    813,
+    815,
+    817,
+    871,
+    1016,
+    833,
+    840,
+    70,
+    259,
+    842,
+    846,
+    849,
+    852
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/suco-com-pedacos-yantai-sabor-pessego-238ml-bebida-importada-mimos-korea/",
+    "https://mimoskorea.com.br/bolinho-coreano-choco-pie-lotte-chocolate-duplo-com-marshmallow/",
+    "https://www.mimoskorea.com.br/"
+   ]
+  },
+  {
+   "title": "Hosts www e apex indexados com versões diferentes, e a home em cache está com acentos corrompidos (mojibake)",
+   "severity": "low",
+   "evidence": "https://mimoskorea.com.br/ no índice exibe 'PelÃºcias Coreanas Fofas', 'Comida Coreana AutÃªntica', 'Mochilas e AcessÃ³rios', 'Bebida CafÃ© Coreano...' (texto UTF-8 decodificado duas vezes). A home ao vivo (?audit=1) está correta ('Pelúcias Coreanas Fofas'). https://www.mimoskorea.com.br/ aparece como documento separado, com outra versão: banner 'R$ 290', chips com emoji '🍶 Soju 🧸 Pelúcias 🍜 Lámen 💄 Beleza...' e nomes antigos de produtos. O fetch ao vivo de www com ?audit=1 não retornou documento próprio (provável redirect para apex, não confirmado). O banner de frete grátis também aparece com dois valores nas páginas indexadas: 'R$ 150' (home, /presentes/, /lar/, /jogos/, /marca/orion/) e 'R$ 290' (/papelaria/, /mochilas/, /categoria-produto/biscoitos/).",
+   "detail": "Duas versões da home (www e apex) competem no índice, e a versão com mojibake pode ter sido a que o Google capturou. As informações de frete divergentes entre páginas indexadas passam inconsistência ao cliente.",
+   "recommendation": "Garantir 301 de www para apex (ou o inverso) e rel=canonical. Verificar no Search Console (Inspeção de URL) qual versão da home está indexada e pedir reindexação. Manter o limite de frete grátis em um único lugar (opção do tema) e pedir recrawl.",
+   "affected_product_ids": [],
+   "sources": [
+    "https://mimoskorea.com.br/",
+    "https://mimoskorea.com.br/?audit=1",
+    "https://www.mimoskorea.com.br/",
+    "https://mimoskorea.com.br/categoria-produto/biscoitos/"
+   ]
+  },
+  {
+   "title": "Presença em marketplaces e redes: MKD no ML, loja na Shopee, lojas físicas em shoppings; nenhuma página no Reclame Aqui encontrada",
+   "severity": "info",
+   "evidence": "Mercado Livre: loja oficial 'MKD Mimos Korea Design' (https://www.mercadolivre.com.br/loja/mkd-mimos-korea-design), com '+1.200 seguidores', categorias Alimentos e Bebidas, Calçados, Roupas e Bolsas e Casa, e anúncio com '+1000 vendas concluídas'. Houve também uma vitrine Mercado Shops 'mimosmimos' em www.mimoskorea.com.br. Shopee: loja 'MIMOS KOREA DESIGN', nota 4.8/5, 12 produtos catalogados (https://superofertasbrasil.com/s/mimos-korea-design); a URL da loja na própria Shopee não foi encontrada. Instagram e Facebook: 'instagram.com/mimoskoreadesign' e 'facebook.com/mimoskoreadesign' segundo o perfil LinkedIn (https://linkedin.com/company/mimoskorea); os fetches deram timeout ou erro. Hub de links 'entr.ai/mimoskoreadesign' (@mimoskoreadesign_contatos) lista 'Shopping Riomar, Shopping Jardins, Shopping Recife, Shopping MidWay Mall'. TikTok: https://www.tiktok.com/@mimoskoreadesign retornou só o shell JS, sem confirmar a conta. Google Maps (espelho 2pos.biz): 'Mimos Korea Design' com 4.9 e 8.537 avaliações e 'Mimos Korea Design - Shopping Recife | Presentes | Papelaria | Pelúcias' com 4.8 e 464 avaliações, no mesmo endereço (R. Padre Carapuceiro, 777) e com o mesmo telefone (81) 99237-3408. Reclame Aqui: https://www.siteconfiavel.com.br/site/mimoskorea-com-br diz 'Não há informações sobre esse site no Reclame Aqui'; o fetch da página de empresa no RA deu timeout. O único resultado do RA encontrado é da 'MIMOS STORE ONLINE', outra empresa, e não deve ser atribuído à Mimos Korea. CNPJ 41.147.282: matriz Recife, filiais em Recife e uma em Cajamar-SP (CNAE bebidas, aberta em 24/07/2025).",
+   "detail": "A reputação das lojas físicas é muito boa, e não foram encontradas reclamações públicas ligadas ao catálogo online. A evidência de confusão de cliente está no próprio anúncio ML (pergunta sobre 'cor' da 'mamadeira'). Há duas fichas Google no mesmo endereço, uma delas com nome recheado de palavras-chave, o que pode violar as diretrizes do Google Business Profile. Existem pelo menos 3 canais online com cadastros independentes (WooCommerce, Shopee e ML, além da antiga vitrine Mercado Shops), o que explica por que os mesmos erros e fotos circulam entre canais. A filial de Cajamar-SP pode estar ligada a fulfillment de marketplace (não verificado).",
+   "recommendation": "Consolidar ou reivindicar as fichas Google duplicadas. Cadastrar e monitorar a empresa no Reclame Aqui. Na solução, tratar WooCommerce como fonte da verdade e sincronizar Shopee e ML a partir dela (IDs de anúncio mapeados por SKU).",
+   "affected_product_ids": [],
+   "sources": [
+    "https://www.mercadolivre.com.br/loja/mkd-mimos-korea-design",
+    "https://superofertasbrasil.com/s/mimos-korea-design",
+    "https://linkedin.com/company/mimoskorea",
+    "https://entr.ai/mimoskoreadesign",
+    "https://2pos.biz/1630/116656",
+    "https://2pos.biz/1630/52340",
+    "https://www.siteconfiavel.com.br/site/mimoskorea-com-br",
+    "https://www.reclameaqui.com.br/mimos-store-online/atraso-na-entrega-falta-de-comunicacao-e-nao-reembolso-de-compra-online_urm-nY8RMH7rWOVY/",
+    "https://www.cirtrox.com.br/consulta-empresas/empresa/41147282000565-mimos-korea-design",
+    "https://www.tiktok.com/@mimoskoreadesign"
+   ]
+  },
+  {
+   "title": "Páginas legais indexadas com erro no endereço e jargão de IA",
+   "severity": "low",
+   "evidence": "/condicoes-de-compra/, /termos-de-uso/, /politica-de-privacidade/, /termos-e-condicoes-do-contrato/ e /politica-de-cookies/ trazem o endereço 'Shopping Recife – Rua Padre Carapuceiro, 777, ML oka 017pc' (o correto é 'Loja 0017 PC', segundo a GuiaPJ: 'RUA PADRE CARAPUCEIRO, 777, LOJA 0017 PC'). Os textos incluem 'chatbot HIM™ ... MAIC™ – Massive Artificial Intelligence Consciousness ... simulando consciência emergente ética' e uma cláusula de 'perícia técnica' contra 'denúncias falsas'.",
+   "detail": "São páginas indexadas que passam uma impressão pouco profissional (endereço com erro, jargão de IA em texto jurídico) e têm cláusulas potencialmente abusivas pelo CDC. O impacto no catálogo é baixo, mas reforça o padrão de texto gerado por IA e publicado sem revisão.",
+   "recommendation": "Revisar as páginas legais com um profissional, corrigir o endereço e retirar o jargão técnico e de marketing de IA.",
+   "affected_product_ids": [],
+   "sources": [
+    "https://mimoskorea.com.br/condicoes-de-compra/",
+    "https://mimoskorea.com.br/termos-de-uso/",
+    "https://mimoskorea.com.br/politica-de-privacidade/",
+    "https://guiapj.com.br/consulta-cnpj/41147282000131"
+   ]
+  }
+ ],
+ "urls_fetched": [
+  "https://mimoskorea.com.br/bebida-coreana-cafe-gelado-cantata-lotte-bag-230ml-sabor-avela/",
+  "https://mimoskorea.com.br/bebida-cafe-coreano-lets-be-lotte-mild-coffee-de-175ml/",
+  "https://mimoskorea.com.br/lamen-asiatico-sinomie-102g-estilo-coreano-sabor-kimchi/",
+  "https://mimoskorea.com.br/lamen-asiatico-sinomie-72g-estilo-coreano-sabor-frango-picante/",
+  "https://mimoskorea.com.br/lamen-asiatico-sinomie-102g-estilo-coreano-sabor-frutos-do-mar/",
+  "https://www.mimoskorea.com.br/MLB-4870683630-copo-200ml-fibra-de-bambu-orgnico-colorido-criancas-cozinha-_JM",
+  "https://mimoskorea.com.br/product-sitemap.xml",
+  "https://mimoskorea.com.br/sitemap_index.xml",
+  "https://mimoskorea.com.br/wp-sitemap-posts-product-1.xml",
+  "https://mimoskorea.com.br/robots.txt",
+  "https://mimoskorea.com.br/comida-e-bebida/",
+  "https://mimoskorea.com.br/papelaria/",
+  "https://mimoskorea.com.br/marca/mimos-korea-design/",
+  "https://mimoskorea.com.br/presentes/",
+  "https://mimoskorea.com.br/lar/",
+  "https://mimoskorea.com.br/moda/",
+  "https://www.mercadolivre.com.br/loja/mkd-mimos-korea-design",
+  "https://superofertasbrasil.com/s/mimos-korea-design",
+  "https://entr.ai/mimoskoreadesign",
+  "https://superofertasbrasil.com/p/lamen-sinomie-102g-estilo-coreano-macarrao-sabores-kimchi-frutos-do-mar-picantes-i.22099149111",
+  "https://superofertasbrasil.com/p/lamen-coreano-sinomie-72g-frango-picante-queijo-ou-carbonara-macarrao-instantane-i.22399143332",
+  "https://mimoskorea.com.br/",
+  "https://mimoskorea.com.br/pelucias/",
+  "https://mimoskorea.com.br/mochilas/",
+  "https://mimoskorea.com.br/categoria-produto/biscoitos/",
+  "https://mimoskorea.com.br/marca/orion/",
+  "https://mimoskorea.com.br/refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde-2/",
+  "https://mimoskorea.com.br/bolinho-coreano-choco-pie-lotte-chocolate-duplo-com-marshmallow/",
+  "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-bife-ny/",
+  "https://mimoskorea.com.br/mochila-executiva-29l-cor-preto-notebook-reforcada-impermeavel-usb-viagem-premium-mimos/",
+  "https://mimoskorea.com.br/soju-chum-churum-lotte-iogurte-de-360ml/",
+  "https://mimoskorea.com.br/bebida-coreana-cafe-gelado-cantata-lotte-bag-230ml-sabor-caramelo-macchiato/",
+  "https://mimoskorea.com.br/lamen-asiatico-sinomie-102g-estilo-coreano-sabor-carne-e-cogumelo/",
+  "https://mimoskorea.com.br/lamen-asiatico-sinomie-72g-estilo-coreano-sabor-carbonara/",
+  "https://mimoskorea.com.br/pelucia-mkd-gato-imperador-macio-fofo-antialergico-de-30cm/",
+  "https://mimoskorea.com.br/tesoura-escolar-dino-verde-fofy/",
+  "https://mimoskorea.com.br/estojo-infantil-unicornios/",
+  "https://mimoskorea.com.br/livro-colorir-bobbie-goods-infantil-48-paginas-capa-dura/",
+  "https://produto.mercadolivre.com.br/MLB-5173474044-mamadeira-vidro-coreano-iogurte-bebida-original-280-ml-_JM",
+  "https://www.instagram.com/mimoskoreadesign/",
+  "https://www.facebook.com/mimoskoreadesign",
+  "https://www.tiktok.com/@mimoskoreadesign",
+  "https://www.reclameaqui.com.br/empresa/mimos-korea-design/",
+  "https://www.mimoskorea.com.br/",
+  "https://www.mimoskorea.com.br/MLB-4870683630-copo-200ml-fibra-de-bambu-orgnico-colorido-criancas-cozinha-_JM?live=1",
+  "https://mimoskorea.com.br/bebida-coreana-cafe-gelado-cantata-lotte-bag-230ml-sabor-avela/?audit=1",
+  "https://mimoskorea.com.br/bebida-cafe-coreano-lets-be-lotte-mild-coffee-de-175ml/?audit=1",
+  "https://mimoskorea.com.br/lamen-asiatico-sinomie-102g-estilo-coreano-sabor-kimchi/?audit=1",
+  "https://mimoskorea.com.br/lamen-asiatico-sinomie-72g-estilo-coreano-sabor-frango-picante/?audit=1",
+  "https://mimoskorea.com.br/lamen-asiatico-sinomie-102g-estilo-coreano-sabor-frutos-do-mar/?audit=1",
+  "https://mimoskorea.com.br/soju-chum-churum-lotte-pessego-de-360ml/?audit=1",
+  "https://mimoskorea.com.br/pelucia-cachorro-pug-fofinho-de-30cm/?audit=1",
+  "https://mimoskorea.com.br/?audit=1",
+  "https://www.mimoskorea.com.br/?audit=1",
+  "https://mimoskorea.com.br/papelaria/?audit=1",
+  "https://mimoskorea.com.br/mochilas/?audit=1",
+  "https://mimoskorea.com.br/marca/mimos-korea-design/?audit=1",
+  "https://mimoskorea.com.br/soju-chum-churum-lotte-maca-verde-de-360ml/?audit=1",
+  "https://mimoskorea.com.br/refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde/?audit=1",
+  "https://mimoskorea.com.br/bolinho-coreano-choco-pie-lotte-chocolate-original-com-marshmallow/?audit=1"
+ ],
+ "limitations": "1) O índice consultado é o do Exa, não o do Google. Não vi SERPs reais do Google nem dados do Search Console, então 'indexado' significa 'presente no índice/cache do Exa'. As versões em cache não têm data. Pelo banner de frete grátis (R$150 vs R$290), há capturas de épocas diferentes. 2) Sem parâmetro, o web_fetch_exa devolve cópia em cache. Para saber o status ao vivo, acrescentei '?audit=1' ou '?live=1', o que força um novo crawl. Validei o método com duas URLs de controle publicadas (retornaram conteúdo). Mesmo assim, CRAWL_NOT_FOUND é a leitura do Exa, não um código HTTP que eu tenha visto diretamente. 3) Nove URLs foram montadas por mim seguindo o padrão de slug do site, como sondagem: soju-...-iogurte, cantata-...-caramelo-macchiato, sinomie carne-e-cogumelo e carbonara, pelucia-mkd-gato-imperador, tesoura-escolar-dino-verde-fofy, estojo-infantil-unicornios, livro-colorir-bobbie-goods e soju-...-maca-verde. Todas deram 404, mas o slug real pode ter sido outro, então esses negativos não são conclusivos. Não as apresento como URLs indexadas; os nomes desses produtos vêm de páginas de listagem indexadas. 4) Instagram (timeout), Facebook (erro de infraestrutura), página de empresa no Reclame Aqui (timeout) e TikTok (só shell JS) não puderam ser lidos. Os handles sociais vêm do perfil LinkedIn. A URL da loja na própria Shopee não foi encontrada; os dados da Shopee vêm do agregador superofertasbrasil.com. As avaliações Google vêm do espelho 2pos.biz. 5) A origem das imagens foi deduzida só pelo nome de arquivo e pelos padrões de ID (br-11134207 = Shopee BR; D_NQ_NP_2X_...-MLA = Mercado Libre Argentina). Não comparei pixels nem confirmei a titularidade dos anúncios de origem. A busca por anúncios de mochila da MKD no ML não achou nada, o que não prova que não existam. 6) Um resultado de busca grande (104 KB) foi salvo em arquivo. Li integralmente o trecho do domínio mimoskorea (linhas 1–182) e a lista de títulos e URLs do restante, que eram só sites de terceiros sem relação. 7) Não confirmei se www redireciona para o apex: o fetch de www com ?audit=1 não retornou documento separado. 8) Os IDs afetados vêm do snapshot local de 103 produtos publicados. As URLs indexadas que hoje dão 404 não têm ID conhecido e por isso aparecem com affected_product_ids vazio."
+}

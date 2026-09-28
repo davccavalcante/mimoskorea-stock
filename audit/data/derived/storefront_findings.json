@@ -1,0 +1,494 @@
+{
+ "findings": [
+  {
+   "title": "Same product listed 2-3 times at different prices, shown side by side (O'Star, Marine Boy)",
+   "severity": "high",
+   "evidence": "O'Star Queijo Duplo exists as id 235 'Snack Batata Frita Coreano O’star Orion 30g Sabor Queijo Duplo', 'R$ 12,90', 'Fora de estoque'; id 954 'Salgadinho Coreano O’Star Orion 30g Sabor Queijo Duplo | Batata Frita Crocante | Snack Sabores', 'R$ 12,99'; id 1021 'Salgadinho Coreano O’Star Orion 30g | Batata Frita Crocante | Snack Sabor Queijo Duplo', 'R$ 12,99'. 954 and 1021 have word-for-word identical descriptions. Bife Americano has the same three-way split: 237 'Sabor Bife Americano' (R$ 12,90, Fora de estoque), 952 'Sabor Bife Americano NY' (R$ 12,99) and 1019 'Sabor Bife NY' (R$ 12,99). Marine Boy: 150 'Snack Coreano Marine Boy Orion Camarão de 30g' at R$ 12,90 (Fora de estoque) and 864 '...Sabor Camarão 30g | Salgadinho Crocante, Divertido e Delicioso | Importação Mimos Korea' at R$ 10,99. 864 reuses 150's image file 'snack-coreano-marine-boy-orion-camarao-de-30g'. On a fresh homepage crawl (/?orderby=date), 'Mais Vendidos' shows old 235/237 at R$ 12,90 while the 'Comida e Bebida' block of the same page shows 1021, 1019, 954 and 952, so Queijo Duplo and Bife each appear three times. /comida-e-bebida/ lists 235/237 and /ofertas-mimos/ lists 1021/1019. The same 30g snack has three different shipping weights and dimensions: 0,03 kg at 15×10×5 (235), 0,2 kg at 5×5×5 (954) and 0,2 kg at 5×3×6 (1021).",
+   "detail": "A buyer sees the same bag of chips under three different names and two prices (R$ 12,90 vs R$ 12,99; R$ 12,90 vs R$ 10,99 for Marine Boy). The old copy is out of stock but still ranks as 'Mais Vendidos', because the sales history stays on the old ID, while the new copies have no reviews or sales. This splits SEO signals and creates near-duplicate content: the three URLs compete for the same query. The pattern matches an operator who re-creates a product instead of editing it or restocking it.",
+   "recommendation": "Pick one canonical ID per SKU (prefer the oldest, which holds the sales history and has brand/SKU/tags filled). Merge the better content into it, then trash the copies with a 301 redirect to the canonical URL. Enforce a unique SKU per product (954/1021/952/1019/864 have no SKU at all). Normalise names to one pattern, e.g. 'Salgadinho O'Star Orion Queijo Duplo 30g'. Consider one variable product 'O'Star 30g' with a flavour attribute instead of separate simple products.",
+   "affected_product_ids": [
+    235,
+    954,
+    1021,
+    237,
+    952,
+    1019,
+    150,
+    864
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/snack-batata-frita-coreano-ostar-orion-30g-sabor-queijo-duplo/",
+    "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-sabor-queijo-duplo-batata-frita-crocante-snack-sabores/",
+    "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-queijo-duplo/",
+    "https://mimoskorea.com.br/snack-batata-frita-coreano-ostar-orion-30g-sabor-bife-americano/",
+    "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-sabor-bife-americano-ny-batata-frita-crocante-snack-sabores/",
+    "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-bife-ny/",
+    "https://mimoskorea.com.br/snack-coreano-marine-boy-orion-camarao-de-30g/",
+    "https://mimoskorea.com.br/snack-coreano-marine-boy-orion-sabor-camarao-30g-salgadinho-crocante-divertido-e-delicioso-importacao-mimos-korea/",
+    "https://mimoskorea.com.br/?orderby=date",
+    "https://mimoskorea.com.br/ofertas-mimos/",
+    "https://mimoskorea.com.br/comida-e-bebida/"
+   ]
+  },
+  {
+   "title": "Single-flavour listings say 'Vários Sabores' / 'Sabores disponíveis' / 'escolha o sabor', but all products are simple and have no selector",
+   "severity": "high",
+   "evidence": "954/1021 (Queijo Duplo) and 952/1019 (Bife NY) all open with '🥔 Salgadinho Coreano O’Star Orion 30g | Batata Frita Crocante | Vários Sabores | Importado'. 815 'Soju ... Sabor Lichia' lists '🍓 Sabores disponíveis' with 12 flavours (Morango, Pêssego, Blueberry, Maçã Verde, Lichia, Ameixa, Tradicional, Kiwi Zero Açúcar, ...) and says '1 Garrafa de Soju Lotte Chum Churum 360ml (escolha o sabor no momento da compra)'. 833 'Mamadeira Chuyin 280ml ... Sabor Original' lists 'Sabores disponíveis: Morango, Manga, Tradicional, Melão'. 926 'Bala Hortelã Sakuragi Sabor Melancia 16g' lists 'Sabores disponíveis: Pêssego, Café Vanilla Latte, Melancia'. 919 'Biscoitos Sakuragi Animais 130g Sabor Chocolate' has the heading 'Sabores Variados' and lists Chocolate and Leite. Catalog scan: 41 non-kit single-SKU listings carry 'Sabores disponíveis', 'Vários Sabores' or 'escolha o sabor'. 11 older listings (64, 66, 68, 149, 231, 233, 235, 237, 269, 271, 273) say 'sabores variados' in generic text on single-flavour products.",
+   "detail": "A shopper on the Melancia listing reads that Pêssego and Café are 'available', but there is no selector because every product is a simple product. The soju page explicitly tells them to choose a flavour at checkout, which they cannot do. This produces wrong orders and complaints, and it conflicts with CDC art. 31, which requires clear and correct information about the product offered. The cause is one shared 'family' description pasted onto each flavour's listing.",
+   "recommendation": "Either convert each family into a WooCommerce variable product with a 'Sabor' attribute (one URL, a flavour selector, stock per variation), or rewrite every simple listing so it describes only its own flavour. Remove 'escolha o sabor no momento da compra' from all simple products.",
+   "affected_product_ids": [
+    952,
+    954,
+    1019,
+    1021,
+    815,
+    833,
+    926,
+    919,
+    923,
+    810,
+    813,
+    817,
+    819,
+    822,
+    825,
+    827,
+    838,
+    840,
+    842,
+    846,
+    849,
+    852,
+    855,
+    858,
+    860,
+    875,
+    879,
+    894,
+    899,
+    902,
+    905,
+    908,
+    910,
+    912,
+    916,
+    932,
+    933,
+    934,
+    939,
+    941,
+    946
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-sabor-queijo-duplo-batata-frita-crocante-snack-sabores/",
+    "https://mimoskorea.com.br/soju-coreano-lotte-chum-churum-360ml-sabor-lichia-koreia-kpop/",
+    "https://mimoskorea.com.br/mamadeira-chuyin-280ml-vidro-bebida-cremosa-sabor-original-importada-mimos-korea/",
+    "https://mimoskorea.com.br/bala-hortela-sakuragi-sabor-melancia-16g-importado-mimos-korea-design/",
+    "https://mimoskorea.com.br/biscoitos-sakuragi-animais-130g-sabor-chocolate-importado-mimos-korea-design/"
+   ]
+  },
+  {
+   "title": "Product photos include a '40% de DESCONTO' promo banner (no real discount), ChatGPT-generated images, photos of other products and images copied from Shopee/Mercado Livre; every image has an empty alt",
+   "severity": "high",
+   "evidence": "Based on image file names only; pixels were not viewed. 926 Bala Melancia uses 'ChatGPT Image 7 de ago. de 2026, 12_45_42', 'ChatGPT Image 7 de ago. de 2026, 12_48_02' and '40% de DESCONTO (61)'. The same '40% de DESCONTO (61)' file is attached to 18 products (890, 894, 899, 902, 905, 908, 910, 912, 916, 919, 923, 926, 932, 933, 934, 939, 941, 946), yet their pages show a single regular price with no strikethrough (e.g. 919 'R$ 29,99'). Mochilas 980/985 use 'Documento A4 etiqueta adesiva oferta balão divertido amarelo e vermelho' (a sticker template). 1021's only image is named 'zzz'. Yantai juices 842/846/849/852 use 'sasdasd', 'dsdsdssdsdsds' and 'Capturar' (a screenshot). 948 uses 'WhatsApp Image 2026-06-27 at 16.41.01'. 957 Mochila Cinza uses six 'D_NQ_NP_2X_...-MLA...' files, which is the Mercado Livre CDN naming. 1019, 815, 829, 819-827 and 864 use 'br-11134207-...' Shopee CDN hashes, and 815, 829, 819, 822, 825 and 827 share the identical file 'br-11134207-820lc-mralsmujhipye8'. 1011 BongBang (5un, 140g) includes 'Orion-Bungo-Choco-Mochi-Soft-Cake_-174g' and 'Orion_Cham_Booner_Bbang_174g_-_5', which are different products. Catalog-wide image name classes: 60 junk names, 34 Shopee hashes, 27 AI-generated, 23 promo banners, 18 Mercado Livre copies, 6 screenshots, 1 WhatsApp export, 52 descriptive. images_alt_all_empty is true for 103/103 products.",
+   "detail": "For shoppers, the gallery for a R$ 12,99 candy advertises '40% de DESCONTO' with no reduced price anywhere. That is potentially misleading advertising (CDC art. 37 §1) and erodes trust. AI-rendered packshots may not match the real packaging. Photos of a different product (174g Bungo / Cham Booner on a 140g BongBang listing) are a direct misrepresentation. Images lifted from Shopee and Mercado Livre sellers carry copyright risk and are duplicate images across the web. Empty alts plus meaningless file names ('zzz', 'sdsd') give Google Images nothing to index.",
+   "recommendation": "Remove the '40% de DESCONTO' and sticker-template images from every product gallery. If there is a real promotion, set a WooCommerce sale price so a de/por price shows. Replace AI and marketplace images with the store's own photos of the real package, front and back, where the back label shows ingredients and nutrition. Rename files descriptively before upload and fill alt text with product, flavour and size. Delete orphaned and reused media.",
+   "affected_product_ids": [
+    926,
+    919,
+    923,
+    890,
+    894,
+    899,
+    902,
+    905,
+    908,
+    910,
+    912,
+    916,
+    932,
+    933,
+    934,
+    939,
+    941,
+    946,
+    980,
+    985,
+    1021,
+    842,
+    846,
+    849,
+    852,
+    948,
+    957,
+    1019,
+    1011,
+    815,
+    829,
+    819,
+    822,
+    825,
+    827,
+    864
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/bala-hortela-sakuragi-sabor-melancia-16g-importado-mimos-korea-design/",
+    "https://mimoskorea.com.br/biscoitos-sakuragi-animais-130g-sabor-chocolate-importado-mimos-korea-design/",
+    "https://mimoskorea.com.br/mochila-escolar-viagem-cor-cinza-notebook-15-6-impermeavel-usb-premium-25l/",
+    "https://mimoskorea.com.br/bolinho-orion-bongbang-5un-sabor-chocolate-com-feijao-vermelho-importado-mimos-korea-design/"
+   ]
+  },
+  {
+   "title": "Food and drink listings lack nutrition tables and allergens, and some carry contradictory facts ('Zero Açúcar' with added sugar, 'kimchi' on cheese chips)",
+   "severity": "high",
+   "evidence": "New-generation listings show only weight and dimensions under 'Informação adicional'. 954/1021 show 'Peso | 0,2 kg; Dimensões | 5 × 5 × 5 cm' with no ingredients or allergens. 833 Mamadeira Chuyin (a 'bebida láctea') has no ingredients, allergens or nutrition. 1011 BongBang (cake with chocolate and red bean) has no allergens. 1007 Custard says 'ovos frescos (22%)' but has no allergen table. Old-generation listings carry vague attributes: 235 Queijo Duplo 'Alérgicos | Pode conter leite, glúten' (a cheese snack certainly contains milk, it is not 'pode conter') and 'Calorias | Cerca de 150 kcal por pacote'. The Queijo Duplo and Bife Americano descriptions say 'perfeito para jovens que apreciam sabores inovadores como kimchi' and '...baixa caloria'; the kimchi sentence appears on 4 non-kimchi products (149, 233, 235, 237). 64 'Café Gelado Cantata ... Sabor Americano Zero Açúcar' shows 'Ingredientes Principais | Água purificada, açúcar, extrato de café (1.56%)' and 'Açúcar | Contém açúcar adicionado' on the live page, and 66 (Amêndoa Zero Açúcar) has the same attribute. None of the fetched food pages shows a tabela nutricional. 59/103 products have no attributes at all.",
+   "detail": "Buyers of imported foods, especially people with allergies, parents and diabetics for 'Zero Açúcar', cannot check composition before buying. A 'Zero Açúcar' product that states 'Contém açúcar adicionado' is a factual contradiction that invites complaints and a Procon issue under CDC arts. 6 III and 31 (information on composition and risks). Allergen and nutrition data in Portuguese is expected under ANVISA RDC 727/2022 and RDC 429/2020 for the label; online shoppers expect the same data on the page. Allergen misstatements are also a safety risk.",
+   "recommendation": "Create a mandatory food template: ingredients, 'Alérgicos: contém ... / pode conter ...', a tabela nutricional per portion from the Brazilian importer's label, validade/conservação, país de origem and importer. Fill it by transcribing the physical label, not by AI generation. Block publishing of food products that lack these fields. Fix 64/66 by verifying the real label and correcting either the name or the attribute. Remove the 'kimchi' and 'baixa caloria' boilerplate.",
+   "affected_product_ids": [
+    954,
+    1021,
+    952,
+    1019,
+    833,
+    1011,
+    1007,
+    235,
+    237,
+    149,
+    233,
+    64,
+    66,
+    150,
+    864
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/bebida-coreana-cafe-gelado-cantata-lotte-bag-230ml-sabor-americano-zero-acucar/",
+    "https://mimoskorea.com.br/snack-batata-frita-coreano-ostar-orion-30g-sabor-queijo-duplo/",
+    "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-queijo-duplo/",
+    "https://mimoskorea.com.br/mamadeira-chuyin-280ml-vidro-bebida-cremosa-sabor-original-importada-mimos-korea/",
+    "https://mimoskorea.com.br/bolinho-orion-bongbang-5un-sabor-chocolate-com-feijao-vermelho-importado-mimos-korea-design/",
+    "https://mimoskorea.com.br/bolinho-coreano-custard-orion-creme-de-ovos-caixa-com-12-unidades-276g-k-snack-importado-mimos-korea/"
+   ]
+  },
+  {
+   "title": "Soju listings: newer ones drop ABV and the 18+ warning, Saero listings are described as Chum Churum, the kit says '5/6 garrafas', and Pêssego has no price",
+   "severity": "high",
+   "evidence": "The old listing 156 shows 'ABV | 12%' and 'Aviso | Proibido para menores de 18 anos, beba com moderação'. The newer 815 'Soju Coreano Lotte Chum Churum 360ml Sabor Lichia, Koreia, Kpop' shows only 'Peso | 0,600 kg; Dimensões | 6,5 × 6,5 × 20 cm', with no ABV and no age warning. A catalog scan finds an ABV or 18+ mention in 154, 155 and 156 only; 810, 813, 815, 817, 819, 822, 825, 827, 829 and 831 have neither. Saero 819/822/825 cards on /soju/ read 'Soju Coreano Lotte Saero 360ml Sabor Damasco Sem Açúcar — 🇰🇷🍶 Soju Coreano Lotte Chum Churum 360ml | Bebida Tradicional da Coreia'; 819-827 all contain the Chum Churum text. Kit 829 'Kit 6 Soju' says '🍓 O Kit Contém 5/6 Garrafas de 360ml' and '✅ Kit com 5 ou 6 garrafas', then '6 Garrafas de Soju'; its shipping dimensions are '8 × 6 × 21 cm' (the size of one bottle) and it ends with '💜 감합니다! (Kamsahamnida!)' (the Korean is misspelled, missing 사). 156 'Soju Chum-Churum Lotte Pêssego de 360ml' shows no price at all on its product page (catalog price 0.0, stock 'in-stock') and has an empty price line on /soju/, /ofertas-mimos/, /comida-e-bebida/, /marca/lotte/ and in the homepage 'Mais Vendidos' block. Product names contain 'Koreia, Kpop'.",
+   "detail": "Alcohol requires the most careful listing. The alcohol content is basic product information (CDC art. 31). Selling alcohol to under-18s is a crime (ECA art. 243, as amended by Lei 13.106/2015), so the warning and an age check matter. Stronger variants (above 13 °GL) also fall under Lei 9.294/1996 advertising warnings. A kit that may contain 5 or 6 bottles at a fixed R$ 199,99 is a quantity misrepresentation. A product with no price is not purchasable in WooCommerce, yet it is promoted as a best-seller and an 'oferta'.",
+   "recommendation": "Add mandatory attributes for every alcoholic item: ABV, volume, flavour, line (Chum Churum / Saero), 'Venda proibida para menores de 18 anos' and 'Beba com moderação'. Add an age confirmation at checkout. Fix the Saero copy. Decide whether the kit is 5 or 6 bottles and set the real box dimensions. Give 156 a price or hide it, and exclude price-less products from the home and offer blocks. Remove 'Koreia, Kpop' from names.",
+   "affected_product_ids": [
+    156,
+    815,
+    810,
+    813,
+    817,
+    819,
+    822,
+    825,
+    827,
+    829,
+    831
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/soju-chum-churum-lotte-pessego-de-360ml/",
+    "https://mimoskorea.com.br/soju-coreano-lotte-chum-churum-360ml-sabor-lichia-koreia-kpop/",
+    "https://mimoskorea.com.br/kit-6-soju-coreano-lotte-sabor-sortido-bebidas-coreanas-mimos-korea/",
+    "https://mimoskorea.com.br/soju/",
+    "https://mimoskorea.com.br/marca/lotte/"
+   ]
+  },
+  {
+   "title": "Most main-menu categories are empty, and homepage banners promise categories that do not exist",
+   "severity": "high",
+   "evidence": "The main menu (seen in crawled page markup) lists 'Presentes, Agendas, Pelúcias, Comida e Bebida, Papelaria, Moda, Lar, Eletrônicos, Jogos, Bebê e Infantil'. Fresh crawls return 'Nenhum produto foi encontrado para a sua seleção.' for /presentes/, /agendas/, /papelaria/, /lar/, /eletronicos/ and /jogos/, and also for /maquiagens/. /moda/ contains 1 product, 'Pantufas Fofas Porquinho Rosa', which is 'Fora de estoque'. The homepage shows the banners 'Canecas Coreanas Exclusivas' and 'Mochilas e Acessórios', and its SEO paragraph says 'desde Soju, Ramem, papelaria fofinha, mochilas estilosas, bolsas e pelúcias kawaii, até maquiagem e acessórios K-Beauty originais, tudo direto de Seul'. /canecas/ could not be crawled (CRAWL_NOT_FOUND). An older cached homepage showed a 'Papelaria' block with 8 products ('Tesoura Escolar Bichinho Fofy', 'Papel de Lembrete Post It...', 'Estojo Infantil Tubarão', 'Livro Colorir Bobbie Goods...'). Those products are absent from today's 103-product catalog, their guessed URLs could not be crawled, and /papelaria/ is now empty. The tag archive /produto-tag/mochila/ is also empty yet appears in Exa's search index.",
+   "detail": "Six of ten menu entries lead to an empty page, which makes the store look abandoned and wastes crawl budget on thin, soft-404-like pages. The homepage copy promises canecas, maquiagem, K-Beauty and bolsas that the shop does not sell. The Papelaria products vanished from the catalog without redirects. This matches the reported deletions and drafts and likely leaves 404s for URLs Google had indexed.",
+   "recommendation": "Hide or remove empty categories from the menu (or noindex them until they have stock). Remove the Canecas and K-Beauty claims from homepage banners and text. For every deleted or drafted product that was published, add a 301 to the closest category or replacement instead of letting it 404. Add a publish checklist so no category link goes live empty.",
+   "affected_product_ids": [],
+   "sources": [
+    "https://mimoskorea.com.br/presentes/?orderby=price",
+    "https://mimoskorea.com.br/agendas/?orderby=price",
+    "https://mimoskorea.com.br/papelaria/?orderby=price",
+    "https://mimoskorea.com.br/lar/?orderby=price",
+    "https://mimoskorea.com.br/eletronicos/?orderby=price",
+    "https://mimoskorea.com.br/jogos/?orderby=price",
+    "https://mimoskorea.com.br/moda/?orderby=price",
+    "https://mimoskorea.com.br/maquiagens/",
+    "https://mimoskorea.com.br/?orderby=date",
+    "https://mimoskorea.com.br/"
+   ]
+  },
+  {
+   "title": "Return and shipping rules contradict each other across the legal pages, and some clauses fall short of the CDC",
+   "severity": "high",
+   "evidence": "On return shipping in a withdrawal (arrependimento): /condicoes-de-trocas-e-devolucoes/ says 'o frete de devolução é de responsabilidade do fornecedor, sem custos adicionais ao consumidor', but /condicoes-de-compra/ §5 says 'O frete de devolução é por conta do consumidor, salvo acordo contrário.' On apparent defects: Compra §6 says 'Defeitos Aparentes: Notifique em até 7 dias do recebimento (art. 26, I, CDC)', while Trocas §3 gives '30 dias para produtos não duráveis ... e 90 dias para duráveis'. On jurisdiction: Compra §9 says 'Foro competente: Recife/PE, com renúncia a outros', while the other pages say 'foro: domicílio do consumidor'. On free shipping: the banner reads 'ENVIOS GRÁTIS para pedidos acima de R$ 150' on the privacy, trocas, cookies and termos pages but 'ENVIOS GRÁTIS para pedidos acima de R$ 290' on /condicoes-de-compra/ and the cached /mochilas/. The withdrawal clause also demands 'sem indícios de uso ... lacres intactos' and says 'reembolso ... Integral e imediato ... em até 10 dias úteis após recebimento e inspeção'. The 7-day right itself is stated correctly: '7 (sete) dias corridos a contar da assinatura do contrato ou do recebimento do produto'.",
+   "detail": "A consumer reading two official pages gets opposite answers on who pays return shipping. Charging the consumer for return shipping on a withdrawal goes against CDC art. 49 sole paragraph and Decreto 7.962/2013. A 7-day limit for apparent defects cuts the 30/90-day legal deadline of CDC art. 26 and would be void under CDC art. 51. A jurisdiction clause with 'renúncia a outros' is abusive in consumer contracts. The R$ 150 vs R$ 290 threshold may reflect page-cache timing (the Exa crawls were taken at different times), but a buyer can see both.",
+   "recommendation": "Rewrite the legal set into one consistent policy that a Brazilian consumer lawyer has reviewed. State that the supplier pays return shipping for withdrawals, use the 30/90-day defect deadlines, and set jurisdiction at the consumer's domicile. Set the free-shipping threshold in a single place (a theme option) and purge caches.",
+   "affected_product_ids": [],
+   "sources": [
+    "https://mimoskorea.com.br/condicoes-de-trocas-e-devolucoes/",
+    "https://mimoskorea.com.br/condicoes-de-compra/",
+    "https://mimoskorea.com.br/politica-de-privacidade/",
+    "https://mimoskorea.com.br/mochilas/"
+   ]
+  },
+  {
+   "title": "Legal pages are AI-padded: chatbot marketing ('HIM™/MAIC™ ... consciência emergente'), features the store does not offer, miscited law, hostile tone, and no named DPO",
+   "severity": "medium",
+   "evidence": "Privacy, cookies and termos all describe a chatbot: 'HIM™ – Hybrid Entity Intelligence Model, baseado na arquitetura MAIC™ – Massive Artificial Intelligence Consciousness, desenvolvidos por David C. Cavalcante e Takk™ Innovate Studio ... simulando consciência emergente ética'. They cover 'adesão a assinaturas, participação em programas de pontos ou cashback' and 'caixa mensal de produtos coreanos', and cookies lists 'Hotjar', 'Facebook Pixel' and 'Google Ads'; none of these subscriptions, points or cashback features was visible on any page fetched. Citations look wrong: Trocas cites 'Súmula 297/STJ' for withdrawal exceptions (that súmula is about the CDC applying to banks) and says 'O prazo não pode ser inferior a 7 nem superior a 180 dias (art. 18, §2º)' for contractual warranty (§2º governs the repair period). The texts are padded with 'com atualizações até novembro de 2025'. The tone is threatening: 'reportar às autoridades competentes (ex.: Procon ou Polícia Civil por estelionato, art. 171 do Código Penal)'. Privacy §8 says 'Para dúvidas, DPO ou exercícios de direitos, contate contato@mimoskorea.com.br' but names no encarregado.",
+   "detail": "A privacy policy should list the data actually processed and the tools actually used. Describing features that do not exist, or undeclared trackers, undermines LGPD art. 9 transparency. LGPD art. 41 §1 requires the encarregado's identity and contact to be disclosed publicly. The marketing copy and threats in legal pages hurt trust with buyers, and wrong legal citations weaken the documents if they are ever disputed.",
+   "recommendation": "Replace the documents with concise, accurate policies. List the real processors (payment gateway, carrier, analytics actually installed), name the encarregado, and remove the chatbot marketing and the features that do not exist. Keep a neutral tone and have a lawyer check the citations.",
+   "affected_product_ids": [],
+   "sources": [
+    "https://mimoskorea.com.br/politica-de-privacidade/",
+    "https://mimoskorea.com.br/politica-de-cookies/",
+    "https://mimoskorea.com.br/termos-de-uso/",
+    "https://mimoskorea.com.br/condicoes-de-trocas-e-devolucoes/"
+   ]
+  },
+  {
+   "title": "Company data exists but only inside legal pages; the address has a typo, email is the only contact channel, and the contact and store-locator pages could not be crawled",
+   "severity": "medium",
+   "evidence": "Every legal page lists 'Razão Social: Mimos Korea Design Ltda', 'CNPJ: 41.147.282/0001-31', 'Endereço Principal: Shopping Recife – Rua Padre Carapuceiro, 777, ML oka 017pc, Boa Viagem, Recife – PE, CEP 51.020-280' and 'E-mail de Contato: contato@mimoskorea.com.br'. No telephone, WhatsApp or SAC hours appear on any fetched page. The header reads 'Visite nossas lojas físicas' and links to /lojas, which returned CRAWL_NOT_FOUND. /contato/ also returned CRAWL_NOT_FOUND. Neither the homepage nor the product pages, as extracted, show the company data or a footer (the extraction may have dropped the footer).",
+   "detail": "This is the positive side of the audit: legal name, CNPJ, address and email are published, which Decreto 7.962/2013 art. 2 requires. However, 'ML oka 017pc' looks like a garbled 'Loja 017', which is sloppy on the one line that identifies the business. The decree asks for the data 'em local de destaque e de fácil visualização', and Brazilian shoppers expect a WhatsApp or phone number, especially for a small store selling food and alcohol. A 'lojas físicas' link that does not resolve damages credibility.",
+   "recommendation": "Put the CNPJ, razão social, full corrected address, e-mail, and WhatsApp/phone with service hours in the site footer on every page. Publish a working /lojas/ page with the addresses and hours of each shopping-mall store and a /contato/ page with a form. Mark it up with Organization/LocalBusiness schema.",
+   "affected_product_ids": [],
+   "sources": [
+    "https://mimoskorea.com.br/politica-de-privacidade/",
+    "https://mimoskorea.com.br/condicoes-de-compra/",
+    "https://mimoskorea.com.br/lojas",
+    "https://mimoskorea.com.br/contato/"
+   ]
+  },
+  {
+   "title": "Emoji-laden, formulaic ChatGPT copy, including in the card excerpts shown on category pages, plus typos in product names",
+   "severity": "medium",
+   "evidence": "Category cards open with emoji strings: '🍹✨ Bebida Suco com Pedaços Chuyin 500ml | Bebida Importada | Mimos Korea ✨🍓🍊🍇', '🇰🇷🍶 Soju Coreano Lotte Chum Churum 360ml | Bebida Tradicional da Coreia |...' and '🍫 Bolinho Coreano Choco Pie...'. Descriptions read '🍑☕🍉 Bala Hortelã Sakuragi...', '🐟🍫 Bolinho Orion BongBang...' and '💜 감사합니다! (Kamsahamnida!)'. 61/103 descriptions contain emoji. The older generation is a fixed AI template, e.g. '...oferecendo qualidade superior, versatilidade e valor agregado que o tornam essencial' (150) and '...qualidade superior, diversão e valor agregado' (235, 140, pantufas). Typos in names and text: 'Ceral' in 'Biscoito Coreano Orion Miz Chocolate 54g | Ceral, Crocante...' (1016), 'Koreia' in several soju names, 'Marine Voy' (864), 'Diretemente da Ásia' (833) and '감합니다' (829). Excerpts in an older homepage cache paired the wrong copy with the wrong product: 'Let's Be Lotte Mild Coffee de 175ml' carried the text 'A Bebida Café Coreano Let's Be Lotte Cappuccino de 240ml...', and 'Sinomie 102g' carried '...Sinomie de 72g'.",
+   "detail": "The copy is generic across products, so it adds no unique value for SEO and reads as spam to shoppers. Emoji at the start of the excerpt push the actual product facts out of the card and out of meta descriptions. Two AI 'generations' of text sit side by side, so the catalog has no consistent voice or structure. Typos in titles appear in Google results and in the H1.",
+   "recommendation": "Define one description template in plain Portuguese: 1-2 sentence hook, bullet facts (brand, flavour, size, origin, conservação), and ingredient, allergen and nutrition blocks. Emoji should be none, or at most one decorative one outside the title and excerpt. Generate short descriptions and meta descriptions from facts, not marketing. Spell-check names before publishing.",
+   "affected_product_ids": [
+    815,
+    829,
+    833,
+    926,
+    1011,
+    1016,
+    864,
+    150,
+    235,
+    237,
+    140,
+    954,
+    1021,
+    952,
+    1019
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/ofertas-mimos/",
+    "https://mimoskorea.com.br/soju/",
+    "https://mimoskorea.com.br/kit-6-soju-coreano-lotte-sabor-sortido-bebidas-coreanas-mimos-korea/",
+    "https://mimoskorea.com.br/snack-coreano-marine-boy-orion-sabor-camarao-30g-salgadinho-crocante-divertido-e-delicioso-importacao-mimos-korea/",
+    "https://mimoskorea.com.br/"
+   ]
+  },
+  {
+   "title": "Country-of-origin signals are misleading: Korean flags and 'direto de Seul' on products the pages themselves say come from China or Vietnam",
+   "severity": "medium",
+   "evidence": "The homepage says '...tudo direto de Seul para você com muito mimo.' 1011 'Bolinho Orion BongBang' states '🇻🇳 Produto importado do Vietnã pela Orion' and is signed '🇰🇷 Especialistas em produtos asiáticos importados'. 919 'Biscoitos Sakuragi Animais' has the header '...Importado | Mimos Korea Design 🇰🇷' and the body '✅ Produto importado da Ásia (China)'. 926 Sakuragi candy has '🇰🇷' in its header while the body says 'Produto importado da Ásia'. 1007 is named 'Bolinho Coreano Custard' and its text shows both '🇰🇷 Produto importado' and '🎌'. The catalog scan flags 919, 923 and 1011 for a Korean flag alongside a China or Vietnam origin.",
+   "detail": "Presenting Chinese or Vietnamese goods with Korean flags and 'Coreano' in the name can mislead buyers about origin, which is protected information under CDC art. 31 and art. 37 §1. Shoppers of an 'authentic Korean' store care about this.",
+   "recommendation": "Add a factual 'País de origem' attribute to every product from the package label. Only use 'Coreano' or the Korean flag when the origin is Korea. Reword the homepage copy to 'produtos coreanos e asiáticos'.",
+   "affected_product_ids": [
+    1011,
+    919,
+    923,
+    926,
+    1007
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/bolinho-orion-bongbang-5un-sabor-chocolate-com-feijao-vermelho-importado-mimos-korea-design/",
+    "https://mimoskorea.com.br/biscoitos-sakuragi-animais-130g-sabor-chocolate-importado-mimos-korea-design/",
+    "https://mimoskorea.com.br/?orderby=date"
+   ]
+  },
+  {
+   "title": "Wrong shipping weights and dimensions, and contradictions between title and description (colour, size)",
+   "severity": "medium",
+   "evidence": "957 'Mochila ... Cor Cinza ... 25L': the description says 'Com um design moderno na cor azul' and the spec says 'Aproximadamente 45cm de altura por 32cm de largura', but the shipping data is 'Peso | 0,3 kg; Dimensões | 5 × 5 × 10 cm'. 829 Kit 6 soju: 'Peso 3,5 kg; Dimensões 8 × 6 × 21 cm'. The 30g snacks 954/952/1021/1019/864 are listed at '0,2 kg' while the old copies 235/237/150 are at '0,03 kg'. 926 (16g candy) is at 0,2 kg. Pantufas (the only product in Moda) shows 'Cor | Rosa', 'Uso | Casa, inverno' and no shoe size.",
+   "detail": "Correios and carrier quotes are computed from these fields, so a 45×32 cm backpack declared as a 5×5×10 cm box will be under-quoted at checkout, leaving the store to absorb the difference or have the parcel rejected. Inflated weights on snacks make freight look expensive and push small orders away. A backpack sold as grey but described as blue, and slippers without a size, lead to returns.",
+   "recommendation": "Measure and record real packed dimensions and weight per SKU; a product template can default by type. Validate before publishing (e.g. weight at least net content, dimensions not below the product's stated size). Add a required 'Tamanho' field for apparel and footwear. Make colour and size come from attributes, not free text.",
+   "affected_product_ids": [
+    957,
+    829,
+    954,
+    952,
+    1021,
+    1019,
+    864,
+    926
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/mochila-escolar-viagem-cor-cinza-notebook-15-6-impermeavel-usb-premium-25l/",
+    "https://mimoskorea.com.br/kit-6-soju-coreano-lotte-sabor-sortido-bebidas-coreanas-mimos-korea/",
+    "https://mimoskorea.com.br/pantufas-fofas-porquinho-rosa/"
+   ]
+  },
+  {
+   "title": "Out-of-stock and price-less items dominate the homepage 'Mais Vendidos' and the Pelúcias sections; every plush is out of stock",
+   "severity": "medium",
+   "evidence": "On the fresh homepage crawl, 'Mais Vendidos' includes 237 and 235 (Fora de estoque on their pages) and 156 Soju Pêssego (no price). The homepage 'Pelúcias' block and the /pelucias/ and /bebe-e-infantil/ pages list 7 plushes. According to the catalog, all 7 (135, 136, 137, 139, 140, 141, 142) are out of stock. For example, 140 'Pelúcia Porquinho Rosa Mamadeira de 35cm' shows 'R$ 139,99' and 'Fora de estoque'. /bebe-e-infantil/ contains exactly the same 7 plushes as /pelucias/. /produto-tag/30g/ lists 6 products (149, 150, 231, 233, 235, 237), all out of stock, while the in-stock 30g copies (952, 954, 1019, 1021, 864) are not tagged. The catalog has 41/103 products out of stock.",
+   "detail": "The first things a visitor sees on the homepage are products they cannot buy. A category that is 100% out of stock with no 'Avise-me' and no back-in-stock date looks dead. The old duplicate IDs keep the 'best-seller' slots that the new in-stock copies should hold.",
+   "recommendation": "Configure the home 'Mais Vendidos' and featured blocks to exclude out-of-stock and zero-price items. Either hide out-of-stock products from listings or sort them last, with a 'Avise-me quando chegar' form. Restock the plushes or hide the Pelúcias banner until they are available.",
+   "affected_product_ids": [
+    235,
+    237,
+    156,
+    135,
+    136,
+    137,
+    139,
+    140,
+    141,
+    142
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/?orderby=date",
+    "https://mimoskorea.com.br/pelucias/",
+    "https://mimoskorea.com.br/bebe-e-infantil/",
+    "https://mimoskorea.com.br/pelucia-porquinho-rosa-mamadeira-de-35cm/",
+    "https://mimoskorea.com.br/produto-tag/30g/"
+   ]
+  },
+  {
+   "title": "'Ofertas Mimos' holds 62% of the catalog without any sale price, and new products skip subcategories",
+   "severity": "medium",
+   "evidence": "64 of 103 products are in 'Ofertas Mimos'. On /ofertas-mimos/ every card shows one plain price, e.g. 'Mochila Executiva 29L ... R$ 369,99' and 'Salgadinho Coreano O’Star ... R$ 12,99', with no de/por, strikethrough or percentage. The new listings sit in the generic categories only: 954/1021 in 'Comida e Bebida' and 'Ofertas Mimos', 833 in 'Bebidas' and 'Ofertas Mimos'. The old equivalents sit in real subcategories (235 in 'Salgadinhos'). Category counts: Comida e Bebida 66, Ofertas Mimos 64, Bebidas 21, Soju 12, Salgadinhos 10, Mochilas 8, Biscoitos 7, Pelúcias 7, Bebê e Infantil 7, Refrigerantes 6, Doces 3, Moda 1, Ramyeon 1. 49/103 products have no brand and 59/103 have no SKU; all of these are the newer IDs.",
+   "detail": "Calling almost everything an 'oferta' with no reduced price is misleading and hides real promotions. Because new products skip subcategories (Salgadinhos, Biscoitos, Doces), the category tree and faceted navigation are useless: a buyer browsing Salgadinhos misses the in-stock O'Star copies and only sees the out-of-stock old ones.",
+   "recommendation": "Use 'Ofertas' only for products that have a WooCommerce sale price, preferably through an automatic on-sale query rather than a manual category. Make leaf category, brand and SKU mandatory at creation. Build a two-level tree (e.g. Comida > Salgadinhos / Biscoitos / Doces / Lámen; Bebidas > Soju / Sucos / Café / Refrigerantes).",
+   "affected_product_ids": [
+    954,
+    1021,
+    952,
+    1019,
+    833,
+    864,
+    926,
+    957,
+    1011,
+    815,
+    829
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/ofertas-mimos/",
+    "https://mimoskorea.com.br/comida-e-bebida/"
+   ]
+  },
+  {
+   "title": "SEO: pipe-stuffed product titles with the brand repeated, thin tag archives that are crawlable, and brand misassignment",
+   "severity": "medium",
+   "evidence": "Page <title>s as crawled: 'Bala Hortelã Sakuragi Sabor Melancia 16g | Importado | Mimos Korea Design – Mimos Korea Design'; 'Snack Coreano Marine Boy Orion Sabor Camarão 30g | Salgadinho Crocante, Divertido e Delicioso | Importação Mimos Korea – Mimos Korea Design' (about 140 characters); 'Kit 6 Soju Coreano Lotte | Sabor Sortido | Bebidas Coreanas | Mimos Korea – Mimos Korea Design'. The homepage title is only 'Mimos Korea Design'. There are 75 distinct product tags, 32 of them used once, and 59 products have no tags. Tags are sizes such as '30g', '250ml', '47g' and '129g'. /produto-tag/30g/ ('30g – Mimos Korea Design') and the empty /produto-tag/mochila/ are both crawlable, and the latter shows up in Exa's search index. /marca/lotte/ lists 'Bolinho Coreano ChocoPie Orion Chocolate Duplo...'; 70 and 259 are named Orion but carry the brand 'Lotte' (Orion and Lotte make different Choco Pies).",
+   "detail": "Keyword-stuffed titles with pipes and a doubled store name get truncated in search results and look spammy. Tag archives named after weights create dozens of thin, near-empty pages that compete with categories. A wrong brand taxonomy sends Lotte searchers to Orion products and vice versa.",
+   "recommendation": "Title pattern: '{Produto} {Marca} {Sabor} {Tamanho} | Mimos Korea', at 60 characters or fewer, with the store name added only by the SEO plugin. Set product tag archives to noindex (or stop using tags) and put sizes and flavours in attributes. Fix the brands on 70 and 259. Give the homepage a descriptive title and meta description.",
+   "affected_product_ids": [
+    926,
+    864,
+    829,
+    70,
+    259
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/produto-tag/30g/",
+    "https://mimoskorea.com.br/marca/lotte/",
+    "https://mimoskorea.com.br/bala-hortela-sakuragi-sabor-melancia-16g-importado-mimos-korea-design/"
+   ]
+  },
+  {
+   "title": "Children's plush toys: no INMETRO certification shown, and 'hipoalergênica/antialérgico' claims are unverified",
+   "severity": "medium",
+   "evidence": "140 'Pelúcia Porquinho Rosa Mamadeira de 35cm' says 'oferece fofura hipoalergênica ... ideal para crianças acima de 3 anos' and shows 'Material | Plush de poliéster, enchimento PP cotton', 'Características | Antialérgico, macio' and 'Idade Recomendada | Acima de 3 anos'. The page mentions no INMETRO seal or registration. All plushes are also sold under 'Bebê e Infantil', and card excerpts repeat 'hipoalergênica' and 'antialérgico' (e.g. 'Pelúcia Unicórnio Infantil ... maciez hipoalergênica').",
+   "detail": "Toys for children under 14 require compulsory INMETRO conformity certification in Brazil, and shoppers look for the seal. Health claims such as 'hipoalergênico' need evidence. Placing items in 'Bebê' next to a '3+ anos' age rating is contradictory.",
+   "recommendation": "Show the INMETRO registration or seal and the importer on every toy page, keep the age rating consistent with the category (3+ items do not belong in 'Bebê'), and drop unverified health claims.",
+   "affected_product_ids": [
+    140,
+    135,
+    136,
+    137,
+    139,
+    141,
+    142
+   ],
+   "sources": [
+    "https://mimoskorea.com.br/pelucia-porquinho-rosa-mamadeira-de-35cm/",
+    "https://mimoskorea.com.br/bebe-e-infantil/"
+   ]
+  },
+  {
+   "title": "Catalog churn is visible: products seen in older crawls are gone, and category contents differ between crawls",
+   "severity": "low",
+   "evidence": "An older cached homepage (the text had mojibake such as 'PelÃºcias') listed 'Lamen Asiático Sinomie 72g ... Frango Picante', 'Sinomie 102g ... Carne e Cogumelo', 'Let's Be Lotte Mild Coffee de 175ml' and 8 Papelaria items. None of these is in today's 103-product catalog. The cached /mochilas/ page said 'Nenhum produto foi encontrado', while a fresh crawl (/mochilas/?orderby=price) lists 8 backpacks (R$ 249,99 to R$ 389,99). Catalog IDs run up to 1021 with only 103 published products.",
+   "detail": "The snapshots are consistent with products being created, deleted and re-created, which is what the user reported. Each deletion of an indexed URL without a redirect is a lost ranking, and each re-creation starts with zero sales and reviews.",
+   "recommendation": "Set a rule to edit or restock existing products and never delete and re-create them. Log product deletions, add redirects for every removed published URL, and monitor 404s in Search Console.",
+   "affected_product_ids": [],
+   "sources": [
+    "https://mimoskorea.com.br/",
+    "https://mimoskorea.com.br/mochilas/",
+    "https://mimoskorea.com.br/mochilas/?orderby=price",
+    "https://mimoskorea.com.br/papelaria/?orderby=price"
+   ]
+  }
+ ],
+ "urls_fetched": [
+  "https://mimoskorea.com.br/",
+  "https://mimoskorea.com.br/?orderby=date",
+  "https://mimoskorea.com.br/ofertas-mimos/",
+  "https://mimoskorea.com.br/comida-e-bebida/",
+  "https://mimoskorea.com.br/soju/",
+  "https://mimoskorea.com.br/pelucias/",
+  "https://mimoskorea.com.br/mochilas/",
+  "https://mimoskorea.com.br/mochilas/?orderby=price",
+  "https://mimoskorea.com.br/bebe-e-infantil/",
+  "https://mimoskorea.com.br/maquiagens/",
+  "https://mimoskorea.com.br/maquiagens/?orderby=price",
+  "https://mimoskorea.com.br/marca/lotte/",
+  "https://mimoskorea.com.br/produto-tag/30g/",
+  "https://mimoskorea.com.br/politica-de-privacidade/",
+  "https://mimoskorea.com.br/condicoes-de-trocas-e-devolucoes/",
+  "https://mimoskorea.com.br/condicoes-de-compra/",
+  "https://mimoskorea.com.br/politica-de-cookies/",
+  "https://mimoskorea.com.br/termos-de-uso/",
+  "https://mimoskorea.com.br/papelaria/?orderby=price",
+  "https://mimoskorea.com.br/presentes/?orderby=price",
+  "https://mimoskorea.com.br/eletronicos/?orderby=price",
+  "https://mimoskorea.com.br/agendas/?orderby=price",
+  "https://mimoskorea.com.br/lar/?orderby=price",
+  "https://mimoskorea.com.br/jogos/?orderby=price",
+  "https://mimoskorea.com.br/moda/?orderby=price",
+  "https://mimoskorea.com.br/canecas/ (CRAWL_NOT_FOUND)",
+  "https://mimoskorea.com.br/contato/ (CRAWL_NOT_FOUND)",
+  "https://mimoskorea.com.br/lojas/ (CRAWL_NOT_FOUND)",
+  "https://mimoskorea.com.br/lojas (CRAWL_NOT_FOUND)",
+  "https://mimoskorea.com.br/tesoura-escolar-bichinho-fofy/ (CRAWL_NOT_FOUND, guessed slug)",
+  "https://mimoskorea.com.br/estojo-infantil-tubarao/ (CRAWL_NOT_FOUND, guessed slug)",
+  "https://mimoskorea.com.br/livro-colorir-bobbie-goods-infantil-48-paginas-capa-dura/ (CRAWL_NOT_FOUND, guessed slug)",
+  "https://mimoskorea.com.br/pantufas-fofas-porquinho-rosa/",
+  "https://mimoskorea.com.br/snack-batata-frita-coreano-ostar-orion-30g-sabor-queijo-duplo/",
+  "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-sabor-queijo-duplo-batata-frita-crocante-snack-sabores/",
+  "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-queijo-duplo/",
+  "https://mimoskorea.com.br/snack-batata-frita-coreano-ostar-orion-30g-sabor-bife-americano/",
+  "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-sabor-bife-americano-ny-batata-frita-crocante-snack-sabores/",
+  "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-bife-ny/",
+  "https://mimoskorea.com.br/soju-coreano-lotte-chum-churum-360ml-sabor-lichia-koreia-kpop/",
+  "https://mimoskorea.com.br/kit-6-soju-coreano-lotte-sabor-sortido-bebidas-coreanas-mimos-korea/",
+  "https://mimoskorea.com.br/mamadeira-chuyin-280ml-vidro-bebida-cremosa-sabor-original-importada-mimos-korea/",
+  "https://mimoskorea.com.br/mochila-escolar-viagem-cor-cinza-notebook-15-6-impermeavel-usb-premium-25l/",
+  "https://mimoskorea.com.br/bala-hortela-sakuragi-sabor-melancia-16g-importado-mimos-korea-design/",
+  "https://mimoskorea.com.br/pelucia-porquinho-rosa-mamadeira-de-35cm/",
+  "https://mimoskorea.com.br/bolinho-orion-bongbang-5un-sabor-chocolate-com-feijao-vermelho-importado-mimos-korea-design/",
+  "https://mimoskorea.com.br/snack-coreano-marine-boy-orion-camarao-de-30g/",
+  "https://mimoskorea.com.br/snack-coreano-marine-boy-orion-sabor-camarao-30g-salgadinho-crocante-divertido-e-delicioso-importacao-mimos-korea/",
+  "https://mimoskorea.com.br/bebida-coreana-cafe-gelado-cantata-lotte-bag-230ml-sabor-americano-zero-acucar/",
+  "https://mimoskorea.com.br/soju-chum-churum-lotte-pessego-de-360ml/",
+  "https://mimoskorea.com.br/bolinho-coreano-custard-orion-creme-de-ovos-caixa-com-12-unidades-276g-k-snack-importado-mimos-korea/",
+  "https://mimoskorea.com.br/biscoitos-sakuragi-animais-130g-sabor-chocolate-importado-mimos-korea-design/",
+  "Exa web_search_exa: 'mimoskorea.com.br produto-tag' (surfaced /produto-tag/mochila/, /marca/mimos-korea-design/, /presentes/, /papelaria/, /moda/, /eletronicos/, /categoria-produto/biscoitos/ and the main-menu markup)"
+ ],
+ "limitations": "All pages were fetched through Exa. Exa returns cleaned main content, which means: (1) no images or pixels, so photo findings rest on file names and name_class from the local catalog snapshot (catalog_full.json / catalog_slim.json); (2) no <head> data, so meta robots/noindex, canonical tags, meta descriptions and JSON-LD structured data could not be checked; (3) headers and footers are mostly stripped, so I could not confirm whether CNPJ, address or WhatsApp appear in the site footer, or whether an age gate, cookie banner, 'Produtos relacionados', breadcrumbs, add-to-cart buttons, installment (parcelamento) or PIX-discount text are shown; (4) excerpt price lines are sometimes missing on listing cards (e.g. Custard 1007 and Miz 1016 show no price on the homepage and ofertas cards but do have prices on their product pages and in the catalog), so only 156 Soju Pêssego is reported as truly price-less. Exa's cache mixes crawl dates: the plain homepage fetch was an old cache with mojibake ('PelÃºcias') and products no longer in the catalog, and the plain /mochilas/ was an old empty cache. I re-fetched with query-string cache busting (?orderby=date / ?orderby=price) and based the main findings on the fresh versions, reporting the old caches only as churn evidence. The R$150 vs R$290 free-shipping discrepancy may likewise be a crawl-timing artifact. /canecas/, /contato/, /lojas(/) and three guessed Papelaria product slugs returned CRAWL_NOT_FOUND; this means Exa could not crawl them, not necessarily a live 404. Legal-compliance remarks (CDC, LGPD, Decreto 7.962/2013, ECA, INMETRO, ANVISA) are an auditor's reading, not legal advice, and should be confirmed by a Brazilian lawyer. The checkout, cart, shipping calculator and account area were not tested."
+}

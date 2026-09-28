@@ -1,0 +1,633 @@
+{
+ "requirements": [
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "Denominação de venda em português que diga a natureza real do produto (ex.: 'Bolinho de arroz instantâneo sabor picante'), além da marca ou nome coreano",
+   "legal_or_policy_basis": "RDC Anvisa 727/2022 arts. 7 I, 8 I e 9; CDC art. 31 (oferta em língua portuguesa)",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "high",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022",
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "notes": "Título só em coreano ou só com emojis não atende o CDC art. 31. Na loja, o título deve trazer a denominação em PT."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "Lista de ingredientes em português (ordem decrescente; aditivos por função + nome ou INS)",
+   "legal_or_policy_basis": "Rótulo: RDC 727/2022 arts. 7 II, 11 e 12. Anúncio: CDC art. 31 ('composição') e Decreto 7.962/2013 art. 2 III",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "high",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022",
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+    "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm"
+   ],
+   "notes": "A Anvisa regula o rótulo e não cita o e-commerce. No anúncio, a obrigação vem do CDC e do Decreto 7.962. A tartrazina (INS 102) deve aparecer pelo nome completo (art. 12 §2)."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "Advertência de alergênicos: 'ALÉRGICOS: CONTÉM ...' / 'CONTÉM DERIVADOS DE ...' / 'PODE CONTER ...' (trigo, soja, leite, ovos, amendoim, crustáceos, peixes, castanhas etc.)",
+   "legal_or_policy_basis": "RDC 727/2022 arts. 13 a 15 e Anexo III (consolidou a antiga RDC 26/2015); CDC arts. 9 e 31 (riscos à saúde); Decreto 7.962 art. 2 III (riscos à saúde e segurança)",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "high",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022",
+    "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm"
+   ],
+   "notes": "No rótulo: caixa alta, negrito e mínimo de 2 mm, logo após os ingredientes. No site, recomenda-se um campo estruturado para cada alergênico. Pelo art. 4 IV, o anúncio não pode dizer 'livre de alergênicos' fora dos casos previstos em norma."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "'CONTÉM LACTOSE' quando houver mais de 100 mg por 100 g/ml",
+   "legal_or_policy_basis": "Decreto-Lei 986/1969 art. 19-A (incluído pela Lei 13.305/2016); RDC 727/2022 arts. 18 e 19",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "high",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13305.htm",
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022"
+   ],
+   "notes": "A obrigação legal é do rótulo. No anúncio, é esperada pelo CDC art. 31, porque é um risco à saúde para intolerantes."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "'CONTÉM GLÚTEN' ou 'NÃO CONTÉM GLÚTEN'",
+   "legal_or_policy_basis": "Lei 10.674/2003 art. 1 e §1: rótulos e embalagens 'assim como em cartazes e materiais de divulgação'",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "medium",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.674.htm"
+   ],
+   "notes": "No rótulo, confiança alta. Tratar a página de produto como 'material de divulgação' é interpretação razoável, mas não expressa. Quase todos os snacks e o topokki levam trigo."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "Tabela de informação nutricional (valor energético, carboidratos, açúcares totais e adicionados, proteínas, gorduras totais, saturadas e trans, fibras, sódio, por 100 g e por porção)",
+   "legal_or_policy_basis": "Rótulo: RDC 429/2020 art. 4 e IN 75/2020. Anúncio: não há regra expressa da Anvisa; o apoio vem do CDC art. 31 ('características, composição')",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "medium",
+   "source_urls": [
+    "https://bvs.saude.gov.br/bvs/saudelegis/anvisa/2020/RDC_429_2020_.pdf",
+    "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2020/perguntas-e-respostas-rotulagem-nutricional"
+   ],
+   "notes": "No rótulo é obrigatória (confiança alta). No site é 'deveria': boa prática e defensável pelo CDC, sem exigência explícita. Uma foto nítida do painel traseiro com a etiqueta PT pode cumprir a função, mas publicar em texto é melhor para acessibilidade e busca."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "Rotulagem nutricional frontal (lupa 'ALTO EM açúcar adicionado / gordura saturada / sódio'): sólidos com 15 g ou mais de açúcar adicionado, 6 g ou mais de gordura saturada ou 600 mg ou mais de sódio por 100 g",
+   "legal_or_policy_basis": "RDC 429/2020 arts. 18 a 22; IN 75/2020 Anexos XV e XVII",
+   "applies_to_online_listing_or_label": "physical_label",
+   "confidence": "high",
+   "source_urls": [
+    "https://bvs.saude.gov.br/bvs/saudelegis/anvisa/2020/RDC_429_2020_.pdf",
+    "https://www.gov.br/anvisa/pt-br/assuntos/educacaoepesquisa/webinar/alimentos/arquivos/apresentacao-we-49-21-a-rotulagem-nutricional-frontal-conforme-a-resolucao-rdc-no-420-de-2020.pdf/@@display-file/file"
+   ],
+   "notes": "A lupa é dever do importador, na etiqueta PT do painel principal. Balas, biscoitos e ramyeon/topokki normalmente se enquadram. Opcional com painel principal abaixo de 35 cm². No site é opcional, mas exibir é recomendado."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "Conteúdo líquido (g/ml, unidades) e preço por unidade de medida (R$/kg ou R$/100 g)",
+   "legal_or_policy_basis": "Rótulo: RDC 727 art. 7 VIII. Anúncio: CDC art. 31 ('quantidade') e art. 6 XIII (preço por unidade de medida, Lei 14.181/2021)",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "high",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022",
+    "https://www.in.gov.br/web/dou/-/consulta-publica-n-6-de-23-de-fevereiro-de-2026-688403623"
+   ],
+   "notes": "Para kits e multipacks, informar a quantidade de unidades e o peso de cada uma. A Consulta Pública Inmetro 6/2026 (proposta, ainda não vigente) exigiria no anúncio de pré-embalados: imagem da embalagem, quantidade nominal e todas as informações em PT."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "País de origem, fabricante e importador (razão social e endereço)",
+   "legal_or_policy_basis": "Rótulo: RDC 727 art. 29 (inciso V: importador). Anúncio: CDC art. 31 ('origem')",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "high",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022",
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "notes": "No anúncio, a origem é obrigatória pelo CDC. Mostrar o importador é recomendado, não expressamente exigido."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "Prazo de validade (e lote no rótulo); no anúncio, validade do lote enviado ou validade mínima garantida",
+   "legal_or_policy_basis": "Rótulo: RDC 727 arts. 7 X e XI, 30 e 31. Anúncio: CDC art. 31 ('prazos de validade') e art. 18 §6 I (produto vencido é impróprio)",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "medium",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022",
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "notes": "O Anexo I da RDC 727 dispensa validade no rótulo para balas, caramelos, confeitos e gomas de mascar. Como exibir validade online é interpretação do art. 31; na prática, usar um campo por lote no estoque."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "Instruções de preparo e conservação (ex.: topokki: modo de preparo; 'após aberto, consumir em X dias'; temperatura)",
+   "legal_or_policy_basis": "RDC 727 arts. 7 XII, 32 e 33; CDC art. 31",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "medium",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022"
+   ],
+   "notes": "Obrigatório no rótulo 'quando necessário'. No anúncio é recomendado, sobretudo para refrigerados e congelados."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "Advertências de aditivos: 'Contém fenilalanina' (aspartame), 'Este produto pode ter efeito laxativo' (poliois acima dos limites), tartrazina pelo nome",
+   "legal_or_policy_basis": "RDC 727 arts. 12 §2, 25 e 26",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "medium",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022"
+   ],
+   "notes": "Obrigatório no rótulo (alta). No anúncio, recomendado como risco à saúde (CDC art. 9)."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "Etiqueta complementar em português colada na embalagem importada antes da venda",
+   "legal_or_policy_basis": "RDC 727/2022 art. 8, I e parágrafo único",
+   "applies_to_online_listing_or_label": "physical_label",
+   "confidence": "high",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022"
+   ],
+   "notes": "Dever do importador ou de quem nacionaliza. Se a loja importa diretamente, o dever é dela. Fotos só da embalagem coreana, sem a etiqueta PT, não cumprem o CDC art. 31 no anúncio."
+  },
+  {
+   "product_kind": "Alimentos embalados importados (snacks, biscoitos, balas, topokki instantâneo)",
+   "required_listing_field": "Texto descritivo/SEO sem alegações proibidas: nada de 'saudável', 'dá energia', 'estimulante', 'terapêutico', 'sem alérgenos' sem base, nem superlativos falsos",
+   "legal_or_policy_basis": "RDC 727 art. 4 (I a VIII); CDC arts. 36 parágrafo único, 37 §§1 e 3 (enganosa, inclusive por omissão) e 38 (ônus da prova)",
+   "applies_to_online_listing_or_label": "online_listing",
+   "confidence": "high",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022",
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "notes": "Afeta diretamente os textos gerados por ChatGPT: afirmações inventadas vinculam a oferta (CDC art. 30) e podem ser publicidade enganosa. Emojis em si não são ilegais, mas não substituem informação obrigatória."
+  },
+  {
+   "product_kind": "Bebidas não alcoólicas (milk soda, sucos/bebidas com pedaços de fruta, café gelado)",
+   "required_listing_field": "Todos os itens de alimento embalado: denominação PT, ingredientes, alergênicos, lactose, glúten, tabela nutricional, lupa frontal (líquidos: 7,5 g ou mais de açúcar adicionado, 3 g ou mais de gordura saturada, 300 mg ou mais de sódio por 100 ml), volume, origem, validade",
+   "legal_or_policy_basis": "RDC 727/2022 art. 2 (inclui bebidas); RDC 429/2020 arts. 2, 4 e 18; IN 75/2020 Anexo XV; Lei 10.674/2003; CDC art. 31",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "high",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022",
+    "https://bvs.saude.gov.br/bvs/saudelegis/anvisa/2020/RDC_429_2020_.pdf",
+    "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2020/perguntas-e-respostas-rotulagem-nutricional"
+   ],
+   "notes": "A Anvisa confirma tabela nutricional obrigatória para sucos, refrigerantes e chás prontos. Milk soda e sucos adoçados devem levar 'ALTO EM AÇÚCAR ADICIONADO'. Os mesmos limites entre rótulo e anúncio descritos para os alimentos valem aqui."
+  },
+  {
+   "product_kind": "Bebidas não alcoólicas (milk soda, sucos/bebidas com pedaços de fruta, café gelado)",
+   "required_listing_field": "Milk soda: 'ALÉRGICOS: CONTÉM LEITE' (ou DERIVADOS) e 'CONTÉM LACTOSE'",
+   "legal_or_policy_basis": "RDC 727 arts. 13 e 18; Decreto-Lei 986/1969 art. 19-A",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "high",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022",
+    "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13305.htm"
+   ],
+   "notes": "'Lactose' depende de mais de 100 mg por 100 ml. Leite é alergênico do Anexo III."
+  },
+  {
+   "product_kind": "Bebidas não alcoólicas (milk soda, sucos/bebidas com pedaços de fruta, café gelado)",
+   "required_listing_field": "Rótulo MAPA de bebida: nome e endereço do importador, nº de registro do estabelecimento importador no MAPA, denominação, ingredientes, conteúdo, lote e validade",
+   "legal_or_policy_basis": "Decreto 6.871/2009 (regulamenta a Lei 8.918/1994) arts. 6, 7 e 11",
+   "applies_to_online_listing_or_label": "physical_label",
+   "confidence": "medium",
+   "source_urls": [
+    "https://presidencia.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d6871.htm",
+    "https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-produtos/registro-de-produtos-vinhos-e-bebidas"
+   ],
+   "notes": "Refrigerantes, sucos, néctares e bebidas de fruta estão sob o MAPA. O café pronto para beber provavelmente fica sob regra Anvisa de café (RDC 716/2022, não consultada), por isso a confiança é média quanto ao enquadramento de cada item."
+  },
+  {
+   "product_kind": "Bebidas não alcoólicas (milk soda, sucos/bebidas com pedaços de fruta, café gelado)",
+   "required_listing_field": "Denominação correta: não chamar de 'suco' o que é 'bebida de fruta', 'néctar' ou 'refrigerante'; pedaços de fruta descritos com veracidade",
+   "legal_or_policy_basis": "Decreto 6.871/2009 art. 11 IV e parágrafo único; RDC 727 arts. 4 I e 9; CDC art. 37 §1",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "medium",
+   "source_urls": [
+    "https://presidencia.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d6871.htm",
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "notes": "Os padrões de identidade específicos (percentual de suco etc.) estão em normas do MAPA não consultadas."
+  },
+  {
+   "product_kind": "Bebidas não alcoólicas (milk soda, sucos/bebidas com pedaços de fruta, café gelado)",
+   "required_listing_field": "Bebida com cafeína adicionada enquadrada como 'composto líquido pronto para o consumo': quantidade de cafeína por porção e advertências 'Crianças, gestantes, nutrizes, idosos e portadores de enfermidades: consultar o médico antes de consumir o produto' e 'Não é recomendado o consumo com bebida alcoólica'",
+   "legal_or_policy_basis": "RDC Anvisa 719/2022 arts. 2 II, 3 IV (máximo de 35 mg/100 ml) e 6; RDC 726/2022 art. 8 (guaraná)",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "medium",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=detalharAto&cod_menu=9882&cod_modulo=310&desItem=&desItemFim=&nomeTitulo=codigos&numeroAto=00000719&orgao=RDC%2FDC%2FANVISA%2FMS&seqAto=002&tipo=RDC&valorAno=2022",
+    "https://www.fukumaadvogados.com.br/wp-content/uploads/2022/07/RDC-No-726-DE-01.07.2022-.pdf"
+   ],
+   "notes": "Só vale para energéticos e compostos líquidos, não para café gelado comum. A proibição dos termos 'estimulante' e 'melhora de desempenho' (art. 7) também deve orientar o texto SEO."
+  },
+  {
+   "product_kind": "Bebidas não alcoólicas (milk soda, sucos/bebidas com pedaços de fruta, café gelado)",
+   "required_listing_field": "Café gelado: teor de cafeína (mg por lata ou garrafa) e aviso para crianças, gestantes e pessoas sensíveis",
+   "legal_or_policy_basis": "CDC arts. 9 e 31 (riscos à saúde) e Decreto 7.962 art. 2 III. Não foi encontrada norma Anvisa que exija advertência de cafeína para café pronto para beber",
+   "applies_to_online_listing_or_label": "online_listing",
+   "confidence": "low",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+    "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm"
+   ],
+   "notes": "Recomendação de boa prática, não obrigação confirmada. A RDC 716/2022 (café) não foi consultada."
+  },
+  {
+   "product_kind": "Soju (bebida alcoólica, 12% a 17% vol.)",
+   "required_listing_field": "Restrição 18+: aviso 'Venda proibida para menores de 18 anos', verificação de idade no checkout e na entrega (documento)",
+   "legal_or_policy_basis": "ECA (Lei 8.069/1990) art. 81 II (proíbe a venda) e art. 243 com redação da Lei 13.106/2015 (crime vender, fornecer ou entregar, 'de qualquer forma', pena de 2 a 4 anos); Decreto 7.962 art. 2 VI (restrições à fruição da oferta); CONAR Anexo A item 2.d (acesso seletivo em sites)",
+   "applies_to_online_listing_or_label": "online_listing",
+   "confidence": "high",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13106.htm",
+    "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm",
+    "https://www.tjrj.jus.br/estatuto-da-crianca-e-do-adolescente?p_l_back_url=%2Fteste-busca%3Fdelta%3D40%26start%3D72",
+    "http://www.conar.org.br/pdf/Codigo-CONAR-2024.pdf",
+    "http://www.conar.org.br/pdf/conar214.pdf"
+   ],
+   "notes": "A proibição é certa (alta). A forma do age gate vem da autorregulação: o CONAR já recomendou alteração a um e-commerce de aguardente sem mecanismo de acesso condicionado (conar214). A entrega também é conduta típica, por isso é preciso conferir documento ao entregar."
+  },
+  {
+   "product_kind": "Soju (bebida alcoólica, 12% a 17% vol.)",
+   "required_listing_field": "Graduação alcoólica (% vol.)",
+   "legal_or_policy_basis": "Rótulo: Decreto 6.871/2009 art. 11 IX. Anúncio: CDC art. 31 (características, composição, riscos)",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "high",
+   "source_urls": [
+    "https://presidencia.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d6871.htm",
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "notes": "O Decreto 6.871 art. 12 II define bebida alcoólica como acima de 0,5% até 54% vol."
+  },
+  {
+   "product_kind": "Soju (bebida alcoólica, 12% a 17% vol.)",
+   "required_listing_field": "Cláusula de advertência no anúncio online, ex.: 'BEBA COM MODERAÇÃO', 'SE FOR DIRIGIR NÃO BEBA', 'A VENDA E O CONSUMO DE BEBIDA ALCOÓLICA SÃO PROIBIDOS PARA MENORES'",
+   "legal_or_policy_basis": "CONAR, Código Anexo A item 5 e Resolução 01/08 (item 1.6: na internet integra a mensagem publicitária); Lei 9.294/1996 art. 3 §2 (redação da MP 2.190-34) para bebidas acima de 13 °GL",
+   "applies_to_online_listing_or_label": "online_listing",
+   "confidence": "medium",
+   "source_urls": [
+    "http://www.conar.org.br/pdf/Codigo-CONAR-2025.pdf",
+    "https://www.conar.org.br/codigos?section=sumulas",
+    "https://www.planalto.gov.br/ccivil_03/leis/l9294.htm"
+   ],
+   "notes": "O CONAR é autorregulação, mas a Súmula exige cláusula ostensiva 'em qualquer veículo ou plataforma'. Soju com sabor misturado a suco pode cair também no Anexo T (ices/RTD)."
+  },
+  {
+   "product_kind": "Soju (bebida alcoólica, 12% a 17% vol.)",
+   "required_listing_field": "Advertência no rótulo 'Evite o Consumo Excessivo de Álcool'",
+   "legal_or_policy_basis": "Lei 9.294/1996 art. 4 §2, combinado com o art. 1 parágrafo único (só bebidas acima de 13 °GL)",
+   "applies_to_online_listing_or_label": "physical_label",
+   "confidence": "high",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l9294.htm"
+   ],
+   "notes": "Soju de 16% a 17% entra. Soju de 12% a 13% fica fora da definição da Lei 9.294, mas o ECA e o CONAR continuam valendo. Também o art. 4-A: aviso de que dirigir sob influência de álcool é crime, nos locais de venda (físicos)."
+  },
+  {
+   "product_kind": "Soju (bebida alcoólica, 12% a 17% vol.)",
+   "required_listing_field": "Rótulo PT de bebida importada: importador (nome, endereço, nº de registro do estabelecimento no MAPA), denominação, marca, ingredientes, conteúdo, graduação, lote, frase de advertência",
+   "legal_or_policy_basis": "Decreto 6.871/2009 arts. 6, 7 (bebida importada dispensada de registro de produto, mas importador registrado) e 11",
+   "applies_to_online_listing_or_label": "physical_label",
+   "confidence": "high",
+   "source_urls": [
+    "https://presidencia.gov.br/ccivil_03/_ato2007-2010/2009/decreto/d6871.htm",
+    "https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/registro-importacao-e-exportacao-1/registro/registro-de-produtos/registro-de-produtos-vinhos-e-bebidas"
+   ],
+   "notes": "Validade: o Decreto 6.871 art. 11 XIII a lista, mas o Anexo I da RDC 727 dispensa validade para bebidas com 10% vol. ou mais. Há conflito aparente; confirmar com o MAPA. A classificação do soju pelo MAPA (bebida mista, destilado etc.) não foi confirmada."
+  },
+  {
+   "product_kind": "Soju (bebida alcoólica, 12% a 17% vol.)",
+   "required_listing_field": "Informação nutricional: opcional (pode declarar só o valor energético); sem lupa frontal; sem alegações nutricionais",
+   "legal_or_policy_basis": "RDC 429/2020 art. 5 §5 e regras de alegações (bebidas alcoólicas); Q&A Anvisa",
+   "applies_to_online_listing_or_label": "physical_label",
+   "confidence": "high",
+   "source_urls": [
+    "https://bvs.saude.gov.br/bvs/saudelegis/anvisa/2020/RDC_429_2020_.pdf",
+    "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2020/perguntas-e-respostas-rotulagem-nutricional"
+   ],
+   "notes": "Textos como 'zero açúcar' ou 'light' para soju são alegações nutricionais vedadas a bebidas alcoólicas (a RDC 429 veda alegações nutricionais nelas)."
+  },
+  {
+   "product_kind": "Soju (bebida alcoólica, 12% a 17% vol.)",
+   "required_listing_field": "Alergênicos e glúten ('CONTÉM/NÃO CONTÉM GLÚTEN') conforme ingredientes (ex.: álcool de trigo ou cevada)",
+   "legal_or_policy_basis": "RDC 727 art. 2 (aplica-se a bebidas) e arts. 13 e 14; Lei 10.674/2003 ('alimentos industrializados')",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "medium",
+   "source_urls": [
+    "https://anvisalegis.datalegis.net/action/ActionDatalegis.php?acao=abrirTextoAto&codTipo=&cod_menu=9434&cod_modulo=310&desItem=&desItemFim=&numeroAto=00000727&orgao=RDC%2FDC%2FANVISA%2FMS&pesquisa=true&seqAto=002&tipo=RDC&valorAno=2022",
+    "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.674.htm"
+   ],
+   "notes": "A aplicação a bebidas alcoólicas reguladas pelo MAPA é provável, mas não foi confirmada em nota específica."
+  },
+  {
+   "product_kind": "Soju (bebida alcoólica, 12% a 17% vol.)",
+   "required_listing_field": "Conteúdo da página e marketing: sem apelo imperativo de consumo, sem linguagem ou imagens infantis ('animais humanizados, bonecos ou animações'), sem associação a esporte, direção, sexualidade ou sucesso; pessoas nas imagens maiores de 25 anos; não misturar com pelúcias ou vitrines infantis",
+   "legal_or_policy_basis": "CONAR Anexo A itens 1 e 2 (a, b, c); Lei 9.294 art. 4 §1 (para mais de 13 °GL); CDC art. 37 §2",
+   "applies_to_online_listing_or_label": "online_listing",
+   "confidence": "medium",
+   "source_urls": [
+    "http://www.conar.org.br/pdf/Codigo-CONAR-2024.pdf",
+    "https://www.planalto.gov.br/ccivil_03/leis/l9294.htm",
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "notes": "Risco alto para a Mimos Korea: estética fofa, emojis e mascotes K-pop perto de soju podem ser vistos como apelo a menores. Evitar cross-sell de soju em páginas de pelúcia ou produtos infantis."
+  },
+  {
+   "product_kind": "Pelúcias / brinquedos (incl. 'infantil', para menores de 14 anos)",
+   "required_listing_field": "Selo de Identificação da Conformidade Inmetro e número de registro (nnnnnn/aaaa) visíveis no anúncio (imagem do selo ou texto)",
+   "legal_or_policy_basis": "Portaria Inmetro 302/2021 arts. 7 e 8 (certificação e registro compulsórios; o registro condiciona o selo e a venda) e art. 6 III (o comércio 'físico ou virtual' deve manter a integridade das marcações obrigatórias); Consulta Pública Inmetro 6/2026 arts. 2, 3 e 8 IV (proposta: selo e registro no anúncio)",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "medium",
+   "source_urls": [
+    "http://sistema-sil.inmetro.gov.br/rtac/RTAC002801.pdf",
+    "https://acertcertifications.com/wp-content/uploads/2024/08/RTAC002801-BRINQUEDOS.pdf",
+    "https://www.gov.br/inmetro/pt-br/acesso-a-informacao/perguntas-frequentes/avaliacao-da-conformidade/brinquedos/onde-e-colocado-o-selo-em-brinquedos",
+    "https://www.in.gov.br/web/dou/-/consulta-publica-n-6-de-23-de-fevereiro-de-2026-688403623",
+    "https://www.gov.br/inmetro/pt-br/acesso-a-informacao/perguntas-frequentes/avaliacao-da-conformidade/selos/qual-o-regulamento-que-trata-sobre-comercio-virtual-de-produto-certificado"
+   ],
+   "notes": "Selo e registro no produto: confiança alta. A regra geral antiga de exibir o selo no site (Portaria 194/2021 art. 4 §3) aparece como revogada pela Portaria 232/2021. A CP 6/2026 ainda é proposta. Na prática, mostrar o selo e o nº de registro no anúncio é o esperado pelo Inmetro. Pelúcia sem certificação e registro não pode ser vendida."
+  },
+  {
+   "product_kind": "Pelúcias / brinquedos (incl. 'infantil', para menores de 14 anos)",
+   "required_listing_field": "Faixa etária indicada e advertências de segurança (ex.: símbolo e frase de 'não recomendável para menores de 3 anos' quando houver partes pequenas; 'ATENÇÃO/CUIDADO/ADVERTÊNCIA'; supervisão de adulto quando aplicável)",
+   "legal_or_policy_basis": "Portaria Inmetro 302/2021 RTQ (Anexo I) conforme FAQ Inmetro; Portaria 217/2020 (que alterou a 563/2016): comércio virtual deve manter as advertências 'na própria imagem da embalagem ou redigidas próximo à imagem do brinquedo'; CDC arts. 9 e 31; Decreto 7.962 art. 2 III",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "medium",
+   "source_urls": [
+    "https://www.gov.br/inmetro/pt-br/acesso-a-informacao/perguntas-frequentes/avaliacao-da-conformidade/brinquedos/quais-sao-as-marcacoes-e-informacoes-obrigatorias-devem-constar-no-produto-e-na-embalagem-de-brinquedos",
+    "http://www.in.gov.br/web/dou/-/portaria-n-217-de-18-de-junho-de-2020-263186131",
+    "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm"
+   ],
+   "notes": "No rótulo, confiança alta. A redação explícita da 217/2020 foi consolidada na 302/2021, mas não confirmei se o trecho sobre 'imagem' foi mantido literalmente."
+  },
+  {
+   "product_kind": "Pelúcias / brinquedos (incl. 'infantil', para menores de 14 anos)",
+   "required_listing_field": "Rótulo e embalagem: instruções e avisos em português, data de fabricação (código), GTIN na embalagem, identificação do fabricante ou importador",
+   "legal_or_policy_basis": "Portaria Inmetro 302/2021 art. 10 (GTIN obrigatório) e RTQ (FAQ Inmetro); art. 9 (licença de importação não automática com anuência Inmetro)",
+   "applies_to_online_listing_or_label": "physical_label",
+   "confidence": "high",
+   "source_urls": [
+    "http://sistema-sil.inmetro.gov.br/rtac/RTAC002801.pdf",
+    "https://www.gov.br/inmetro/pt-br/acesso-a-informacao/perguntas-frequentes/avaliacao-da-conformidade/brinquedos/quais-sao-as-marcacoes-e-informacoes-obrigatorias-devem-constar-no-produto-e-na-embalagem-de-brinquedos"
+   ],
+   "notes": "O GTIN pode ser usado no WooCommerce como chave única contra duplicidade de produtos."
+  },
+  {
+   "product_kind": "Pelúcias / brinquedos (incl. 'infantil', para menores de 14 anos)",
+   "required_listing_field": "Materiais (tecido e enchimento), dimensões, peso, instruções de lavagem, país de origem",
+   "legal_or_policy_basis": "CDC art. 31 ('características, composição, origem') e Decreto 7.962 art. 2 III. A etiquetagem têxtil (Portaria Inmetro 118/2021) não se aplica: 'Brinquedos' constam do Apêndice B",
+   "applies_to_online_listing_or_label": "online_listing",
+   "confidence": "medium",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+    "http://sistema-sil.inmetro.gov.br/rtac/RTAC002713.pdf",
+    "https://www.gov.br/inmetro/pt-br/acesso-a-informacao/perguntas-frequentes/avaliacao-da-conformidade/produtos-texteis/quais-produtos-texteis-que-nao-estao-sujeitos-ao-cumprimento-da-portaria-inmetro-n-296-de-12-de-junho-de-2019"
+   ],
+   "notes": "A exclusão da etiquetagem têxtil tem confiança alta. Os campos específicos no anúncio decorrem do dever geral de informar."
+  },
+  {
+   "product_kind": "Pelúcias / brinquedos (incl. 'infantil', para menores de 14 anos)",
+   "required_listing_field": "Enquadramento: se a pelúcia é decorativa ou para colecionador adulto, o anúncio não pode usar 'infantil' nem 'brinquedo', e a embalagem precisa de 'Este produto não é um brinquedo. Produto destinado a colecionadores com mais de 14 (quatorze) anos'",
+   "legal_or_policy_basis": "Portaria Inmetro 302/2021 art. 4 §2 II e art. 5 (produto não-brinquedo não pode ostentar 'brinquedo' nem o selo)",
+   "applies_to_online_listing_or_label": "both",
+   "confidence": "medium",
+   "source_urls": [
+    "http://sistema-sil.inmetro.gov.br/rtac/RTAC002801.pdf",
+    "https://www.gov.br/inmetro/pt-br/acesso-a-informacao/perguntas-frequentes/avaliacao-da-conformidade/brinquedos/quais-os-produtos-abrangidos-e-excluidos-pelo-regulamento-de-brinquedos"
+   ],
+   "notes": "Chamar a pelúcia de 'infantil' no anúncio a coloca no escopo de brinquedo (menores de 14): exige certificação, registro e selo. A exceção de colecionador depende da advertência na embalagem."
+  },
+  {
+   "product_kind": "Pelúcias / brinquedos (incl. 'infantil', para menores de 14 anos)",
+   "required_listing_field": "Texto publicitário não abusivo para crianças: sem explorar a 'deficiência de julgamento e experiência da criança' nem urgência de compra dirigida a ela",
+   "legal_or_policy_basis": "CDC art. 37 §2 e art. 39 IV",
+   "applies_to_online_listing_or_label": "online_listing",
+   "confidence": "medium",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "notes": "A Resolução Conanda 163/2014 e a Seção 11 do CONAR sobre publicidade infantil não foram consultadas."
+  },
+  {
+   "product_kind": "Pantufas / chinelos (calçados)",
+   "required_listing_field": "Etiqueta de calçado (ABNT NBR 16679): marca registrada ou razão social e CNPJ, país de origem, tamanho (numeração), composição por parte (cabedal, forro, palmilha, sola: couro, têxtil ou outros) e GTIN na embalagem",
+   "legal_or_policy_basis": "Portaria Inmetro 459/2025 arts. 2, 3, 7, 11 (fabricantes e importadores a partir de 31/07/2026) e 12 (comércio a partir de 31/12/2027)",
+   "applies_to_online_listing_or_label": "physical_label",
+   "confidence": "high",
+   "source_urls": [
+    "https://www.legisweb.com.br/legislacao/?id=482498",
+    "https://www.gov.br/inmetro/pt-br/assuntos/regulamentacao/analise-de-impacto-regulatorio/realizadas/2025/etiquetagem-de-calcados",
+    "https://home.etiquetacerta.com/pt/blog/guia-completo-da-portaria-459"
+   ],
+   "notes": "Os campos da portaria são confirmados (alta). O detalhamento da NBR 16679 (pictogramas, regra de 80% etc.) vem de fonte secundária. Se a loja importa, o prazo de julho de 2026 já está vencendo."
+  },
+  {
+   "product_kind": "Pantufas / chinelos (calçados)",
+   "required_listing_field": "No anúncio: tabela de tamanhos com medida em cm, materiais de cada parte, país de origem, cor e modelo inequívocos, instruções de lavagem",
+   "legal_or_policy_basis": "CDC art. 31; Decreto 7.962 art. 2 III; Portaria Inmetro 459/2025 art. 6 III (o comércio 'físico e eletrônico' deve preservar a integridade das informações obrigatórias)",
+   "applies_to_online_listing_or_label": "online_listing",
+   "confidence": "medium",
+   "source_urls": [
+    "https://www.legisweb.com.br/legislacao/?id=482498",
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "notes": "A grade de tamanhos coreana (mm) difere da brasileira. Informar a conversão reduz trocas e arrependimentos."
+  },
+  {
+   "product_kind": "Pantufas / chinelos (calçados)",
+   "required_listing_field": "Enquadramento: etiquetagem têxtil não se aplica (calçados excluídos); pantufa em formato de bicho para criança continua sendo calçado. 'Calçados de brinquedo' estão excluídos da Portaria 459 e, se forem brinquedo, entram na Portaria 302",
+   "legal_or_policy_basis": "Portaria Inmetro 118/2021 Apêndice B item 15; Portaria 459/2025 art. 5 §2 II",
+   "applies_to_online_listing_or_label": "unclear",
+   "confidence": "medium",
+   "source_urls": [
+    "http://sistema-sil.inmetro.gov.br/rtac/RTAC002713.pdf",
+    "https://www.legisweb.com.br/legislacao/?id=482498"
+   ],
+   "notes": "Evitar descrever pantufa como 'brinquedo' no anúncio."
+  },
+  {
+   "product_kind": "Mochilas (notebook, com porta USB)",
+   "required_listing_field": "Características essenciais: dimensões (A x L x P), capacidade (L), tamanho máximo do notebook (polegadas/cm), peso, materiais externos e forro, compartimentos, cor, origem",
+   "legal_or_policy_basis": "CDC arts. 6 III e 31; Decreto 7.962/2013 art. 2 III",
+   "applies_to_online_listing_or_label": "online_listing",
+   "confidence": "medium",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+    "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm"
+   ],
+   "notes": "O dever geral de informar é certo. A lista exata de campos é boa prática derivada dele."
+  },
+  {
+   "product_kind": "Mochilas (notebook, com porta USB)",
+   "required_listing_field": "Enquadramento: sem etiqueta têxtil obrigatória ('Malas, bolsas, carteiras, sacolas e assemelhados' excluídos) e fora da certificação Inmetro de artigos escolares (a lista inclui estojo e lancheira, não mochila)",
+   "legal_or_policy_basis": "Portaria Inmetro 118/2021 Apêndice B item 34; Portaria Inmetro 423/2021 (lista de artigos escolares)",
+   "applies_to_online_listing_or_label": "physical_label",
+   "confidence": "medium",
+   "source_urls": [
+    "http://sistema-sil.inmetro.gov.br/rtac/RTAC002713.pdf",
+    "https://www.gov.br/inmetro/pt-br/acesso-a-informacao/perguntas-frequentes/avaliacao-da-conformidade/artigos-escolares/quais-os-produtos-abrangidos-pela-atual-medida-regulatoria-para-artigos-escolares"
+   ],
+   "notes": "Mochila como 'assemelhado' de bolsa é interpretação. Estojo ou lancheira com personagem infantil vendidos junto exigem selo Inmetro (Portaria 423/2021)."
+  },
+  {
+   "product_kind": "Mochilas (notebook, com porta USB)",
+   "required_listing_field": "Porta USB: deixar claro que é só passagem de cabo e que power bank ou carregador NÃO está incluído (ou especificar o incluído)",
+   "legal_or_policy_basis": "CDC arts. 31 e 37 §3 (omissão de dado essencial); se incluir bateria ou carregador, podem incidir outros regimes (ex.: homologação Anatel), não verificados",
+   "applies_to_online_listing_or_label": "online_listing",
+   "confidence": "low",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "notes": "Regime regulatório de acessórios elétricos não pesquisado. A confiança é baixa para qualquer exigência além do CDC."
+  },
+  {
+   "product_kind": "Mochilas (notebook, com porta USB)",
+   "required_listing_field": "Garantia: legal de 90 dias (bem durável) e termo da garantia contratual, se houver",
+   "legal_or_policy_basis": "CDC arts. 24, 26 II, 31 ('garantia') e 50",
+   "applies_to_online_listing_or_label": "online_listing",
+   "confidence": "high",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "notes": "Vale também para pelúcias e pantufas (duráveis: 90 dias). Para alimentos e bebidas (não duráveis), 30 dias."
+  }
+ ],
+ "general_ecommerce_obligations": [
+  {
+   "obligation": "Identificar o fornecedor em local de destaque e de fácil visualização: nome empresarial, CNPJ, endereço físico e eletrônico e demais meios de contato",
+   "basis": "Decreto 7.962/2013 art. 2 I e II; sanções do CDC art. 56 (Decreto 7.962 art. 7)",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "obligation": "Informar as características essenciais de cada produto, incluindo riscos à saúde e segurança, em português, de forma correta, clara, precisa e ostensiva (composição, quantidade, qualidade, preço, garantia, validade, origem)",
+   "basis": "CDC arts. 6 III, 8, 9 e 31; Decreto 7.962 art. 2 III. Produto sem descrição ou foto ou com informação incompleta viola diretamente esses artigos",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+    "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "obligation": "Preço à vista ostensivo junto à imagem do produto, em fonte de pelo menos 12; em parcelamento, informar valor total, número, periodicidade e valor das parcelas, juros e encargos; não exibir preço só em parcelas nem em moeda estrangeira sem conversão",
+   "basis": "Lei 10.962/2004 art. 2 III (incluído pela Lei 13.543/2017); Decreto 5.903/2006 arts. 2, 3 e 9 (aplicáveis ao e-commerce pelo art. 10 parágrafo único)",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.962.htm",
+    "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/decreto/d5903.htm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "obligation": "Não atribuir preços distintos ao mesmo item: produtos duplicados no WooCommerce com preços diferentes são infração, e em divergência o consumidor paga o menor preço",
+   "basis": "Decreto 5.903/2006 art. 9 VII (aplicável ao e-commerce); Lei 10.962/2004 art. 5",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/decreto/d5903.htm",
+    "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.962.htm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "obligation": "Informar o preço por unidade de medida (R$/kg, R$/L), especialmente para alimentos e bebidas",
+   "basis": "CDC art. 6 XIII (incluído pela Lei 14.181/2021); Lei 10.962 art. 2-A (fracionados)",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+    "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.962.htm"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "obligation": "Discriminar despesas adicionais (frete, seguro) e informar as condições integrais da oferta: formas de pagamento, disponibilidade de estoque, forma e prazo de entrega, e restrições (ex.: soju só para maiores de 18, áreas de entrega)",
+   "basis": "Decreto 7.962/2013 art. 2 IV, V e VI; Decreto 7.962 art. 6 (cumprir prazos, quantidade e qualidade ofertados)",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "obligation": "Informar em local e formato visíveis os descontos por forma ou prazo de pagamento (ex.: desconto no Pix)",
+   "basis": "Lei 10.962/2004 art. 5-A (Lei 13.455/2017)",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.962.htm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "obligation": "Direito de arrependimento: 7 dias a contar do recebimento, devolução imediata e corrigida de todos os valores pagos (inclusive frete), meios claros e ostensivos para exercê-lo (inclusive pela mesma ferramenta da compra), confirmação imediata do pedido de arrependimento e comunicação à operadora do cartão para estorno",
+   "basis": "CDC art. 49; Decreto 7.962/2013 art. 5 §§1 a 4",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+    "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "obligation": "Atendimento facilitado: resumo do contrato antes da compra (destacando cláusulas limitativas), ferramentas para corrigir erros antes de finalizar, confirmação imediata da compra, contrato disponível para guarda, SAC eletrônico com resposta em até 5 dias e segurança no pagamento e nos dados",
+   "basis": "Decreto 7.962/2013 art. 4 I a VII e parágrafo único",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "obligation": "A oferta vincula: toda informação suficientemente precisa (inclusive textos SEO gerados por IA) integra o contrato; é proibida publicidade enganosa (inclusive por omissão de dado essencial) ou abusiva; o anunciante deve manter os dados que sustentam as alegações e carrega o ônus da prova",
+   "basis": "CDC arts. 30, 35, 36 parágrafo único, 37 §§1 a 3 e 38",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "obligation": "Informação acessível à pessoa com deficiência (ex.: texto alternativo nas fotos, informações obrigatórias em texto e não só dentro de imagens)",
+   "basis": "CDC art. 6 parágrafo único (incluído pela Lei 13.146/2015)",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "confidence": "medium"
+  },
+  {
+   "obligation": "Garantia legal irrenunciável: 30 dias (não duráveis: alimentos e bebidas) e 90 dias (duráveis: pelúcias, pantufas, mochilas), contados da entrega; a garantia contratual é complementar e exige termo escrito",
+   "basis": "CDC arts. 24, 26 e 50",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "confidence": "high"
+  },
+  {
+   "obligation": "Não vender produto em desacordo com normas técnicas oficiais (ex.: brinquedo sem certificação e registro Inmetro; alimento importado sem etiqueta PT; bebida sem importador registrado no MAPA); o comerciante responde solidariamente por vícios e pelo fato do produto quando o importador não for identificado",
+   "basis": "CDC arts. 13, 18 §6 II e 39 VIII; Portaria Inmetro 302/2021 art. 6 III",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm",
+    "http://sistema-sil.inmetro.gov.br/rtac/RTAC002801.pdf"
+   ],
+   "confidence": "high"
+  },
+  {
+   "obligation": "Produtos com certificação Inmetro compulsória: exibir imagem do selo e número de registro no anúncio (proposta em consulta pública); hoje decorre dos regulamentos de cada produto, que obrigam o comércio virtual a preservar as marcações obrigatórias",
+   "basis": "Consulta Pública Inmetro 6/2026 (arts. 2, 3, 6, 8, 9: proposta); FAQ Inmetro sobre comércio virtual; Portaria 194/2021 art. 4 §3 (texto semelhante, registrada como revogada pela Portaria 232/2021)",
+   "source_urls": [
+    "https://www.in.gov.br/web/dou/-/consulta-publica-n-6-de-23-de-fevereiro-de-2026-688403623",
+    "https://www.gov.br/inmetro/pt-br/acesso-a-informacao/perguntas-frequentes/avaliacao-da-conformidade/selos/qual-o-regulamento-que-trata-sobre-comercio-virtual-de-produto-certificado",
+    "https://www.legisweb.com.br/legislacao/?id=413737"
+   ],
+   "confidence": "low"
+  },
+  {
+   "obligation": "Tributos incidentes: informar o valor aproximado de tributos (transparência fiscal)",
+   "basis": "CDC art. 6 III (redação da Lei 12.741/2012 inclui 'tributos incidentes'); o detalhamento da Lei 12.741/2012 não foi consultado",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+   ],
+   "confidence": "low"
+  }
+ ],
+ "caveats": "Isto é uma pesquisa de conformidade para orientar a auditoria, não parecer jurídico. Os pontos de maior risco devem ser validados por advogado ou despachante regulatório.\n\n1) As normas Anvisa (RDC 727/2022, RDC 429/2020, IN 75/2020) regulam o RÓTULO físico e não trazem regra expressa para anúncios de e-commerce. A exigência de mostrar ingredientes, alergênicos, lactose, validade etc. no anúncio vem do CDC (arts. 6, 9, 31, 37) e do Decreto 7.962/2013. Por isso vários itens estão como 'both' com confiança média. Uma Consulta Pública da Anvisa (processo 25351.906893/2024-25) propõe regras para informação via 'tecnologia' (sites, apps) ligada ao rótulo; não é regra de anúncio.\n\n2) Textos primários conferidos via Exa: CDC (compilado), Decretos 7.962/2013 e 5.903/2006, Leis 10.962/2004, 10.674/2003, 13.106/2015, 13.305/2016 e 9.294/1996 (planalto); RDC 727/2022 e RDC 719/2022 (anvisalegis); RDC 429/2020 (BVS/MS); Decreto 6.871/2009 (espelho da Presidência e Câmara); Portaria Inmetro 459/2025 e Portaria 194/2021 (via LegisWeb e PDF Inmetro); Portaria Inmetro 302/2021 e 118/2021 (trechos do PDF Inmetro via Exa, pois o download direto foi bloqueado pelo proxy); CP Inmetro 6/2026 (in.gov.br); Código CONAR 2024/2025 (conar.org.br). Não consultados diretamente: RDC 716/2022 (café), RDC 726/2022 (lida em cópia de escritório de advocacia), ABNT NBR 16679 (norma paga; detalhes via fonte secundária), Resolução Conanda 163/2014, Lei 12.741/2012 e LGPD.\n\n3) Portaria Inmetro 194/2021 (regra geral de exibir o selo no comércio virtual) aparece como revogada pela Portaria 232/2021, e não confirmei se a 232 manteve o texto. A FAQ do Inmetro (atualizada em 04/2026) remete aos regulamentos específicos. A CP 6/2026 ainda era proposta em 24/02/2026; seu status atual não foi verificado. A expressão 'na própria imagem da embalagem ou redigidas próximo à imagem do brinquedo' está na Portaria 217/2020, que foi consolidada na 302/2021; não confirmei que o trecho foi mantido literalmente.\n\n4) Soju: a Lei 9.294/1996 só alcança bebidas acima de 13 °GL (art. 1 parágrafo único). Soju de 12% a 13% fica fora dela, mas o ECA (proibição absoluta de venda ou entrega a menores, crime do art. 243) e o CONAR valem para qualquer teor. A classificação MAPA do soju (bebida mista, destilado, ice/RTD) e o conflito sobre prazo de validade (Decreto 6.871 art. 11 XIII versus Anexo I da RDC 727, que dispensa para 10% vol. ou mais) não foram resolvidos. Leis estaduais ou municipais sobre verificação de idade em delivery não foram pesquisadas.\n\n5) Não foram pesquisados: regularização sanitária de alimentos importados (dispensa ou registro, licenciamento de importação Anvisa e MAPA), regimes de acessórios eletrônicos (porta USB ou power bank, Anatel), padrões de identidade de sucos e néctares do MAPA, limites de substâncias em pelúcias além do selo, e regras de marketplace de terceiros.\n\n6) Prazos: a lupa frontal e a nova tabela nutricional já estão em vigor (RDC 429 vigente desde 09/10/2022, com adequações até 2025 para retornáveis). Etiquetagem de calçados: importadores a partir de 31/07/2026 e varejo a partir de 31/12/2027. Brinquedos: Portaria 302/2021 com comercialização conforme desde 2023 (fabricantes e importadores).\n\n7) Ligação com a auditoria: produtos duplicados com preços diferentes conflitam com o Decreto 5.903 art. 9 VII e a Lei 10.962 art. 5. Anúncios sem descrição ou foto violam o CDC art. 31 e o Decreto 7.962 art. 2 III. Textos de IA com alegações inventadas criam obrigação pela oferta (CDC art. 30) e risco de publicidade enganosa (art. 37). Chamar pelúcias de 'infantil' as coloca no escopo de brinquedo Inmetro. Estética fofa ou infantil perto de soju conflita com o CONAR Anexo A item 2."
+}
