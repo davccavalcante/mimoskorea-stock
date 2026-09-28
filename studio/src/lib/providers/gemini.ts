@@ -12,12 +12,78 @@ import { LlmOutputError, type LlmProvider, type LlmRequest, type LlmResult } fro
 // - timeout and maxRetries must be passed per call (client-level options do
 //   not apply to interactions).
 
+// JSON Schema keywords accepted by Gemini structured output. Anything else is
+// removed: unknown keywords are either rejected or silently ignored, and a
+// silently ignored constraint gives a false sense of safety (Zod validates the
+// answer anyway).
+const SCHEMA_KEYWORDS = new Set([
+  "type",
+  "format",
+  "title",
+  "description",
+  "enum",
+  "items",
+  "prefixItems",
+  "minItems",
+  "maxItems",
+  "minimum",
+  "maximum",
+  "anyOf",
+  "oneOf",
+  "properties",
+  "additionalProperties",
+  "required",
+  "propertyOrdering",
+  "$id",
+  "$defs",
+  "$ref",
+  "$anchor",
+]);
+
+/** Keys whose value is a map of sub-schemas (their own keys are names, not keywords). */
+const SCHEMA_MAPS = new Set(["properties", "$defs"]);
+
+// Zod adds these bounds to every z.number().int(); they carry no information.
+const SAFE_INT = Number.MAX_SAFE_INTEGER;
+
+export function sanitizeSchema(node: unknown): unknown {
+  if (Array.isArray(node)) return node.map(sanitizeSchema);
+  if (!node || typeof node !== "object") return node;
+  const out: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(node as Record<string, unknown>)) {
+    if (key === "exclusiveMinimum" && typeof value === "number") {
+      out.minimum = value;
+      continue;
+    }
+    if (key === "exclusiveMaximum" && typeof value === "number") {
+      out.maximum = value;
+      continue;
+    }
+    if (key === "const" && (typeof value === "string" || typeof value === "number" || typeof value === "boolean")) {
+      out.enum = [value];
+      continue;
+    }
+    if (!SCHEMA_KEYWORDS.has(key)) continue;
+    if ((key === "minimum" && value === -SAFE_INT) || (key === "maximum" && value === SAFE_INT)) continue;
+    if (SCHEMA_MAPS.has(key) && value && typeof value === "object") {
+      out[key] = Object.fromEntries(Object.entries(value).map(([name, sub]) => [name, sanitizeSchema(sub)]));
+    } else if (key === "additionalProperties" && typeof value === "boolean") {
+      out[key] = value;
+    } else {
+      out[key] = sanitizeSchema(value);
+    }
+  }
+  return out;
+}
+
 /** Convert a Zod schema to the JSON Schema accepted by response_format. */
 export function toResponseSchema(schema: z.ZodType): Record<string, unknown> {
-  const json = z.toJSONSchema(schema, { unrepresentable: "any" }) as Record<string, unknown>;
-  delete json.$schema;
-  return json;
+  const json = z.toJSONSchema(schema, { unrepresentable: "any" });
+  return sanitizeSchema(json) as Record<string, unknown>;
 }
+
+/** Wall-clock limit per operation (a hung call must not freeze the operator's screen). */
+const TIMEOUTS_MS: Record<string, number> = { identify: 60_000, images: 90_000, write: 300_000 };
 
 function describeIssues(error: z.ZodError): string {
   return error.issues
@@ -45,14 +111,14 @@ export class GeminiProvider implements LlmProvider {
     let lastRaw = "";
 
     for (let attempt = 1; attempt <= 2; attempt++) {
+      // Each image is preceded by its own label, so indices can never drift.
       const input = request.images?.length
         ? [
             { type: "text" as const, text: prompt },
-            ...request.images.map((img) => ({
-              type: "image" as const,
-              data: img.base64,
-              mime_type: img.mimeType,
-            })),
+            ...request.images.flatMap((img, index) => [
+              { type: "text" as const, text: `Image index ${index}:` },
+              { type: "image" as const, data: img.base64, mime_type: img.mimeType },
+            ]),
           ]
         : prompt;
 
@@ -69,7 +135,7 @@ export class GeminiProvider implements LlmProvider {
           generation_config: { thinking_level: request.thinking ?? "medium" },
           store: false,
         },
-        { timeout: this.timeoutMs, maxRetries: 3 },
+        { timeout: Math.min(this.timeoutMs, TIMEOUTS_MS[request.operation] ?? this.timeoutMs), maxRetries: 1 },
       );
 
       if (interaction.status && interaction.status !== "completed") {

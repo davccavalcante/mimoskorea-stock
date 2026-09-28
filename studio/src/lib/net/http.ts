@@ -10,6 +10,8 @@ export class HttpError extends Error {
     readonly status: number,
     readonly body: unknown,
     readonly retryAfterSeconds: number | null,
+    /** Host that answered (used to tell the operator which service failed). */
+    readonly host: string | null = null,
   ) {
     super(message);
     this.name = "HttpError";
@@ -58,7 +60,7 @@ export async function requestJson<T>(
         continue;
       }
       const reason = error instanceof Error ? error.message : String(error);
-      throw new HttpError(`Falha de rede ao acessar ${new URL(url).host}: ${reason}`, 0, null, null);
+      throw new HttpError(`Falha de rede ao acessar ${new URL(url).host}: ${reason}`, 0, null, null, new URL(url).host);
     }
 
     const text = await res.text();
@@ -78,6 +80,7 @@ export async function requestJson<T>(
           res.status,
           text.slice(0, 300),
           null,
+          new URL(url).host,
         );
       }
       return { data: data as T, headers: res.headers };
@@ -95,6 +98,7 @@ export async function requestJson<T>(
       res.status,
       data,
       retryAfter,
+      new URL(url).host,
     );
   }
 }

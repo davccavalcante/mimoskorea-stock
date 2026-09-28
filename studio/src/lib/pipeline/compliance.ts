@@ -1,4 +1,6 @@
-import type { FieldKey, MissingField, ProductKind, Severity, VerifiedFact } from "@/lib/types";
+import { numbersIn } from "@/lib/pipeline/verify";
+import { fold } from "@/lib/text/normalize";
+import type { FieldKey, Identity, MissingField, ProductKind, Severity, VerifiedFact } from "@/lib/types";
 
 // =============================================================================
 // Compliance profiles per product kind
@@ -256,13 +258,13 @@ export function requiredFields(kind: ProductKind): Rule[] {
   return [...PROFILES[kind], ...COMMON_RULES];
 }
 
-/** Fields required by the profile that are not backed by a verified fact. */
+/** Fields required by the profile that are not backed by a verified fact (nutrition only via the verified table). */
 export function findMissing(
   kind: ProductKind,
   facts: VerifiedFact[],
   extra: { hasNutrition: boolean; brand: string | null },
 ): MissingField[] {
-  const present = new Set(facts.filter((f) => f.verified).map((f) => f.field));
+  const present = new Set(facts.filter((f) => f.verified && f.field !== "nutrition").map((f) => f.field));
   if (extra.hasNutrition) present.add("nutrition");
   if (extra.brand) present.add("brand");
   return requiredFields(kind)
@@ -290,4 +292,36 @@ export function legalNotices(kind: ProductKind): string[] {
   if (kind === "alcoholic_beverage") return ALCOHOL_NOTICES;
   if (kind === "plush_toy" || kind === "toy") return TOY_NOTICES;
   return [];
+}
+
+// =============================================================================
+// Deterministic product kind for legal purposes
+// =============================================================================
+// The 18+ notice must never depend on the model's classification alone: words
+// that name an alcoholic drink, or a verified alcohol content, force the kind.
+
+const ALCOHOL_RE =
+  /\b(soju|cervejas?|beer|vinhos?|wine|sake|saque|makgeolli|licor|liqueur|whisky|whiskey|vodka|gin|rum|cachaca|baijiu|shochu|umeshu|chuhai|highball|bebida alcoolica|destilado|espumante|champagne|sidra|cider|hard seltzer)\b|소주|막걸리|맥주|와인|청주|과실주|焼酎|梅酒|清酒|白酒|啤酒|日本酒/;
+
+/** Things that merely taste like or relate to a drink (a soju-flavoured candy, a wine glass). */
+const NOT_A_DRINK_RE =
+  /\b(balas?|doces?|chocolates?|salgadinhos?|biscoitos?|bolachas?|snacks?|candy|gelatinas?|pirulitos?|sorvetes?|gomas?|chicletes?|copos?|tacas?|canecas?|abridor|livros?|chaveiros?|pelucias?|adesivos?|meias?|camisetas?)\b/;
+
+export function enforceKind(identity: Identity, operatorName: string): Identity {
+  if (identity.kind === "alcoholic_beverage") return identity;
+  if (NOT_A_DRINK_RE.test(fold(identity.productType))) return identity;
+  const hay = fold([identity.productType, identity.line, identity.nativeName, operatorName].filter(Boolean).join(" "));
+  if (!ALCOHOL_RE.test(hay)) return identity;
+  return {
+    ...identity,
+    kind: "alcoholic_beverage",
+    notes: `${identity.notes} (tipo definido como bebida alcoólica por regra fixa)`.trim(),
+  };
+}
+
+/** Alcohol content of a verified fact, when above 0.5% (the Brazilian threshold for alcoholic drinks). */
+export function verifiedAbv(facts: VerifiedFact[]): number | null {
+  const fact = facts.find((f) => f.field === "alcohol_abv" && f.verified);
+  const value = fact ? Number(numbersIn(fact.value)[0]) : Number.NaN;
+  return Number.isFinite(value) && value > 0.5 ? value : null;
 }

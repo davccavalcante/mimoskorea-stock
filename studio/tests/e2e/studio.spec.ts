@@ -91,7 +91,7 @@ test("new food product: research -> review -> create (pending approval)", async 
   expect(product.status).toBe("pending"); // no price yet: waits for the owner
   expect(product.stock_quantity).toBe(36);
   expect(product.manage_stock).toBe(true);
-  expect(product.sku).toBe("LAM-SAM-BUL-CAR-130G");
+  expect(product.sku).toMatch(/^LAM-SAM-BUL-CAR-130G-[0-9A-Z]{4}$/);
   expect(product.global_unique_id).toBe("8801073113428");
   expect(product.images.length).toBeGreaterThan(0);
   expect(product.images[0].src).toMatch(/lamen-samyang-buldak-sabor-carbonara-130g.*\.webp$/);
@@ -162,16 +162,24 @@ test("triplicated product (O'Star): duplicate guard forces a stock update", asyn
   );
   await page.getByRole("button", { name: "Gerar cadastro" }).click();
 
-  const banner = page.getByText("Este produto já existe na loja");
+  // The mirror has the 3 production copies: all are confident matches, so the
+  // operator must pick which one to update and "create" is not even offered.
+  const banner = page.getByText(/Este produto já existe na loja \d+ vezes/);
   await expect(banner).toBeVisible({ timeout: 90_000 });
-  await expect(page.getByText(/Vamos atualizar o estoque de \d+ para 50 unidades\./)).toBeVisible();
+  const sync = page.getByRole("button", { name: "Sincronizar com a loja" });
+  await expect(sync).toBeDisabled();
+  await expect(page.getByText("Escolha uma opção no quadro acima para liberar o botão.")).toBeVisible();
+  await expect(page.getByText("É um produto diferente: criar um novo")).toHaveCount(0);
+  const options = page.getByRole("radio");
+  expect(await options.count()).toBeGreaterThanOrEqual(2);
   await page.screenshot({ path: path.join(shots, "06-duplicate.png"), fullPage: true });
 
-  const idText = await page.locator("text=/^ID \\d+ ·/").first().textContent();
-  const targetId = Number(/ID (\d+)/.exec(idText ?? "")?.[1]);
+  const first = options.first();
+  const targetId = Number((await first.getAttribute("value")) ?? "0");
+  await first.click();
   const original = await store.get(`/wc/v3/products/${targetId}`);
 
-  await page.getByRole("button", { name: "Sincronizar com a loja" }).click();
+  await sync.click();
   const dialog = page.getByRole("alertdialog");
   await expect(dialog.getByText(`Atualizar o produto ID ${targetId}`, { exact: false })).toBeVisible();
   await dialog.getByRole("button", { name: "Confirmar e sincronizar" }).click();
@@ -191,6 +199,24 @@ test("triplicated product (O'Star): duplicate guard forces a stock update", asyn
     attributes: original.attributes,
     images: [],
   });
+});
+
+test("discard: the registration leaves the queue and stays in the history", async ({ page }) => {
+  await fillForm(
+    page,
+    "Pelúcia Capivara Gotinha 45cm",
+    "https://shopee.com.br/pelucia-capivara-gotinha-45cm-i.000.001",
+    "3",
+  );
+  await page.getByRole("button", { name: "Gerar cadastro" }).click();
+  await expect(page.getByRole("button", { name: "Sincronizar com a loja" })).toBeVisible({ timeout: 90_000 });
+  const jobUrl = page.url();
+  await page.getByRole("button", { name: "Descartar" }).click();
+  await expect(page.getByRole("heading", { name: "Diga o produto. A IA faz o resto." })).toBeVisible();
+
+  await page.goto(jobUrl);
+  await expect(page.getByRole("heading", { name: "Este cadastro foi descartado" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Sincronizar com a loja" })).toHaveCount(0);
 });
 
 test("history lists every registration @mobile", async ({ page }, info) => {

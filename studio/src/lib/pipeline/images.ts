@@ -1,6 +1,7 @@
 import "server-only";
 import sharp from "sharp";
-import { assertPublicHttpUrl } from "@/lib/net/ssrf";
+import { fetch as guardedFetch } from "undici";
+import { assertPublicHttpUrl, guardedDispatcher } from "@/lib/net/ssrf";
 import type { Source } from "@/lib/types";
 
 // =============================================================================
@@ -45,7 +46,8 @@ export async function downloadImage(
   let url = rawUrl;
   for (let hop = 0; hop < 4; hop++) {
     await assertPublicHttpUrl(url, options.allowPrivate);
-    const res = await fetch(url, {
+    const res = await guardedFetch(url, {
+      dispatcher: guardedDispatcher(options.allowPrivate),
       redirect: "manual",
       signal: AbortSignal.timeout(options.timeoutMs ?? 20_000),
       headers: {
@@ -60,9 +62,10 @@ export async function downloadImage(
       continue;
     }
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const type = res.headers.get("content-type") ?? "";
-    if (type && !type.startsWith("image/") && !type.startsWith("application/octet-stream")) {
-      throw new Error(`Conteúdo não é imagem (${type})`);
+    const type = (res.headers.get("content-type") ?? "").toLowerCase();
+    if (!type.startsWith("image/") || type.includes("svg")) {
+      await res.body?.cancel().catch(() => undefined);
+      throw new Error(`Conteúdo não é imagem (${type || "sem tipo"})`);
     }
     const declared = Number(res.headers.get("content-length") ?? "0");
     if (declared > options.maxBytes) throw new Error("Imagem grande demais");
@@ -88,6 +91,12 @@ export async function downloadImage(
 // -----------------------------------------------------------------------------
 // Inspection and perceptual hash (dHash, 64 bits) for duplicate removal
 // -----------------------------------------------------------------------------
+// Decompression bombs: a small file can declare a gigantic canvas. sharp
+// refuses anything above LIMIT_PIXELS, and sides above MAX_SIDE are skipped.
+
+const LIMIT_PIXELS = 40_000_000;
+const MAX_SIDE = 8000;
+const load = (data: Buffer) => sharp(data, { failOn: "none", limitInputPixels: LIMIT_PIXELS });
 
 export type InspectedImage = {
   width: number;
@@ -98,9 +107,10 @@ export type InspectedImage = {
 
 export async function inspectImage(data: Buffer): Promise<InspectedImage | null> {
   try {
-    const meta = await sharp(data, { failOn: "none" }).metadata();
+    const meta = await load(data).metadata();
     if (!meta.width || !meta.height || !meta.format) return null;
-    const { data: pixels } = await sharp(data, { failOn: "none" })
+    if (meta.width > MAX_SIDE || meta.height > MAX_SIDE || meta.format === "svg") return null;
+    const { data: pixels } = await load(data)
       .rotate()
       .flatten({ background: "#ffffff" })
       .greyscale()
@@ -136,7 +146,7 @@ export function hammingDistance(a: bigint, b: bigint): number {
 
 /** Small JPEG preview sent to the vision model. */
 export async function visionThumbnail(data: Buffer, size = 448): Promise<Buffer> {
-  return sharp(data, { failOn: "none" })
+  return load(data)
     .rotate()
     .flatten({ background: "#ffffff" })
     .resize(size, size, { fit: "inside" })
@@ -158,13 +168,13 @@ export async function processProductImage(
   const inner = size - margin * 2;
 
   // 1. Normalise orientation and transparency, then trim uniform borders.
-  let base = sharp(data, { failOn: "none" }).rotate().flatten({ background: "#ffffff" });
+  let base = load(data).rotate().flatten({ background: "#ffffff" });
   try {
     const trimmed = await base
       .clone()
       .trim({ background: "#ffffff", threshold: 18 })
       .toBuffer({ resolveWithObject: true });
-    if (trimmed.info.width >= 64 && trimmed.info.height >= 64) base = sharp(trimmed.data);
+    if (trimmed.info.width >= 64 && trimmed.info.height >= 64) base = load(trimmed.data);
   } catch {
     // Nothing to trim (uniform image) - keep the original.
   }

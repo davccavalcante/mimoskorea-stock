@@ -28,6 +28,7 @@
     "sanitize-html": "^2.17.7",
     "server-only": "^0.0.1",
     "sharp": "^0.35.5",
+    "undici": "^8.11.2",
     "zod": "^4.6.5"
   },
   "devDependencies": {
@@ -44,6 +45,6 @@
   },
   "description": "AI-assisted product registration for the Mimos Korea WooCommerce store",
   "engines": {
-    "node": ">=22.12"
+    "node": ">=22.19"
   }
 }

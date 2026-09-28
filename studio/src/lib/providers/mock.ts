@@ -1,8 +1,9 @@
 import "server-only";
 import sharp from "sharp";
+import { HttpError } from "@/lib/net/http";
 import { fold } from "@/lib/text/normalize";
 import type { CatalogProduct, Identity, ProductKind } from "@/lib/types";
-import type { CatalogCategory, CatalogProvider, ProductPayload, SavedProduct } from "./catalog";
+import type { CatalogCategory, CatalogProvider, ProductDetail, ProductPayload } from "./catalog";
 import type { LlmProvider, LlmRequest, LlmResult } from "./llm";
 import { MOCK_PAGES } from "./mock-data";
 import type { ResearchProvider, SearchHit } from "./search";
@@ -148,6 +149,16 @@ function detectKind(text: string): ProductKind {
   return "other";
 }
 
+/** Variant names in English and Korean, as a real identify step would return. */
+const VARIANT_ALIASES: Record<string, string[]> = {
+  morango: ["Strawberry", "딸기"],
+  pessego: ["Peach", "복숭아"],
+  uva: ["Grape", "포도"],
+  original: ["Original", "오리지널"],
+  "queijo duplo": ["Double Cheese", "더블치즈"],
+  carbonara: ["Carbonara", "까르보"],
+};
+
 function titleCase(word: string) {
   return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 }
@@ -206,6 +217,7 @@ function mockIdentify(prompt: string): Identity {
     line,
     productType,
     variant,
+    variantAliases: variant ? (VARIANT_ALIASES[fold(variant)] ?? []) : [],
     netContent,
     packCount: null,
     gtin,
@@ -438,15 +450,21 @@ function mockWrite(prompt: string) {
         : { weightKg: 0.08, lengthCm: 20, widthCm: 15, heightCm: 5 };
 
   return {
-    // The mock adds the store name and an emoji on purpose: the system must strip them.
+    // Traps on purpose (the system must remove all of them): store name and
+    // emoji in the title, a WhatsApp contact, and an alcohol content copied
+    // from the ORIGINAL soju (16,5%) that is wrong for flavoured versions.
     title: `${name} | Mimos Korea 🍓`,
-    shortDescription: `${name}, produto importado ${identity.originCountry ? `da ${identity.originCountry}` : ""} com informações verificadas nas fontes. ✅`,
+    shortDescription: `${name}, produto importado ${identity.originCountry ? `da ${identity.originCountry}` : ""} com informações verificadas nas fontes. ✅ Chame no WhatsApp (11) 99999-0000.`,
     introParagraphs: [
-      `${name} é um produto ${identity.originCountry ? `importado da ${identity.originCountry}` : "importado"} da marca ${identity.brand ?? "indicada na embalagem"}. As especificações abaixo foram conferidas em fontes públicas e no rótulo informado pelos vendedores.`,
+      `${name} é um produto ${identity.originCountry ? `importado da ${identity.originCountry}` : "importado"} da marca ${identity.brand ?? "indicada na embalagem"}. As especificações abaixo foram conferidas em fontes públicas e no rótulo informado pelos vendedores.${identity.kind === "alcoholic_beverage" ? " Todas as versões têm teor alcoólico de 16,5%." : ""}`,
     ],
-    highlights: facts
-      .filter((f) => ["net_content", "alcohol_abv", "material", "dimensions", "country_of_origin"].includes(f.field))
-      .map((f) => `${f.label}: ${f.value}`),
+    // Numeric highlights are removed by the system and rebuilt from verified facts.
+    highlights: [
+      ...facts
+        .filter((f) => ["net_content", "alcohol_abv", "material", "dimensions", "country_of_origin"].includes(f.field))
+        .map((f) => `${f.label}: ${f.value}`),
+      "Produto importado com rótulo original",
+    ],
     usage: identity.kind === "alcoholic_beverage" ? "Sirva gelado, puro ou com gelo." : null,
     facts,
     nutrition,
@@ -500,22 +518,48 @@ export class MockLlm implements LlmProvider {
 }
 
 // -----------------------------------------------------------------------------
-// In-memory catalog (unit tests)
+// In-memory catalog (unit and integration tests)
 // -----------------------------------------------------------------------------
+// Mirrors the WooCommerce behaviour the sync depends on: unique SKU and
+// barcode (same error codes), brand terms, media library, meta data.
+
+type MemoryProduct = ProductDetail & { payload: Partial<ProductPayload>; meta: Record<string, string> };
+
+const conflict = (code: string, message: string, resourceId: number) =>
+  new HttpError(message, 400, { code, message, data: { status: 400, resource_id: resourceId } }, null, "memory.local");
 
 export class MemoryCatalog implements CatalogProvider {
   readonly name = "memory";
   readonly baseUrl = "http://memory.local";
-  products: Array<SavedProduct & { payload: Partial<ProductPayload> }> = [];
-  media: Array<{ id: number; fileName: string; parent: number | null }> = [];
+  products: MemoryProduct[] = [];
+  media: Array<{ id: number; fileName: string; alt: string; parent: number | null }> = [];
   brands: Array<{ id: number; name: string }> = [];
   private seq = 1000;
 
   constructor(
-    seed: CatalogProduct[] = [],
+    seed: Array<CatalogProduct & Partial<ProductDetail>> = [],
     private readonly categories: CatalogCategory[] = [],
   ) {
-    for (const p of seed) this.products.push({ ...p, hasPrice: true, payload: {} });
+    for (const p of seed) {
+      this.products.push({
+        type: "simple",
+        manageStock: true,
+        weight: "",
+        dimensions: { length: "", width: "", height: "" },
+        categoryIds: [],
+        brandIds: [],
+        attributes: [],
+        studioJob: null,
+        ...p,
+        payload: {},
+        meta: {},
+      });
+    }
+  }
+
+  private view(p: MemoryProduct): ProductDetail {
+    const { payload: _payload, meta: _meta, ...detail } = structuredClone(p);
+    return detail;
   }
 
   async listCategories() {
@@ -525,60 +569,119 @@ export class MemoryCatalog implements CatalogProvider {
     const words = fold(query)
       .split(/\s+/)
       .filter((w) => w.length > 2);
-    return this.products.filter((p) => words.every((w) => fold(p.name).includes(w)));
+    return this.products.filter((p) => words.every((w) => fold(p.name).includes(w))).map((p) => this.view(p));
   }
   async findBySku(sku: string) {
-    return this.products.find((p) => p.sku.toUpperCase() === sku.toUpperCase()) ?? null;
+    const p = this.products.find((x) => x.sku && x.sku.toUpperCase() === sku.toUpperCase());
+    return p ? this.view(p) : null;
+  }
+  async findByGtin(gtin: string) {
+    const digits = gtin.replace(/\D/g, "");
+    const p = this.products.find((x) => x.gtin && x.gtin.replace(/\D/g, "") === digits);
+    return p ? this.view(p) : null;
   }
   async getProduct(id: number) {
-    return this.products.find((p) => p.id === id) ?? null;
+    const p = this.products.find((x) => x.id === id);
+    return p ? this.view(p) : null;
   }
-  async ensureBrand(name: string) {
-    const found = this.brands.find((b) => fold(b.name) === fold(name));
+  async findBrand(name: string, create: boolean) {
+    const key = (v: string) => fold(v).replace(/[^a-z0-9]+/g, "");
+    const found = this.brands.find((b) => key(b.name) === key(name));
     if (found) return found.id;
+    if (!create) return null;
     const id = ++this.seq;
     this.brands.push({ id, name });
     return id;
   }
-  async uploadImage(file: { fileName: string }) {
+  async uploadImage(file: { data: Buffer; fileName: string; mimeType: string }) {
     const id = ++this.seq;
-    this.media.push({ id, fileName: file.fileName, parent: null });
+    this.media.push({ id, fileName: file.fileName, alt: "", parent: null });
     return { id, url: `${this.baseUrl}/${file.fileName}` };
   }
-  async attachMedia(mediaId: number, productId: number) {
+  async updateMedia(mediaId: number, meta: { alt?: string; title?: string; parent?: number }) {
     const m = this.media.find((x) => x.id === mediaId);
-    if (m) m.parent = productId;
+    if (!m) throw new Error("media not found");
+    if (meta.alt !== undefined) m.alt = meta.alt;
+    if (meta.parent !== undefined) m.parent = meta.parent;
   }
+  async mediaExists(mediaId: number) {
+    return this.media.some((x) => x.id === mediaId);
+  }
+
+  private assertUnique(payload: Partial<ProductPayload>, selfId: number | null) {
+    const other = (fn: (p: MemoryProduct) => boolean) => this.products.find((p) => p.id !== selfId && fn(p));
+    if (payload.sku) {
+      const clash = other((p) => p.sku.toUpperCase() === payload.sku?.toUpperCase());
+      if (clash) throw conflict("product_invalid_sku", "SKU inválido ou duplicado.", clash.id);
+    }
+    if (payload.global_unique_id) {
+      const clash = other((p) => p.gtin === payload.global_unique_id);
+      if (clash) throw conflict("product_invalid_global_unique_id", "GTIN duplicado.", clash.id);
+    }
+  }
+
+  private apply(p: MemoryProduct, payload: Partial<ProductPayload>) {
+    if (payload.name !== undefined) p.name = payload.name;
+    if (payload.slug !== undefined) p.slug = payload.slug;
+    if (payload.status !== undefined) p.status = payload.status;
+    if (payload.sku !== undefined) p.sku = payload.sku;
+    if (payload.global_unique_id !== undefined) p.gtin = payload.global_unique_id;
+    if (payload.manage_stock !== undefined) p.manageStock = payload.manage_stock;
+    if (payload.stock_quantity !== undefined) p.stockQuantity = p.manageStock ? payload.stock_quantity : null;
+    if (payload.weight !== undefined) p.weight = payload.weight;
+    if (payload.dimensions !== undefined) p.dimensions = payload.dimensions;
+    if (payload.categories !== undefined) p.categoryIds = payload.categories.map((c) => c.id);
+    if (payload.brands !== undefined) {
+      p.brandIds = payload.brands.map((b) => b.id);
+      p.brands = p.brandIds.map((id) => this.brands.find((b) => b.id === id)?.name ?? String(id));
+    }
+    if (payload.attributes !== undefined) p.attributes = payload.attributes;
+    for (const m of payload.meta_data ?? []) p.meta[m.key] = m.value;
+    p.studioJob = p.meta._mimos_studio_job ?? p.studioJob;
+    p.payload = { ...p.payload, ...payload };
+  }
+
   async createProduct(payload: ProductPayload) {
-    if (payload.sku && this.products.some((p) => p.sku === payload.sku))
-      throw new Error("product_invalid_sku: SKU duplicado");
+    this.assertUnique(payload, null);
     const id = ++this.seq;
-    const product = {
+    const product: MemoryProduct = {
       id,
       name: payload.name,
       slug: payload.slug ?? String(id),
-      sku: payload.sku ?? "",
-      gtin: payload.global_unique_id ?? "",
-      status: payload.status ?? "draft",
-      stockQuantity: payload.stock_quantity,
-      permalink: `${this.baseUrl}/${payload.slug}`,
+      sku: "",
+      gtin: "",
+      status: "draft",
+      stockQuantity: null,
+      permalink: `${this.baseUrl}/${payload.slug ?? id}`,
       brands: [],
       hasPrice: false,
-      payload,
+      type: "simple",
+      manageStock: false,
+      weight: "",
+      dimensions: { length: "", width: "", height: "" },
+      categoryIds: [],
+      brandIds: [],
+      attributes: [],
+      studioJob: null,
+      payload: {},
+      meta: {},
     };
+    this.apply(product, payload);
     this.products.push(product);
-    return product;
+    return this.view(product);
   }
   async updateProduct(id: number, payload: Partial<ProductPayload>) {
     const p = this.products.find((x) => x.id === id);
-    if (!p) throw new Error("not found");
-    Object.assign(p, {
-      name: payload.name ?? p.name,
-      sku: payload.sku ?? p.sku,
-      status: payload.status ?? p.status,
-      stockQuantity: payload.stock_quantity ?? p.stockQuantity,
-      payload: { ...p.payload, ...payload },
-    });
-    return p;
+    if (!p)
+      throw new HttpError(
+        "Produto não encontrado",
+        404,
+        { code: "woocommerce_rest_product_invalid_id" },
+        null,
+        "memory.local",
+      );
+    this.assertUnique(payload, id);
+    this.apply(p, payload);
+    return this.view(p);
   }
 }

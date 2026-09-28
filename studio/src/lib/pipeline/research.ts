@@ -1,7 +1,7 @@
 import "server-only";
+import { mentionsAny } from "@/lib/pipeline/verify";
 import type { ResearchProvider, SearchHit } from "@/lib/providers/search";
 import { fold } from "@/lib/text/normalize";
-import { tokens } from "@/lib/text/similarity";
 import type { Identity, Source } from "@/lib/types";
 
 // =============================================================================
@@ -81,22 +81,34 @@ export async function readReference(
   return null;
 }
 
+/** Variant name plus aliases (English / native language) given by the identify step. */
+export function variantAliases(identity: Identity): string[] {
+  return [identity.variant, ...(identity.variantAliases ?? [])].filter((v): v is string => Boolean(v?.trim()));
+}
+
+/** Does the text name the exact variant (whole words, any alias, any script)? null when there is no variant. */
 export function mentionsVariant(identity: Identity, text: string): boolean | null {
-  if (!identity.variant) return null;
-  const wanted = [...tokens(identity.variant)];
-  if (!wanted.length) return null;
-  const folded = fold(text);
-  return wanted.every((t) => folded.includes(t));
+  const aliases = variantAliases(identity);
+  if (!aliases.length) return null;
+  return mentionsAny(text, aliases);
+}
+
+/** Unicode-aware term presence (Latin, Hangul, Kana, Han). */
+function hasTerm(hay: string, term: string | null | undefined): boolean {
+  if (!term) return false;
+  const words = fold(term)
+    .split(/[^\p{L}\p{N}]+/u)
+    .filter((w) => w.length >= 2);
+  return words.length > 0 && words.every((w) => hay.includes(w));
 }
 
 function relevance(identity: Identity, hit: SearchHit): number {
-  const hay = fold(`${hit.title} ${hit.text.slice(0, 6000)}`);
+  const hay = fold(`${hit.title} ${hit.text.slice(0, 8000)}`);
   let score = 0;
-  for (const part of [identity.brand, identity.line, identity.productType, identity.nativeName]) {
-    if (!part) continue;
-    const t = [...tokens(part)];
-    if (t.length && t.every((x) => hay.includes(x))) score += 2;
-  }
+  if (hasTerm(hay, identity.brand)) score += 2;
+  if (hasTerm(hay, identity.line)) score += 2;
+  if (hasTerm(hay, identity.nativeName)) score += 3;
+  if (hasTerm(hay, identity.productType)) score += 1;
   if (mentionsVariant(identity, hay)) score += 3;
   if (identity.netContent && hay.replace(/\s/g, "").includes(fold(identity.netContent).replace(/\s/g, ""))) score += 1;
   if (identity.gtin && hay.includes(identity.gtin)) score += 5;
@@ -155,12 +167,19 @@ export async function webResearch(args: {
     }
   }
 
-  const ranked = [...merged.values()]
+  const scored = [...merged.values()]
     .map((hit) => ({ hit, score: relevance(identity, hit) }))
-    .filter((r) => r.score >= 2)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, reference ? maxSources - 1 : maxSources)
-    .map((r) => r.hit);
+    .sort((a, b) => b.score - a.score);
+  const kept = scored.filter((r) => r.score >= 3);
+  // Keep the best native-language page (manufacturer sites) even below the threshold.
+  const native = scored.find(
+    (r) => /[\u3131-\ud79d\u3040-\u30ff\u4e00-\u9fff]/.test(r.hit.text.slice(0, 3000)) && r.score >= 2,
+  );
+  if (native && !kept.includes(native)) kept.push(native);
+  for (const r of scored.filter((x) => !kept.includes(x)).slice(0, 8)) {
+    log({ provider: "research", operation: "discard", detail: `${r.hit.url} (relevância ${r.score})` });
+  }
+  const ranked = kept.slice(0, reference ? maxSources - 1 : maxSources).map((r) => r.hit);
 
   const ordered = reference ? [reference, ...ranked] : ranked;
   return ordered.map((hit, i) => ({

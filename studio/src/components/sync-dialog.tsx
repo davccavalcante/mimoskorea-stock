@@ -3,51 +3,40 @@
 import { CloudArrowUpIcon } from "@phosphor-icons/react";
 import { AlertDialog } from "radix-ui";
 import { useState } from "react";
-import { syncJob } from "@/lib/client/api";
+import { ApiError, syncJob } from "@/lib/client/api";
 import type { JobView } from "@/lib/jobs/view";
+import type { SyncPlan } from "@/lib/pipeline/plan";
 import type { Decision } from "./review-panel";
 import { Button } from "./ui/button";
 
 // =============================================================================
 // Confirmation: say in plain words exactly what will happen in the store
 // =============================================================================
+// The lines come from the same pure plan function the server applies, so the
+// dialog can never promise something different from what the sync does.
 
 export function SyncDialog({
   job,
   decision,
+  plan,
   open,
   onOpenChange,
   onSynced,
+  onFailed,
 }: {
   job: JobView;
   decision: Decision;
+  plan: Extract<SyncPlan, { ok: true }>;
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onSynced: (job: JobView) => void;
+  onFailed: () => void;
 }) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const draft = job.draft;
-  if (!draft) return null;
-  const target =
-    decision.mode === "update" ? job.duplicates?.candidates.find((c) => c.id === decision.productId) : null;
-
-  const lines =
-    decision.mode === "update"
-      ? [
-          `Atualizar o produto ID ${decision.productId}${target ? ` (${target.name})` : ""}.`,
-          `Estoque passa de ${target?.stockQuantity ?? 0} para ${job.input.stockQuantity} unidades.`,
-          `Título, descrições, informações e ${draft.images.length} foto(s) serão substituídos pelo novo conteúdo.`,
-          "O endereço (link) do produto na loja não muda.",
-        ]
-      : [
-          "Criar um produto novo na loja.",
-          `Estoque inicial: ${job.input.stockQuantity} unidades.`,
-          `${draft.images.length} foto(s) em WebP serão enviadas para a biblioteca de mídia.`,
-          "O produto fica aguardando preço e aprovação do administrador antes de aparecer para os clientes.",
-        ];
 
   async function confirm() {
+    if (busy) return;
     setBusy(true);
     setError(null);
     try {
@@ -55,9 +44,10 @@ export function SyncDialog({
       onOpenChange(false);
       onSynced(result);
     } catch (e) {
-      setError(e instanceof Error ? e.message : String(e));
-    } finally {
       setBusy(false);
+      setError(e instanceof Error ? e.message : String(e));
+      // The server may have stored a fresh duplicate check: reload the review behind the dialog.
+      if (e instanceof ApiError && e.status !== 0) onFailed();
     }
   }
 
@@ -65,13 +55,13 @@ export function SyncDialog({
     <AlertDialog.Root open={open} onOpenChange={(o) => !busy && onOpenChange(o)}>
       <AlertDialog.Portal>
         <AlertDialog.Overlay className="fixed inset-0 z-50 bg-ink/40 backdrop-blur-[2px]" />
-        <AlertDialog.Content className="fixed top-1/2 left-1/2 z-50 grid w-[min(92vw,34rem)] -translate-x-1/2 -translate-y-1/2 gap-5 border-[3px] border-ink bg-paper p-7 shadow-[10px_10px_0_0_var(--color-ink)]">
+        <AlertDialog.Content className="fixed top-1/2 left-1/2 z-50 grid max-h-[90dvh] w-[min(92vw,34rem)] -translate-x-1/2 -translate-y-1/2 gap-5 overflow-y-auto border-[3px] border-ink bg-paper p-7 shadow-[10px_10px_0_0_var(--color-ink)]">
           <AlertDialog.Title className="display text-3xl">
-            {decision.mode === "update" ? "Atualizar produto" : "Criar produto"}
+            {plan.mode === "update" ? "Atualizar produto" : "Criar produto"}
           </AlertDialog.Title>
           <AlertDialog.Description asChild>
             <ul className="grid gap-2 text-ink-2">
-              {lines.map((l) => (
+              {plan.lines.map((l) => (
                 <li key={l} className="border-rule border-b pb-2">
                   {l}
                 </li>
@@ -90,7 +80,7 @@ export function SyncDialog({
               </Button>
             </AlertDialog.Cancel>
             <Button onClick={confirm} loading={busy} icon={<CloudArrowUpIcon size={20} weight="bold" aria-hidden />}>
-              {busy ? "Enviando..." : "Confirmar e sincronizar"}
+              {busy ? "Enviando... não feche esta página" : "Confirmar e sincronizar"}
             </Button>
           </div>
         </AlertDialog.Content>

@@ -30,6 +30,14 @@ function time(iso: string | null) {
     : "--:--:--";
 }
 
+const STATUS_WORDS: Record<StepState["status"], string> = {
+  pending: "aguardando",
+  running: "em andamento",
+  done: "concluído",
+  failed: "falhou",
+  skipped: "pulado",
+};
+
 function StatusGlyph({ status }: { status: StepState["status"] }) {
   const common = "grid size-8 shrink-0 place-items-center border-2 border-ink";
   if (status === "done")
@@ -103,15 +111,18 @@ export function ProgressPanel({ job }: { job: JobView }) {
               key={s.key}
               layout
               initial={{ opacity: 0, x: -8 }}
-              animate={{ opacity: s.status === "pending" ? 0.4 : 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.04, duration: 0.3 }}
               className="grid grid-cols-[2rem_1fr] gap-4 border-rule border-b border-dashed py-4 last:border-b-0 sm:grid-cols-[2rem_6.5rem_1fr]"
             >
               <StatusGlyph status={s.status} />
               <span className="hidden pt-1 text-ink-3 text-xs sm:block">{time(s.finishedAt ?? s.startedAt)}</span>
               <div className="grid gap-1">
-                <span className={`font-sans text-base ${s.status === "running" ? "font-bold" : "font-medium"}`}>
+                <span
+                  className={`font-sans text-base ${s.status === "running" ? "font-bold" : "font-medium"} ${s.status === "pending" ? "text-ink-3" : ""}`}
+                >
                   {STEP_LABELS[s.key]}
+                  <span className="sr-only">: {STATUS_WORDS[s.status]}</span>
                 </span>
                 {s.detail ? <span className="text-ink-2 text-sm leading-snug">{s.detail}</span> : null}
               </div>

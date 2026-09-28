@@ -128,13 +128,6 @@ export type CandidateLike = {
 
 export function compareProducts(item: Comparable, candidate: CandidateLike): { score: number; reasons: string[] } {
   const reasons: string[] = [];
-  if (item.gtin && candidate.gtin && item.gtin.replace(/\D/g, "") === candidate.gtin.replace(/\D/g, "")) {
-    return { score: 1, reasons: ["Mesmo código de barras (EAN)"] };
-  }
-  if (item.sku && candidate.sku && item.sku.toUpperCase() === candidate.sku.toUpperCase()) {
-    return { score: 0.98, reasons: ["Mesmo SKU"] };
-  }
-
   const itemTokens = tokens([item.title, item.brand, item.variant].filter(Boolean).join(" "));
   const candTokens = tokens([candidate.name, ...candidate.brands].join(" "));
   let score = jaccard(itemTokens, candTokens);
@@ -146,6 +139,8 @@ export function compareProducts(item: Comparable, candidate: CandidateLike): { s
     reasons.push("Mesma marca");
   }
 
+  // Contradictions are collected first and applied as caps AFTER every bonus.
+  let contradiction = false;
   const variantTokens = item.variant ? tokens(item.variant) : new Set<string>();
   if (variantTokens.size) {
     const hits = [...variantTokens].filter((t) => candTokens.has(t)).length;
@@ -153,7 +148,7 @@ export function compareProducts(item: Comparable, candidate: CandidateLike): { s
       score += 0.15;
       reasons.push("Mesmo sabor/cor/variação");
     } else if (hits === 0) {
-      score = Math.min(score, 0.45);
+      contradiction = true;
       reasons.push("Sabor/cor/variação diferente");
     }
   }
@@ -163,10 +158,26 @@ export function compareProducts(item: Comparable, candidate: CandidateLike): { s
     score += 0.1;
     reasons.push("Mesmo tamanho/conteúdo");
   } else if (size === "different") {
-    score = Math.min(score, 0.45);
+    contradiction = true;
     reasons.push("Tamanho/conteúdo diferente");
   }
 
+  // Exact identifiers are strong evidence, but never stronger than a visible
+  // contradiction: then the operator decides ("possible"), never "match".
+  const sameGtin = Boolean(
+    item.gtin && candidate.gtin && item.gtin.replace(/\D/g, "") === candidate.gtin.replace(/\D/g, ""),
+  );
+  const sameSku = Boolean(item.sku && candidate.sku && item.sku.toUpperCase() === candidate.sku.toUpperCase());
+  if (sameGtin || sameSku) {
+    reasons.unshift(sameGtin ? "Mesmo código de barras (EAN)" : "Mesmo SKU");
+    if (contradiction) {
+      reasons.unshift("Mesmo código, mas sabor/tamanho diferente: confira");
+      return { score: 0.7, reasons };
+    }
+    return { score: sameGtin ? 1 : 0.98, reasons };
+  }
+
+  if (contradiction) score = Math.min(score, 0.45);
   return { score: Math.max(0, Math.min(1, Number(score.toFixed(3)))), reasons };
 }
 

@@ -79,6 +79,10 @@ export const FIELD_KEYS = [
 export const FieldKeySchema = z.enum(FIELD_KEYS);
 export type FieldKey = z.infer<typeof FieldKeySchema>;
 
+/** Fields a single fact may carry (the nutrition table has its own structured field). */
+export const FACT_FIELD_KEYS = FIELD_KEYS.filter((k) => k !== "nutrition");
+export const FactFieldSchema = z.enum(FACT_FIELD_KEYS as unknown as [FieldKey, ...FieldKey[]]);
+
 // =============================================================================
 // Research
 // =============================================================================
@@ -101,6 +105,11 @@ export const IdentitySchema = z.object({
   line: z.string().nullable().describe("Product line or model, e.g. 'Chum-Churum', 'O'Star'"),
   productType: z.string().describe("Generic type in Portuguese, e.g. 'Soju', 'Salgadinho', 'Pelúcia', 'Mochila'"),
   variant: z.string().nullable().describe("Flavour, colour or model variant in Portuguese"),
+  variantAliases: z
+    .array(z.string())
+    .describe(
+      "The same variant in English and in the native language, e.g. ['Strawberry', '딸기']; empty if no variant",
+    ),
   netContent: z.string().nullable().describe("e.g. '360ml', '30g', '40cm'"),
   packCount: z.number().int().nullable(),
   gtin: z.string().nullable(),
@@ -121,14 +130,14 @@ export type Identity = z.infer<typeof IdentitySchema>;
 // =============================================================================
 
 export const FactSchema = z.object({
-  field: FieldKeySchema,
+  field: FactFieldSchema,
   label: z.string().describe("Portuguese label shown to buyers, e.g. 'Teor alcoólico'"),
   value: z.string().describe("Value in Brazilian Portuguese, ready for the listing"),
   sourceIds: z.array(z.string()).min(1),
   evidence: z
     .string()
     .describe(
-      "Verbatim excerpt (max 220 chars) copied from ONE cited source that supports the value, in the source's original language",
+      "Verbatim excerpt (max 220 chars; up to 900 for ingredients) copied from ONE cited source that supports the value, in the source's original language",
     ),
 });
 export type Fact = z.infer<typeof FactSchema>;
@@ -146,6 +155,45 @@ export const NutritionSchema = z.object({
   sourceIds: z.array(z.string()).min(1),
 });
 export type Nutrition = z.infer<typeof NutritionSchema>;
+
+// What the model is asked to return. Deliberately lenient: one malformed fact
+// or a zero weight must not fail the whole (paid) synthesis. toSynthesis()
+// normalises it into the strict SynthesisSchema below.
+export const SynthesisWireSchema = z.object({
+  title: z.string(),
+  shortDescription: z.string(),
+  introParagraphs: z.array(z.string()),
+  highlights: z.array(z.string()).describe("Non-numeric qualities only; numbers and specs belong in facts"),
+  usage: z.string().nullable(),
+  facts: z.array(
+    z.object({
+      field: z.string().describe(`One of: ${FIELD_KEYS.filter((k) => k !== "nutrition").join(", ")}`),
+      label: z.string(),
+      value: z.string(),
+      sourceIds: z.array(z.string()),
+      evidence: z.string(),
+    }),
+  ),
+  nutrition: z
+    .object({
+      servingSize: z.string(),
+      servingsPerPackage: z.string().nullable(),
+      rows: z.array(z.object({ nutrient: z.string(), perServing: z.string(), dailyValue: z.string().nullable() })),
+      sourceIds: z.array(z.string()),
+    })
+    .nullable(),
+  sourcedWarnings: z.array(z.object({ text: z.string(), sourceIds: z.array(z.string()), evidence: z.string() })),
+  categoryId: z.number().int().nullable(),
+  seo: z.object({ metaTitle: z.string(), metaDescription: z.string(), focusKeyword: z.string() }),
+  shipping: z.object({
+    weightKg: z.number().nullable(),
+    lengthCm: z.number().nullable(),
+    widthCm: z.number().nullable(),
+    heightCm: z.number().nullable(),
+  }),
+  marketPrices: z.array(z.object({ amount: z.number(), currency: z.string(), sourceId: z.string() })),
+});
+export type SynthesisWire = z.infer<typeof SynthesisWireSchema>;
 
 export const SynthesisSchema = z.object({
   title: z.string(),
@@ -188,6 +236,40 @@ export const SynthesisSchema = z.object({
 });
 export type Synthesis = z.infer<typeof SynthesisSchema>;
 
+const positiveOrNull = (n: number | null) => (typeof n === "number" && Number.isFinite(n) && n > 0 ? n : null);
+
+/** Normalise the lenient model output: drop invalid facts, clamp numbers, bound arrays. */
+export function toSynthesis(wire: SynthesisWire): { synthesis: Synthesis; dropped: string[] } {
+  const dropped: string[] = [];
+  const facts = wire.facts.flatMap((f) => {
+    const parsed = FactSchema.safeParse(f);
+    if (parsed.success) return [parsed.data];
+    dropped.push(`${f.label || f.field}: ${f.value}`.slice(0, 120));
+    return [];
+  });
+  const nutrition = wire.nutrition ? NutritionSchema.safeParse(wire.nutrition) : null;
+  const synthesis: Synthesis = {
+    title: wire.title,
+    shortDescription: wire.shortDescription,
+    introParagraphs: (wire.introParagraphs.length ? wire.introParagraphs : [wire.shortDescription]).slice(0, 3),
+    highlights: wire.highlights.slice(0, 6),
+    usage: wire.usage,
+    facts,
+    nutrition: nutrition?.success ? nutrition.data : null,
+    sourcedWarnings: wire.sourcedWarnings.filter((w) => w.sourceIds.length && w.evidence.trim()),
+    categoryId: wire.categoryId,
+    seo: wire.seo,
+    shipping: {
+      weightKg: positiveOrNull(wire.shipping.weightKg),
+      lengthCm: positiveOrNull(wire.shipping.lengthCm),
+      widthCm: positiveOrNull(wire.shipping.widthCm),
+      heightCm: positiveOrNull(wire.shipping.heightCm),
+    },
+    marketPrices: wire.marketPrices.filter((p) => Number.isFinite(p.amount) && p.amount > 0),
+  };
+  return { synthesis: SynthesisSchema.parse(synthesis), dropped };
+}
+
 export type Severity = "blocker" | "warning";
 
 export type MissingField = {
@@ -220,6 +302,8 @@ export type ProductDraft = {
   sku: string;
   gtin: string | null;
   brand: string | null;
+  /** True when the brand name appears in at least one source (only then may a new brand term be created). */
+  brandVerified: boolean;
   category: { id: number; name: string } | null;
   shortDescriptionHtml: string;
   descriptionHtml: string;
@@ -256,11 +340,14 @@ export type CatalogProduct = {
   stockQuantity: number | null;
   permalink: string;
   brands: string[];
+  hasPrice: boolean;
 };
 
 export type DuplicateCandidate = CatalogProduct & {
   score: number;
   reasons: string[];
+  /** How the candidate was found: exact barcode, exact SKU, or name similarity. */
+  tier: "gtin" | "sku" | "name";
 };
 
 export type DuplicateCheck = {
@@ -276,6 +363,9 @@ export type SyncResult = {
   adminUrl: string;
   mediaIds: number[];
   stockQuantity: number;
+  /** False when only the stock was updated (incomplete draft on a live product). */
+  contentUpdated: boolean;
+  notes: string[];
   at: string;
 };
 
@@ -294,7 +384,10 @@ export type StepState = {
   finishedAt: string | null;
 };
 
-export type JobStatus = "running" | "ready" | "syncing" | "synced" | "failed";
+export type JobStatus = "running" | "ready" | "syncing" | "synced" | "failed" | "superseded" | "discarded";
+
+/** Machine-readable failure class, used to show the right advice to the operator. */
+export type ErrorCode = "config" | "network" | "credentials" | "quota" | "store" | "ai" | "interrupted" | "unknown";
 
 export type Job = {
   id: string;
@@ -304,6 +397,13 @@ export type Job = {
   status: JobStatus;
   steps: StepState[];
   error: string | null;
+  errorCode: ErrorCode | null;
+  /** Technical detail of the last error (shown collapsed). */
+  errorDetail: string | null;
+  /** Server process that last ran this job (detects restarts). */
+  bootId: string | null;
+  /** Set when "Gerar de novo" replaced this job. */
+  supersededBy: string | null;
   identity: Identity | null;
   sources: Source[];
   draft: ProductDraft | null;

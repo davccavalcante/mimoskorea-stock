@@ -1,5 +1,5 @@
 import "server-only";
-import { env } from "@/lib/env";
+import { ConfigError, env } from "@/lib/env";
 import { downloadImage } from "@/lib/pipeline/images";
 import type { CatalogProvider } from "./catalog";
 import { GeminiProvider } from "./gemini";
@@ -36,7 +36,7 @@ export function getProviders(): Providers {
     catalog = memoryCatalog;
   } else {
     if (!e.WP_USERNAME || !e.WP_APPLICATION_PASSWORD) {
-      throw new Error(
+      throw new ConfigError(
         "Configure WP_USERNAME e WP_APPLICATION_PASSWORD no arquivo .env.local para conectar ao WooCommerce.",
       );
     }
@@ -53,11 +53,11 @@ export function getProviders(): Providers {
     };
   }
 
-  if (!e.GEMINI_API_KEY) throw new Error("Configure GEMINI_API_KEY no arquivo .env.local.");
+  if (!e.GEMINI_API_KEY) throw new ConfigError("Configure GEMINI_API_KEY no arquivo .env.local.");
   const research: ResearchProvider[] = [];
   if (e.TAVILY_API_KEY) research.push(new TavilyProvider(e.TAVILY_API_KEY));
   if (e.EXA_API_KEY) research.push(new ExaProvider(e.EXA_API_KEY));
-  if (!research.length) throw new Error("Configure TAVILY_API_KEY e/ou EXA_API_KEY no arquivo .env.local.");
+  if (!research.length) throw new ConfigError("Configure TAVILY_API_KEY e/ou EXA_API_KEY no arquivo .env.local.");
 
   return {
     llm: new GeminiProvider(e.GEMINI_API_KEY, e.GEMINI_MODEL, e.GEMINI_TIMEOUT_MS),

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { runSync } from "@/lib/jobs/runner";
+import { runSync, SyncFailedError } from "@/lib/jobs/runner";
 import { toView } from "@/lib/jobs/view";
 import { SyncRejectedError } from "@/lib/pipeline/sync";
 
@@ -22,8 +22,11 @@ export async function POST(request: Request, context: RouteContext<"/api/jobs/[i
     const job = await runSync(id, parsed.data);
     return Response.json(toView(job));
   } catch (error) {
-    const status = error instanceof SyncRejectedError ? 409 : 502;
-    const text = error instanceof Error ? error.message : String(error);
-    return Response.json({ error: text }, { status });
+    if (error instanceof SyncRejectedError)
+      return Response.json({ error: error.message, code: "store" }, { status: 409 });
+    if (error instanceof SyncFailedError) {
+      return Response.json({ error: error.message, code: error.classified.code }, { status: 502 });
+    }
+    return Response.json({ error: "Erro inesperado ao sincronizar.", code: "unknown" }, { status: 500 });
   }
 }

@@ -1,7 +1,15 @@
+import { createServer, type Server } from "node:http";
+import type { AddressInfo } from "node:net";
 import sharp from "sharp";
-import { describe, expect, it } from "vitest";
+import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { assertPublicHttpUrl, BlockedUrlError, isPrivateAddress } from "@/lib/net/ssrf";
-import { collectCandidates, hammingDistance, inspectImage, processProductImage } from "@/lib/pipeline/images";
+import {
+  collectCandidates,
+  downloadImage,
+  hammingDistance,
+  inspectImage,
+  processProductImage,
+} from "@/lib/pipeline/images";
 import type { Source } from "@/lib/types";
 
 // =============================================================================
@@ -124,5 +132,61 @@ describe("SSRF guard", () => {
     await expect(assertPublicHttpUrl("https://user:pass@8.8.8.8/x.png")).rejects.toBeInstanceOf(BlockedUrlError);
     await expect(assertPublicHttpUrl("https://8.8.8.8/x.png")).resolves.toBeInstanceOf(URL);
     await expect(assertPublicHttpUrl("http://127.0.0.1:8080/x.png", true)).resolves.toBeInstanceOf(URL);
+  });
+});
+
+describe("downloadImage", () => {
+  let server: Server;
+  let base: string;
+  let png: Buffer;
+
+  beforeAll(async () => {
+    png = await photo(600, 600, "#aa3355");
+    server = createServer((req, res) => {
+      if (req.url === "/photo.png") {
+        res.writeHead(200, { "Content-Type": "image/png" });
+        res.end(png);
+      } else if (req.url === "/page.html") {
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.end("<html></html>");
+      } else if (req.url === "/vector.svg") {
+        res.writeHead(200, { "Content-Type": "image/svg+xml" });
+        res.end("<svg xmlns='http://www.w3.org/2000/svg'/>");
+      } else if (req.url === "/big.png") {
+        res.writeHead(200, { "Content-Type": "image/png" });
+        res.end(Buffer.alloc(4096));
+      } else if (req.url === "/redirect") {
+        res.writeHead(302, { Location: "/photo.png" });
+        res.end();
+      } else {
+        res.writeHead(404);
+        res.end();
+      }
+    });
+    await new Promise<void>((resolve) => server.listen(0, "127.0.0.1", resolve));
+    base = `http://127.0.0.1:${(server.address() as AddressInfo).port}`;
+  });
+
+  afterAll(async () => {
+    await new Promise((resolve) => server.close(resolve));
+  });
+
+  const open = { maxBytes: 1024 * 1024, allowPrivate: true };
+
+  it("downloads real images and follows redirects", async () => {
+    expect((await downloadImage(`${base}/photo.png`, open)).equals(png)).toBe(true);
+    expect((await downloadImage(`${base}/redirect`, open)).equals(png)).toBe(true);
+  });
+
+  it("refuses non-images, SVG and oversized files", async () => {
+    await expect(downloadImage(`${base}/page.html`, open)).rejects.toThrow(/não é imagem/);
+    await expect(downloadImage(`${base}/vector.svg`, open)).rejects.toThrow(/não é imagem/);
+    await expect(downloadImage(`${base}/big.png`, { ...open, maxBytes: 1000 })).rejects.toThrow(/grande demais/);
+  });
+
+  it("refuses internal addresses unless explicitly allowed (local staging only)", async () => {
+    await expect(downloadImage(`${base}/photo.png`, { ...open, allowPrivate: false })).rejects.toBeInstanceOf(
+      BlockedUrlError,
+    );
   });
 });

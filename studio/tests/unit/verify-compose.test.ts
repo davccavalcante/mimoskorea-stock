@@ -193,7 +193,9 @@ describe("buildSku", () => {
       netContent: "360ml",
       packCount: null,
     } as unknown as Identity;
-    expect(buildSku(identity)).toBe("SOJ-LOT-CHCH-MOR-360ML");
+    // Readable prefix + 4-character hash of the full identity (avoids collisions after truncation).
+    expect(buildSku(identity)).toMatch(/^SOJ-LOT-CHCH-MOR-360ML-[0-9A-Z]{4}$/);
     expect(buildSku(identity)).toBe(buildSku({ ...identity }));
+    expect(buildSku({ ...identity, variant: "Pêssego" } as Identity)).not.toBe(buildSku(identity));
   });
 });

@@ -99,19 +99,29 @@ export async function selectImages(args: {
   if (!pool.length) return { images: [], usage: null };
 
   // 3. Vision review: exact product and variant, no overlays or watermarks.
-  const thumbs = await Promise.all(pool.map((p) => visionThumbnail(p.data)));
-  const { data: review, usage } = await llm.generateJson({
-    operation: "images",
-    system: IMAGES_SYSTEM,
-    prompt: imagesPrompt(identity, pool.length),
-    schema: ImageReviewSchema,
-    images: thumbs.map((t) => ({
-      mimeType: "image/jpeg" as const,
-      base64: t.toString("base64"),
-    })),
-    thinking: "low",
-    model: visionModel,
-  });
+  // A failed review never lets unreviewed photos through: no photo is safer than a wrong variant.
+  let review: z.infer<typeof ImageReviewSchema>;
+  let usage: string;
+  try {
+    const thumbs = await Promise.all(pool.map((p) => visionThumbnail(p.data)));
+    ({ data: review, usage } = await llm.generateJson({
+      operation: "images",
+      system: IMAGES_SYSTEM,
+      prompt: imagesPrompt(identity, pool.length),
+      schema: ImageReviewSchema,
+      images: thumbs.map((t) => ({
+        mimeType: "image/jpeg" as const,
+        base64: t.toString("base64"),
+      })),
+      thinking: "low",
+      model: visionModel,
+    }));
+  } catch (error) {
+    log(
+      `Revisão visual falhou (${error instanceof Error ? error.message.slice(0, 160) : "erro"}): nenhuma foto aprovada`,
+    );
+    return { images: [], usage: null };
+  }
 
   const accepted = review.images
     .filter(
@@ -125,12 +135,16 @@ export async function selectImages(args: {
   // 4. Process and store as SEO-named WebP files.
   await mkdir(options.outputDir, { recursive: true });
   const images: ProcessedImage[] = [];
-  for (const [i, r] of accepted.entries()) {
+  for (const r of accepted) {
     const src = pool[r.index];
-    const out = await processProductImage(src.data, {
-      size: options.size,
-      quality: options.quality,
-    });
+    let out: Awaited<ReturnType<typeof processProductImage>>;
+    try {
+      out = await processProductImage(src.data, { size: options.size, quality: options.quality });
+    } catch {
+      log(`Imagem ${r.index} não pôde ser tratada e foi ignorada`);
+      continue;
+    }
+    const i = images.length;
     const fileName = `${options.slug}${i === 0 ? "" : `-${i + 1}`}.webp`;
     await writeFile(path.join(options.outputDir, fileName), out.data);
     images.push({

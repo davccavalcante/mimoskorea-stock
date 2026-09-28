@@ -7,7 +7,7 @@ import type { Identity } from "@/lib/types";
 // =============================================================================
 // Same product -> same SKU, so a second registration of the same item is caught
 // by the SKU lookup even when the operator types a different name.
-// Pattern: TYPE-BRAND-LINE-VARIANT-SIZE, e.g. SOJ-LOT-CHU-MOR-360ML
+// Pattern: TYPE-BRAND-LINE-VARIANT-SIZE-HASH, e.g. SOJ-LOT-CHCH-MOR-360ML-1K9Q
 
 function code(text: string | null | undefined, letters = 3): string {
   if (!text) return "";
@@ -25,6 +25,16 @@ function code(text: string | null | undefined, letters = 3): string {
     .toUpperCase();
 }
 
+/** FNV-1a 32-bit, base36: short, deterministic and dependency-free. */
+function shortHash(text: string): string {
+  let h = 0x811c9dc5;
+  for (const ch of text) {
+    h ^= ch.codePointAt(0) ?? 0;
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return h.toString(36).toUpperCase().padStart(4, "0").slice(-4);
+}
+
 export function buildSku(identity: Identity): string {
   const size = measures(identity.netContent ?? "")[0];
   const sizePart = size
@@ -40,5 +50,18 @@ export function buildSku(identity: Identity): string {
     pack,
   ].filter(Boolean);
   const unique = parts.filter((p, i) => parts.indexOf(p) === i);
-  return unique.join("-").slice(0, 40).replace(/-+$/g, "") || "SKU";
+  // The readable prefix can collide ("Morango" vs "Morango Silvestre"); the hash of the full
+  // normalised identity cannot, and stays identical for the same product.
+  const key = [
+    identity.brand,
+    identity.line,
+    identity.productType,
+    identity.variant,
+    identity.netContent,
+    identity.packCount,
+  ]
+    .map((v) => fold(String(v ?? "")).replace(/[^a-z0-9]+/g, ""))
+    .join("|");
+  const prefix = unique.join("-").slice(0, 34).replace(/-+$/g, "") || "SKU";
+  return `${prefix}-${shortHash(key)}`;
 }

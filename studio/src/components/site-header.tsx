@@ -41,16 +41,22 @@ export async function SiteHeader() {
           >
             {status.label}
             {status.problems.length ? " / pendências" : ""}
+            {status.problems.length ? <span className="sr-only">: {status.problems.join("; ")}</span> : null}
           </span>
           <Link
             href="/historico"
-            className="flex items-center gap-1.5 px-2 py-1 text-sm font-medium underline-offset-4 hover:underline"
+            aria-label="Histórico de cadastros"
+            className="flex min-h-11 min-w-11 items-center justify-center gap-1.5 px-2 text-sm font-medium underline-offset-4 hover:underline"
           >
-            <ClockCounterClockwiseIcon size={18} weight="bold" aria-hidden />
+            <ClockCounterClockwiseIcon size={20} weight="bold" aria-hidden />
             <span className="hidden sm:inline">Histórico</span>
           </Link>
-          <Link href="/" className="flex items-center gap-1.5 bg-ink px-3 py-1.5 text-paper text-sm font-semibold">
-            <PlusIcon size={16} weight="bold" aria-hidden />
+          <Link
+            href="/"
+            aria-label="Novo cadastro"
+            className="flex min-h-11 min-w-11 items-center justify-center gap-1.5 bg-ink px-3 text-paper text-sm font-semibold"
+          >
+            <PlusIcon size={18} weight="bold" aria-hidden />
             <span className="hidden sm:inline">Novo</span>
           </Link>
         </nav>

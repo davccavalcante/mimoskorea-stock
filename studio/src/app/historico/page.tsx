@@ -2,7 +2,7 @@ import { ArrowSquareOutIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { connection } from "next/server";
-import { listJobs } from "@/lib/jobs/store";
+import { listJobsReconciled } from "@/lib/jobs/runner";
 import { toSummary } from "@/lib/jobs/view";
 
 export const metadata: Metadata = { title: "Histórico | Mimos Catalog Studio" };
@@ -13,11 +13,13 @@ const STATUS: Record<string, string> = {
   syncing: "sincronizando",
   synced: "sincronizado",
   failed: "falhou",
+  superseded: "substituído",
+  discarded: "descartado",
 };
 
 export default async function HistoryPage() {
   await connection();
-  const jobs = (await listJobs(300)).map(toSummary);
+  const jobs = (await listJobsReconciled(300)).map(toSummary);
   return (
     <section className="grid gap-8" aria-labelledby="history-title">
       <div className="grid gap-3">

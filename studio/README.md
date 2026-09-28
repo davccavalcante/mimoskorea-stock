@@ -38,13 +38,15 @@ operator: name + link + stock
                 vision picks the exact product without overlays -> sharp:
                 trim, white square canvas, gentle colour correction, sharpen,
                 WebP, SEO file name, alt text
- 6. Duplicates  search the store (all statuses) by SKU, EAN and name
+ 6. Duplicates  search the store (all statuses) by SKU, EAN, name and the
+                operator's typed name
                 -> "match" forces UPDATE of the existing product (stock,
-                   content, photos; URL and SKU kept); "possible" asks the
-                   operator; "none" allows CREATE
+                   content, photos; URL and SKU kept); several matches ask
+                   which one; "possible" asks the operator; "none" allows CREATE
         |
         v
- review screen (read-only)  ->  Sincronizar  ->  WooCommerce REST API
+ review screen (read-only)  ->  Sincronizar  ->  duplicate re-check against
+                                                 the live store  ->  WooCommerce
 ```
 
 Rules enforced by the system, not by the operator:
@@ -58,6 +60,13 @@ Rules enforced by the system, not by the operator:
 | Same product cannot be created twice | `src/lib/pipeline/duplicates.ts`, `sync.ts` |
 | New products have no price, so they go to WooCommerce as **pending** for the owner | `src/lib/pipeline/sync.ts` |
 | Incomplete listings never publish themselves | `src/lib/pipeline/sync.ts` |
+| A live product is never overwritten by an incomplete listing (stock only) | `src/lib/pipeline/plan.ts` |
+| The confirmation dialog and the server use the same plan function | `src/lib/pipeline/plan.ts` |
+| Free text cannot carry unverified numbers, contact data, prices or promotions | `src/lib/pipeline/prose.ts` |
+| Barcode only from a verified fact; a new brand term only if the sources name it | `src/lib/pipeline/write.ts` |
+| Soju, beer, wine... are always treated as alcohol (18+), whatever the AI says | `src/lib/pipeline/compliance.ts` |
+| The store is re-checked right before sync; syncs run one at a time | `src/lib/jobs/runner.ts` |
+| Mock (demo) content can never be sent to a non-local store | `src/lib/jobs/runner.ts` |
 | Every job is kept as an audit trail (inputs, sources, output, sync result) | `.data/jobs/*.json`, `/historico` |
 
 ## Stack
@@ -69,7 +78,7 @@ Vitest 5 · Playwright.
 
 ## Setup
 
-Requirements: Node.js 22.12 or newer.
+Requirements: Node.js 22.19 or newer.
 
 ```bash
 cd studio
@@ -102,8 +111,25 @@ WordPress requirements: pretty permalinks enabled (Settings > Permalinks),
 HTTPS in production (Application Passwords are disabled on plain HTTP unless the
 site is a local environment), WooCommerce stock management enabled.
 
-There is no login screen by design. Run the studio on a trusted machine or set
-`STUDIO_BASIC_AUTH=user:password` to make the browser ask for a password.
+### Security without a login screen
+
+There is no login screen by design. The app protects itself in layers
+(`src/proxy.ts`):
+
+1. **Host allowlist** (`STUDIO_ALLOWED_HOSTS`, default `localhost,127.0.0.1,[::1]`).
+   When other computers on the network open the studio, add the machine name or
+   IP, e.g. `STUDIO_ALLOWED_HOSTS=localhost,estoque.local,192.168.0.20`.
+2. **Same-origin writes**: registrations and syncs are accepted only from the
+   studio's own pages (blocks other websites open in the same browser).
+3. **JSON-only API writes**.
+4. Optional browser password: `STUDIO_BASIC_AUTH=user:password`.
+
+Image downloads are protected against SSRF and DNS rebinding (the address is
+checked again at connection time, including IPv6 forms such as NAT64 and 6to4),
+and oversized or non-image files are refused.
+
+Paid quotas are protected too: at most `STUDIO_MAX_CONCURRENT_JOBS` registrations
+are researched at the same time and `STUDIO_MAX_JOBS_PER_MINUTE` can start per minute.
 
 ## Test environment
 

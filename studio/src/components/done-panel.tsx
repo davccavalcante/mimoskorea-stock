@@ -42,6 +42,27 @@ export function DonePanel({ job, onNew }: { job: JobView; onNew: () => void }) {
           {sync.mediaIds.length} foto(s)
         </p>
       </div>
+      {sync.contentUpdated === false ? (
+        <p className="border-2 border-ink p-4 font-medium">
+          Só o estoque foi atualizado. Faltam informações obrigatórias, então o texto novo ficou guardado no histórico
+          para o administrador revisar.
+        </p>
+      ) : null}
+      {sync.notes?.length ? (
+        <div className="grid gap-2">
+          <p className="font-mono text-ink-3 text-xs uppercase tracking-[0.2em]">Observações</p>
+          <ul className="grid gap-1">
+            {sync.notes.map((note) => (
+              <li
+                key={note}
+                className={`border-ink border-l-4 pl-3 ${note.startsWith("ATENÇÃO") ? "font-semibold" : "text-ink-2"}`}
+              >
+                {note}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
       <div className="flex flex-wrap gap-3">
         <a
           href={sync.adminUrl}

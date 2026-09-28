@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   // Native image library and filesystem-heavy code stay out of the bundle.
-  serverExternalPackages: ["sharp"],
+  serverExternalPackages: ["sharp", "undici"],
   poweredByHeader: false,
   typedRoutes: true,
   images: { unoptimized: true },

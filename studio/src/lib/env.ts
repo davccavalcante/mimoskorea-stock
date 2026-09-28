@@ -9,6 +9,14 @@ import { z } from "zod";
 // below is the single source of truth: it documents each variable, applies
 // defaults and fails fast with a readable message when something is wrong.
 
+/** A missing or invalid setting in .env.local (the operator cannot fix it; the owner can). */
+export class ConfigError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "ConfigError";
+  }
+}
+
 const bool = z
   .enum(["true", "false", "1", "0", "yes", "no"])
   .transform((v) => v === "true" || v === "1" || v === "yes");
@@ -22,12 +30,19 @@ const schema = z.object({
   STUDIO_DATA_DIR: z.string().default(".data"),
   /** Optional HTTP Basic protection ("user:password"). Not a login screen. */
   STUDIO_BASIC_AUTH: z.string().optional(),
+  /** Host names allowed to reach the app (comma separated; read by src/proxy.ts). */
+  STUDIO_ALLOWED_HOSTS: z.string().default("localhost,127.0.0.1,[::1]"),
+  /** How many registrations are researched at the same time (the rest wait in line). */
+  STUDIO_MAX_CONCURRENT_JOBS: z.coerce.number().int().min(1).max(4).default(2),
+  /** New registrations accepted per minute (protects the paid AI and search quotas). */
+  STUDIO_MAX_JOBS_PER_MINUTE: z.coerce.number().int().min(1).max(120).default(10),
 
   // --- Gemini ------------------------------------------------------------------
   GEMINI_API_KEY: z.string().optional(),
   GEMINI_MODEL: z.string().default("gemini-3.8-flash"),
   GEMINI_VISION_MODEL: z.string().default("gemini-3.8-flash"),
-  GEMINI_TIMEOUT_MS: z.coerce.number().int().positive().default(120_000),
+  /** Upper limit per AI call; each operation also has its own shorter limit (identify 60 s, images 90 s). */
+  GEMINI_TIMEOUT_MS: z.coerce.number().int().positive().default(300_000),
 
   // --- Research ----------------------------------------------------------------
   TAVILY_API_KEY: z.string().optional(),
@@ -69,7 +84,7 @@ export function env(): Env {
   const parsed = schema.safeParse(process.env);
   if (!parsed.success) {
     const issues = parsed.error.issues.map((i) => `  - ${i.path.join(".")}: ${i.message}`).join("\n");
-    throw new Error(`Invalid environment configuration:\n${issues}`);
+    throw new ConfigError(`Configuração inválida no arquivo .env.local:\n${issues}`);
   }
   cached = parsed.data;
   return cached;

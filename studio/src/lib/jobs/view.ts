@@ -1,3 +1,5 @@
+import { env } from "@/lib/env";
+import type { SyncSettingsLike } from "@/lib/pipeline/plan";
 import type { Job } from "@/lib/types";
 
 // =============================================================================
@@ -15,11 +17,15 @@ export type JobView = Omit<Job, "sources"> & {
     origin: string;
     chars: number;
   }>;
+  /** Store status rules, so the confirmation dialog shows exactly what the server will do. */
+  syncSettings: SyncSettingsLike;
 };
 
 export function toView(job: Job): JobView {
+  const e = env();
   return {
     ...job,
+    syncSettings: { statusWhenComplete: e.WC_STATUS_WHEN_COMPLETE, statusWhenIncomplete: e.WC_STATUS_WHEN_INCOMPLETE },
     sources: job.sources.map((s) => ({
       id: s.id,
       url: s.url,
@@ -42,6 +48,7 @@ export type JobSummary = {
   productId: number | null;
   adminUrl: string | null;
   complete: boolean | null;
+  supersededBy: string | null;
 };
 
 export function toSummary(job: Job): JobSummary {
@@ -56,5 +63,6 @@ export function toSummary(job: Job): JobSummary {
     productId: job.sync?.productId ?? null,
     adminUrl: job.sync?.adminUrl ?? null,
     complete: job.draft?.complete ?? null,
+    supersededBy: job.supersededBy,
   };
 }

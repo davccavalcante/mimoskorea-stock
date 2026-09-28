@@ -29,6 +29,7 @@ export function fold(text: string): string {
     .replace(/[\u2018\u2019\u00b4`]/g, "'")
     .normalize("NFKD")
     .replace(/\p{M}/gu, "")
+    .normalize("NFC") // recompose Hangul syllables split by NFKD
     .toLowerCase();
 }
 
