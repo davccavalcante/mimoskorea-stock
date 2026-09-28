@@ -1,0 +1,170 @@
+{
+ "source_urls": [
+  "https://mimoskorea.com.br/wp-json/wp/v2/product_brand?per_page=100&hide_empty=false&_fields=id,count,name,slug,description"
+ ],
+ "captured_at": "2026-09-28",
+ "count": 23,
+ "data": [
+  {
+   "id": 164,
+   "count": 0,
+   "description": "",
+   "name": "Bobbie Goods",
+   "slug": "bobbie-goods"
+  },
+  {
+   "id": 24,
+   "count": 2,
+   "description": "",
+   "name": "Cantata",
+   "slug": "cantata"
+  },
+  {
+   "id": 52,
+   "count": 2,
+   "description": "",
+   "name": "Choco Pie",
+   "slug": "choco-pie"
+  },
+  {
+   "id": 266,
+   "count": 3,
+   "description": "",
+   "name": "Chum-Churum",
+   "slug": "chum-churum"
+  },
+  {
+   "id": 87,
+   "count": 0,
+   "description": "",
+   "name": "Fofy",
+   "slug": "fofy"
+  },
+  {
+   "id": 63,
+   "count": 8,
+   "description": "",
+   "name": "Genérico",
+   "slug": "generico"
+  },
+  {
+   "id": 258,
+   "count": 1,
+   "description": "",
+   "name": "Koony",
+   "slug": "koony"
+  },
+  {
+   "id": 30,
+   "count": 1,
+   "description": "",
+   "name": "Let's Be",
+   "slug": "lets-be"
+  },
+  {
+   "id": 25,
+   "count": 31,
+   "description": "",
+   "name": "Lotte",
+   "slug": "lotte"
+  },
+  {
+   "id": 129,
+   "count": 1,
+   "description": "",
+   "name": "Marine Boy",
+   "slug": "marine-boy"
+  },
+  {
+   "id": 35,
+   "count": 6,
+   "description": "",
+   "name": "Milkis",
+   "slug": "milkis"
+  },
+  {
+   "id": 60,
+   "count": 0,
+   "description": "",
+   "name": "Mimos Korea Design",
+   "slug": "mimos-korea-design"
+  },
+  {
+   "id": 59,
+   "count": 0,
+   "description": "",
+   "name": "MKD",
+   "slug": "mkd"
+  },
+  {
+   "id": 45,
+   "count": 3,
+   "description": "",
+   "name": "O'Rice",
+   "slug": "orice"
+  },
+  {
+   "id": 138,
+   "count": 5,
+   "description": "",
+   "name": "O'star",
+   "slug": "ostar"
+  },
+  {
+   "id": 46,
+   "count": 13,
+   "description": "",
+   "name": "Orion",
+   "slug": "orion"
+  },
+  {
+   "id": 40,
+   "count": 4,
+   "description": "",
+   "name": "Pepero",
+   "slug": "pepero"
+  },
+  {
+   "id": 229,
+   "count": 0,
+   "description": "",
+   "name": "Post It",
+   "slug": "post-it"
+  },
+  {
+   "id": 111,
+   "count": 3,
+   "description": "",
+   "name": "Sac Sac",
+   "slug": "sac-sac"
+  },
+  {
+   "id": 125,
+   "count": 0,
+   "description": "",
+   "name": "Sinomie",
+   "slug": "sinomie"
+  },
+  {
+   "id": 117,
+   "count": 2,
+   "description": "",
+   "name": "Tok",
+   "slug": "tok"
+  },
+  {
+   "id": 276,
+   "count": 1,
+   "description": "",
+   "name": "Yopokki",
+   "slug": "yopokki"
+  },
+  {
+   "id": 277,
+   "count": 1,
+   "description": "",
+   "name": "Youngpoong",
+   "slug": "youngpoong"
+  }
+ ]
+}

@@ -1,0 +1,2781 @@
+{
+ "total_in_database": 204,
+ "visible_publicly": 195,
+ "hidden_attached_to_non_public_posts": 9,
+ "unattached_parent_0": 14,
+ "not_used_by_any_published_product": [
+  975,
+  895,
+  357,
+  356,
+  355,
+  354,
+  352,
+  351,
+  342,
+  341,
+  246,
+  225,
+  220,
+  7
+ ],
+ "used_by_multiple_products": {
+  "964": [
+   968,
+   967,
+   957
+  ],
+  "963": [
+   968,
+   967,
+   957
+  ],
+  "962": [
+   968,
+   967,
+   957
+  ],
+  "961": [
+   968,
+   967,
+   957
+  ],
+  "960": [
+   968,
+   967,
+   957
+  ],
+  "959": [
+   968,
+   967,
+   957
+  ],
+  "943": [
+   946,
+   941
+  ],
+  "942": [
+   946,
+   941
+  ],
+  "938": [
+   939,
+   934
+  ],
+  "935": [
+   939,
+   934
+  ],
+  "931": [
+   933,
+   932,
+   926
+  ],
+  "927": [
+   933,
+   932,
+   926
+  ],
+  "920": [
+   923,
+   919
+  ],
+  "914": [
+   916,
+   912
+  ],
+  "907": [
+   910,
+   908,
+   905
+  ],
+  "897": [
+   902,
+   899,
+   894
+  ],
+  "877": [
+   879,
+   875
+  ],
+  "857": [
+   860,
+   858,
+   855
+  ],
+  "843": [
+   852,
+   849,
+   846,
+   842
+  ],
+  "837": [
+   840,
+   838,
+   833
+  ],
+  "836": [
+   840,
+   838,
+   833
+  ],
+  "828": [
+   831,
+   827
+  ],
+  "826": [
+   831,
+   825
+  ],
+  "824": [
+   829,
+   827,
+   825,
+   822
+  ],
+  "823": [
+   831,
+   822
+  ],
+  "820": [
+   831,
+   819
+  ],
+  "812": [
+   831,
+   819,
+   817,
+   815,
+   813,
+   810
+  ],
+  "228": [
+   864,
+   150
+  ]
+ },
+ "alt_text_empty": 195,
+ "name_class_counts": {
+  "shopee_cdn_hash": 22,
+  "junk_name": 54,
+  "descriptive": 62,
+  "promo_banner": 15,
+  "mercadolivre_cdn_copy": 6,
+  "whatsapp_export": 1,
+  "short_or_unclear": 5,
+  "ai_generated_image": 24,
+  "screenshot": 2,
+  "amazon_cdn_copy": 4
+ },
+ "mime_counts": {
+  "image/png": 136,
+  "image/jpeg": 1,
+  "image/webp": 58
+ },
+ "reupload_suffix_files": [
+  "image-1.png",
+  "br-11134207-81z1k-mehbkcdkr6yr79-1.png",
+  "2-1.png",
+  "1-2.png",
+  "7-2.png",
+  "6-2.png",
+  "5-2.png",
+  "4-2.png",
+  "3-2.png",
+  "Documento-A4-etiqueta-adesiva-oferta-balao-divertido-amarelo-e-vermelho-10.png",
+  "Documento-A4-etiqueta-adesiva-oferta-balao-divertido-amarelo-e-vermelho-9.png",
+  "Documento-A4-etiqueta-adesiva-oferta-balao-divertido-amarelo-e-vermelho-8.png",
+  "Documento-A4-etiqueta-adesiva-oferta-balao-divertido-amarelo-e-vermelho-7.png",
+  "Documento-A4-etiqueta-adesiva-oferta-balao-divertido-amarelo-e-vermelho-6.png",
+  "1-1.png",
+  "Capturar-1.png",
+  "40-de-DESCONTO-61-8.png",
+  "40-de-DESCONTO-61-7.png",
+  "40-de-DESCONTO-61-6.png",
+  "40-de-DESCONTO-61-5.png",
+  "ChatGPT-Image-6-de-ago.-de-2026-16_07_33-1.png",
+  "40-de-DESCONTO-61-4.png",
+  "40-de-DESCONTO-61-3.png",
+  "ChatGPT-Image-6-de-ago.-de-2026-16_12_50-1-1.png",
+  "ChatGPT-Image-6-de-ago.-de-2026-16_12_50-1.png",
+  "61RZ-t7Z5SL._AC_UF8941000_QL80_-1.png",
+  "61oMCHIuu4L._AC_UF350350_QL50_-1.png",
+  "40-de-DESCONTO-61-2.png",
+  "40-de-DESCONTO-61-1.png",
+  "40-de-DESCONTO-61.png",
+  "lichia-2.png",
+  "uva-1.png",
+  "morango-1.png",
+  "dsdsdssdsdsds-1.png",
+  "lichia-1.png",
+  "br-11134207-820lc-mralsmujhipye8-1.png"
+ ],
+ "uploads_per_day": {
+  "2025-11-15": 1,
+  "2025-11-17": 10,
+  "2025-11-18": 22,
+  "2025-11-19": 9,
+  "2025-12-09": 16,
+  "2026-08-22": 45,
+  "2026-09-02": 79,
+  "2026-09-12": 13
+ },
+ "rows": [
+  {
+   "id": 1025,
+   "date": "2026-09-12T09:37:28",
+   "file": "br-11134207-820m6-mrltqcy2ja4naa.png",
+   "mime": "image/png",
+   "parent_post": 259,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    259
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 1024,
+   "date": "2026-09-12T09:36:46",
+   "file": "br-11134207-820mg-mrltqcy2kop31a.png",
+   "mime": "image/png",
+   "parent_post": 70,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    70
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 1022,
+   "date": "2026-09-12T09:32:45",
+   "file": "zzz.png",
+   "mime": "image/png",
+   "parent_post": 1021,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    1021
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 1020,
+   "date": "2026-09-12T09:30:26",
+   "file": "br-11134207-81z1k-mehazn7w8qgy43.png",
+   "mime": "image/png",
+   "parent_post": 1019,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    1019
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 1018,
+   "date": "2026-09-12T09:28:40",
+   "file": "br-11134207-81z1k-mehcxobmbrwjc1.png",
+   "mime": "image/png",
+   "parent_post": 1016,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    1016
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 1017,
+   "date": "2026-09-12T09:28:38",
+   "file": "br-11134207-81z1k-mehcxobmd6gz81.png",
+   "mime": "image/png",
+   "parent_post": 1016,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    1016
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 1015,
+   "date": "2026-09-12T09:25:08",
+   "file": "Orion-Bungo-Choco-Mochi-Soft-Cake_-174g-Orion-131557256_700x700.png",
+   "mime": "image/png",
+   "parent_post": 1011,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    1011
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 1014,
+   "date": "2026-09-12T09:25:07",
+   "file": "Orion_Cham_Booner_Bbang_174g_-_5.png",
+   "mime": "image/png",
+   "parent_post": 1011,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    1011
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 1013,
+   "date": "2026-09-12T09:25:06",
+   "file": "image-1.png",
+   "mime": "image/png",
+   "parent_post": 1011,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    1011
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 1012,
+   "date": "2026-09-12T09:24:44",
+   "file": "bong-bang-mk-5p-chi-nh-sa-ng.png",
+   "mime": "image/png",
+   "parent_post": 1011,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    1011
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 1010,
+   "date": "2026-09-12T09:22:42",
+   "file": "br-11134207-81z1k-mehbkcdkr6yr79-1.png",
+   "mime": "image/png",
+   "parent_post": 1007,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    1007
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 1009,
+   "date": "2026-09-12T09:22:40",
+   "file": "br-11134201-820lw-msst7ovm5ptz38.png",
+   "mime": "image/png",
+   "parent_post": 1007,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    1007
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 1008,
+   "date": "2026-09-12T09:22:28",
+   "file": "br-11134207-81z1k-mehbkcdkr6yr79.png",
+   "mime": "image/png",
+   "parent_post": 1007,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    1007
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 1000,
+   "date": "2026-09-02T16:42:49",
+   "file": "7.png",
+   "mime": "image/png",
+   "parent_post": 993,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    993
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 999,
+   "date": "2026-09-02T16:42:44",
+   "file": "6.png",
+   "mime": "image/png",
+   "parent_post": 993,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    993
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 998,
+   "date": "2026-09-02T16:42:38",
+   "file": "5.png",
+   "mime": "image/png",
+   "parent_post": 993,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    993
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 997,
+   "date": "2026-09-02T16:42:34",
+   "file": "4.png",
+   "mime": "image/png",
+   "parent_post": 993,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    993
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 996,
+   "date": "2026-09-02T16:42:29",
+   "file": "3.png",
+   "mime": "image/png",
+   "parent_post": 993,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    993
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 995,
+   "date": "2026-09-02T16:42:18",
+   "file": "2-1.png",
+   "mime": "image/png",
+   "parent_post": 993,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    993
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 994,
+   "date": "2026-09-02T16:42:06",
+   "file": "1-2.png",
+   "mime": "image/png",
+   "parent_post": 993,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    993
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 992,
+   "date": "2026-09-02T16:40:41",
+   "file": "Documento-A4-etiqueta-adesiva-oferta-balao-divertido-amarelo-e-vermelho.png",
+   "mime": "image/png",
+   "parent_post": 985,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    985
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 991,
+   "date": "2026-09-02T16:40:35",
+   "file": "7-2.png",
+   "mime": "image/png",
+   "parent_post": 985,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    985
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 990,
+   "date": "2026-09-02T16:40:30",
+   "file": "6-2.png",
+   "mime": "image/png",
+   "parent_post": 985,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    985
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 989,
+   "date": "2026-09-02T16:40:24",
+   "file": "5-2.png",
+   "mime": "image/png",
+   "parent_post": 985,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    985
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 988,
+   "date": "2026-09-02T16:40:18",
+   "file": "4-2.png",
+   "mime": "image/png",
+   "parent_post": 985,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    985
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 987,
+   "date": "2026-09-02T16:40:11",
+   "file": "3-2.png",
+   "mime": "image/png",
+   "parent_post": 985,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    985
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 986,
+   "date": "2026-09-02T16:40:00",
+   "file": "2.png",
+   "mime": "image/png",
+   "parent_post": 985,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    985
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 984,
+   "date": "2026-09-02T16:37:51",
+   "file": "ross.png",
+   "mime": "image/png",
+   "parent_post": 981,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    981
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 983,
+   "date": "2026-09-02T16:37:50",
+   "file": "ro.png",
+   "mime": "image/png",
+   "parent_post": 981,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    981
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 982,
+   "date": "2026-09-02T16:37:19",
+   "file": "rosa.png",
+   "mime": "image/png",
+   "parent_post": 981,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    981
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 979,
+   "date": "2026-09-02T16:35:11",
+   "file": "HGH.png",
+   "mime": "image/png",
+   "parent_post": 969,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    980
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 978,
+   "date": "2026-09-02T16:35:06",
+   "file": "Documento-A4-etiqueta-adesiva-oferta-balao-divertido-amarelo-e-vermelho-10.png",
+   "mime": "image/png",
+   "parent_post": 969,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    980
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 977,
+   "date": "2026-09-02T16:35:00",
+   "file": "Documento-A4-etiqueta-adesiva-oferta-balao-divertido-amarelo-e-vermelho-9.png",
+   "mime": "image/png",
+   "parent_post": 969,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    980
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 976,
+   "date": "2026-09-02T16:34:56",
+   "file": "Documento-A4-etiqueta-adesiva-oferta-balao-divertido-amarelo-e-vermelho-8.png",
+   "mime": "image/png",
+   "parent_post": 969,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    980
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 975,
+   "date": "2026-09-02T16:34:52",
+   "file": "Documento-A4-etiqueta-adesiva-oferta-balao-divertido-amarelo-e-vermelho-7.png",
+   "mime": "image/png",
+   "parent_post": 969,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": true
+  },
+  {
+   "id": 974,
+   "date": "2026-09-02T16:34:49",
+   "file": "Documento-A4-etiqueta-adesiva-oferta-balao-divertido-amarelo-e-vermelho-6.png",
+   "mime": "image/png",
+   "parent_post": 969,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    980
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 973,
+   "date": "2026-09-02T16:34:43",
+   "file": "bege4.png",
+   "mime": "image/png",
+   "parent_post": 969,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    969
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 972,
+   "date": "2026-09-02T16:34:38",
+   "file": "bege3.png",
+   "mime": "image/png",
+   "parent_post": 969,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    969
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 971,
+   "date": "2026-09-02T16:34:32",
+   "file": "bege2.png",
+   "mime": "image/png",
+   "parent_post": 969,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    969
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 970,
+   "date": "2026-09-02T16:34:27",
+   "file": "bege.png",
+   "mime": "image/png",
+   "parent_post": 969,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    969
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 966,
+   "date": "2026-09-02T16:29:37",
+   "file": "V.png",
+   "mime": "image/png",
+   "parent_post": 957,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    968
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 965,
+   "date": "2026-09-02T16:29:31",
+   "file": "R.png",
+   "mime": "image/png",
+   "parent_post": 957,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    967
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 964,
+   "date": "2026-09-02T16:29:29",
+   "file": "D_NQ_NP_2X_841307-MLA83253313776_042025-F.png",
+   "mime": "image/png",
+   "parent_post": 957,
+   "name_class": "mercadolivre_cdn_copy",
+   "alt_empty": true,
+   "used_by_published_products": [
+    968,
+    967,
+    957
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 963,
+   "date": "2026-09-02T16:29:24",
+   "file": "D_NQ_NP_2X_830485-MLA92310392642_092025-F.png",
+   "mime": "image/png",
+   "parent_post": 957,
+   "name_class": "mercadolivre_cdn_copy",
+   "alt_empty": true,
+   "used_by_published_products": [
+    968,
+    967,
+    957
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 962,
+   "date": "2026-09-02T16:29:23",
+   "file": "D_NQ_NP_2X_816704-MLA83253449746_042025-F.png",
+   "mime": "image/png",
+   "parent_post": 957,
+   "name_class": "mercadolivre_cdn_copy",
+   "alt_empty": true,
+   "used_by_published_products": [
+    968,
+    967,
+    957
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 961,
+   "date": "2026-09-02T16:29:22",
+   "file": "D_NQ_NP_2X_800796-MLA83253313778_042025-F.png",
+   "mime": "image/png",
+   "parent_post": 957,
+   "name_class": "mercadolivre_cdn_copy",
+   "alt_empty": true,
+   "used_by_published_products": [
+    968,
+    967,
+    957
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 960,
+   "date": "2026-09-02T16:29:21",
+   "file": "D_NQ_NP_2X_694798-MLA83544912071_042025-F.png",
+   "mime": "image/png",
+   "parent_post": 957,
+   "name_class": "mercadolivre_cdn_copy",
+   "alt_empty": true,
+   "used_by_published_products": [
+    968,
+    967,
+    957
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 959,
+   "date": "2026-09-02T16:29:19",
+   "file": "D_NQ_NP_2X_646533-MLA83544912075_042025-F.png",
+   "mime": "image/png",
+   "parent_post": 957,
+   "name_class": "mercadolivre_cdn_copy",
+   "alt_empty": true,
+   "used_by_published_products": [
+    968,
+    967,
+    957
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 958,
+   "date": "2026-09-02T16:28:57",
+   "file": "1-1.png",
+   "mime": "image/png",
+   "parent_post": 957,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    957
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 955,
+   "date": "2026-09-02T16:24:44",
+   "file": "queijo.png",
+   "mime": "image/png",
+   "parent_post": 954,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    954
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 953,
+   "date": "2026-09-02T16:23:15",
+   "file": "bife.png",
+   "mime": "image/png",
+   "parent_post": 952,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    952
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 951,
+   "date": "2026-09-02T16:19:44",
+   "file": "WhatsApp-Image-2026-06-27-at-16.41.01.jpeg",
+   "mime": "image/jpeg",
+   "parent_post": 948,
+   "name_class": "whatsapp_export",
+   "alt_empty": true,
+   "used_by_published_products": [
+    948
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 950,
+   "date": "2026-09-02T16:19:43",
+   "file": "tonichoco.png",
+   "mime": "image/png",
+   "parent_post": 948,
+   "name_class": "short_or_unclear",
+   "alt_empty": true,
+   "used_by_published_products": [
+    948
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 949,
+   "date": "2026-09-02T16:19:41",
+   "file": "socola.png",
+   "mime": "image/png",
+   "parent_post": 948,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    948
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 945,
+   "date": "2026-09-02T16:15:28",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-13_14_04.png",
+   "mime": "image/png",
+   "parent_post": 941,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    941
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 944,
+   "date": "2026-09-02T16:15:17",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-13_12_27.png",
+   "mime": "image/png",
+   "parent_post": 941,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    946
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 943,
+   "date": "2026-09-02T16:15:17",
+   "file": "Capturar-1.png",
+   "mime": "image/png",
+   "parent_post": 941,
+   "name_class": "screenshot",
+   "alt_empty": true,
+   "used_by_published_products": [
+    946,
+    941
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 942,
+   "date": "2026-09-02T16:15:10",
+   "file": "40-de-DESCONTO-61-8.png",
+   "mime": "image/png",
+   "parent_post": 941,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    946,
+    941
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 938,
+   "date": "2026-09-02T16:12:39",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-13_49_10.png",
+   "mime": "image/png",
+   "parent_post": 934,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    939,
+    934
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 937,
+   "date": "2026-09-02T16:12:28",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-13_36_59.png",
+   "mime": "image/png",
+   "parent_post": 934,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    934
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 936,
+   "date": "2026-09-02T16:12:17",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-13_31_22.png",
+   "mime": "image/png",
+   "parent_post": 934,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    939
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 935,
+   "date": "2026-09-02T16:12:08",
+   "file": "40-de-DESCONTO-61-7.png",
+   "mime": "image/png",
+   "parent_post": 934,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    939,
+    934
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 931,
+   "date": "2026-09-02T16:09:24",
+   "file": "ChatGPT-Image-7-de-ago.-de-2026-12_48_02.png",
+   "mime": "image/png",
+   "parent_post": 926,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    933,
+    932,
+    926
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 930,
+   "date": "2026-09-02T16:09:13",
+   "file": "ChatGPT-Image-7-de-ago.-de-2026-12_45_42.png",
+   "mime": "image/png",
+   "parent_post": 926,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    926
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 929,
+   "date": "2026-09-02T16:08:59",
+   "file": "ChatGPT-Image-7-de-ago.-de-2026-12_43_18.png",
+   "mime": "image/png",
+   "parent_post": 926,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    932
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 928,
+   "date": "2026-09-02T16:08:48",
+   "file": "ChatGPT-Image-7-de-ago.-de-2026-12_39_46.png",
+   "mime": "image/png",
+   "parent_post": 926,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    933
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 927,
+   "date": "2026-09-02T16:08:40",
+   "file": "40-de-DESCONTO-61-6.png",
+   "mime": "image/png",
+   "parent_post": 926,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    933,
+    932,
+    926
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 925,
+   "date": "2026-09-02T16:07:22",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-15_30_09.png",
+   "mime": "image/png",
+   "parent_post": 923,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    923
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 924,
+   "date": "2026-09-02T16:07:11",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-15_25_43.png",
+   "mime": "image/png",
+   "parent_post": 923,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    923
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 922,
+   "date": "2026-09-02T16:05:48",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-15_36_31.png",
+   "mime": "image/png",
+   "parent_post": 919,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    919
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 921,
+   "date": "2026-09-02T16:05:36",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-15_31_46.png",
+   "mime": "image/png",
+   "parent_post": 919,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    919
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 920,
+   "date": "2026-09-02T16:05:28",
+   "file": "40-de-DESCONTO-61-5.png",
+   "mime": "image/png",
+   "parent_post": 919,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    923,
+    919
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 918,
+   "date": "2026-09-02T16:04:16",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-16_07_33-1.png",
+   "mime": "image/png",
+   "parent_post": 916,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    916
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 917,
+   "date": "2026-09-02T16:03:57",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-16_02_26.png",
+   "mime": "image/png",
+   "parent_post": 916,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    916
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 915,
+   "date": "2026-09-02T16:02:32",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-15_58_31.png",
+   "mime": "image/png",
+   "parent_post": 912,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    912
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 914,
+   "date": "2026-09-02T16:02:23",
+   "file": "40-de-DESCONTO-61-4.png",
+   "mime": "image/png",
+   "parent_post": 912,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    916,
+    912
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 913,
+   "date": "2026-09-02T16:01:52",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-15_53_40.png",
+   "mime": "image/png",
+   "parent_post": 912,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    912
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 911,
+   "date": "2026-09-02T16:00:20",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-16_29_14.png",
+   "mime": "image/png",
+   "parent_post": 910,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    910
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 909,
+   "date": "2026-09-02T15:59:10",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-16_26_59.png",
+   "mime": "image/png",
+   "parent_post": 908,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    908
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 907,
+   "date": "2026-09-02T15:57:36",
+   "file": "40-de-DESCONTO-61-3.png",
+   "mime": "image/png",
+   "parent_post": 905,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    910,
+    908,
+    905
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 906,
+   "date": "2026-09-02T15:57:13",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-16_24_18.png",
+   "mime": "image/png",
+   "parent_post": 905,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    905
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 904,
+   "date": "2026-09-02T15:55:40",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-16_12_50-1-1.png",
+   "mime": "image/png",
+   "parent_post": 902,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    902
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 903,
+   "date": "2026-09-02T15:55:28",
+   "file": "ChatGPT-Image-6-de-ago.-de-2026-16_12_50-1.png",
+   "mime": "image/png",
+   "parent_post": 902,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    902
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 901,
+   "date": "2026-09-02T15:54:27",
+   "file": "61RZ-t7Z5SL._AC_UF8941000_QL80_-1.png",
+   "mime": "image/png",
+   "parent_post": 899,
+   "name_class": "amazon_cdn_copy",
+   "alt_empty": true,
+   "used_by_published_products": [
+    899
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 900,
+   "date": "2026-09-02T15:54:16",
+   "file": "61RZ-t7Z5SL._AC_UF8941000_QL80_.png",
+   "mime": "image/png",
+   "parent_post": 899,
+   "name_class": "amazon_cdn_copy",
+   "alt_empty": true,
+   "used_by_published_products": [
+    899
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 898,
+   "date": "2026-09-02T15:52:29",
+   "file": "61oMCHIuu4L._AC_UF350350_QL50_-1.png",
+   "mime": "image/png",
+   "parent_post": 894,
+   "name_class": "amazon_cdn_copy",
+   "alt_empty": true,
+   "used_by_published_products": [
+    894
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 897,
+   "date": "2026-09-02T15:52:24",
+   "file": "40-de-DESCONTO-61-2.png",
+   "mime": "image/png",
+   "parent_post": 894,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    902,
+    899,
+    894
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 896,
+   "date": "2026-09-02T15:52:04",
+   "file": "61oMCHIuu4L._AC_UF350350_QL50_.png",
+   "mime": "image/png",
+   "parent_post": 894,
+   "name_class": "amazon_cdn_copy",
+   "alt_empty": true,
+   "used_by_published_products": [
+    894
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 895,
+   "date": "2026-09-02T15:51:41",
+   "file": "40-de-DESCONTO-61-1.png",
+   "mime": "image/png",
+   "parent_post": 894,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": true
+  },
+  {
+   "id": 893,
+   "date": "2026-09-02T15:48:54",
+   "file": "ChatGPT-Image-14-de-ago.-de-2026-11_34_53.png",
+   "mime": "image/png",
+   "parent_post": 890,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    890
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 892,
+   "date": "2026-09-02T15:48:42",
+   "file": "ChatGPT-Image-14-de-ago.-de-2026-11_40_23.png",
+   "mime": "image/png",
+   "parent_post": 890,
+   "name_class": "ai_generated_image",
+   "alt_empty": true,
+   "used_by_published_products": [
+    890
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 891,
+   "date": "2026-09-02T15:48:14",
+   "file": "40-de-DESCONTO-61.png",
+   "mime": "image/png",
+   "parent_post": 890,
+   "name_class": "promo_banner",
+   "alt_empty": true,
+   "used_by_published_products": [
+    890
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 881,
+   "date": "2026-08-22T11:30:56",
+   "file": "algas.png",
+   "mime": "image/png",
+   "parent_post": 879,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    879
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 880,
+   "date": "2026-08-22T11:30:42",
+   "file": "aaa.png",
+   "mime": "image/png",
+   "parent_post": 879,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    879
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 878,
+   "date": "2026-08-22T11:29:29",
+   "file": "milho.png",
+   "mime": "image/png",
+   "parent_post": 875,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    875
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 877,
+   "date": "2026-08-22T11:29:28",
+   "file": "miklho.png",
+   "mime": "image/png",
+   "parent_post": 875,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    879,
+    875
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 876,
+   "date": "2026-08-22T11:29:19",
+   "file": "turtl.png",
+   "mime": "image/png",
+   "parent_post": 875,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    875
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 874,
+   "date": "2026-08-22T11:26:55",
+   "file": "br-11134207-820lz-mpzfywmdczk07c.png",
+   "mime": "image/png",
+   "parent_post": 871,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    871
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 873,
+   "date": "2026-08-22T11:26:54",
+   "file": "br-11134207-820lq-mpzfywmdbkzk31.png",
+   "mime": "image/png",
+   "parent_post": 871,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    871
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 872,
+   "date": "2026-08-22T11:26:46",
+   "file": "br-11134207-820mc-mpzhg0z6xfr5c6.png",
+   "mime": "image/png",
+   "parent_post": 871,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    871
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 870,
+   "date": "2026-08-22T11:24:27",
+   "file": "br-11134207-820m2-mq3lpv4d4bghc2.png",
+   "mime": "image/png",
+   "parent_post": 867,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    867
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 869,
+   "date": "2026-08-22T11:24:26",
+   "file": "br-11134207-820ld-mq3lpv4d2ww144.png",
+   "mime": "image/png",
+   "parent_post": 867,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    867
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 868,
+   "date": "2026-08-22T11:24:15",
+   "file": "br-11134207-820la-mq3lpv4g32mbb9.png",
+   "mime": "image/png",
+   "parent_post": 867,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    867
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 866,
+   "date": "2026-08-22T11:21:22",
+   "file": "br-11134207-820m2-ms33f7nh65txc9.png",
+   "mime": "image/png",
+   "parent_post": 864,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    864
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 865,
+   "date": "2026-08-22T11:21:21",
+   "file": "br-11134207-81z1k-mehcxobm65mrad.png",
+   "mime": "image/png",
+   "parent_post": 864,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    864
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 862,
+   "date": "2026-08-22T11:16:43",
+   "file": "br-11134207-81z1k-min2vvv8d98j27.png",
+   "mime": "image/png",
+   "parent_post": 860,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    860
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 861,
+   "date": "2026-08-22T11:16:32",
+   "file": "lichia-2.png",
+   "mime": "image/png",
+   "parent_post": 860,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    860
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 859,
+   "date": "2026-08-22T11:15:49",
+   "file": "uva-1.png",
+   "mime": "image/png",
+   "parent_post": 858,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    858
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 857,
+   "date": "2026-08-22T11:14:26",
+   "file": "br-11134207-81z1k-min2vvuzs8au88.png",
+   "mime": "image/png",
+   "parent_post": 855,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    860,
+    858,
+    855
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 856,
+   "date": "2026-08-22T11:14:13",
+   "file": "morango-1.png",
+   "mime": "image/png",
+   "parent_post": 855,
+   "name_class": "short_or_unclear",
+   "alt_empty": true,
+   "used_by_published_products": [
+    855
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 854,
+   "date": "2026-08-22T10:40:21",
+   "file": "dsdsdssdsdsds-1.png",
+   "mime": "image/png",
+   "parent_post": 852,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    852
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 853,
+   "date": "2026-08-22T10:40:05",
+   "file": "lichia-1.png",
+   "mime": "image/png",
+   "parent_post": 852,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    852
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 851,
+   "date": "2026-08-22T10:38:37",
+   "file": "sdsd.png",
+   "mime": "image/png",
+   "parent_post": 849,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    849
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 850,
+   "date": "2026-08-22T10:38:20",
+   "file": "uva.png",
+   "mime": "image/png",
+   "parent_post": 849,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    849
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 848,
+   "date": "2026-08-22T10:36:39",
+   "file": "dsdsdssdsdsds.png",
+   "mime": "image/png",
+   "parent_post": 846,
+   "name_class": "short_or_unclear",
+   "alt_empty": true,
+   "used_by_published_products": [
+    846
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 847,
+   "date": "2026-08-22T10:36:06",
+   "file": "pessego.png",
+   "mime": "image/png",
+   "parent_post": 846,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    846
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 845,
+   "date": "2026-08-22T10:34:08",
+   "file": "sasdasd.png",
+   "mime": "image/png",
+   "parent_post": 842,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    842
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 844,
+   "date": "2026-08-22T10:33:57",
+   "file": "morango.png",
+   "mime": "image/png",
+   "parent_post": 842,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    842
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 843,
+   "date": "2026-08-22T10:33:21",
+   "file": "Capturar.png",
+   "mime": "image/png",
+   "parent_post": 842,
+   "name_class": "screenshot",
+   "alt_empty": true,
+   "used_by_published_products": [
+    852,
+    849,
+    846,
+    842
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 841,
+   "date": "2026-08-22T10:28:44",
+   "file": "melao.png",
+   "mime": "image/png",
+   "parent_post": 840,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    840
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 839,
+   "date": "2026-08-22T10:26:21",
+   "file": "br-11134207-820lc-mqbyej9vtla858.png",
+   "mime": "image/png",
+   "parent_post": 838,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    838
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 837,
+   "date": "2026-08-22T10:23:18",
+   "file": "br-11134207-820lf-mqbyej9kqo02df.png",
+   "mime": "image/png",
+   "parent_post": 833,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    840,
+    838,
+    833
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 836,
+   "date": "2026-08-22T10:22:49",
+   "file": "1.png",
+   "mime": "image/png",
+   "parent_post": 833,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    840,
+    838,
+    833
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 835,
+   "date": "2026-08-22T10:22:36",
+   "file": "mamas.png",
+   "mime": "image/png",
+   "parent_post": 833,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    833
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 834,
+   "date": "2026-08-22T10:22:23",
+   "file": "asasa.png",
+   "mime": "image/png",
+   "parent_post": 833,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    838
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 832,
+   "date": "2026-08-22T10:19:09",
+   "file": "kit-saero.png",
+   "mime": "image/png",
+   "parent_post": 831,
+   "name_class": "short_or_unclear",
+   "alt_empty": true,
+   "used_by_published_products": [
+    831
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 830,
+   "date": "2026-08-22T10:16:22",
+   "file": "kit6.png",
+   "mime": "image/png",
+   "parent_post": 829,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    829
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 828,
+   "date": "2026-08-22T10:11:40",
+   "file": "kiwi.png",
+   "mime": "image/png",
+   "parent_post": 827,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    831,
+    827
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 826,
+   "date": "2026-08-22T10:09:23",
+   "file": "damasco.png",
+   "mime": "image/png",
+   "parent_post": 825,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    831,
+    825
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 824,
+   "date": "2026-08-22T10:07:59",
+   "file": "br-11134207-820lc-mralsmujhipye8-1.png",
+   "mime": "image/png",
+   "parent_post": 822,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    829,
+    827,
+    825,
+    822
+   ],
+   "reupload_suffix": true
+  },
+  {
+   "id": 823,
+   "date": "2026-08-22T10:07:49",
+   "file": "lichia-sem.png",
+   "mime": "image/png",
+   "parent_post": 822,
+   "name_class": "short_or_unclear",
+   "alt_empty": true,
+   "used_by_published_products": [
+    831,
+    822
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 820,
+   "date": "2026-08-22T10:05:27",
+   "file": "oris.png",
+   "mime": "image/png",
+   "parent_post": 819,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    831,
+    819
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 818,
+   "date": "2026-08-22T10:02:35",
+   "file": "ameixa.png",
+   "mime": "image/png",
+   "parent_post": 817,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    817
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 816,
+   "date": "2026-08-22T09:59:48",
+   "file": "lichia.png",
+   "mime": "image/png",
+   "parent_post": 815,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    815
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 814,
+   "date": "2026-08-22T09:58:04",
+   "file": "blue.png",
+   "mime": "image/png",
+   "parent_post": 813,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    813
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 812,
+   "date": "2026-08-22T09:53:11",
+   "file": "br-11134207-820lc-mralsmujhipye8.png",
+   "mime": "image/png",
+   "parent_post": 810,
+   "name_class": "shopee_cdn_hash",
+   "alt_empty": true,
+   "used_by_published_products": [
+    831,
+    819,
+    817,
+    815,
+    813,
+    810
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 811,
+   "date": "2026-08-22T09:52:16",
+   "file": "maca.png",
+   "mime": "image/png",
+   "parent_post": 810,
+   "name_class": "junk_name",
+   "alt_empty": true,
+   "used_by_published_products": [
+    810
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 357,
+   "date": "2025-12-09T11:45:11",
+   "file": "estojo-infantil-coelhinho-cosmico.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  },
+  {
+   "id": 356,
+   "date": "2025-12-09T11:44:40",
+   "file": "estojo-infantil-tubarao.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  },
+  {
+   "id": 355,
+   "date": "2025-12-09T11:44:11",
+   "file": "estojo-infantil-unicornios.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  },
+  {
+   "id": 354,
+   "date": "2025-12-09T11:43:48",
+   "file": "livro-colorir-bobbie-goods-infantil-48-paginas-capa-dura.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  },
+  {
+   "id": 353,
+   "date": "2025-12-09T11:43:09",
+   "file": "pantufas-fofas-porquinho-rosa.webp",
+   "mime": "image/webp",
+   "parent_post": 131,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    131
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 352,
+   "date": "2025-12-09T11:42:42",
+   "file": "papel-de-lembrete-post-it-100-folhas-4-cores-76x76mm.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  },
+  {
+   "id": 351,
+   "date": "2025-12-09T11:42:06",
+   "file": "papel-de-lembrete-post-it-100-folhas-76x50mm.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  },
+  {
+   "id": 350,
+   "date": "2025-12-09T11:41:34",
+   "file": "pelucia-cachorro-pug-fofinho-de-30cm.webp",
+   "mime": "image/webp",
+   "parent_post": 135,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    135
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 349,
+   "date": "2025-12-09T11:40:24",
+   "file": "pelucia-capivara-gotinha-fofinha-de-45cm.webp",
+   "mime": "image/webp",
+   "parent_post": 136,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    136
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 348,
+   "date": "2025-12-09T11:39:48",
+   "file": "pelucia-coala-fofinho-de-45cm.webp",
+   "mime": "image/webp",
+   "parent_post": 137,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    137
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 346,
+   "date": "2025-12-09T11:36:50",
+   "file": "pelucia-porquinho-rosa-deitado-fofinho-de-40cm.webp",
+   "mime": "image/webp",
+   "parent_post": 139,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    139
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 345,
+   "date": "2025-12-09T11:35:55",
+   "file": "pelucia-porquinho-rosa-mamadeira-de-35cm.webp",
+   "mime": "image/webp",
+   "parent_post": 140,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    140
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 344,
+   "date": "2025-12-09T11:34:36",
+   "file": "pelucia-unicornio-fofo-deitado-rosa-de-50cm.webp",
+   "mime": "image/webp",
+   "parent_post": 141,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    141
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 343,
+   "date": "2025-12-09T11:33:57",
+   "file": "pelucia-unicornio-infantil-fofo-de-40cm.webp",
+   "mime": "image/webp",
+   "parent_post": 142,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    142
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 342,
+   "date": "2025-12-09T11:32:47",
+   "file": "tesoura-escolar-dino-verde-fofy.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  },
+  {
+   "id": 341,
+   "date": "2025-12-09T11:32:19",
+   "file": "tesoura-escolar-bichinho-fofy.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  },
+  {
+   "id": 292,
+   "date": "2025-11-19T13:11:47",
+   "file": "bebida-cafe-coreano-gelado-cantata-lotte-bag-230ml-sabores-americano-zero-acucar.webp",
+   "mime": "image/webp",
+   "parent_post": 64,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    64
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 290,
+   "date": "2025-11-19T13:10:20",
+   "file": "bebida-cafe-coreano-gelado-cantata-lotte-bag-230ml-sabores-amendoas-zero-acucar.webp",
+   "mime": "image/webp",
+   "parent_post": 66,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    66
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 287,
+   "date": "2025-11-19T13:01:52",
+   "file": "bebida-cafe-coreano-let-s-be-lotte-cappuccino-de-240ml.webp",
+   "mime": "image/webp",
+   "parent_post": 65,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    65
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 286,
+   "date": "2025-11-19T12:59:42",
+   "file": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-pessego.webp",
+   "mime": "image/webp",
+   "parent_post": 285,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    285
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 284,
+   "date": "2025-11-19T12:58:58",
+   "file": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-morango.webp",
+   "mime": "image/webp",
+   "parent_post": 283,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    283
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 282,
+   "date": "2025-11-19T12:58:17",
+   "file": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-uva.webp",
+   "mime": "image/webp",
+   "parent_post": 281,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    281
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 280,
+   "date": "2025-11-19T12:57:17",
+   "file": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabores-banana.webp",
+   "mime": "image/webp",
+   "parent_post": 279,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    279
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 278,
+   "date": "2025-11-19T12:56:32",
+   "file": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabores-melao.webp",
+   "mime": "image/webp",
+   "parent_post": 277,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    277
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 276,
+   "date": "2025-11-19T12:55:50",
+   "file": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabores-original.webp",
+   "mime": "image/webp",
+   "parent_post": 67,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    67
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 274,
+   "date": "2025-11-18T22:25:29",
+   "file": "biscoito-coreano-pepero-lotte-47g-sabores-almond.webp",
+   "mime": "image/webp",
+   "parent_post": 273,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    273
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 272,
+   "date": "2025-11-18T22:21:15",
+   "file": "biscoito-coreano-pepero-lotte-47g-sabores-choco-cookie.webp",
+   "mime": "image/webp",
+   "parent_post": 271,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    271
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 270,
+   "date": "2025-11-18T22:19:22",
+   "file": "biscoito-coreano-pepero-lotte-47g-sabores-original.webp",
+   "mime": "image/webp",
+   "parent_post": 269,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    269
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 268,
+   "date": "2025-11-18T22:18:45",
+   "file": "biscoito-coreano-pepero-lotte-47g-sabores-white-cookie.webp",
+   "mime": "image/webp",
+   "parent_post": 68,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    68
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 266,
+   "date": "2025-11-18T22:09:53",
+   "file": "biscoito-de-arroz-coreano-o-rice-orion-129g-sabores-alga.webp",
+   "mime": "image/webp",
+   "parent_post": 265,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    265
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 264,
+   "date": "2025-11-18T22:06:28",
+   "file": "biscoito-de-arroz-coreano-o-rice-orion-129g-sabores-natural.webp",
+   "mime": "image/webp",
+   "parent_post": 263,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    263
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 262,
+   "date": "2025-11-18T22:04:15",
+   "file": "biscoito-de-arroz-coreano-o-rice-orion-129g-sabores-queijo-com-batata.webp",
+   "mime": "image/webp",
+   "parent_post": 69,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    69
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 260,
+   "date": "2025-11-18T21:38:49",
+   "file": "bolinho-coreano-choco-pie-lotte-chocolate-original.webp",
+   "mime": "image/webp",
+   "parent_post": 259,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    259
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 258,
+   "date": "2025-11-18T21:37:28",
+   "file": "bolinho-coreano-choco-pie-lotte-chocolate-duplo-com-marshmallow.webp",
+   "mime": "image/webp",
+   "parent_post": 70,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    70
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 255,
+   "date": "2025-11-18T21:17:33",
+   "file": "kit-guloseima-chiclete-coreano-orion-morango-de-12g.webp",
+   "mime": "image/webp",
+   "parent_post": 106,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    106
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 254,
+   "date": "2025-11-18T21:16:43",
+   "file": "refresco-coreano-sac-sac-lotte-240ml-sabor-uva-com-pedacos.webp",
+   "mime": "image/webp",
+   "parent_post": 253,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    253
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 246,
+   "date": "2025-11-18T21:11:08",
+   "file": "lamen-asiatico-sinomie-72g-estilo-coreano-sabores-carbonara.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  },
+  {
+   "id": 243,
+   "date": "2025-11-18T21:08:59",
+   "file": "refresco-coreano-sac-sac-lotte-238ml-sabor-uva-com-pedacos.webp",
+   "mime": "image/webp",
+   "parent_post": 242,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    242
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 241,
+   "date": "2025-11-18T21:07:23",
+   "file": "refresco-coreano-sac-sac-lotte-238ml-sabores-morango-com-pedacos.webp",
+   "mime": "image/webp",
+   "parent_post": 145,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    145
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 240,
+   "date": "2025-11-18T21:03:56",
+   "file": "salgadinho-coreano-koony-sabor-frango-frito-de-40g.webp",
+   "mime": "image/webp",
+   "parent_post": 147,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    147
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 239,
+   "date": "2025-11-18T21:03:16",
+   "file": "salgadinho-coreano-orion-sabor-milho-agridoce-picante-de-35g.webp",
+   "mime": "image/webp",
+   "parent_post": 148,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    148
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 238,
+   "date": "2025-11-18T19:36:19",
+   "file": "snack-batata-frita-coreano-o-star-orion-30g-sabores-bife-americano-ny.webp",
+   "mime": "image/webp",
+   "parent_post": 237,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    237
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 236,
+   "date": "2025-11-18T19:35:32",
+   "file": "snack-batata-frita-coreano-o-star-orion-30g-sabores-duplo-queijo.webp",
+   "mime": "image/webp",
+   "parent_post": 235,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    235
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 234,
+   "date": "2025-11-18T19:33:51",
+   "file": "snack-batata-frita-coreano-o-star-orion-30g-sabores-frango-barbecue.webp",
+   "mime": "image/webp",
+   "parent_post": 233,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    233
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 232,
+   "date": "2025-11-18T19:32:02",
+   "file": "snack-batata-frita-coreano-o-star-orion-30g-sabores-kimchi.webp",
+   "mime": "image/webp",
+   "parent_post": 231,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    231
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 230,
+   "date": "2025-11-18T19:30:54",
+   "file": "snack-batata-frita-coreano-o-star-orion-30g-sabores-maionese.webp",
+   "mime": "image/webp",
+   "parent_post": 149,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    149
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 228,
+   "date": "2025-11-18T17:07:29",
+   "file": "snack-coreano-marine-boy-orion-camarao-de-30g.webp",
+   "mime": "image/webp",
+   "parent_post": 150,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    864,
+    150
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 225,
+   "date": "2025-11-17T16:09:40",
+   "file": "soju-chum-churum-lotte-iogurte-de-360ml.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  },
+  {
+   "id": 223,
+   "date": "2025-11-17T16:07:55",
+   "file": "soju-chum-churum-lotte-maca-verde-de-360ml.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    810
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 221,
+   "date": "2025-11-17T16:04:05",
+   "file": "soju-chum-churum-lotte-blueberry-de-360ml.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    813
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 220,
+   "date": "2025-11-17T16:01:58",
+   "file": "soju-chum-churum-lotte-manga-de-360ml.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  },
+  {
+   "id": 219,
+   "date": "2025-11-17T16:01:02",
+   "file": "soju-chum-churum-lotte-morango-de-360ml.webp",
+   "mime": "image/webp",
+   "parent_post": 154,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    154
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 218,
+   "date": "2025-11-17T16:00:24",
+   "file": "soju-chum-churum-lotte-original-de-360ml.webp",
+   "mime": "image/webp",
+   "parent_post": 155,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    155
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 217,
+   "date": "2025-11-17T15:59:51",
+   "file": "soju-chum-churum-lotte-pessego-de-360ml.webp",
+   "mime": "image/webp",
+   "parent_post": 156,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    156
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 216,
+   "date": "2025-11-17T15:58:34",
+   "file": "snack-de-batata-coreano-orion-tok-38g-sabores-carne-barbecue.webp",
+   "mime": "image/webp",
+   "parent_post": 85,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    85
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 215,
+   "date": "2025-11-17T15:58:03",
+   "file": "snack-de-batata-coreano-orion-tok-38g-sabores-queijo.webp",
+   "mime": "image/webp",
+   "parent_post": 151,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    151
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 213,
+   "date": "2025-11-17T15:12:09",
+   "file": "topokki-yopokki-youngpoong-coreano-120g-copo-sabores-tradicional.webp",
+   "mime": "image/webp",
+   "parent_post": 160,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [
+    160
+   ],
+   "reupload_suffix": false
+  },
+  {
+   "id": 7,
+   "date": "2025-11-15T20:51:56",
+   "file": "woocommerce-placeholder.webp",
+   "mime": "image/webp",
+   "parent_post": null,
+   "name_class": "descriptive",
+   "alt_empty": true,
+   "used_by_published_products": [],
+   "reupload_suffix": false
+  }
+ ]
+}

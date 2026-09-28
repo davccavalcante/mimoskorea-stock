@@ -1,0 +1,4564 @@
+{
+ "source_urls": [
+  "https://mimoskorea.com.br/wp-json/wp/v2/product?per_page=100&page=1&_fields=id,date,date_gmt,modified,modified_gmt,slug,status,type,link,title,author,featured_media,menu_order,template,class_list,product_cat,product_tag,product_brand,comment_status",
+  "https://mimoskorea.com.br/wp-json/wp/v2/product?per_page=100&page=2&_fields=id,date,date_gmt,modified,modified_gmt,slug,status,type,link,title,author,featured_media,menu_order,template,class_list,product_cat,product_tag,product_brand,comment_status"
+ ],
+ "captured_at": "2026-09-28",
+ "count": 103,
+ "data": [
+  {
+   "id": 1021,
+   "date": "2026-09-12T09:33:08",
+   "date_gmt": "2026-09-12T12:33:08",
+   "modified": "2026-09-12T09:33:08",
+   "modified_gmt": "2026-09-12T12:33:08",
+   "slug": "salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-queijo-duplo",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-queijo-duplo/",
+   "title": {
+    "rendered": "Salgadinho Coreano O’Star Orion 30g | Batata Frita Crocante | Snack Sabor Queijo Duplo"
+   },
+   "featured_media": 1022,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-1021",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "first",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 1019,
+   "date": "2026-09-12T09:31:50",
+   "date_gmt": "2026-09-12T12:31:50",
+   "modified": "2026-09-12T09:31:51",
+   "modified_gmt": "2026-09-12T12:31:51",
+   "slug": "salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-bife-ny",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-batata-frita-crocante-snack-sabor-bife-ny/",
+   "title": {
+    "rendered": "Salgadinho Coreano O’Star Orion 30g | Batata Frita Crocante | Snack Sabor Bife NY"
+   },
+   "featured_media": 1020,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-1019",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 1016,
+   "date": "2026-09-12T09:29:10",
+   "date_gmt": "2026-09-12T12:29:10",
+   "modified": "2026-09-12T09:29:10",
+   "modified_gmt": "2026-09-12T12:29:10",
+   "slug": "biscoito-coreano-orion-miz-chocolate-54g-ceral-crocante-divertido-e-delicioso-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-coreano-orion-miz-chocolate-54g-ceral-crocante-divertido-e-delicioso-mimos-korea/",
+   "title": {
+    "rendered": "Biscoito Coreano Orion Miz Chocolate 54g | Ceral, Crocante, Divertido e Delicioso | Mimos Korea"
+   },
+   "featured_media": 1018,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-1016",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 1011,
+   "date": "2026-09-12T09:26:25",
+   "date_gmt": "2026-09-12T12:26:25",
+   "modified": "2026-09-12T09:26:25",
+   "modified_gmt": "2026-09-12T12:26:25",
+   "slug": "bolinho-orion-bongbang-5un-sabor-chocolate-com-feijao-vermelho-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bolinho-orion-bongbang-5un-sabor-chocolate-com-feijao-vermelho-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Bolinho Orion BongBang 5un Sabor Chocolate com Feijão Vermelho | Importado | Mimos Korea Design"
+   },
+   "featured_media": 1012,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-1011",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 1007,
+   "date": "2026-09-12T09:23:28",
+   "date_gmt": "2026-09-12T12:23:28",
+   "modified": "2026-09-12T09:23:28",
+   "modified_gmt": "2026-09-12T12:23:28",
+   "slug": "bolinho-coreano-custard-orion-creme-de-ovos-caixa-com-12-unidades-276g-k-snack-importado-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bolinho-coreano-custard-orion-creme-de-ovos-caixa-com-12-unidades-276g-k-snack-importado-mimos-korea/",
+   "title": {
+    "rendered": "Bolinho Coreano Custard Orion | Creme de Ovos | Caixa com 12 Unidades | 276g | K-snack Importado Mimos Korea"
+   },
+   "featured_media": 1008,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-1007",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 993,
+   "date": "2026-09-02T16:43:37",
+   "date_gmt": "2026-09-02T19:43:37",
+   "modified": "2026-09-02T16:43:37",
+   "modified_gmt": "2026-09-02T19:43:37",
+   "slug": "mochila-faculdade-notebook-reforcada-impermeavel-executiva-trabalho-resistente-preta",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/mochila-faculdade-notebook-reforcada-impermeavel-executiva-trabalho-resistente-preta/",
+   "title": {
+    "rendered": "Mochila Faculdade Notebook Reforçada Impermeável Executiva Trabalho Resistente Preta"
+   },
+   "featured_media": 994,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    219,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-993",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-mochilas",
+    "product_cat-ofertas-mimos",
+    "first",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 985,
+   "date": "2026-09-02T16:41:28",
+   "date_gmt": "2026-09-02T19:41:28",
+   "modified": "2026-09-02T16:41:28",
+   "modified_gmt": "2026-09-02T19:41:28",
+   "slug": "mochila-premium-notebook-reforcada-impermeavel-preta-executiva-resistente",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/mochila-premium-notebook-reforcada-impermeavel-preta-executiva-resistente/",
+   "title": {
+    "rendered": "Mochila Premium Notebook Reforçada Impermeável Preta Executiva Resistente"
+   },
+   "featured_media": 992,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    219,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-985",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-mochilas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 981,
+   "date": "2026-09-02T16:38:45",
+   "date_gmt": "2026-09-02T19:38:45",
+   "modified": "2026-09-02T16:38:45",
+   "modified_gmt": "2026-09-02T19:38:45",
+   "slug": "mochila-executiva-29l-cor-rosa-notebook-reforcada-impermeavel-usb-viagem-premium-mimos",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/mochila-executiva-29l-cor-rosa-notebook-reforcada-impermeavel-usb-viagem-premium-mimos/",
+   "title": {
+    "rendered": "Mochila Executiva 29L Cor Rosa Notebook Reforçada Impermeável USB Viagem Premium Mimos"
+   },
+   "featured_media": 982,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    219,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-981",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-mochilas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 980,
+   "date": "2026-09-02T16:36:42",
+   "date_gmt": "2026-09-02T19:36:42",
+   "modified": "2026-09-02T16:36:42",
+   "modified_gmt": "2026-09-02T19:36:42",
+   "slug": "mochila-executiva-29l-cor-preto-notebook-reforcada-impermeavel-usb-viagem-premium-mimos",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/mochila-executiva-29l-cor-preto-notebook-reforcada-impermeavel-usb-viagem-premium-mimos/",
+   "title": {
+    "rendered": "Mochila Executiva 29L Cor Preto Notebook Reforçada Impermeável USB Viagem Premium Mimos"
+   },
+   "featured_media": 974,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    219,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-980",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-mochilas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 969,
+   "date": "2026-09-02T16:35:52",
+   "date_gmt": "2026-09-02T19:35:52",
+   "modified": "2026-09-02T16:35:52",
+   "modified_gmt": "2026-09-02T19:35:52",
+   "slug": "mochila-executiva-29l-cor-bege-notebook-reforcada-impermeavel-usb-viagem-premium-mimos",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/mochila-executiva-29l-cor-bege-notebook-reforcada-impermeavel-usb-viagem-premium-mimos/",
+   "title": {
+    "rendered": "Mochila Executiva 29L Cor Bege Notebook Reforçada Impermeável USB Viagem Premium Mimos"
+   },
+   "featured_media": 970,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    219,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-969",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-mochilas",
+    "product_cat-ofertas-mimos",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 968,
+   "date": "2026-09-02T16:32:32",
+   "date_gmt": "2026-09-02T19:32:32",
+   "modified": "2026-09-02T16:32:33",
+   "modified_gmt": "2026-09-02T19:32:33",
+   "slug": "mochila-escolar-viagem-cor-verde-notebook-15-6-impermeavel-usb-premium-25l",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/mochila-escolar-viagem-cor-verde-notebook-15-6-impermeavel-usb-premium-25l/",
+   "title": {
+    "rendered": "Mochila Escolar Viagem Cor Verde Notebook 15.6 Impermeável USB Premium 25L"
+   },
+   "featured_media": 966,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    219,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-968",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-mochilas",
+    "product_cat-ofertas-mimos",
+    "first",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 967,
+   "date": "2026-09-02T16:31:34",
+   "date_gmt": "2026-09-02T19:31:34",
+   "modified": "2026-09-02T16:31:34",
+   "modified_gmt": "2026-09-02T19:31:34",
+   "slug": "mochila-escolar-viagem-cor-rosa-notebook-15-6-impermeavel-usb-premium-25l",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/mochila-escolar-viagem-cor-rosa-notebook-15-6-impermeavel-usb-premium-25l/",
+   "title": {
+    "rendered": "Mochila Escolar Viagem Cor Rosa Notebook 15.6 Impermeável USB Premium 25L"
+   },
+   "featured_media": 965,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    219,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-967",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-mochilas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 957,
+   "date": "2026-09-02T16:30:13",
+   "date_gmt": "2026-09-02T19:30:13",
+   "modified": "2026-09-02T16:30:13",
+   "modified_gmt": "2026-09-02T19:30:13",
+   "slug": "mochila-escolar-viagem-cor-cinza-notebook-15-6-impermeavel-usb-premium-25l",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/mochila-escolar-viagem-cor-cinza-notebook-15-6-impermeavel-usb-premium-25l/",
+   "title": {
+    "rendered": "Mochila Escolar Viagem Cor Cinza Notebook 15.6 Impermeável USB Premium 25L"
+   },
+   "featured_media": 958,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    219,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-957",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-mochilas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 954,
+   "date": "2026-09-02T16:25:09",
+   "date_gmt": "2026-09-02T19:25:09",
+   "modified": "2026-09-02T16:25:10",
+   "modified_gmt": "2026-09-02T19:25:10",
+   "slug": "salgadinho-coreano-ostar-orion-30g-sabor-queijo-duplo-batata-frita-crocante-snack-sabores",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-sabor-queijo-duplo-batata-frita-crocante-snack-sabores/",
+   "title": {
+    "rendered": "Salgadinho Coreano O’Star Orion 30g Sabor Queijo Duplo | Batata Frita Crocante | Snack Sabores"
+   },
+   "featured_media": 955,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-954",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 952,
+   "date": "2026-09-02T16:23:43",
+   "date_gmt": "2026-09-02T19:23:43",
+   "modified": "2026-09-02T16:23:43",
+   "modified_gmt": "2026-09-02T19:23:43",
+   "slug": "salgadinho-coreano-ostar-orion-30g-sabor-bife-americano-ny-batata-frita-crocante-snack-sabores",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/salgadinho-coreano-ostar-orion-30g-sabor-bife-americano-ny-batata-frita-crocante-snack-sabores/",
+   "title": {
+    "rendered": "Salgadinho Coreano O’Star Orion 30g Sabor Bife Americano NY | Batata Frita Crocante | Snack Sabores"
+   },
+   "featured_media": 953,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-952",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 948,
+   "date": "2026-09-02T16:20:43",
+   "date_gmt": "2026-09-02T19:20:43",
+   "modified": "2026-09-12T09:59:42",
+   "modified_gmt": "2026-09-12T12:59:42",
+   "slug": "salgadinho-orion-toonies-sabor-chocolate-60g-importado-coreano-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/salgadinho-orion-toonies-sabor-chocolate-60g-importado-coreano-mimos-korea/",
+   "title": {
+    "rendered": "Salgadinho Orion Toonies Sabor Chocolate 60g | Importado | Coreano | Mimos Korea"
+   },
+   "featured_media": 951,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-948",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "first",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 946,
+   "date": "2026-09-02T16:17:03",
+   "date_gmt": "2026-09-02T19:17:03",
+   "modified": "2026-09-02T16:17:03",
+   "modified_gmt": "2026-09-02T19:17:03",
+   "slug": "biscoito-sakuragi-wafer-5-camadas-110g-sabor-sorvete-leite-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-sakuragi-wafer-5-camadas-110g-sabor-sorvete-leite-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Biscoito Sakuragi Wafer 5 Camadas 110g Sabor Sorvete Leite | Importado | Mimos Korea Design"
+   },
+   "featured_media": 944,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-946",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 941,
+   "date": "2026-09-02T16:16:12",
+   "date_gmt": "2026-09-02T19:16:12",
+   "modified": "2026-09-02T16:16:12",
+   "modified_gmt": "2026-09-02T19:16:12",
+   "slug": "biscoito-sakuragi-wafer-5-camadas-110g-sabor-chocolate-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-sakuragi-wafer-5-camadas-110g-sabor-chocolate-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Biscoito Sakuragi Wafer 5 Camadas 110g Sabor Chocolate | Importado | Mimos Korea Design"
+   },
+   "featured_media": 945,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-941",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 939,
+   "date": "2026-09-02T16:14:15",
+   "date_gmt": "2026-09-02T19:14:15",
+   "modified": "2026-09-02T16:14:15",
+   "modified_gmt": "2026-09-02T19:14:15",
+   "slug": "biscoito-sakuragi-wafer-cubos-65g-sabor-sorvete-leite-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-sakuragi-wafer-cubos-65g-sabor-sorvete-leite-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Biscoito Sakuragi Wafer Cubos 65g Sabor Sorvete Leite | Importado | Mimos Korea Design"
+   },
+   "featured_media": 936,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-939",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 934,
+   "date": "2026-09-02T16:13:22",
+   "date_gmt": "2026-09-02T19:13:22",
+   "modified": "2026-09-02T16:13:22",
+   "modified_gmt": "2026-09-02T19:13:22",
+   "slug": "biscoito-sakuragi-wafer-cubos-65g-sabor-queijo-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-sakuragi-wafer-cubos-65g-sabor-queijo-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Biscoito Sakuragi Wafer Cubos 65g Sabor Queijo | Importado | Mimos Korea Design"
+   },
+   "featured_media": 937,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-934",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 933,
+   "date": "2026-09-02T16:11:20",
+   "date_gmt": "2026-09-02T19:11:20",
+   "modified": "2026-09-02T16:11:20",
+   "modified_gmt": "2026-09-02T19:11:20",
+   "slug": "bala-hortela-sakuragi-sabor-pessego-16g-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bala-hortela-sakuragi-sabor-pessego-16g-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Bala Hortelã Sakuragi Sabor Pêssego 16g | Importado | Mimos Korea Design"
+   },
+   "featured_media": 928,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-933",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "first",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 932,
+   "date": "2026-09-02T16:10:36",
+   "date_gmt": "2026-09-02T19:10:36",
+   "modified": "2026-09-02T16:10:37",
+   "modified_gmt": "2026-09-02T19:10:37",
+   "slug": "bala-hortela-sakuragi-sabor-cafe-16g-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bala-hortela-sakuragi-sabor-cafe-16g-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Bala Hortelã Sakuragi Sabor Café 16g | Importado | Mimos Korea Design"
+   },
+   "featured_media": 929,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-932",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 926,
+   "date": "2026-09-02T16:09:54",
+   "date_gmt": "2026-09-02T19:09:54",
+   "modified": "2026-09-02T16:09:54",
+   "modified_gmt": "2026-09-02T19:09:54",
+   "slug": "bala-hortela-sakuragi-sabor-melancia-16g-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bala-hortela-sakuragi-sabor-melancia-16g-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Bala Hortelã Sakuragi Sabor Melancia 16g | Importado | Mimos Korea Design"
+   },
+   "featured_media": 930,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-926",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 923,
+   "date": "2026-09-02T16:07:51",
+   "date_gmt": "2026-09-02T19:07:51",
+   "modified": "2026-09-02T16:07:51",
+   "modified_gmt": "2026-09-02T19:07:51",
+   "slug": "biscoitos-sakuragi-animais-130g-sabor-leite-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoitos-sakuragi-animais-130g-sabor-leite-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Biscoitos Sakuragi Animais 130g Sabor Leite | Importado | Mimos Korea Design"
+   },
+   "featured_media": 924,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-923",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 919,
+   "date": "2026-09-02T16:06:28",
+   "date_gmt": "2026-09-02T19:06:28",
+   "modified": "2026-09-05T04:21:47",
+   "modified_gmt": "2026-09-05T07:21:47",
+   "slug": "biscoitos-sakuragi-animais-130g-sabor-chocolate-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoitos-sakuragi-animais-130g-sabor-chocolate-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Biscoitos Sakuragi Animais 130g Sabor Chocolate | Importado | Mimos Korea Design"
+   },
+   "featured_media": 921,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-919",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 916,
+   "date": "2026-09-02T16:04:38",
+   "date_gmt": "2026-09-02T19:04:38",
+   "modified": "2026-09-02T16:04:38",
+   "modified_gmt": "2026-09-02T19:04:38",
+   "slug": "biscoitos-snack-sakuragi-sabor-batata-doce-80g-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoitos-snack-sakuragi-sabor-batata-doce-80g-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Biscoitos Snack Sakuragi Sabor Batata Doce 80g | Importado | Mimos Korea Design"
+   },
+   "featured_media": 917,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-916",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "first",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 912,
+   "date": "2026-09-02T16:03:19",
+   "date_gmt": "2026-09-02T19:03:19",
+   "modified": "2026-09-02T16:03:19",
+   "modified_gmt": "2026-09-02T19:03:19",
+   "slug": "biscoitos-snack-sakuragi-sabor-abobora-80g-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoitos-snack-sakuragi-sabor-abobora-80g-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Biscoitos Snack Sakuragi Sabor Abóbora 80g | Importado | Mimos Korea Design"
+   },
+   "featured_media": 913,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-912",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 910,
+   "date": "2026-09-02T16:00:58",
+   "date_gmt": "2026-09-02T19:00:58",
+   "modified": "2026-09-02T16:00:58",
+   "modified_gmt": "2026-09-02T19:00:58",
+   "slug": "bala-gelatina-sakuragi-70-fruta-32g-sabor-limao-com-sal-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bala-gelatina-sakuragi-70-fruta-32g-sabor-limao-com-sal-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Bala Gelatina Sakuragi 70% Fruta 32g Sabor Limão com Sal | Importado | Mimos Korea Design"
+   },
+   "featured_media": 911,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-910",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 908,
+   "date": "2026-09-02T15:59:42",
+   "date_gmt": "2026-09-02T18:59:42",
+   "modified": "2026-09-02T15:59:43",
+   "modified_gmt": "2026-09-02T18:59:43",
+   "slug": "bala-gelatina-sakuragi-70-fruta-32g-sabor-blueberry-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bala-gelatina-sakuragi-70-fruta-32g-sabor-blueberry-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Bala Gelatina Sakuragi 70% Fruta 32g Sabor Blueberry | Importado | Mimos Korea Design"
+   },
+   "featured_media": 909,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-908",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 905,
+   "date": "2026-09-02T15:58:15",
+   "date_gmt": "2026-09-02T18:58:15",
+   "modified": "2026-09-05T04:21:47",
+   "modified_gmt": "2026-09-05T07:21:47",
+   "slug": "bala-gelatina-sakuragi-70-fruta-32g-sabor-morango-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bala-gelatina-sakuragi-70-fruta-32g-sabor-morango-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Bala Gelatina Sakuragi 70% Fruta 32g Sabor Morango | Importado | Mimos Korea Design"
+   },
+   "featured_media": 906,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-905",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 902,
+   "date": "2026-09-02T15:56:00",
+   "date_gmt": "2026-09-02T18:56:00",
+   "modified": "2026-09-02T15:56:00",
+   "modified_gmt": "2026-09-02T18:56:00",
+   "slug": "bala-gelatina-sakuragi-4d-50-fruta-50g-sabor-maca-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bala-gelatina-sakuragi-4d-50-fruta-50g-sabor-maca-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Bala Gelatina Sakuragi 4D 50% Fruta 50g Sabor Maçã | Importado | Mimos Korea Design"
+   },
+   "featured_media": 903,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-902",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "first",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 899,
+   "date": "2026-09-02T15:54:50",
+   "date_gmt": "2026-09-02T18:54:50",
+   "modified": "2026-09-02T15:54:50",
+   "modified_gmt": "2026-09-02T18:54:50",
+   "slug": "bala-gelatina-sakuragi-4d-50-fruta-50g-sabor-uva-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bala-gelatina-sakuragi-4d-50-fruta-50g-sabor-uva-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Bala Gelatina Sakuragi 4D 50% Fruta 50g Sabor Uva | Importado | Mimos Korea Design"
+   },
+   "featured_media": 900,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-899",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 894,
+   "date": "2026-09-02T15:53:26",
+   "date_gmt": "2026-09-02T18:53:26",
+   "modified": "2026-09-02T15:53:27",
+   "modified_gmt": "2026-09-02T18:53:27",
+   "slug": "bala-gelatina-sakuragi-4d-50-fruta-50g-sabor-morango-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bala-gelatina-sakuragi-4d-50-fruta-50g-sabor-morango-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Bala Gelatina Sakuragi 4D 50% Fruta 50g Sabor Morango | Importado | Mimos Korea Design"
+   },
+   "featured_media": 896,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-894",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 890,
+   "date": "2026-09-02T15:50:04",
+   "date_gmt": "2026-09-02T18:50:04",
+   "modified": "2026-09-02T15:50:05",
+   "modified_gmt": "2026-09-02T18:50:05",
+   "slug": "bala-gelatina-sakuragi-tortinha-sabor-ovo-caramelizado-40g-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bala-gelatina-sakuragi-tortinha-sabor-ovo-caramelizado-40g-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Bala Gelatina Sakuragi Tortinha Sabor Ovo Caramelizado 40g | Importado | Mimos Korea Design"
+   },
+   "featured_media": 891,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-890",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 879,
+   "date": "2026-08-22T11:31:21",
+   "date_gmt": "2026-08-22T14:31:21",
+   "modified": "2026-09-12T09:39:01",
+   "modified_gmt": "2026-09-12T12:39:01",
+   "slug": "salgadinhos-turtlechips-orion-sabor-alga-marinha-60g-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/salgadinhos-turtlechips-orion-sabor-alga-marinha-60g-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Salgadinhos Masita TurtleChips Orion Sabor Alga Marinha 60g | Importado | Mimos Korea Design"
+   },
+   "featured_media": 880,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-879",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 875,
+   "date": "2026-08-22T11:29:56",
+   "date_gmt": "2026-08-22T14:29:56",
+   "modified": "2026-09-12T09:38:49",
+   "modified_gmt": "2026-09-12T12:38:49",
+   "slug": "salgadinhos-turtlechips-orion-sabor-milho-agridoce-60g-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/salgadinhos-turtlechips-orion-sabor-milho-agridoce-60g-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Salgadinhos Masita TurtleChips Orion Sabor Milho Agridoce 60g | Importado | Mimos Korea Design"
+   },
+   "featured_media": 876,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-875",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "first",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 871,
+   "date": "2026-08-22T11:27:06",
+   "date_gmt": "2026-08-22T14:27:06",
+   "modified": "2026-08-22T11:27:12",
+   "modified_gmt": "2026-08-22T14:27:12",
+   "slug": "salgadinho-koony-orion-sabor-chili-picante-40g-impotado-coreano-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/salgadinho-koony-orion-sabor-chili-picante-40g-impotado-coreano-mimos-korea/",
+   "title": {
+    "rendered": "Salgadinho Koony Orion Sabor Chili Picante 40g Importado | Coreano | Mimos Korea"
+   },
+   "featured_media": 872,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-871",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 867,
+   "date": "2026-08-22T11:25:03",
+   "date_gmt": "2026-08-22T14:25:03",
+   "modified": "2026-09-12T09:59:11",
+   "modified_gmt": "2026-09-12T12:59:11",
+   "slug": "salgadinhos-cornchip-orion-sabor-milho-assado-70g-importado-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/salgadinhos-cornchip-orion-sabor-milho-assado-70g-importado-mimos-korea-design/",
+   "title": {
+    "rendered": "Salgadinhos CornChip Orion Sabor Milho Assado 70g | Importado | Mimos Korea Design"
+   },
+   "featured_media": 868,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-867",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 864,
+   "date": "2026-08-22T11:22:13",
+   "date_gmt": "2026-08-22T14:22:13",
+   "modified": "2026-08-22T11:22:13",
+   "modified_gmt": "2026-08-22T14:22:13",
+   "slug": "snack-coreano-marine-boy-orion-sabor-camarao-30g-salgadinho-crocante-divertido-e-delicioso-importacao-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/snack-coreano-marine-boy-orion-sabor-camarao-30g-salgadinho-crocante-divertido-e-delicioso-importacao-mimos-korea/",
+   "title": {
+    "rendered": "Snack Coreano Marine Boy Orion Sabor Camarão 30g | Salgadinho Crocante, Divertido e Delicioso | Importação Mimos Korea"
+   },
+   "featured_media": 228,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    17,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-864",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 860,
+   "date": "2026-08-22T11:17:11",
+   "date_gmt": "2026-08-22T14:17:11",
+   "modified": "2026-09-05T04:21:47",
+   "modified_gmt": "2026-09-05T07:21:47",
+   "slug": "bebida-suco-com-pedacos-chuyin-500ml-sabor-lichia-bebida-importada-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-suco-com-pedacos-chuyin-500ml-sabor-lichia-bebida-importada-mimos-korea/",
+   "title": {
+    "rendered": "Bebida Suco com Pedaços Chuyin 500ml Sabor Lichia | Bebida Importada | Mimos Korea"
+   },
+   "featured_media": 861,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    16,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-860",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 858,
+   "date": "2026-08-22T11:16:11",
+   "date_gmt": "2026-08-22T14:16:11",
+   "modified": "2026-09-05T04:21:47",
+   "modified_gmt": "2026-09-05T07:21:47",
+   "slug": "bebida-suco-com-pedacos-chuyin-500ml-sabor-uva-bebida-importada-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-suco-com-pedacos-chuyin-500ml-sabor-uva-bebida-importada-mimos-korea/",
+   "title": {
+    "rendered": "Bebida Suco com Pedaços Chuyin 500ml Sabor Uva | Bebida Importada | Mimos Korea"
+   },
+   "featured_media": 859,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-858",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-ofertas-mimos",
+    "first",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 855,
+   "date": "2026-08-22T11:14:59",
+   "date_gmt": "2026-08-22T14:14:59",
+   "modified": "2026-09-05T04:21:47",
+   "modified_gmt": "2026-09-05T07:21:47",
+   "slug": "bebida-suco-com-pedacos-chuyin-500ml-sabor-morango-bebida-importada-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-suco-com-pedacos-chuyin-500ml-sabor-morango-bebida-importada-mimos-korea/",
+   "title": {
+    "rendered": "Bebida Suco com Pedaços Chuyin 500ml Sabor Morango | Bebida Importada | Mimos Korea"
+   },
+   "featured_media": 856,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    16,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-855",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 852,
+   "date": "2026-08-22T10:40:57",
+   "date_gmt": "2026-08-22T13:40:57",
+   "modified": "2026-08-23T12:20:17",
+   "modified_gmt": "2026-08-23T15:20:17",
+   "slug": "suco-com-pedacos-yantai-sabor-lichia-238ml-bebida-importada-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/suco-com-pedacos-yantai-sabor-lichia-238ml-bebida-importada-mimos-korea/",
+   "title": {
+    "rendered": "Suco com Pedaços Yantai Sabor Lichia 238ml | Bebida Importada | Mimos Korea"
+   },
+   "featured_media": 853,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    16,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-852",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 849,
+   "date": "2026-08-22T10:39:34",
+   "date_gmt": "2026-08-22T13:39:34",
+   "modified": "2026-08-22T10:39:34",
+   "modified_gmt": "2026-08-22T13:39:34",
+   "slug": "suco-com-pedacos-yantai-sabor-uva-238ml-bebida-importada-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/suco-com-pedacos-yantai-sabor-uva-238ml-bebida-importada-mimos-korea/",
+   "title": {
+    "rendered": "Suco com Pedaços Yantai Sabor Uva 238ml | Bebida Importada | Mimos Korea"
+   },
+   "featured_media": 850,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    16,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-849",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 846,
+   "date": "2026-08-22T10:37:21",
+   "date_gmt": "2026-08-22T13:37:21",
+   "modified": "2026-08-22T10:37:21",
+   "modified_gmt": "2026-08-22T13:37:21",
+   "slug": "suco-com-pedacos-yantai-sabor-pessego-238ml-bebida-importada-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/suco-com-pedacos-yantai-sabor-pessego-238ml-bebida-importada-mimos-korea/",
+   "title": {
+    "rendered": "Suco com Pedaços Yantai Sabor Pêssego 238ml | Bebida Importada | Mimos Korea"
+   },
+   "featured_media": 847,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    16,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-846",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 842,
+   "date": "2026-08-22T10:35:30",
+   "date_gmt": "2026-08-22T13:35:30",
+   "modified": "2026-08-22T10:35:30",
+   "modified_gmt": "2026-08-22T13:35:30",
+   "slug": "suco-com-pedacos-yantai-sabor-morango-238ml-bebida-importada-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/suco-com-pedacos-yantai-sabor-morango-238ml-bebida-importada-mimos-korea/",
+   "title": {
+    "rendered": "Suco com Pedaços Yantai Sabor Morango 238ml | Bebida Importada | Mimos Korea"
+   },
+   "featured_media": 844,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    16,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-842",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "first",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 840,
+   "date": "2026-08-22T10:29:18",
+   "date_gmt": "2026-08-22T13:29:18",
+   "modified": "2026-08-22T10:29:18",
+   "modified_gmt": "2026-08-22T13:29:18",
+   "slug": "mamadeira-chuyin-280ml-vidro-bebida-cremosa-sabor-melao-importada-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/mamadeira-chuyin-280ml-vidro-bebida-cremosa-sabor-melao-importada-mimos-korea/",
+   "title": {
+    "rendered": "Mamadeira Chuyin 280ml Vidro | Bebida Cremosa | Sabor Melão | Importada | Mimos Korea"
+   },
+   "featured_media": 841,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    16,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-840",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 838,
+   "date": "2026-08-22T10:26:57",
+   "date_gmt": "2026-08-22T13:26:57",
+   "modified": "2026-08-22T10:26:57",
+   "modified_gmt": "2026-08-22T13:26:57",
+   "slug": "mamadeira-chuyin-280ml-vidro-bebida-cremosa-sabor-manga-importada-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/mamadeira-chuyin-280ml-vidro-bebida-cremosa-sabor-manga-importada-mimos-korea/",
+   "title": {
+    "rendered": "Mamadeira Chuyin 280ml Vidro | Bebida Cremosa | Sabor Manga | Importada | Mimos Korea"
+   },
+   "featured_media": 839,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    16,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-838",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 833,
+   "date": "2026-08-22T10:24:07",
+   "date_gmt": "2026-08-22T13:24:07",
+   "modified": "2026-08-22T10:29:29",
+   "modified_gmt": "2026-08-22T13:29:29",
+   "slug": "mamadeira-chuyin-280ml-vidro-bebida-cremosa-sabor-original-importada-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/mamadeira-chuyin-280ml-vidro-bebida-cremosa-sabor-original-importada-mimos-korea/",
+   "title": {
+    "rendered": "Mamadeira Chuyin 280ml Vidro | Bebida Cremosa | Sabor Original | Importada | Mimos Korea"
+   },
+   "featured_media": 835,
+   "template": "",
+   "product_brand": [],
+   "product_cat": [
+    16,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-833",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 831,
+   "date": "2026-08-22T10:19:55",
+   "date_gmt": "2026-08-22T13:19:55",
+   "modified": "2026-08-22T10:19:55",
+   "modified_gmt": "2026-08-22T13:19:55",
+   "slug": "kit-soju-coreano-sem-acucar-lotte-4-garrafas-de-360ml-sabores-mimos-korea-design",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/kit-soju-coreano-sem-acucar-lotte-4-garrafas-de-360ml-sabores-mimos-korea-design/",
+   "title": {
+    "rendered": "Kit Soju Coreano Sem Açúcar Lotte | 4 Garrafas de 360ml | Sabores | Mimos Korea Design"
+   },
+   "featured_media": 832,
+   "template": "",
+   "product_brand": [
+    25
+   ],
+   "product_cat": [
+    15,
+    261
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-831",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 829,
+   "date": "2026-08-22T10:17:46",
+   "date_gmt": "2026-08-22T13:17:46",
+   "modified": "2026-08-22T10:17:46",
+   "modified_gmt": "2026-08-22T13:17:46",
+   "slug": "kit-6-soju-coreano-lotte-sabor-sortido-bebidas-coreanas-mimos-korea",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/kit-6-soju-coreano-lotte-sabor-sortido-bebidas-coreanas-mimos-korea/",
+   "title": {
+    "rendered": "Kit 6 Soju Coreano Lotte | Sabor Sortido | Bebidas Coreanas | Mimos Korea"
+   },
+   "featured_media": 830,
+   "template": "",
+   "product_brand": [
+    25
+   ],
+   "product_cat": [
+    15,
+    261
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-829",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "first",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 827,
+   "date": "2026-08-22T10:12:16",
+   "date_gmt": "2026-08-22T13:12:16",
+   "modified": "2026-08-22T10:12:16",
+   "modified_gmt": "2026-08-22T13:12:16",
+   "slug": "soju-coreano-lotte-saero-360ml-sabor-kiwi-sem-acucar",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/soju-coreano-lotte-saero-360ml-sabor-kiwi-sem-acucar/",
+   "title": {
+    "rendered": "Soju Coreano Lotte Saero 360ml Sabor Kiwi Sem Açúcar"
+   },
+   "featured_media": 828,
+   "template": "",
+   "product_brand": [
+    25
+   ],
+   "product_cat": [
+    15,
+    261
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-827",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 825,
+   "date": "2026-08-22T10:10:13",
+   "date_gmt": "2026-08-22T13:10:13",
+   "modified": "2026-08-22T10:10:13",
+   "modified_gmt": "2026-08-22T13:10:13",
+   "slug": "soju-coreano-lotte-saero-360ml-sabor-damasco-sem-acucar",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/soju-coreano-lotte-saero-360ml-sabor-damasco-sem-acucar/",
+   "title": {
+    "rendered": "Soju Coreano Lotte Saero 360ml Sabor Damasco Sem Açúcar"
+   },
+   "featured_media": 826,
+   "template": "",
+   "product_brand": [
+    25
+   ],
+   "product_cat": [
+    15,
+    261
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-825",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 822,
+   "date": "2026-08-22T10:08:46",
+   "date_gmt": "2026-08-22T13:08:46",
+   "modified": "2026-08-22T10:08:46",
+   "modified_gmt": "2026-08-22T13:08:46",
+   "slug": "soju-coreano-lotte-saero-360ml-sabor-lichia-sem-acucar",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/soju-coreano-lotte-saero-360ml-sabor-lichia-sem-acucar/",
+   "title": {
+    "rendered": "Soju Coreano Lotte Saero 360ml Sabor Lichia Sem Açúcar"
+   },
+   "featured_media": 823,
+   "template": "",
+   "product_brand": [
+    25
+   ],
+   "product_cat": [
+    15,
+    261
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-822",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 819,
+   "date": "2026-08-22T10:06:38",
+   "date_gmt": "2026-08-22T13:06:38",
+   "modified": "2026-08-22T10:06:38",
+   "modified_gmt": "2026-08-22T13:06:38",
+   "slug": "soju-coreano-lotte-saero-360ml-sabor-original-sem-acucar",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/soju-coreano-lotte-saero-360ml-sabor-original-sem-acucar/",
+   "title": {
+    "rendered": "Soju Coreano Lotte Saero 360ml Sabor Original Sem Açúcar"
+   },
+   "featured_media": 820,
+   "template": "",
+   "product_brand": [
+    25
+   ],
+   "product_cat": [
+    15,
+    261
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-819",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 817,
+   "date": "2026-08-22T10:03:25",
+   "date_gmt": "2026-08-22T13:03:25",
+   "modified": "2026-08-22T10:50:27",
+   "modified_gmt": "2026-08-22T13:50:27",
+   "slug": "soju-coreano-lotte-chum-churum-360ml-sabor-ameixa-koreia-kpop",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/soju-coreano-lotte-chum-churum-360ml-sabor-ameixa-koreia-kpop/",
+   "title": {
+    "rendered": "Soju Coreano Lotte Chum Churum 360ml Sabor Ameixa, Koreia, Kpop"
+   },
+   "featured_media": 818,
+   "template": "",
+   "product_brand": [
+    25
+   ],
+   "product_cat": [
+    16,
+    15,
+    261
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-817",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "first",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 815,
+   "date": "2026-08-22T10:00:50",
+   "date_gmt": "2026-08-22T13:00:50",
+   "modified": "2026-08-22T10:50:18",
+   "modified_gmt": "2026-08-22T13:50:18",
+   "slug": "soju-coreano-lotte-chum-churum-360ml-sabor-lichia-koreia-kpop",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/soju-coreano-lotte-chum-churum-360ml-sabor-lichia-koreia-kpop/",
+   "title": {
+    "rendered": "Soju Coreano Lotte Chum Churum 360ml Sabor Lichia, Koreia, Kpop"
+   },
+   "featured_media": 816,
+   "template": "",
+   "product_brand": [
+    25
+   ],
+   "product_cat": [
+    16,
+    15
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-815",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 813,
+   "date": "2026-08-22T09:58:48",
+   "date_gmt": "2026-08-22T12:58:48",
+   "modified": "2026-08-22T10:50:12",
+   "modified_gmt": "2026-08-22T13:50:12",
+   "slug": "soju-coreano-lotte-chum-churum-360ml-sabor-blueberry-koreia-kpop",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/soju-coreano-lotte-chum-churum-360ml-sabor-blueberry-koreia-kpop/",
+   "title": {
+    "rendered": "Soju Coreano Lotte Chum Churum 360ml Sabor Blueberry , Koreia, Kpop"
+   },
+   "featured_media": 221,
+   "template": "",
+   "product_brand": [
+    25
+   ],
+   "product_cat": [
+    16,
+    15,
+    261
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-813",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 810,
+   "date": "2026-08-22T09:55:07",
+   "date_gmt": "2026-08-22T12:55:07",
+   "modified": "2026-08-22T10:50:04",
+   "modified_gmt": "2026-08-22T13:50:04",
+   "slug": "soju-coreano-lotte-chum-churum-360ml-sabor-maca-verde-koreia-kpop",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/soju-coreano-lotte-chum-churum-360ml-sabor-maca-verde-koreia-kpop/",
+   "title": {
+    "rendered": "Soju Coreano Lotte Chum Churum 360ml Sabor Maçã Verde , Koreia, Kpop"
+   },
+   "featured_media": 223,
+   "template": "",
+   "product_brand": [
+    25
+   ],
+   "product_cat": [
+    16,
+    15,
+    261
+   ],
+   "product_tag": [],
+   "class_list": [
+    "post-810",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 285,
+   "date": "2025-11-19T12:59:21",
+   "date_gmt": "2025-11-19T15:59:21",
+   "modified": "2026-08-21T14:08:16",
+   "modified_gmt": "2026-08-21T17:08:16",
+   "slug": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-pessego",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-pessego/",
+   "title": {
+    "rendered": "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Pêssego"
+   },
+   "featured_media": 286,
+   "template": "",
+   "product_brand": [
+    25,
+    35
+   ],
+   "product_cat": [
+    17,
+    31
+   ],
+   "product_tag": [
+    34,
+    21,
+    19,
+    32,
+    33
+   ],
+   "class_list": [
+    "post-285",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-milkis",
+    "product_cat-comida-e-bebida",
+    "product_cat-refrigerantes",
+    "product_tag-250ml",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-milkis",
+    "product_tag-refrigerante-leite",
+    "last",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 283,
+   "date": "2025-11-19T12:58:34",
+   "date_gmt": "2025-11-19T15:58:34",
+   "modified": "2026-04-29T14:42:05",
+   "modified_gmt": "2026-04-29T17:42:05",
+   "slug": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-morango",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-morango/",
+   "title": {
+    "rendered": "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Morango"
+   },
+   "featured_media": 284,
+   "template": "",
+   "product_brand": [
+    25,
+    35
+   ],
+   "product_cat": [
+    17,
+    31
+   ],
+   "product_tag": [
+    34,
+    21,
+    19,
+    32,
+    33
+   ],
+   "class_list": [
+    "post-283",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-milkis",
+    "product_cat-comida-e-bebida",
+    "product_cat-refrigerantes",
+    "product_tag-250ml",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-milkis",
+    "product_tag-refrigerante-leite",
+    "first",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 281,
+   "date": "2025-11-19T12:57:50",
+   "date_gmt": "2025-11-19T15:57:50",
+   "modified": "2026-04-28T08:23:58",
+   "modified_gmt": "2026-04-28T11:23:58",
+   "slug": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-uva",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-uva/",
+   "title": {
+    "rendered": "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Uva"
+   },
+   "featured_media": 282,
+   "template": "",
+   "product_brand": [
+    25,
+    35
+   ],
+   "product_cat": [
+    17,
+    31
+   ],
+   "product_tag": [
+    34,
+    21,
+    19,
+    32,
+    33
+   ],
+   "class_list": [
+    "post-281",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-milkis",
+    "product_cat-comida-e-bebida",
+    "product_cat-refrigerantes",
+    "product_tag-250ml",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-milkis",
+    "product_tag-refrigerante-leite",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 279,
+   "date": "2025-11-19T12:56:55",
+   "date_gmt": "2025-11-19T15:56:55",
+   "modified": "2026-08-21T14:08:32",
+   "modified_gmt": "2026-08-21T17:08:32",
+   "slug": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-banana",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-banana/",
+   "title": {
+    "rendered": "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Banana"
+   },
+   "featured_media": 280,
+   "template": "",
+   "product_brand": [
+    25,
+    35
+   ],
+   "product_cat": [
+    17,
+    31
+   ],
+   "product_tag": [
+    34,
+    21,
+    19,
+    32,
+    33
+   ],
+   "class_list": [
+    "post-279",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-milkis",
+    "product_cat-comida-e-bebida",
+    "product_cat-refrigerantes",
+    "product_tag-250ml",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-milkis",
+    "product_tag-refrigerante-leite",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 277,
+   "date": "2025-11-19T12:56:09",
+   "date_gmt": "2025-11-19T15:56:09",
+   "modified": "2026-04-28T08:24:08",
+   "modified_gmt": "2026-04-28T11:24:08",
+   "slug": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-melao",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-melao/",
+   "title": {
+    "rendered": "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Melão"
+   },
+   "featured_media": 278,
+   "template": "",
+   "product_brand": [
+    25,
+    35
+   ],
+   "product_cat": [
+    17,
+    31
+   ],
+   "product_tag": [
+    34,
+    21,
+    19,
+    32,
+    33
+   ],
+   "class_list": [
+    "post-277",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-milkis",
+    "product_cat-comida-e-bebida",
+    "product_cat-refrigerantes",
+    "product_tag-250ml",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-milkis",
+    "product_tag-refrigerante-leite",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 273,
+   "date": "2025-11-18T22:21:33",
+   "date_gmt": "2025-11-19T01:21:33",
+   "modified": "2026-04-28T08:24:19",
+   "modified_gmt": "2026-04-28T11:24:19",
+   "slug": "biscoito-coreano-pepero-lotte-47g-sabor-amendoa",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-coreano-pepero-lotte-47g-sabor-amendoa/",
+   "title": {
+    "rendered": "Biscoito Coreano Pepero Lotte 47g Sabor Amêndoa"
+   },
+   "featured_media": 274,
+   "template": "",
+   "product_brand": [
+    25,
+    40
+   ],
+   "product_cat": [
+    36,
+    17
+   ],
+   "product_tag": [
+    39,
+    38,
+    21,
+    19,
+    37
+   ],
+   "class_list": [
+    "post-273",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-pepero",
+    "product_cat-biscoitos",
+    "product_cat-comida-e-bebida",
+    "product_tag-47g",
+    "product_tag-biscoito",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-pepero",
+    "last",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 271,
+   "date": "2025-11-18T22:20:49",
+   "date_gmt": "2025-11-19T01:20:49",
+   "modified": "2026-04-28T08:24:25",
+   "modified_gmt": "2026-04-28T11:24:25",
+   "slug": "biscoito-coreano-pepero-lotte-47g-sabor-choco-cookie",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-coreano-pepero-lotte-47g-sabor-choco-cookie/",
+   "title": {
+    "rendered": "Biscoito Coreano Pepero Lotte 47g Sabor Choco Cookie"
+   },
+   "featured_media": 272,
+   "template": "",
+   "product_brand": [
+    25,
+    40
+   ],
+   "product_cat": [
+    36,
+    17
+   ],
+   "product_tag": [
+    39,
+    38,
+    21,
+    19,
+    37
+   ],
+   "class_list": [
+    "post-271",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-pepero",
+    "product_cat-biscoitos",
+    "product_cat-comida-e-bebida",
+    "product_tag-47g",
+    "product_tag-biscoito",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-pepero",
+    "first",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 269,
+   "date": "2025-11-18T22:19:01",
+   "date_gmt": "2025-11-19T01:19:01",
+   "modified": "2026-04-28T08:24:36",
+   "modified_gmt": "2026-04-28T11:24:36",
+   "slug": "biscoito-coreano-pepero-lotte-47g-sabor-original",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-coreano-pepero-lotte-47g-sabor-original/",
+   "title": {
+    "rendered": "Biscoito Coreano Pepero Lotte 47g Sabor Original"
+   },
+   "featured_media": 270,
+   "template": "",
+   "product_brand": [
+    25,
+    40
+   ],
+   "product_cat": [
+    36,
+    17
+   ],
+   "product_tag": [
+    39,
+    38,
+    21,
+    19,
+    37
+   ],
+   "class_list": [
+    "post-269",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-pepero",
+    "product_cat-biscoitos",
+    "product_cat-comida-e-bebida",
+    "product_tag-47g",
+    "product_tag-biscoito",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-pepero",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 265,
+   "date": "2025-11-18T22:07:01",
+   "date_gmt": "2025-11-19T01:07:01",
+   "modified": "2026-04-28T08:24:48",
+   "modified_gmt": "2026-04-28T11:24:48",
+   "slug": "biscoito-de-arroz-coreano-orice-orion-129g-sabor-alga",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-de-arroz-coreano-orice-orion-129g-sabor-alga/",
+   "title": {
+    "rendered": "Biscoito de Arroz Coreano O’Rice Orion 129g Sabor Alga"
+   },
+   "featured_media": 266,
+   "template": "",
+   "product_brand": [
+    45,
+    46
+   ],
+   "product_cat": [
+    36,
+    17
+   ],
+   "product_tag": [
+    44,
+    43,
+    21,
+    41,
+    42
+   ],
+   "class_list": [
+    "post-265",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-orice",
+    "product_brand-orion",
+    "product_cat-biscoitos",
+    "product_cat-comida-e-bebida",
+    "product_tag-129g",
+    "product_tag-biscoito-de-arroz",
+    "product_tag-coreano",
+    "product_tag-orice",
+    "product_tag-orion",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 263,
+   "date": "2025-11-18T22:04:37",
+   "date_gmt": "2025-11-19T01:04:37",
+   "modified": "2026-04-28T08:24:56",
+   "modified_gmt": "2026-04-28T11:24:56",
+   "slug": "biscoito-de-arroz-coreano-orice-orion-129g-sabor-natural",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-de-arroz-coreano-orice-orion-129g-sabor-natural/",
+   "title": {
+    "rendered": "Biscoito de Arroz Coreano O’Rice Orion 129g Sabor Natural"
+   },
+   "featured_media": 264,
+   "template": "",
+   "product_brand": [
+    45,
+    46
+   ],
+   "product_cat": [
+    36,
+    17
+   ],
+   "product_tag": [
+    44,
+    43,
+    21,
+    41,
+    42
+   ],
+   "class_list": [
+    "post-263",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-orice",
+    "product_brand-orion",
+    "product_cat-biscoitos",
+    "product_cat-comida-e-bebida",
+    "product_tag-129g",
+    "product_tag-biscoito-de-arroz",
+    "product_tag-coreano",
+    "product_tag-orice",
+    "product_tag-orion",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 259,
+   "date": "2025-11-18T21:37:49",
+   "date_gmt": "2025-11-19T00:37:49",
+   "modified": "2026-09-12T09:38:16",
+   "modified_gmt": "2026-09-12T12:38:16",
+   "slug": "bolinho-coreano-choco-pie-lotte-chocolate-original-com-marshmallow",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bolinho-coreano-choco-pie-lotte-chocolate-original-com-marshmallow/",
+   "title": {
+    "rendered": "Bolinho Coreano ChocoPie Chocolate 180g Orion | Caixa com 6 Unidades | Recheio Cremoso | Sem Glúten | Mimos Korea"
+   },
+   "featured_media": 260,
+   "template": "",
+   "product_brand": [
+    52,
+    25
+   ],
+   "product_cat": [
+    17,
+    47,
+    15
+   ],
+   "product_tag": [
+    49,
+    48,
+    50,
+    21,
+    19,
+    51
+   ],
+   "class_list": [
+    "post-259",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-choco-pie",
+    "product_brand-lotte",
+    "product_cat-comida-e-bebida",
+    "product_cat-doces",
+    "product_cat-ofertas-mimos",
+    "product_tag-bolinho",
+    "product_tag-choco-pie",
+    "product_tag-chocolate",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-marshmallow",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 253,
+   "date": "2025-11-18T21:16:02",
+   "date_gmt": "2025-11-19T00:16:02",
+   "modified": "2026-04-28T08:26:07",
+   "modified_gmt": "2026-04-28T11:26:07",
+   "slug": "refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde-2",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde-2/",
+   "title": {
+    "rendered": "Refresco Coreano Sac Sac Lotte 240ml Sabor Uva Verde"
+   },
+   "featured_media": 254,
+   "template": "",
+   "product_brand": [
+    25,
+    111
+   ],
+   "product_cat": [
+    16,
+    17
+   ],
+   "product_tag": [
+    110,
+    21,
+    19,
+    109,
+    108
+   ],
+   "class_list": [
+    "post-253",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-sac-sac",
+    "product_cat-bebidas",
+    "product_cat-comida-e-bebida",
+    "product_tag-238ml",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-refresco",
+    "product_tag-sac-sac",
+    "first",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 242,
+   "date": "2025-11-18T21:08:18",
+   "date_gmt": "2025-11-19T00:08:18",
+   "modified": "2026-08-21T14:09:24",
+   "modified_gmt": "2026-08-21T17:09:24",
+   "slug": "refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/refresco-coreano-sac-sac-lotte-238ml-sabor-uva-verde/",
+   "title": {
+    "rendered": "Refresco Coreano Sac Sac Lotte 238ml Sabor Uva Verde"
+   },
+   "featured_media": 243,
+   "template": "",
+   "product_brand": [
+    25,
+    111
+   ],
+   "product_cat": [
+    16,
+    17
+   ],
+   "product_tag": [
+    110,
+    21,
+    19,
+    109,
+    108
+   ],
+   "class_list": [
+    "post-242",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-sac-sac",
+    "product_cat-bebidas",
+    "product_cat-comida-e-bebida",
+    "product_tag-238ml",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-refresco",
+    "product_tag-sac-sac",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 237,
+   "date": "2025-11-18T19:36:06",
+   "date_gmt": "2025-11-18T22:36:06",
+   "modified": "2026-04-28T08:32:47",
+   "modified_gmt": "2026-04-28T11:32:47",
+   "slug": "snack-batata-frita-coreano-ostar-orion-30g-sabor-bife-americano",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/snack-batata-frita-coreano-ostar-orion-30g-sabor-bife-americano/",
+   "title": {
+    "rendered": "Snack Batata Frita Coreano O’star Orion 30g Sabor Bife Americano"
+   },
+   "featured_media": 238,
+   "template": "",
+   "product_brand": [
+    138,
+    46
+   ],
+   "product_cat": [
+    17,
+    112
+   ],
+   "product_tag": [
+    128,
+    137,
+    21,
+    136,
+    42,
+    114
+   ],
+   "class_list": [
+    "post-237",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-ostar",
+    "product_brand-orion",
+    "product_cat-comida-e-bebida",
+    "product_cat-salgadinhos",
+    "product_tag-30g",
+    "product_tag-batata-frita",
+    "product_tag-coreano",
+    "product_tag-ostar",
+    "product_tag-orion",
+    "product_tag-snack",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 235,
+   "date": "2025-11-18T19:35:08",
+   "date_gmt": "2025-11-18T22:35:08",
+   "modified": "2026-04-28T08:33:08",
+   "modified_gmt": "2026-04-28T11:33:08",
+   "slug": "snack-batata-frita-coreano-ostar-orion-30g-sabor-queijo-duplo",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/snack-batata-frita-coreano-ostar-orion-30g-sabor-queijo-duplo/",
+   "title": {
+    "rendered": "Snack Batata Frita Coreano O’star Orion 30g Sabor Queijo Duplo"
+   },
+   "featured_media": 236,
+   "template": "",
+   "product_brand": [
+    138,
+    46
+   ],
+   "product_cat": [
+    17,
+    112
+   ],
+   "product_tag": [
+    128,
+    137,
+    21,
+    136,
+    42,
+    114
+   ],
+   "class_list": [
+    "post-235",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-ostar",
+    "product_brand-orion",
+    "product_cat-comida-e-bebida",
+    "product_cat-salgadinhos",
+    "product_tag-30g",
+    "product_tag-batata-frita",
+    "product_tag-coreano",
+    "product_tag-ostar",
+    "product_tag-orion",
+    "product_tag-snack",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 233,
+   "date": "2025-11-18T19:33:13",
+   "date_gmt": "2025-11-18T22:33:13",
+   "modified": "2026-04-28T08:34:17",
+   "modified_gmt": "2026-04-28T11:34:17",
+   "slug": "snack-batata-frita-coreano-ostar-orion-30g-sabor-barbecue-de-frango",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/snack-batata-frita-coreano-ostar-orion-30g-sabor-barbecue-de-frango/",
+   "title": {
+    "rendered": "Snack Batata Frita Coreano O’star Orion 30g Sabor Barbecue de Frango"
+   },
+   "featured_media": 234,
+   "template": "",
+   "product_brand": [
+    138,
+    46
+   ],
+   "product_cat": [
+    17,
+    112
+   ],
+   "product_tag": [
+    128,
+    137,
+    21,
+    136,
+    42,
+    114
+   ],
+   "class_list": [
+    "post-233",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-ostar",
+    "product_brand-orion",
+    "product_cat-comida-e-bebida",
+    "product_cat-salgadinhos",
+    "product_tag-30g",
+    "product_tag-batata-frita",
+    "product_tag-coreano",
+    "product_tag-ostar",
+    "product_tag-orion",
+    "product_tag-snack",
+    "last",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 231,
+   "date": "2025-11-18T19:31:26",
+   "date_gmt": "2025-11-18T22:31:26",
+   "modified": "2026-04-28T08:34:27",
+   "modified_gmt": "2026-04-28T11:34:27",
+   "slug": "snack-batata-frita-coreano-ostar-orion-30g-sabor-kimchi",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/snack-batata-frita-coreano-ostar-orion-30g-sabor-kimchi/",
+   "title": {
+    "rendered": "Snack Batata Frita Coreano O’star Orion 30g Sabor Kimchi"
+   },
+   "featured_media": 232,
+   "template": "",
+   "product_brand": [
+    138,
+    46
+   ],
+   "product_cat": [
+    17,
+    112
+   ],
+   "product_tag": [
+    128,
+    137,
+    21,
+    136,
+    42,
+    114
+   ],
+   "class_list": [
+    "post-231",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-ostar",
+    "product_brand-orion",
+    "product_cat-comida-e-bebida",
+    "product_cat-salgadinhos",
+    "product_tag-30g",
+    "product_tag-batata-frita",
+    "product_tag-coreano",
+    "product_tag-ostar",
+    "product_tag-orion",
+    "product_tag-snack",
+    "first",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 160,
+   "date": "2025-11-15T21:17:41",
+   "date_gmt": "2025-11-16T00:17:41",
+   "modified": "2026-04-28T16:02:45",
+   "modified_gmt": "2026-04-28T19:02:45",
+   "slug": "topokki-yopokki-youngpoong-coreano-120g-copo-sabores",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/topokki-yopokki-youngpoong-coreano-120g-copo-sabores/",
+   "title": {
+    "rendered": "Topokki Yopokki Youngpoong Coreano 120g Copo Sabores"
+   },
+   "featured_media": 213,
+   "template": "",
+   "product_brand": [
+    276,
+    277
+   ],
+   "product_cat": [
+    17,
+    120
+   ],
+   "product_tag": [
+    274,
+    275,
+    21,
+    273,
+    271,
+    272
+   ],
+   "class_list": [
+    "post-160",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-yopokki",
+    "product_brand-youngpoong",
+    "product_cat-comida-e-bebida",
+    "product_cat-ramyeon",
+    "product_tag-120g",
+    "product_tag-copo",
+    "product_tag-coreano",
+    "product_tag-topokki",
+    "product_tag-yopokki",
+    "product_tag-youngpoong",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 156,
+   "date": "2025-11-15T21:17:40",
+   "date_gmt": "2025-11-16T00:17:40",
+   "modified": "2026-08-22T10:49:56",
+   "modified_gmt": "2026-08-22T13:49:56",
+   "slug": "soju-chum-churum-lotte-pessego-de-360ml",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/soju-chum-churum-lotte-pessego-de-360ml/",
+   "title": {
+    "rendered": "Soju Chum-Churum Lotte Pêssego de 360ml"
+   },
+   "featured_media": 217,
+   "template": "",
+   "product_brand": [
+    266,
+    25
+   ],
+   "product_cat": [
+    16,
+    17,
+    15,
+    261
+   ],
+   "product_tag": [
+    265,
+    262,
+    19,
+    268,
+    264
+   ],
+   "class_list": [
+    "post-156",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-chum-churum",
+    "product_brand-lotte",
+    "product_cat-bebidas",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "product_tag-360ml",
+    "product_tag-chum-churum",
+    "product_tag-lotte",
+    "product_tag-pessego",
+    "product_tag-soju",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 155,
+   "date": "2025-11-15T21:17:40",
+   "date_gmt": "2025-11-16T00:17:40",
+   "modified": "2026-08-22T10:49:34",
+   "modified_gmt": "2026-08-22T13:49:34",
+   "slug": "soju-chum-churum-lotte-original-de-360ml",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/soju-chum-churum-lotte-original-de-360ml/",
+   "title": {
+    "rendered": "Soju Chum-Churum Lotte Original de 360ml"
+   },
+   "featured_media": 218,
+   "template": "",
+   "product_brand": [
+    266,
+    25
+   ],
+   "product_cat": [
+    16,
+    15,
+    261
+   ],
+   "product_tag": [
+    265,
+    262,
+    19,
+    148,
+    264
+   ],
+   "class_list": [
+    "post-155",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-chum-churum",
+    "product_brand-lotte",
+    "product_cat-bebidas",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "product_tag-360ml",
+    "product_tag-chum-churum",
+    "product_tag-lotte",
+    "product_tag-original",
+    "product_tag-soju",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 154,
+   "date": "2025-11-15T21:17:40",
+   "date_gmt": "2025-11-16T00:17:40",
+   "modified": "2026-08-22T10:49:25",
+   "modified_gmt": "2026-08-22T13:49:25",
+   "slug": "soju-chum-churum-lotte-morango-de-360ml",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/soju-chum-churum-lotte-morango-de-360ml/",
+   "title": {
+    "rendered": "Soju Chum-Churum Lotte Morango de 360ml"
+   },
+   "featured_media": 219,
+   "template": "",
+   "product_brand": [
+    266,
+    25
+   ],
+   "product_cat": [
+    17,
+    15,
+    261
+   ],
+   "product_tag": [
+    265,
+    262,
+    19,
+    147,
+    264
+   ],
+   "class_list": [
+    "post-154",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-chum-churum",
+    "product_brand-lotte",
+    "product_cat-comida-e-bebida",
+    "product_cat-ofertas-mimos",
+    "product_cat-soju",
+    "product_tag-360ml",
+    "product_tag-chum-churum",
+    "product_tag-lotte",
+    "product_tag-morango",
+    "product_tag-soju",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 151,
+   "date": "2025-11-15T21:17:39",
+   "date_gmt": "2025-11-16T00:17:39",
+   "modified": "2026-08-21T14:09:48",
+   "modified_gmt": "2026-08-21T17:09:48",
+   "slug": "snack-de-batata-coreano-orion-tok-38g-sabores",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/snack-de-batata-coreano-orion-tok-38g-sabores/",
+   "title": {
+    "rendered": "Snack de Batata Coreano Orion Tok 38g Sabores"
+   },
+   "featured_media": 215,
+   "template": "",
+   "product_brand": [
+    46,
+    117
+   ],
+   "product_cat": [
+    17,
+    112
+   ],
+   "product_tag": [
+    116,
+    115,
+    21,
+    42,
+    114,
+    113
+   ],
+   "class_list": [
+    "post-151",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-orion",
+    "product_brand-tok",
+    "product_cat-comida-e-bebida",
+    "product_cat-salgadinhos",
+    "product_tag-38g",
+    "product_tag-batata",
+    "product_tag-coreano",
+    "product_tag-orion",
+    "product_tag-snack",
+    "product_tag-tok",
+    "first",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 150,
+   "date": "2025-11-15T21:17:39",
+   "date_gmt": "2025-11-16T00:17:39",
+   "modified": "2026-05-04T15:56:18",
+   "modified_gmt": "2026-05-04T18:56:18",
+   "slug": "snack-coreano-marine-boy-orion-camarao-de-30g",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/snack-coreano-marine-boy-orion-camarao-de-30g/",
+   "title": {
+    "rendered": "Snack Coreano Marine Boy Orion Camarão de 30g"
+   },
+   "featured_media": 228,
+   "template": "",
+   "product_brand": [
+    129,
+    46
+   ],
+   "product_cat": [
+    17,
+    112
+   ],
+   "product_tag": [
+    128,
+    127,
+    21,
+    126,
+    42,
+    114
+   ],
+   "class_list": [
+    "post-150",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-marine-boy",
+    "product_brand-orion",
+    "product_cat-comida-e-bebida",
+    "product_cat-salgadinhos",
+    "product_tag-30g",
+    "product_tag-camarao",
+    "product_tag-coreano",
+    "product_tag-marine-boy",
+    "product_tag-orion",
+    "product_tag-snack",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 149,
+   "date": "2025-11-15T21:17:39",
+   "date_gmt": "2025-11-16T00:17:39",
+   "modified": "2026-04-28T08:35:40",
+   "modified_gmt": "2026-04-28T11:35:40",
+   "slug": "snack-batata-frita-coreano-ostar-orion-30g-sabor-maionese",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/snack-batata-frita-coreano-ostar-orion-30g-sabor-maionese/",
+   "title": {
+    "rendered": "Snack Batata Frita Coreano O’star Orion 30g Sabor Maionese"
+   },
+   "featured_media": 230,
+   "template": "",
+   "product_brand": [
+    138,
+    46
+   ],
+   "product_cat": [
+    17,
+    112
+   ],
+   "product_tag": [
+    128,
+    137,
+    21,
+    136,
+    42,
+    114
+   ],
+   "class_list": [
+    "post-149",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-ostar",
+    "product_brand-orion",
+    "product_cat-comida-e-bebida",
+    "product_cat-salgadinhos",
+    "product_tag-30g",
+    "product_tag-batata-frita",
+    "product_tag-coreano",
+    "product_tag-ostar",
+    "product_tag-orion",
+    "product_tag-snack",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 148,
+   "date": "2025-11-15T21:17:39",
+   "date_gmt": "2025-11-16T00:17:39",
+   "modified": "2026-04-28T08:35:30",
+   "modified_gmt": "2026-04-28T11:35:30",
+   "slug": "salgadinho-coreano-orion-sabor-milho-agridoce-picante-de-35g",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/salgadinho-coreano-orion-sabor-milho-agridoce-picante-de-35g/",
+   "title": {
+    "rendered": "Salgadinho Coreano Orion Sabor Milho Agridoce Picante de 35g"
+   },
+   "featured_media": 239,
+   "template": "",
+   "product_brand": [
+    46
+   ],
+   "product_cat": [
+    17,
+    112
+   ],
+   "product_tag": [
+    260,
+    21,
+    259,
+    42,
+    255
+   ],
+   "class_list": [
+    "post-148",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-orion",
+    "product_cat-comida-e-bebida",
+    "product_cat-salgadinhos",
+    "product_tag-35g",
+    "product_tag-coreano",
+    "product_tag-milho-agridoce-picante",
+    "product_tag-orion",
+    "product_tag-salgadinho",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 147,
+   "date": "2025-11-15T21:17:39",
+   "date_gmt": "2025-11-16T00:17:39",
+   "modified": "2026-08-21T14:10:12",
+   "modified_gmt": "2026-08-21T17:10:12",
+   "slug": "salgadinho-coreano-koony-sabor-frango-frito-de-40g",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/salgadinho-coreano-koony-sabor-frango-frito-de-40g/",
+   "title": {
+    "rendered": "Salgadinho Coreano Koony Sabor Frango Frito de 40g"
+   },
+   "featured_media": 240,
+   "template": "",
+   "product_brand": [
+    258
+   ],
+   "product_cat": [
+    17,
+    112
+   ],
+   "product_tag": [
+    257,
+    21,
+    256,
+    254,
+    255
+   ],
+   "class_list": [
+    "post-147",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-koony",
+    "product_cat-comida-e-bebida",
+    "product_cat-salgadinhos",
+    "product_tag-40g",
+    "product_tag-coreano",
+    "product_tag-frango-frito",
+    "product_tag-koony",
+    "product_tag-salgadinho",
+    "last",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 145,
+   "date": "2025-11-15T21:17:38",
+   "date_gmt": "2025-11-16T00:17:38",
+   "modified": "2026-04-28T16:03:38",
+   "modified_gmt": "2026-04-28T19:03:38",
+   "slug": "refresco-coreano-sac-sac-lotte-238ml-sabor-morango",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/refresco-coreano-sac-sac-lotte-238ml-sabor-morango/",
+   "title": {
+    "rendered": "Refresco Coreano Sac Sac Lotte 238ml Sabor Morango"
+   },
+   "featured_media": 241,
+   "template": "",
+   "product_brand": [
+    25,
+    111
+   ],
+   "product_cat": [
+    16,
+    17
+   ],
+   "product_tag": [
+    110,
+    21,
+    19,
+    109,
+    108
+   ],
+   "class_list": [
+    "post-145",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-sac-sac",
+    "product_cat-bebidas",
+    "product_cat-comida-e-bebida",
+    "product_tag-238ml",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-refresco",
+    "product_tag-sac-sac",
+    "first",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 142,
+   "date": "2025-11-15T21:17:38",
+   "date_gmt": "2025-11-16T00:17:38",
+   "modified": "2026-04-28T08:39:38",
+   "modified_gmt": "2026-04-28T11:39:38",
+   "slug": "pelucia-unicornio-infantil-fofo-de-40cm",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/pelucia-unicornio-infantil-fofo-de-40cm/",
+   "title": {
+    "rendered": "Pelúcia Unicórnio Infantil Fofo de 40cm"
+   },
+   "featured_media": 343,
+   "template": "",
+   "product_brand": [
+    63
+   ],
+   "product_cat": [
+    76,
+    231
+   ],
+   "product_tag": [
+    243,
+    78,
+    232,
+    217
+   ],
+   "class_list": [
+    "post-142",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-generico",
+    "product_cat-bebe-e-infantil",
+    "product_cat-pelucias",
+    "product_tag-40cm",
+    "product_tag-infantil",
+    "product_tag-pelucia",
+    "product_tag-unicornio",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 141,
+   "date": "2025-11-15T21:17:38",
+   "date_gmt": "2025-11-16T00:17:38",
+   "modified": "2026-04-28T08:39:30",
+   "modified_gmt": "2026-04-28T11:39:30",
+   "slug": "pelucia-unicornio-fofo-deitado-rosa-de-50cm",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/pelucia-unicornio-fofo-deitado-rosa-de-50cm/",
+   "title": {
+    "rendered": "Pelúcia Unicórnio Fofo Deitado Rosa de 50cm"
+   },
+   "featured_media": 344,
+   "template": "",
+   "product_brand": [
+    63
+   ],
+   "product_cat": [
+    76,
+    231
+   ],
+   "product_tag": [
+    246,
+    242,
+    232,
+    217
+   ],
+   "class_list": [
+    "post-141",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-generico",
+    "product_cat-bebe-e-infantil",
+    "product_cat-pelucias",
+    "product_tag-50cm",
+    "product_tag-deitado",
+    "product_tag-pelucia",
+    "product_tag-unicornio",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 140,
+   "date": "2025-11-15T21:17:38",
+   "date_gmt": "2025-11-16T00:17:38",
+   "modified": "2026-04-28T16:03:19",
+   "modified_gmt": "2026-04-28T19:03:19",
+   "slug": "pelucia-porquinho-rosa-mamadeira-de-35cm",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/pelucia-porquinho-rosa-mamadeira-de-35cm/",
+   "title": {
+    "rendered": "Pelúcia Porquinho Rosa Mamadeira de 35cm"
+   },
+   "featured_media": 345,
+   "template": "",
+   "product_brand": [
+    63
+   ],
+   "product_cat": [
+    76,
+    231
+   ],
+   "product_tag": [
+    245,
+    244,
+    232,
+    222,
+    223
+   ],
+   "class_list": [
+    "post-140",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-generico",
+    "product_cat-bebe-e-infantil",
+    "product_cat-pelucias",
+    "product_tag-35cm",
+    "product_tag-mamadeira",
+    "product_tag-pelucia",
+    "product_tag-porquinho",
+    "product_tag-rosa",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 139,
+   "date": "2025-11-15T21:17:37",
+   "date_gmt": "2025-11-16T00:17:37",
+   "modified": "2026-04-28T16:04:18",
+   "modified_gmt": "2026-04-28T19:04:18",
+   "slug": "pelucia-porquinho-rosa-deitado-fofinho-de-40cm",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/pelucia-porquinho-rosa-deitado-fofinho-de-40cm/",
+   "title": {
+    "rendered": "Pelúcia Porquinho Rosa Deitado Fofinho de 40cm"
+   },
+   "featured_media": 346,
+   "template": "",
+   "product_brand": [
+    63
+   ],
+   "product_cat": [
+    76,
+    231
+   ],
+   "product_tag": [
+    243,
+    242,
+    232,
+    222,
+    223
+   ],
+   "class_list": [
+    "post-139",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-generico",
+    "product_cat-bebe-e-infantil",
+    "product_cat-pelucias",
+    "product_tag-40cm",
+    "product_tag-deitado",
+    "product_tag-pelucia",
+    "product_tag-porquinho",
+    "product_tag-rosa",
+    "last",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 137,
+   "date": "2025-11-15T21:17:37",
+   "date_gmt": "2025-11-16T00:17:37",
+   "modified": "2026-04-28T08:45:35",
+   "modified_gmt": "2026-04-28T11:45:35",
+   "slug": "pelucia-coala-fofinho-de-45cm",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/pelucia-coala-fofinho-de-45cm/",
+   "title": {
+    "rendered": "Pelúcia Coala Fofinho de 45cm"
+   },
+   "featured_media": 348,
+   "template": "",
+   "product_brand": [
+    63
+   ],
+   "product_cat": [
+    76,
+    231
+   ],
+   "product_tag": [
+    238,
+    239,
+    232
+   ],
+   "class_list": [
+    "post-137",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-generico",
+    "product_cat-bebe-e-infantil",
+    "product_cat-pelucias",
+    "product_tag-45cm",
+    "product_tag-coala",
+    "product_tag-pelucia",
+    "first",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 136,
+   "date": "2025-11-15T21:17:37",
+   "date_gmt": "2025-11-16T00:17:37",
+   "modified": "2026-04-28T16:03:44",
+   "modified_gmt": "2026-04-28T19:03:44",
+   "slug": "pelucia-capivara-gotinha-fofinha-de-45cm",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/pelucia-capivara-gotinha-fofinha-de-45cm/",
+   "title": {
+    "rendered": "Pelúcia Capivara Gotinha Fofinha de 45cm"
+   },
+   "featured_media": 349,
+   "template": "",
+   "product_brand": [
+    63
+   ],
+   "product_cat": [
+    76,
+    231
+   ],
+   "product_tag": [
+    238,
+    236,
+    237,
+    232
+   ],
+   "class_list": [
+    "post-136",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-generico",
+    "product_cat-bebe-e-infantil",
+    "product_cat-pelucias",
+    "product_tag-45cm",
+    "product_tag-capivara",
+    "product_tag-gotinha",
+    "product_tag-pelucia",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 135,
+   "date": "2025-11-15T21:17:37",
+   "date_gmt": "2025-11-16T00:17:37",
+   "modified": "2026-04-28T08:45:24",
+   "modified_gmt": "2026-04-28T11:45:24",
+   "slug": "pelucia-cachorro-pug-fofinho-de-30cm",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/pelucia-cachorro-pug-fofinho-de-30cm/",
+   "title": {
+    "rendered": "Pelúcia Cachorro Pug Fofinho de 30cm"
+   },
+   "featured_media": 350,
+   "template": "",
+   "product_brand": [
+    63
+   ],
+   "product_cat": [
+    76,
+    231
+   ],
+   "product_tag": [
+    235,
+    233,
+    232,
+    234
+   ],
+   "class_list": [
+    "post-135",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-generico",
+    "product_cat-bebe-e-infantil",
+    "product_cat-pelucias",
+    "product_tag-30cm",
+    "product_tag-cachorro",
+    "product_tag-pelucia",
+    "product_tag-pug",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 131,
+   "date": "2025-11-15T21:17:36",
+   "date_gmt": "2025-11-16T00:17:36",
+   "modified": "2026-04-28T16:05:02",
+   "modified_gmt": "2026-04-28T19:05:02",
+   "slug": "pantufas-fofas-porquinho-rosa",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/pantufas-fofas-porquinho-rosa/",
+   "title": {
+    "rendered": "Pantufas Fofas Porquinho Rosa"
+   },
+   "featured_media": 353,
+   "template": "",
+   "product_brand": [
+    63
+   ],
+   "product_cat": [
+    64
+   ],
+   "product_tag": [
+    221,
+    222,
+    223
+   ],
+   "class_list": [
+    "post-131",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-generico",
+    "product_cat-moda",
+    "product_tag-pantufas",
+    "product_tag-porquinho",
+    "product_tag-rosa",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 106,
+   "date": "2025-11-15T21:17:32",
+   "date_gmt": "2025-11-16T00:17:32",
+   "modified": "2026-08-21T14:11:06",
+   "modified_gmt": "2026-08-21T17:11:06",
+   "slug": "kit-guloseima-chiclete-coreano-orion-morango-de-12g",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/kit-guloseima-chiclete-coreano-orion-morango-de-12g/",
+   "title": {
+    "rendered": "Kit Guloseima Chiclete Coreano Orion Morango de 12g"
+   },
+   "featured_media": 255,
+   "template": "",
+   "product_brand": [
+    46
+   ],
+   "product_cat": [
+    17,
+    47
+   ],
+   "product_tag": [
+    171,
+    170,
+    21,
+    102,
+    147,
+    42
+   ],
+   "class_list": [
+    "post-106",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-orion",
+    "product_cat-comida-e-bebida",
+    "product_cat-doces",
+    "product_tag-12g",
+    "product_tag-chiclete",
+    "product_tag-coreano",
+    "product_tag-kit",
+    "product_tag-morango",
+    "product_tag-orion",
+    "last",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 85,
+   "date": "2025-11-15T21:17:28",
+   "date_gmt": "2025-11-16T00:17:28",
+   "modified": "2026-04-28T16:10:19",
+   "modified_gmt": "2026-04-28T19:10:19",
+   "slug": "kit-2-snack-coreano-batata-orion-tok-carne-e-queijo-de-38g",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/kit-2-snack-coreano-batata-orion-tok-carne-e-queijo-de-38g/",
+   "title": {
+    "rendered": "Kit 2 Snack Coreano Batata Orion Tok Carne e Queijo de 38g"
+   },
+   "featured_media": 216,
+   "template": "",
+   "product_brand": [
+    46,
+    117
+   ],
+   "product_cat": [
+    17,
+    112
+   ],
+   "product_tag": [
+    107,
+    116,
+    115,
+    21,
+    102,
+    42,
+    114,
+    113
+   ],
+   "class_list": [
+    "post-85",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-orion",
+    "product_brand-tok",
+    "product_cat-comida-e-bebida",
+    "product_cat-salgadinhos",
+    "product_tag-2-unidades",
+    "product_tag-38g",
+    "product_tag-batata",
+    "product_tag-coreano",
+    "product_tag-kit",
+    "product_tag-orion",
+    "product_tag-snack",
+    "product_tag-tok",
+    "first",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 70,
+   "date": "2025-11-15T21:17:26",
+   "date_gmt": "2025-11-16T00:17:26",
+   "modified": "2026-09-12T09:37:14",
+   "modified_gmt": "2026-09-12T12:37:14",
+   "slug": "bolinho-coreano-choco-pie-lotte-chocolate-duplo-com-marshmallow",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bolinho-coreano-choco-pie-lotte-chocolate-duplo-com-marshmallow/",
+   "title": {
+    "rendered": "Bolinho Coreano ChocoPie Orion Chocolate Duplo c/ Marshmallow | Caixa 6 un | 180g | Sem Glúten | Importado Mimos Korea"
+   },
+   "featured_media": 258,
+   "template": "",
+   "product_brand": [
+    52,
+    25
+   ],
+   "product_cat": [
+    17,
+    47,
+    15
+   ],
+   "product_tag": [
+    49,
+    48,
+    50,
+    21,
+    19,
+    51
+   ],
+   "class_list": [
+    "post-70",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-choco-pie",
+    "product_brand-lotte",
+    "product_cat-comida-e-bebida",
+    "product_cat-doces",
+    "product_cat-ofertas-mimos",
+    "product_tag-bolinho",
+    "product_tag-choco-pie",
+    "product_tag-chocolate",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-marshmallow",
+    "",
+    "instock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 69,
+   "date": "2025-11-15T21:17:26",
+   "date_gmt": "2025-11-16T00:17:26",
+   "modified": "2026-05-19T12:39:06",
+   "modified_gmt": "2026-05-19T15:39:06",
+   "slug": "biscoito-de-arroz-coreano-orice-orion-129g-sabor-queijo-com-batata",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-de-arroz-coreano-orice-orion-129g-sabor-queijo-com-batata/",
+   "title": {
+    "rendered": "Biscoito de Arroz Coreano O’Rice Orion 129g Sabor Queijo com Batata"
+   },
+   "featured_media": 262,
+   "template": "",
+   "product_brand": [
+    45,
+    46
+   ],
+   "product_cat": [
+    36,
+    17
+   ],
+   "product_tag": [
+    44,
+    43,
+    21,
+    41,
+    42
+   ],
+   "class_list": [
+    "post-69",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-orice",
+    "product_brand-orion",
+    "product_cat-biscoitos",
+    "product_cat-comida-e-bebida",
+    "product_tag-129g",
+    "product_tag-biscoito-de-arroz",
+    "product_tag-coreano",
+    "product_tag-orice",
+    "product_tag-orion",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 68,
+   "date": "2025-11-15T21:17:26",
+   "date_gmt": "2025-11-16T00:17:26",
+   "modified": "2026-04-28T16:11:10",
+   "modified_gmt": "2026-04-28T19:11:10",
+   "slug": "biscoito-coreano-pepero-lotte-47g-sabor-white-cookie",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/biscoito-coreano-pepero-lotte-47g-sabor-white-cookie/",
+   "title": {
+    "rendered": "Biscoito Coreano Pepero Lotte 47g Sabor White Cookie"
+   },
+   "featured_media": 268,
+   "template": "",
+   "product_brand": [
+    25,
+    40
+   ],
+   "product_cat": [
+    36,
+    17
+   ],
+   "product_tag": [
+    39,
+    38,
+    21,
+    19,
+    37
+   ],
+   "class_list": [
+    "post-68",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-pepero",
+    "product_cat-biscoitos",
+    "product_cat-comida-e-bebida",
+    "product_tag-47g",
+    "product_tag-biscoito",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-pepero",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 67,
+   "date": "2025-11-15T21:17:26",
+   "date_gmt": "2025-11-16T00:17:26",
+   "modified": "2026-04-28T16:11:05",
+   "modified_gmt": "2026-04-28T19:11:05",
+   "slug": "bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-original",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-coreana-refrigerante-leite-milkis-lotte-250ml-sabor-original/",
+   "title": {
+    "rendered": "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Original"
+   },
+   "featured_media": 276,
+   "template": "",
+   "product_brand": [
+    25,
+    35
+   ],
+   "product_cat": [
+    17,
+    31
+   ],
+   "product_tag": [
+    34,
+    21,
+    19,
+    32,
+    33
+   ],
+   "class_list": [
+    "post-67",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lotte",
+    "product_brand-milkis",
+    "product_cat-comida-e-bebida",
+    "product_cat-refrigerantes",
+    "product_tag-250ml",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "product_tag-milkis",
+    "product_tag-refrigerante-leite",
+    "last",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 66,
+   "date": "2025-11-15T21:17:26",
+   "date_gmt": "2025-11-16T00:17:26",
+   "modified": "2026-04-28T16:10:58",
+   "modified_gmt": "2026-04-28T19:10:58",
+   "slug": "bebida-coreana-cafe-gelado-cantata-lotte-bag-230ml-sabor-amendoa-zero-acucar",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-coreana-cafe-gelado-cantata-lotte-bag-230ml-sabor-amendoa-zero-acucar/",
+   "title": {
+    "rendered": "Bebida Coreana Café Gelado Cantata Lotte Bag 230ml Sabor Amêndoa Zero Açúcar"
+   },
+   "featured_media": 290,
+   "template": "",
+   "product_brand": [
+    24,
+    25
+   ],
+   "product_cat": [
+    16,
+    17
+   ],
+   "product_tag": [
+    22,
+    23,
+    20,
+    18,
+    21,
+    19
+   ],
+   "class_list": [
+    "post-66",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-cantata",
+    "product_brand-lotte",
+    "product_cat-bebidas",
+    "product_cat-comida-e-bebida",
+    "product_tag-230ml",
+    "product_tag-bag",
+    "product_tag-cafe-gelado",
+    "product_tag-cantata",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "first",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 65,
+   "date": "2025-11-15T21:17:25",
+   "date_gmt": "2025-11-16T00:17:25",
+   "modified": "2026-08-21T14:11:28",
+   "modified_gmt": "2026-08-21T17:11:28",
+   "slug": "bebida-cafe-coreano-lets-be-lotte-cappuccino-de-240ml",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-cafe-coreano-lets-be-lotte-cappuccino-de-240ml/",
+   "title": {
+    "rendered": "Bebida Café Coreano Let’s Be Lotte Cappuccino de 240ml"
+   },
+   "featured_media": 287,
+   "template": "",
+   "product_brand": [
+    30,
+    25
+   ],
+   "product_cat": [
+    16,
+    17
+   ],
+   "product_tag": [
+    29,
+    27,
+    28,
+    21,
+    26,
+    19
+   ],
+   "class_list": [
+    "post-65",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-lets-be",
+    "product_brand-lotte",
+    "product_cat-bebidas",
+    "product_cat-comida-e-bebida",
+    "product_tag-240ml",
+    "product_tag-cafe",
+    "product_tag-cappuccino",
+    "product_tag-coreano",
+    "product_tag-lets-be",
+    "product_tag-lotte",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  },
+  {
+   "id": 64,
+   "date": "2025-11-15T21:17:25",
+   "date_gmt": "2025-11-16T00:17:25",
+   "modified": "2026-04-28T16:11:29",
+   "modified_gmt": "2026-04-28T19:11:29",
+   "slug": "bebida-coreana-cafe-gelado-cantata-lotte-bag-230ml-sabor-americano-zero-acucar",
+   "status": "publish",
+   "type": "product",
+   "link": "https://mimoskorea.com.br/bebida-coreana-cafe-gelado-cantata-lotte-bag-230ml-sabor-americano-zero-acucar/",
+   "title": {
+    "rendered": "Bebida Coreana Café Gelado Cantata Lotte Bag 230ml Sabor Americano Zero Açúcar"
+   },
+   "featured_media": 292,
+   "template": "",
+   "product_brand": [
+    24,
+    25
+   ],
+   "product_cat": [
+    16,
+    17
+   ],
+   "product_tag": [
+    22,
+    23,
+    20,
+    18,
+    21,
+    19
+   ],
+   "class_list": [
+    "post-64",
+    "product",
+    "type-product",
+    "status-publish",
+    "has-post-thumbnail",
+    "product_brand-cantata",
+    "product_brand-lotte",
+    "product_cat-bebidas",
+    "product_cat-comida-e-bebida",
+    "product_tag-230ml",
+    "product_tag-bag",
+    "product_tag-cafe-gelado",
+    "product_tag-cantata",
+    "product_tag-coreano",
+    "product_tag-lotte",
+    "",
+    "outofstock",
+    "taxable",
+    "shipping-taxable",
+    "purchasable",
+    "product-type-simple"
+   ]
+  }
+ ]
+}

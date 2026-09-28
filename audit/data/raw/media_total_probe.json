@@ -1,0 +1,25 @@
+{
+ "method": "GET /wp-json/wp/v2/media?per_page=1&page=N ; valid pages imply total >= N",
+ "valid_pages": [
+  201,
+  202,
+  203,
+  204
+ ],
+ "invalid_pages_http_400": [
+  205,
+  206,
+  207,
+  208,
+  209,
+  210,
+  230,
+  250,
+  275,
+  300
+ ],
+ "media_total_in_database": 204,
+ "media_visible_publicly": 195,
+ "media_hidden": 9,
+ "captured_at": "2026-09-28"
+}

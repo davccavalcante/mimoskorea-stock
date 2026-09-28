@@ -1,0 +1,354 @@
+[
+ {
+  "family_key": "30g orion star",
+  "product_ids": [
+   149,
+   231,
+   233,
+   235,
+   237,
+   952,
+   954,
+   1019,
+   1021
+  ],
+  "names": [
+   "Snack Batata Frita Coreano O’star Orion 30g Sabor Maionese",
+   "Snack Batata Frita Coreano O’star Orion 30g Sabor Kimchi",
+   "Snack Batata Frita Coreano O’star Orion 30g Sabor Barbecue de Frango",
+   "Snack Batata Frita Coreano O’star Orion 30g Sabor Queijo Duplo",
+   "Snack Batata Frita Coreano O’star Orion 30g Sabor Bife Americano",
+   "Salgadinho Coreano O’Star Orion 30g Sabor Bife Americano NY | Batata Frita Crocante | Snack Sabores",
+   "Salgadinho Coreano O’Star Orion 30g Sabor Queijo Duplo | Batata Frita Crocante | Snack Sabores",
+   "Salgadinho Coreano O’Star Orion 30g | Batata Frita Crocante | Snack Sabor Bife NY",
+   "Salgadinho Coreano O’Star Orion 30g | Batata Frita Crocante | Snack Sabor Queijo Duplo"
+  ],
+  "prices": [
+   12.9,
+   12.99
+  ]
+ },
+ {
+  "family_key": "250ml leite lotte milkis refrigerante",
+  "product_ids": [
+   67,
+   277,
+   279,
+   281,
+   283,
+   285
+  ],
+  "names": [
+   "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Original",
+   "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Melão",
+   "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Banana",
+   "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Uva",
+   "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Morango",
+   "Bebida Coreana Refrigerante Leite Milkis Lotte 250ml Sabor Pêssego"
+  ],
+  "prices": [
+   12.9
+  ]
+ },
+ {
+  "family_key": "360ml chum churum lotte soju",
+  "product_ids": [
+   155,
+   810,
+   813,
+   815,
+   817
+  ],
+  "names": [
+   "Soju Chum-Churum Lotte Original de 360ml",
+   "Soju Coreano Lotte Chum Churum 360ml Sabor Maçã Verde , Koreia, Kpop",
+   "Soju Coreano Lotte Chum Churum 360ml Sabor Blueberry , Koreia, Kpop",
+   "Soju Coreano Lotte Chum Churum 360ml Sabor Lichia, Koreia, Kpop",
+   "Soju Coreano Lotte Chum Churum 360ml Sabor Ameixa, Koreia, Kpop"
+  ],
+  "prices": [
+   34.9,
+   34.99
+  ]
+ },
+ {
+  "family_key": "47g biscoito lotte pepero",
+  "product_ids": [
+   68,
+   269,
+   271,
+   273
+  ],
+  "names": [
+   "Biscoito Coreano Pepero Lotte 47g Sabor White Cookie",
+   "Biscoito Coreano Pepero Lotte 47g Sabor Original",
+   "Biscoito Coreano Pepero Lotte 47g Sabor Choco Cookie",
+   "Biscoito Coreano Pepero Lotte 47g Sabor Amêndoa"
+  ],
+  "prices": [
+   19.99
+  ]
+ },
+ {
+  "family_key": "360ml lotte saero soju",
+  "product_ids": [
+   819,
+   822,
+   825,
+   827
+  ],
+  "names": [
+   "Soju Coreano Lotte Saero 360ml Sabor Original Sem Açúcar",
+   "Soju Coreano Lotte Saero 360ml Sabor Lichia Sem Açúcar",
+   "Soju Coreano Lotte Saero 360ml Sabor Damasco Sem Açúcar",
+   "Soju Coreano Lotte Saero 360ml Sabor Kiwi Sem Açúcar"
+  ],
+  "prices": [
+   39.99
+  ]
+ },
+ {
+  "family_key": "pedacos suco yantai",
+  "product_ids": [
+   842,
+   846,
+   849,
+   852
+  ],
+  "names": [
+   "Suco com Pedaços Yantai Sabor Morango 238ml | Bebida Importada | Mimos Korea",
+   "Suco com Pedaços Yantai Sabor Pêssego 238ml | Bebida Importada | Mimos Korea",
+   "Suco com Pedaços Yantai Sabor Uva 238ml | Bebida Importada | Mimos Korea",
+   "Suco com Pedaços Yantai Sabor Lichia 238ml | Bebida Importada | Mimos Korea"
+  ],
+  "prices": [
+   12.99
+  ]
+ },
+ {
+  "family_key": "129g arroz biscoito orion rice",
+  "product_ids": [
+   69,
+   263,
+   265
+  ],
+  "names": [
+   "Biscoito de Arroz Coreano O’Rice Orion 129g Sabor Queijo com Batata",
+   "Biscoito de Arroz Coreano O’Rice Orion 129g Sabor Natural",
+   "Biscoito de Arroz Coreano O’Rice Orion 129g Sabor Alga"
+  ],
+  "prices": [
+   25.9
+  ]
+ },
+ {
+  "family_key": "280ml chuyin cremosa mamadeira vidro",
+  "product_ids": [
+   833,
+   838,
+   840
+  ],
+  "names": [
+   "Mamadeira Chuyin 280ml Vidro | Bebida Cremosa | Sabor Original | Importada | Mimos Korea",
+   "Mamadeira Chuyin 280ml Vidro | Bebida Cremosa | Sabor Manga | Importada | Mimos Korea",
+   "Mamadeira Chuyin 280ml Vidro | Bebida Cremosa | Sabor Melão | Importada | Mimos Korea"
+  ],
+  "prices": [
+   19.99
+  ]
+ },
+ {
+  "family_key": "500ml chuyin pedacos suco",
+  "product_ids": [
+   855,
+   858,
+   860
+  ],
+  "names": [
+   "Bebida Suco com Pedaços Chuyin 500ml Sabor Morango | Bebida Importada | Mimos Korea",
+   "Bebida Suco com Pedaços Chuyin 500ml Sabor Uva | Bebida Importada | Mimos Korea",
+   "Bebida Suco com Pedaços Chuyin 500ml Sabor Lichia | Bebida Importada | Mimos Korea"
+  ],
+  "prices": [
+   15.99
+  ]
+ },
+ {
+  "family_key": "4d 50 50g bala fruta gelatina sakuragi",
+  "product_ids": [
+   894,
+   899,
+   902
+  ],
+  "names": [
+   "Bala Gelatina Sakuragi 4D 50% Fruta 50g Sabor Morango | Importado | Mimos Korea Design",
+   "Bala Gelatina Sakuragi 4D 50% Fruta 50g Sabor Uva | Importado | Mimos Korea Design",
+   "Bala Gelatina Sakuragi 4D 50% Fruta 50g Sabor Maçã | Importado | Mimos Korea Design"
+  ],
+  "prices": [
+   19.99
+  ]
+ },
+ {
+  "family_key": "32g 70 bala fruta gelatina sakuragi",
+  "product_ids": [
+   905,
+   908,
+   910
+  ],
+  "names": [
+   "Bala Gelatina Sakuragi 70% Fruta 32g Sabor Morango | Importado | Mimos Korea Design",
+   "Bala Gelatina Sakuragi 70% Fruta 32g Sabor Blueberry | Importado | Mimos Korea Design",
+   "Bala Gelatina Sakuragi 70% Fruta 32g Sabor Limão com Sal | Importado | Mimos Korea Design"
+  ],
+  "prices": [
+   13.99
+  ]
+ },
+ {
+  "family_key": "bala hortela sakuragi",
+  "product_ids": [
+   926,
+   932,
+   933
+  ],
+  "names": [
+   "Bala Hortelã Sakuragi Sabor Melancia 16g | Importado | Mimos Korea Design",
+   "Bala Hortelã Sakuragi Sabor Café 16g | Importado | Mimos Korea Design",
+   "Bala Hortelã Sakuragi Sabor Pêssego 16g | Importado | Mimos Korea Design"
+  ],
+  "prices": [
+   12.99
+  ]
+ },
+ {
+  "family_key": "escolar mochila viagem",
+  "product_ids": [
+   957,
+   967,
+   968
+  ],
+  "names": [
+   "Mochila Escolar Viagem Cor Cinza Notebook 15.6 Impermeável USB Premium 25L",
+   "Mochila Escolar Viagem Cor Rosa Notebook 15.6 Impermeável USB Premium 25L",
+   "Mochila Escolar Viagem Cor Verde Notebook 15.6 Impermeável USB Premium 25L"
+  ],
+  "prices": [
+   269.99
+  ]
+ },
+ {
+  "family_key": "29l executiva mochila",
+  "product_ids": [
+   969,
+   980,
+   981
+  ],
+  "names": [
+   "Mochila Executiva 29L Cor Bege Notebook Reforçada Impermeável USB Viagem Premium Mimos",
+   "Mochila Executiva 29L Cor Preto Notebook Reforçada Impermeável USB Viagem Premium Mimos",
+   "Mochila Executiva 29L Cor Rosa Notebook Reforçada Impermeável USB Viagem Premium Mimos"
+  ],
+  "prices": [
+   369.99
+  ]
+ },
+ {
+  "family_key": "230ml bag cafe cantata gelado lotte",
+  "product_ids": [
+   64,
+   66
+  ],
+  "names": [
+   "Bebida Coreana Café Gelado Cantata Lotte Bag 230ml Sabor Americano Zero Açúcar",
+   "Bebida Coreana Café Gelado Cantata Lotte Bag 230ml Sabor Amêndoa Zero Açúcar"
+  ],
+  "prices": [
+   14.9
+  ]
+ },
+ {
+  "family_key": "238ml lotte refresco sac",
+  "product_ids": [
+   145,
+   242
+  ],
+  "names": [
+   "Refresco Coreano Sac Sac Lotte 238ml Sabor Morango",
+   "Refresco Coreano Sac Sac Lotte 238ml Sabor Uva Verde"
+  ],
+  "prices": [
+   12.9
+  ]
+ },
+ {
+  "family_key": "masita orion turtlechips",
+  "product_ids": [
+   875,
+   879
+  ],
+  "names": [
+   "Salgadinhos Masita TurtleChips Orion Sabor Milho Agridoce 60g | Importado | Mimos Korea Design",
+   "Salgadinhos Masita TurtleChips Orion Sabor Alga Marinha 60g | Importado | Mimos Korea Design"
+  ],
+  "prices": [
+   16.99
+  ]
+ },
+ {
+  "family_key": "biscoitos sakuragi",
+  "product_ids": [
+   912,
+   916
+  ],
+  "names": [
+   "Biscoitos Snack Sakuragi Sabor Abóbora 80g | Importado | Mimos Korea Design",
+   "Biscoitos Snack Sakuragi Sabor Batata Doce 80g | Importado | Mimos Korea Design"
+  ],
+  "prices": [
+   29.99
+  ]
+ },
+ {
+  "family_key": "130g animais biscoitos sakuragi",
+  "product_ids": [
+   919,
+   923
+  ],
+  "names": [
+   "Biscoitos Sakuragi Animais 130g Sabor Chocolate | Importado | Mimos Korea Design",
+   "Biscoitos Sakuragi Animais 130g Sabor Leite | Importado | Mimos Korea Design"
+  ],
+  "prices": [
+   29.99
+  ]
+ },
+ {
+  "family_key": "65g biscoito cubos sakuragi wafer",
+  "product_ids": [
+   934,
+   939
+  ],
+  "names": [
+   "Biscoito Sakuragi Wafer Cubos 65g Sabor Queijo | Importado | Mimos Korea Design",
+   "Biscoito Sakuragi Wafer Cubos 65g Sabor Sorvete Leite | Importado | Mimos Korea Design"
+  ],
+  "prices": [
+   24.99
+  ]
+ },
+ {
+  "family_key": "110g biscoito camadas sakuragi wafer",
+  "product_ids": [
+   941,
+   946
+  ],
+  "names": [
+   "Biscoito Sakuragi Wafer 5 Camadas 110g Sabor Chocolate | Importado | Mimos Korea Design",
+   "Biscoito Sakuragi Wafer 5 Camadas 110g Sabor Sorvete Leite | Importado | Mimos Korea Design"
+  ],
+  "prices": [
+   29.99
+  ]
+ }
+]

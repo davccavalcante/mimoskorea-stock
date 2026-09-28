@@ -1,0 +1,201 @@
+{
+ "source_urls": [
+  "https://mimoskorea.com.br/wp-json/wp/v2/product_cat?per_page=100&hide_empty=false&_fields=id,count,name,slug,parent,description"
+ ],
+ "captured_at": "2026-09-28",
+ "count": 24,
+ "data": [
+  {
+   "id": 281,
+   "count": 0,
+   "description": "",
+   "name": "Agendas",
+   "slug": "agendas",
+   "parent": 0
+  },
+  {
+   "id": 284,
+   "count": 0,
+   "description": "",
+   "name": "Almofadas",
+   "slug": "almofadas",
+   "parent": 0
+  },
+  {
+   "id": 76,
+   "count": 7,
+   "description": "",
+   "name": "Bebê e Infantil",
+   "slug": "bebe-e-infantil",
+   "parent": 0
+  },
+  {
+   "id": 16,
+   "count": 21,
+   "description": "",
+   "name": "Bebidas",
+   "slug": "bebidas",
+   "parent": 0
+  },
+  {
+   "id": 36,
+   "count": 7,
+   "description": "",
+   "name": "Biscoitos",
+   "slug": "biscoitos",
+   "parent": 0
+  },
+  {
+   "id": 53,
+   "count": 0,
+   "description": "",
+   "name": "Bolsas",
+   "slug": "bolsas",
+   "parent": 0
+  },
+  {
+   "id": 285,
+   "count": 0,
+   "description": "",
+   "name": "Chaveiros",
+   "slug": "chaveiros",
+   "parent": 0
+  },
+  {
+   "id": 17,
+   "count": 66,
+   "description": "",
+   "name": "Comida e Bebida",
+   "slug": "comida-e-bebida",
+   "parent": 0
+  },
+  {
+   "id": 47,
+   "count": 3,
+   "description": "",
+   "name": "Doces",
+   "slug": "doces",
+   "parent": 0
+  },
+  {
+   "id": 193,
+   "count": 0,
+   "description": "",
+   "name": "Eletrônicos",
+   "slug": "eletronicos",
+   "parent": 0
+  },
+  {
+   "id": 88,
+   "count": 0,
+   "description": "",
+   "name": "Garrafas",
+   "slug": "garrafas",
+   "parent": 0
+  },
+  {
+   "id": 282,
+   "count": 0,
+   "description": "",
+   "name": "Jogos",
+   "slug": "jogos",
+   "parent": 0
+  },
+  {
+   "id": 93,
+   "count": 0,
+   "description": "",
+   "name": "Lar",
+   "slug": "lar",
+   "parent": 0
+  },
+  {
+   "id": 150,
+   "count": 0,
+   "description": "",
+   "name": "Maquiagens",
+   "slug": "maquiagens",
+   "parent": 0
+  },
+  {
+   "id": 219,
+   "count": 8,
+   "description": "",
+   "name": "Mochilas",
+   "slug": "mochilas",
+   "parent": 0
+  },
+  {
+   "id": 64,
+   "count": 1,
+   "description": "",
+   "name": "Moda",
+   "slug": "moda",
+   "parent": 0
+  },
+  {
+   "id": 15,
+   "count": 64,
+   "description": "",
+   "name": "Ofertas Mimos",
+   "slug": "ofertas-mimos",
+   "parent": 0
+  },
+  {
+   "id": 75,
+   "count": 0,
+   "description": "",
+   "name": "Papelaria",
+   "slug": "papelaria",
+   "parent": 0
+  },
+  {
+   "id": 231,
+   "count": 7,
+   "description": "",
+   "name": "Pelúcias",
+   "slug": "pelucias",
+   "parent": 0
+  },
+  {
+   "id": 280,
+   "count": 0,
+   "description": "",
+   "name": "Presentes",
+   "slug": "presentes",
+   "parent": 0
+  },
+  {
+   "id": 120,
+   "count": 1,
+   "description": "",
+   "name": "Ramyeon",
+   "slug": "ramyeon",
+   "parent": 0
+  },
+  {
+   "id": 31,
+   "count": 6,
+   "description": "",
+   "name": "Refrigerantes",
+   "slug": "refrigerantes",
+   "parent": 0
+  },
+  {
+   "id": 112,
+   "count": 10,
+   "description": "",
+   "name": "Salgadinhos",
+   "slug": "salgadinhos",
+   "parent": 0
+  },
+  {
+   "id": 261,
+   "count": 12,
+   "description": "",
+   "name": "Soju",
+   "slug": "soju",
+   "parent": 0
+  }
+ ]
+}

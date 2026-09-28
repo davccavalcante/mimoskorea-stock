@@ -1,0 +1,1337 @@
+{
+ "source_urls": [
+  "https://mimoskorea.com.br/wp-json/wp/v2/product_tag?per_page=100&page=1&hide_empty=false&_fields=id,count,name,slug",
+  "https://mimoskorea.com.br/wp-json/wp/v2/product_tag?per_page=100&page=2&hide_empty=false&_fields=id,count,name,slug",
+  "https://mimoskorea.com.br/wp-json/wp/v2/product_tag?per_page=100&page=3&hide_empty=false&_fields=id,count,name,slug"
+ ],
+ "captured_at": "2026-09-28",
+ "count": 221,
+ "data": [
+  {
+   "id": 58,
+   "count": 0,
+   "name": "10 Litros",
+   "slug": "10-litros"
+  },
+  {
+   "id": 226,
+   "count": 0,
+   "name": "100 Folhas",
+   "slug": "100-folhas"
+  },
+  {
+   "id": 101,
+   "count": 0,
+   "name": "100 Unidades",
+   "slug": "100-unidades"
+  },
+  {
+   "id": 213,
+   "count": 0,
+   "name": "1000ml",
+   "slug": "1000ml"
+  },
+  {
+   "id": 124,
+   "count": 0,
+   "name": "102g",
+   "slug": "102g"
+  },
+  {
+   "id": 206,
+   "count": 0,
+   "name": "1200ml",
+   "slug": "1200ml"
+  },
+  {
+   "id": 274,
+   "count": 1,
+   "name": "120g",
+   "slug": "120g"
+  },
+  {
+   "id": 44,
+   "count": 3,
+   "name": "129g",
+   "slug": "129g"
+  },
+  {
+   "id": 171,
+   "count": 1,
+   "name": "12g",
+   "slug": "12g"
+  },
+  {
+   "id": 156,
+   "count": 0,
+   "name": "175ml",
+   "slug": "175ml"
+  },
+  {
+   "id": 72,
+   "count": 0,
+   "name": "2 em 1",
+   "slug": "2-em-1"
+  },
+  {
+   "id": 157,
+   "count": 0,
+   "name": "2 Latas",
+   "slug": "2-latas"
+  },
+  {
+   "id": 107,
+   "count": 1,
+   "name": "2 Unidades",
+   "slug": "2-unidades"
+  },
+  {
+   "id": 189,
+   "count": 0,
+   "name": "20L",
+   "slug": "20l"
+  },
+  {
+   "id": 22,
+   "count": 2,
+   "name": "230ml",
+   "slug": "230ml"
+  },
+  {
+   "id": 110,
+   "count": 3,
+   "name": "238ml",
+   "slug": "238ml"
+  },
+  {
+   "id": 161,
+   "count": 0,
+   "name": "24 Cores",
+   "slug": "24-cores"
+  },
+  {
+   "id": 29,
+   "count": 1,
+   "name": "240ml",
+   "slug": "240ml"
+  },
+  {
+   "id": 34,
+   "count": 6,
+   "name": "250ml",
+   "slug": "250ml"
+  },
+  {
+   "id": 208,
+   "count": 0,
+   "name": "3 Compartimentos",
+   "slug": "3-compartimentos"
+  },
+  {
+   "id": 106,
+   "count": 0,
+   "name": "3 Fases",
+   "slug": "3-fases"
+  },
+  {
+   "id": 119,
+   "count": 0,
+   "name": "3 Unidades",
+   "slug": "3-unidades"
+  },
+  {
+   "id": 235,
+   "count": 1,
+   "name": "30cm",
+   "slug": "30cm"
+  },
+  {
+   "id": 128,
+   "count": 6,
+   "name": "30g",
+   "slug": "30g"
+  },
+  {
+   "id": 245,
+   "count": 1,
+   "name": "35cm",
+   "slug": "35cm"
+  },
+  {
+   "id": 260,
+   "count": 1,
+   "name": "35g",
+   "slug": "35g"
+  },
+  {
+   "id": 265,
+   "count": 3,
+   "name": "360ml",
+   "slug": "360ml"
+  },
+  {
+   "id": 198,
+   "count": 0,
+   "name": "36V",
+   "slug": "36v"
+  },
+  {
+   "id": 116,
+   "count": 2,
+   "name": "38g",
+   "slug": "38g"
+  },
+  {
+   "id": 158,
+   "count": 0,
+   "name": "4 Bags",
+   "slug": "4-bags"
+  },
+  {
+   "id": 227,
+   "count": 0,
+   "name": "4 Cores",
+   "slug": "4-cores"
+  },
+  {
+   "id": 174,
+   "count": 0,
+   "name": "4 em 1",
+   "slug": "4-em-1"
+  },
+  {
+   "id": 187,
+   "count": 0,
+   "name": "4 Peças",
+   "slug": "4-pecas"
+  },
+  {
+   "id": 133,
+   "count": 0,
+   "name": "4 Unidades",
+   "slug": "4-unidades"
+  },
+  {
+   "id": 243,
+   "count": 2,
+   "name": "40cm",
+   "slug": "40cm"
+  },
+  {
+   "id": 257,
+   "count": 1,
+   "name": "40g",
+   "slug": "40g"
+  },
+  {
+   "id": 238,
+   "count": 2,
+   "name": "45cm",
+   "slug": "45cm"
+  },
+  {
+   "id": 39,
+   "count": 4,
+   "name": "47g",
+   "slug": "47g"
+  },
+  {
+   "id": 191,
+   "count": 0,
+   "name": "48 Páginas",
+   "slug": "48-paginas"
+  },
+  {
+   "id": 135,
+   "count": 0,
+   "name": "5 Unidades",
+   "slug": "5-unidades"
+  },
+  {
+   "id": 91,
+   "count": 0,
+   "name": "500ml",
+   "slug": "500ml"
+  },
+  {
+   "id": 246,
+   "count": 1,
+   "name": "50cm",
+   "slug": "50cm"
+  },
+  {
+   "id": 69,
+   "count": 0,
+   "name": "5cm",
+   "slug": "5cm"
+  },
+  {
+   "id": 154,
+   "count": 0,
+   "name": "5D",
+   "slug": "5d"
+  },
+  {
+   "id": 201,
+   "count": 0,
+   "name": "6 Cores",
+   "slug": "6-cores"
+  },
+  {
+   "id": 177,
+   "count": 0,
+   "name": "6 Peças",
+   "slug": "6-pecas"
+  },
+  {
+   "id": 142,
+   "count": 0,
+   "name": "6 Unidades",
+   "slug": "6-unidades"
+  },
+  {
+   "id": 155,
+   "count": 0,
+   "name": "7 Pares",
+   "slug": "7-pares"
+  },
+  {
+   "id": 168,
+   "count": 0,
+   "name": "7 Peças",
+   "slug": "7-pecas"
+  },
+  {
+   "id": 203,
+   "count": 0,
+   "name": "700ml",
+   "slug": "700ml"
+  },
+  {
+   "id": 188,
+   "count": 0,
+   "name": "72g",
+   "slug": "72g"
+  },
+  {
+   "id": 230,
+   "count": 0,
+   "name": "76x50mm",
+   "slug": "76x50mm"
+  },
+  {
+   "id": 228,
+   "count": 0,
+   "name": "76x76mm",
+   "slug": "76x76mm"
+  },
+  {
+   "id": 218,
+   "count": 0,
+   "name": "800ml",
+   "slug": "800ml"
+  },
+  {
+   "id": 211,
+   "count": 0,
+   "name": "850ml",
+   "slug": "850ml"
+  },
+  {
+   "id": 97,
+   "count": 0,
+   "name": "Aço Inoxidável",
+   "slug": "aco-inoxidavel"
+  },
+  {
+   "id": 98,
+   "count": 0,
+   "name": "Adesivos",
+   "slug": "adesivos"
+  },
+  {
+   "id": 62,
+   "count": 0,
+   "name": "Alça",
+   "slug": "alca"
+  },
+  {
+   "id": 103,
+   "count": 0,
+   "name": "Amoladores",
+   "slug": "amoladores"
+  },
+  {
+   "id": 241,
+   "count": 0,
+   "name": "Antialérgico",
+   "slug": "antialergico"
+  },
+  {
+   "id": 132,
+   "count": 0,
+   "name": "Apontador",
+   "slug": "apontador"
+  },
+  {
+   "id": 123,
+   "count": 0,
+   "name": "Asiático",
+   "slug": "asiatico"
+  },
+  {
+   "id": 186,
+   "count": 0,
+   "name": "Astronauta",
+   "slug": "astronauta"
+  },
+  {
+   "id": 23,
+   "count": 2,
+   "name": "Bag",
+   "slug": "bag"
+  },
+  {
+   "id": 145,
+   "count": 0,
+   "name": "Banana",
+   "slug": "banana"
+  },
+  {
+   "id": 115,
+   "count": 2,
+   "name": "Batata",
+   "slug": "batata"
+  },
+  {
+   "id": 137,
+   "count": 5,
+   "name": "Batata Frita",
+   "slug": "batata-frita"
+  },
+  {
+   "id": 270,
+   "count": 0,
+   "name": "Bichinho",
+   "slug": "bichinho"
+  },
+  {
+   "id": 38,
+   "count": 4,
+   "name": "Biscoito",
+   "slug": "biscoito"
+  },
+  {
+   "id": 43,
+   "count": 3,
+   "name": "Biscoito de Arroz",
+   "slug": "biscoito-de-arroz"
+  },
+  {
+   "id": 118,
+   "count": 0,
+   "name": "Biscoitos de Arroz",
+   "slug": "biscoitos-de-arroz"
+  },
+  {
+   "id": 263,
+   "count": 0,
+   "name": "Blueberry",
+   "slug": "blueberry"
+  },
+  {
+   "id": 159,
+   "count": 0,
+   "name": "Bobbie Goods",
+   "slug": "bobbie-goods"
+  },
+  {
+   "id": 49,
+   "count": 2,
+   "name": "Bolinho",
+   "slug": "bolinho"
+  },
+  {
+   "id": 55,
+   "count": 0,
+   "name": "Bolsa",
+   "slug": "bolsa"
+  },
+  {
+   "id": 65,
+   "count": 0,
+   "name": "Boob Tape",
+   "slug": "boob-tape"
+  },
+  {
+   "id": 130,
+   "count": 0,
+   "name": "Borrachas",
+   "slug": "borrachas"
+  },
+  {
+   "id": 233,
+   "count": 1,
+   "name": "Cachorro",
+   "slug": "cachorro"
+  },
+  {
+   "id": 27,
+   "count": 1,
+   "name": "Café",
+   "slug": "cafe"
+  },
+  {
+   "id": 20,
+   "count": 2,
+   "name": "Café Gelado",
+   "slug": "cafe-gelado"
+  },
+  {
+   "id": 127,
+   "count": 1,
+   "name": "Camarão",
+   "slug": "camarao"
+  },
+  {
+   "id": 160,
+   "count": 0,
+   "name": "Canetas",
+   "slug": "canetas"
+  },
+  {
+   "id": 18,
+   "count": 2,
+   "name": "Cantata",
+   "slug": "cantata"
+  },
+  {
+   "id": 92,
+   "count": 0,
+   "name": "Canudo",
+   "slug": "canudo"
+  },
+  {
+   "id": 139,
+   "count": 0,
+   "name": "Canudos",
+   "slug": "canudos"
+  },
+  {
+   "id": 192,
+   "count": 0,
+   "name": "Capa Dura",
+   "slug": "capa-dura"
+  },
+  {
+   "id": 236,
+   "count": 1,
+   "name": "Capivara",
+   "slug": "capivara"
+  },
+  {
+   "id": 28,
+   "count": 1,
+   "name": "Cappuccino",
+   "slug": "cappuccino"
+  },
+  {
+   "id": 200,
+   "count": 0,
+   "name": "Carimbo",
+   "slug": "carimbo"
+  },
+  {
+   "id": 96,
+   "count": 0,
+   "name": "Chá",
+   "slug": "cha"
+  },
+  {
+   "id": 170,
+   "count": 1,
+   "name": "Chiclete",
+   "slug": "chiclete"
+  },
+  {
+   "id": 48,
+   "count": 2,
+   "name": "Choco Pie",
+   "slug": "choco-pie"
+  },
+  {
+   "id": 50,
+   "count": 2,
+   "name": "Chocolate",
+   "slug": "chocolate"
+  },
+  {
+   "id": 262,
+   "count": 3,
+   "name": "Chum-Churum",
+   "slug": "chum-churum"
+  },
+  {
+   "id": 151,
+   "count": 0,
+   "name": "Cílios",
+   "slug": "cilios"
+  },
+  {
+   "id": 239,
+   "count": 1,
+   "name": "Coala",
+   "slug": "coala"
+  },
+  {
+   "id": 79,
+   "count": 0,
+   "name": "Coelhinho Cósmico",
+   "slug": "coelhinho-cosmico"
+  },
+  {
+   "id": 216,
+   "count": 0,
+   "name": "Colher",
+   "slug": "colher"
+  },
+  {
+   "id": 275,
+   "count": 1,
+   "name": "Copo",
+   "slug": "copo"
+  },
+  {
+   "id": 21,
+   "count": 33,
+   "name": "Coreano",
+   "slug": "coreano"
+  },
+  {
+   "id": 84,
+   "count": 0,
+   "name": "Corretivo",
+   "slug": "corretivo"
+  },
+  {
+   "id": 249,
+   "count": 0,
+   "name": "Coruja",
+   "slug": "coruja"
+  },
+  {
+   "id": 166,
+   "count": 0,
+   "name": "Cosméticos",
+   "slug": "cosmeticos"
+  },
+  {
+   "id": 242,
+   "count": 2,
+   "name": "Deitado",
+   "slug": "deitado"
+  },
+  {
+   "id": 183,
+   "count": 0,
+   "name": "Depilação",
+   "slug": "depilacao"
+  },
+  {
+   "id": 184,
+   "count": 0,
+   "name": "Dermaplaning",
+   "slug": "dermaplaning"
+  },
+  {
+   "id": 251,
+   "count": 0,
+   "name": "Despertador",
+   "slug": "despertador"
+  },
+  {
+   "id": 86,
+   "count": 0,
+   "name": "Dino",
+   "slug": "dino"
+  },
+  {
+   "id": 131,
+   "count": 0,
+   "name": "Dinossauro",
+   "slug": "dinossauro"
+  },
+  {
+   "id": 205,
+   "count": 0,
+   "name": "Divisória",
+   "slug": "divisoria"
+  },
+  {
+   "id": 85,
+   "count": 0,
+   "name": "Escolar",
+   "slug": "escolar"
+  },
+  {
+   "id": 70,
+   "count": 0,
+   "name": "Escova",
+   "slug": "escova"
+  },
+  {
+   "id": 67,
+   "count": 0,
+   "name": "Esportivo",
+   "slug": "esportivo"
+  },
+  {
+   "id": 77,
+   "count": 0,
+   "name": "Estojo",
+   "slug": "estojo"
+  },
+  {
+   "id": 104,
+   "count": 0,
+   "name": "Faca",
+   "slug": "faca"
+  },
+  {
+   "id": 95,
+   "count": 0,
+   "name": "Filtro",
+   "slug": "filtro"
+  },
+  {
+   "id": 144,
+   "count": 0,
+   "name": "Fineliner",
+   "slug": "fineliner"
+  },
+  {
+   "id": 83,
+   "count": 0,
+   "name": "Fita",
+   "slug": "fita"
+  },
+  {
+   "id": 82,
+   "count": 0,
+   "name": "Fofy",
+   "slug": "fofy"
+  },
+  {
+   "id": 256,
+   "count": 1,
+   "name": "Frango Frito",
+   "slug": "frango-frito"
+  },
+  {
+   "id": 165,
+   "count": 0,
+   "name": "Frascos",
+   "slug": "frascos"
+  },
+  {
+   "id": 209,
+   "count": 0,
+   "name": "Games",
+   "slug": "games"
+  },
+  {
+   "id": 269,
+   "count": 0,
+   "name": "Garfo",
+   "slug": "garfo"
+  },
+  {
+   "id": 89,
+   "count": 0,
+   "name": "Garrafa Térmica",
+   "slug": "garrafa-termica"
+  },
+  {
+   "id": 210,
+   "count": 0,
+   "name": "Gatinha",
+   "slug": "gatinha"
+  },
+  {
+   "id": 240,
+   "count": 0,
+   "name": "Gato Imperador",
+   "slug": "gato-imperador"
+  },
+  {
+   "id": 237,
+   "count": 1,
+   "name": "Gotinha",
+   "slug": "gotinha"
+  },
+  {
+   "id": 212,
+   "count": 0,
+   "name": "Hashi",
+   "slug": "hashi"
+  },
+  {
+   "id": 78,
+   "count": 1,
+   "name": "Infantil",
+   "slug": "infantil"
+  },
+  {
+   "id": 94,
+   "count": 0,
+   "name": "Infusor",
+   "slug": "infusor"
+  },
+  {
+   "id": 90,
+   "count": 0,
+   "name": "Inox",
+   "slug": "inox"
+  },
+  {
+   "id": 68,
+   "count": 0,
+   "name": "Invisível",
+   "slug": "invisivel"
+  },
+  {
+   "id": 57,
+   "count": 0,
+   "name": "Isotérmica",
+   "slug": "isotermica"
+  },
+  {
+   "id": 100,
+   "count": 0,
+   "name": "Kep1er",
+   "slug": "kep1er"
+  },
+  {
+   "id": 102,
+   "count": 2,
+   "name": "Kit",
+   "slug": "kit"
+  },
+  {
+   "id": 254,
+   "count": 1,
+   "name": "Koony",
+   "slug": "koony"
+  },
+  {
+   "id": 99,
+   "count": 0,
+   "name": "Kpop",
+   "slug": "kpop"
+  },
+  {
+   "id": 122,
+   "count": 0,
+   "name": "Lamen",
+   "slug": "lamen"
+  },
+  {
+   "id": 172,
+   "count": 0,
+   "name": "Lancheira",
+   "slug": "lancheira"
+  },
+  {
+   "id": 56,
+   "count": 0,
+   "name": "Lancheira Térmica",
+   "slug": "lancheira-termica"
+  },
+  {
+   "id": 195,
+   "count": 0,
+   "name": "LED",
+   "slug": "led"
+  },
+  {
+   "id": 26,
+   "count": 1,
+   "name": "Let's Be",
+   "slug": "lets-be"
+  },
+  {
+   "id": 74,
+   "count": 0,
+   "name": "Limpeza",
+   "slug": "limpeza"
+  },
+  {
+   "id": 190,
+   "count": 0,
+   "name": "Livro Colorir",
+   "slug": "livro-colorir"
+  },
+  {
+   "id": 19,
+   "count": 21,
+   "name": "Lotte",
+   "slug": "lotte"
+  },
+  {
+   "id": 194,
+   "count": 0,
+   "name": "Luminária",
+   "slug": "luminaria"
+  },
+  {
+   "id": 163,
+   "count": 0,
+   "name": "Maletinha",
+   "slug": "maletinha"
+  },
+  {
+   "id": 244,
+   "count": 1,
+   "name": "Mamadeira",
+   "slug": "mamadeira"
+  },
+  {
+   "id": 267,
+   "count": 0,
+   "name": "Manga",
+   "slug": "manga"
+  },
+  {
+   "id": 175,
+   "count": 0,
+   "name": "Manicure",
+   "slug": "manicure"
+  },
+  {
+   "id": 153,
+   "count": 0,
+   "name": "Maquiagem",
+   "slug": "maquiagem"
+  },
+  {
+   "id": 199,
+   "count": 0,
+   "name": "Marca Texto",
+   "slug": "marca-texto"
+  },
+  {
+   "id": 143,
+   "count": 0,
+   "name": "Marcadores",
+   "slug": "marcadores"
+  },
+  {
+   "id": 126,
+   "count": 1,
+   "name": "Marine Boy",
+   "slug": "marine-boy"
+  },
+  {
+   "id": 202,
+   "count": 0,
+   "name": "Marmita",
+   "slug": "marmita"
+  },
+  {
+   "id": 51,
+   "count": 2,
+   "name": "Marshmallow",
+   "slug": "marshmallow"
+  },
+  {
+   "id": 71,
+   "count": 0,
+   "name": "Massageadora",
+   "slug": "massageadora"
+  },
+  {
+   "id": 146,
+   "count": 0,
+   "name": "Melão",
+   "slug": "melao"
+  },
+  {
+   "id": 140,
+   "count": 0,
+   "name": "Metal",
+   "slug": "metal"
+  },
+  {
+   "id": 179,
+   "count": 0,
+   "name": "Miçangas",
+   "slug": "micangas"
+  },
+  {
+   "id": 259,
+   "count": 1,
+   "name": "Milho Agridoce Picante",
+   "slug": "milho-agridoce-picante"
+  },
+  {
+   "id": 32,
+   "count": 6,
+   "name": "Milkis",
+   "slug": "milkis"
+  },
+  {
+   "id": 54,
+   "count": 0,
+   "name": "MKD",
+   "slug": "mkd"
+  },
+  {
+   "id": 220,
+   "count": 0,
+   "name": "Mochila",
+   "slug": "mochila"
+  },
+  {
+   "id": 147,
+   "count": 2,
+   "name": "Morango",
+   "slug": "morango"
+  },
+  {
+   "id": 181,
+   "count": 0,
+   "name": "Navalhete",
+   "slug": "navalhete"
+  },
+  {
+   "id": 169,
+   "count": 0,
+   "name": "Necessaire",
+   "slug": "necessaire"
+  },
+  {
+   "id": 41,
+   "count": 3,
+   "name": "O'Rice",
+   "slug": "orice"
+  },
+  {
+   "id": 136,
+   "count": 5,
+   "name": "O'star",
+   "slug": "ostar"
+  },
+  {
+   "id": 61,
+   "count": 0,
+   "name": "Ombro",
+   "slug": "ombro"
+  },
+  {
+   "id": 148,
+   "count": 1,
+   "name": "Original",
+   "slug": "original"
+  },
+  {
+   "id": 42,
+   "count": 13,
+   "name": "Orion",
+   "slug": "orion"
+  },
+  {
+   "id": 221,
+   "count": 1,
+   "name": "Pantufas",
+   "slug": "pantufas"
+  },
+  {
+   "id": 225,
+   "count": 0,
+   "name": "Papel Lembrete",
+   "slug": "papel-lembrete"
+  },
+  {
+   "id": 248,
+   "count": 0,
+   "name": "Patinhas",
+   "slug": "patinhas"
+  },
+  {
+   "id": 196,
+   "count": 0,
+   "name": "Pato",
+   "slug": "pato"
+  },
+  {
+   "id": 232,
+   "count": 7,
+   "name": "Pelúcia",
+   "slug": "pelucia"
+  },
+  {
+   "id": 37,
+   "count": 4,
+   "name": "Pepero",
+   "slug": "pepero"
+  },
+  {
+   "id": 180,
+   "count": 0,
+   "name": "Pérolas",
+   "slug": "perolas"
+  },
+  {
+   "id": 268,
+   "count": 1,
+   "name": "Pêssego",
+   "slug": "pessego"
+  },
+  {
+   "id": 247,
+   "count": 0,
+   "name": "Pincel",
+   "slug": "pincel"
+  },
+  {
+   "id": 253,
+   "count": 0,
+   "name": "Pinguim",
+   "slug": "pinguim"
+  },
+  {
+   "id": 173,
+   "count": 0,
+   "name": "Plástica",
+   "slug": "plastica"
+  },
+  {
+   "id": 162,
+   "count": 0,
+   "name": "Ponta Dupla",
+   "slug": "ponta-dupla"
+  },
+  {
+   "id": 222,
+   "count": 3,
+   "name": "Porquinho",
+   "slug": "porquinho"
+  },
+  {
+   "id": 252,
+   "count": 0,
+   "name": "Porta Canetas",
+   "slug": "porta-canetas"
+  },
+  {
+   "id": 176,
+   "count": 0,
+   "name": "Portátil",
+   "slug": "portatil"
+  },
+  {
+   "id": 224,
+   "count": 0,
+   "name": "Post It",
+   "slug": "post-it"
+  },
+  {
+   "id": 152,
+   "count": 0,
+   "name": "Postiço",
+   "slug": "postico"
+  },
+  {
+   "id": 215,
+   "count": 0,
+   "name": "Pote",
+   "slug": "pote"
+  },
+  {
+   "id": 207,
+   "count": 0,
+   "name": "Premium",
+   "slug": "premium"
+  },
+  {
+   "id": 134,
+   "count": 0,
+   "name": "Profissional",
+   "slug": "profissional"
+  },
+  {
+   "id": 234,
+   "count": 1,
+   "name": "Pug",
+   "slug": "pug"
+  },
+  {
+   "id": 109,
+   "count": 3,
+   "name": "Refresco",
+   "slug": "refresco"
+  },
+  {
+   "id": 33,
+   "count": 6,
+   "name": "Refrigerante Leite",
+   "slug": "refrigerante-leite"
+  },
+  {
+   "id": 185,
+   "count": 0,
+   "name": "Régua",
+   "slug": "regua"
+  },
+  {
+   "id": 250,
+   "count": 0,
+   "name": "Relógio",
+   "slug": "relogio"
+  },
+  {
+   "id": 141,
+   "count": 0,
+   "name": "Reutilizáveis",
+   "slug": "reutilizaveis"
+  },
+  {
+   "id": 223,
+   "count": 3,
+   "name": "Rosa",
+   "slug": "rosa"
+  },
+  {
+   "id": 73,
+   "count": 0,
+   "name": "Rosto",
+   "slug": "rosto"
+  },
+  {
+   "id": 108,
+   "count": 3,
+   "name": "Sac Sac",
+   "slug": "sac-sac"
+  },
+  {
+   "id": 255,
+   "count": 2,
+   "name": "Salgadinho",
+   "slug": "salgadinho"
+  },
+  {
+   "id": 121,
+   "count": 0,
+   "name": "Sinomie",
+   "slug": "sinomie"
+  },
+  {
+   "id": 114,
+   "count": 8,
+   "name": "Snack",
+   "slug": "snack"
+  },
+  {
+   "id": 182,
+   "count": 0,
+   "name": "Sobrancelha",
+   "slug": "sobrancelha"
+  },
+  {
+   "id": 264,
+   "count": 3,
+   "name": "Soju",
+   "slug": "soju"
+  },
+  {
+   "id": 66,
+   "count": 0,
+   "name": "Sutiã",
+   "slug": "sutia"
+  },
+  {
+   "id": 204,
+   "count": 0,
+   "name": "Talher",
+   "slug": "talher"
+  },
+  {
+   "id": 214,
+   "count": 0,
+   "name": "Talheres",
+   "slug": "talheres"
+  },
+  {
+   "id": 105,
+   "count": 0,
+   "name": "Tesoura",
+   "slug": "tesoura"
+  },
+  {
+   "id": 113,
+   "count": 2,
+   "name": "Tok",
+   "slug": "tok"
+  },
+  {
+   "id": 273,
+   "count": 1,
+   "name": "Topokki",
+   "slug": "topokki"
+  },
+  {
+   "id": 80,
+   "count": 0,
+   "name": "Tubarão",
+   "slug": "tubarao"
+  },
+  {
+   "id": 217,
+   "count": 2,
+   "name": "Unicórnio",
+   "slug": "unicornio"
+  },
+  {
+   "id": 81,
+   "count": 0,
+   "name": "Unicórnios",
+   "slug": "unicornios"
+  },
+  {
+   "id": 197,
+   "count": 0,
+   "name": "USB",
+   "slug": "usb"
+  },
+  {
+   "id": 149,
+   "count": 0,
+   "name": "Uva",
+   "slug": "uva"
+  },
+  {
+   "id": 178,
+   "count": 0,
+   "name": "Verde",
+   "slug": "verde"
+  },
+  {
+   "id": 167,
+   "count": 0,
+   "name": "Viagem",
+   "slug": "viagem"
+  },
+  {
+   "id": 271,
+   "count": 1,
+   "name": "Yopokki",
+   "slug": "yopokki"
+  },
+  {
+   "id": 272,
+   "count": 1,
+   "name": "Youngpoong",
+   "slug": "youngpoong"
+  }
+ ]
+}
