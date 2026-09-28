@@ -257,6 +257,7 @@ describe("error classification", () => {
     expect(quota).toMatchObject({ code: "quota" });
     expect(quota.message).toContain("Tavily");
     expect(classifyError(new HttpError("HTTP 401", 401, null, null, "api.exa.ai")).code).toBe("credentials");
+    expect(classifyError(new HttpError("HTTP 432", 432, null, null, "api.tavily.com")).code).toBe("quota");
     expect(classifyError(new HttpError("x", 0, null, null, "api.exa.ai")).code).toBe("network");
     expect(classifyError(new LlmOutputError("bad json", "{")).code).toBe("ai");
     expect(classifyError(Object.assign(new Error("API key not valid"), { status: 400 })).code).toBe("credentials");

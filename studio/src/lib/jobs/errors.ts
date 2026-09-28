@@ -62,7 +62,8 @@ function byStatus(status: number, service: string, detail: string): Omit<Classif
   if (status === 401 || status === 403 || (status === 400 && /api[ _-]?key/i.test(detail))) {
     return { code: "credentials", message: `${service} recusou a chave de acesso.` };
   }
-  if (status === 402 || status === 429 || /quota|credits|rate.?limit/i.test(detail)) {
+  // 432/433: Tavily plan or pay-as-you-go limit reached.
+  if ([402, 429, 432, 433].includes(status) || /quota|credits|rate.?limit|usage limit/i.test(detail)) {
     return { code: "quota", message: `${service} atingiu o limite de uso ou está sem créditos.` };
   }
   if (status >= 500 || status === 408 || /high demand|overloaded/i.test(detail)) {
